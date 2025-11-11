@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PyData Paris 2025 Recap
-description: 
+description: A recap of the talks that I attended at Pydata Paris 2025
 ---
 
 Late it is to do a Paris 2025 PyData Recap almoest one month and a half after the event, but better late than never as they say. 
