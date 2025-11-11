@@ -1,14 +1,14 @@
 :root {
   color-scheme: only light;
-  --page-bg: #fbfaf5;
-  --surface: #fffdf9;
-  --ink: #14110f;
-  --muted: #5d564f;
-  --rule: #d8d2c4;
-  --accent-blue: #1f4c9a;
-  --accent-blue-soft: #305fb8;
-  --accent-red: #a1262c;
-  --code-bg: #f0ede4;
+  --page-bg: #fff1e0;
+  --surface: #fff7ec;
+  --ink: #332c29;
+  --muted: #6d5d53;
+  --rule: #e3c8a5;
+  --accent-blue: #0f1a2a;
+  --accent-blue-soft: #243449;
+  --accent-red: #c1542a;
+  --code-bg: #f6e7d7;
 }
 
 * {
