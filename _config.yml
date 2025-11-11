@@ -12,3 +12,8 @@ collections:
     permalink: /blog/:slug/
 markdown: kramdown
 highlighter: rouge
+plugins:
+  - jekyll-seo-tag
+kramdown:
+  input: GFM
+  math_engine: mathjax

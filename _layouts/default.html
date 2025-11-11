@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en' }}">
   <head>
+    <meta charset="utf-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
     {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="site-title">
+        <a href="{{ '/' | relative_url }}">{{ site.title | default: 'My Website' }}</a>
+      </div>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        {% if site.email %}
+          <a href="mailto:{{ site.email }}">Contact</a>
+        {% endif %}
+      </nav>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
@@ -23,10 +51,11 @@
         </nav>
       </div>
     </header>
-
-    <main id="content" class="main-content" role="main">
+    <main id="content" class="site-main" role="main">
       {{ content }}
     </main>
+    <footer class="site-footer">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title | default: 'My Website' }}. Built with Jekyll.</p>
 
     <footer class="site-footer">
       <div class="container footer-inner">

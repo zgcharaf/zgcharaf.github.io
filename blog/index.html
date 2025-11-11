@@ -1,5 +1,25 @@
 ---
 layout: default
+title: Writing archive
+description: Collected posts and research notes.
+---
+
+<section class="intro">
+  <h1>Writing archive</h1>
+  <p>
+    All posts, lecture notes, and research updates are collected here. Use the archive to revisit
+    derivations, reproduce code, and follow projects as they evolve.
+  </p>
+</section>
+
+<section class="section">
+  {% if site.posts.size > 0 %}
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <div class="post-meta">{{ post.date | date: '%B %d, %Y' }}</div>
+          <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
 title: Writing
 description: Essays, notes, and reflections from my fresh writing archive.
 ---
@@ -21,6 +41,7 @@ description: Essays, notes, and reflections from my fresh writing archive.
       {% endfor %}
     </ul>
   {% else %}
+    <p>No posts yet. Check back soon.</p>
     <p class="text-muted" style="margin-top: 2rem;">No posts yet—your patience will be rewarded soon.</p>
   {% endif %}
 </section>
