@@ -1,0 +1,26 @@
+---
+layout: default
+title: Writing
+description: Essays, notes, and reflections from my fresh writing archive.
+---
+
+<section class="section-card">
+  <h1>Writing archive</h1>
+  <p class="text-muted">
+    Thoughtful notes on the ideas I'm currently exploring. Expect short essays, research highlights,
+    and occasional book takeaways.
+  </p>
+  {% if site.posts.size > 0 %}
+    <ul class="post-list" style="margin-top: 2rem;">
+      {% for post in site.posts %}
+        <li class="card">
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <p class="post-meta">{{ post.date | date: '%B %d, %Y' }}</p>
+          <p class="text-muted">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-muted" style="margin-top: 2rem;">No posts yet—your patience will be rewarded soon.</p>
+  {% endif %}
+</section>
