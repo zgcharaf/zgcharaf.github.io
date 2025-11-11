@@ -1,26 +1,26 @@
 ---
 layout: default
 title: Writing archive
-description: Collected posts and research notes.
+description: Research notes and posts collected in one LaTeX-inspired archive.
 ---
 
-<section class="section-card">
-  <h1>Writing archive</h1>
-  <p class="text-muted">
-    Thoughtful notes on the ideas I'm currently exploring. Expect short essays, research highlights,
-    and occasional book takeaways.
+<section class="home-section">
+  <h1>Archive</h1>
+  <p>
+    Every entry is a small research memo or technical walkthrough. Browse the full list below or use the
+    navigation to return home.
   </p>
   {% if site.posts.size > 0 %}
-    <ul class="post-list" style="margin-top: 2rem;">
+    <ul class="post-list">
       {% for post in site.posts %}
-        <li class="card">
-          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-          <p class="post-meta">{{ post.date | date: '%B %d, %Y' }}</p>
-          <p class="text-muted">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <div class="post-meta">{{ post.date | date: '%B %d, %Y' }}</div>
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
         </li>
       {% endfor %}
     </ul>
   {% else %}
-    <p>No posts yet. Check back soon.</p>
+    <p>No entries just yet.</p>
   {% endif %}
 </section>
