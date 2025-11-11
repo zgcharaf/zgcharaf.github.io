@@ -1,10 +1,10 @@
-title: Ziad Charaf
-description: Research notes, technical writing, and collaborative projects.
+title: Charaf Zguiouar
+description: Personal website and writing hub for research, projects, and notes.
 baseurl: ""
 url: ""
-email: hello@ziadcharaf.com
+email: Zgcharaf@gmail.com
 github_username: zgcharaf
-linkedin_username: ziad-charaf
+linkedin_username: Charaf ZGUIOUAR
 permalink: pretty
 collections:
   posts:
