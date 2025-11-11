@@ -1,0 +1,19 @@
+title: Ziad Charaf
+description: Research notes, technical writing, and collaborative projects.
+baseurl: ""
+url: ""
+email: hello@ziadcharaf.com
+github_username: zgcharaf
+linkedin_username: ziad-charaf
+permalink: pretty
+collections:
+  posts:
+    output: true
+    permalink: /blog/:slug/
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-seo-tag
+kramdown:
+  input: GFM
+  math_engine: mathjax

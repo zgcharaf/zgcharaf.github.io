@@ -1,55 +1,48 @@
 ---
 layout: default
+title: Ziad Charaf
+description: Research notes, writing, and projects.
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture Notes</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Lecture Notes</h1>
-        <ul>
-            <li><a href="lecture1.html">Course 1 : Econometrics II </a></li>
-            <li><a href="lecture2.html">Course 2: Stochastic Processes</a></li>
-            <!-- Add more lecture notes here -->
-        </ul>
-    </div>
-</body>
-</html>
+
+<section class="intro">
+  <h1>Research notes & writing</h1>
+  <p>
+    I'm Ziad Charaf. This site collects fresh ideas, technical notes, and essays on economics,
+    data, and the tools I use for research. Everything here is written to be clear enough for a
+    collaborator and rigorous enough for my future self.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Focus areas</h2>
+  <p>
+    I spend most of my time studying empirical economics, applied statistics, and open data tools.
+    Expect posts that walk through methods, reproduce results, and explain the math behind the work.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Latest writing</h2>
+  {% if site.posts.size > 0 %}
+    <ul class="post-list">
+      {% for post in site.posts limit: 5 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <div class="post-meta">{{ post.date | date: '%B %d, %Y' }}</div>
+          <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+    <p class="post-footer"><a href="{{ '/blog/' | relative_url }}">Browse the full archive →</a></p>
+  {% else %}
+    <p>No posts yet. New work is on the way.</p>
+  {% endif %}
+</section>
+
+<section class="section">
+  <h2>Get in touch</h2>
+  <p>
+    I'm always open to conversations about research collaborations and data projects. The best way to
+    reach me is by email at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
+  </p>
+</section>
