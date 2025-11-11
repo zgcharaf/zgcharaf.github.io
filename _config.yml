@@ -1,0 +1,14 @@
+title: Ziad Charaf
+description: Personal website and writing hub for research, projects, and notes.
+baseurl: ""
+url: ""
+email: hello@ziadcharaf.com
+github_username: zgcharaf
+linkedin_username: ziad-charaf
+permalink: pretty
+collections:
+  posts:
+    output: true
+    permalink: /blog/:slug/
+markdown: kramdown
+highlighter: rouge
