@@ -5,19 +5,30 @@ description: Research notebook presented in a LaTeX-inspired layout.
 ---
 
 <section class="home-lede">
+  <p class="eyebrow">Charaf Zguiouar • Research notebook</p>
   <h1>Thalia Notes</h1>
-  <p>
-   “March away from the sound of the guns. Observe from a distance, but do not join the fray. Make a fray of your own.”
-    <span class="accent-red">E.O Wilson </span>  </p>
-    
-    <p>
-   “For every scientist … working at any level of mathematical competence, there exists a discipline for which that level is enough to achieve excellence.”
-    <span class="accent-red">E.O Wilson </span>  </p>
-
+  <p class="lede-subtitle">
+    A living lab notebook for strategy, systems and scientific curiosity — designed with the calm focus of a modern studio.
+  </p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="{{ '/blog/' | relative_url }}">Browse the latest entries</a>
+    <a class="btn btn-ghost" href="{{ '/about/' | relative_url }}">About Charaf</a>
+  </div>
+  <div class="quote-grid">
+    <p class="quote">
+      “March away from the sound of the guns. Observe from a distance, but do not join the fray. Make a fray of your own.”
+      <span class="accent-red">E.O Wilson </span>
+    </p>
+    <p class="quote">
+      “For every scientist … working at any level of mathematical competence, there exists a discipline for which that level is enough to achieve excellence.”
+      <span class="accent-red">E.O Wilson </span>
+    </p>
+  </div>
 </section>
 
 <section class="home-section">
   <h2>Latest posts</h2>
+  <p class="section-lede">Fresh observations, references, and half-formed ideas — captured as soon as they crystallize.</p>
   {% if site.posts.size > 0 %}
     <ul class="post-list">
       {% for post in site.posts limit: 5 %}
@@ -33,13 +44,20 @@ description: Research notebook presented in a LaTeX-inspired layout.
   {% endif %}
 </section>
 
-<section class="home-section">
-  <h2>About the notebook</h2>
-  <p>
-   Thalia Notes is the name I found most suiting for this mosaique of structured and random thoughts and ideas. 
-  </p>
-  <p class="note">
-    Prefer an email introduction? Reach out at <a href="mailto:{{ site.email }}">{{ site.email }}</a> and let me know
-    what you're working on.
-  </p>
+<section class="home-section highlight">
+  <div class="section-card">
+    <h2>About the notebook</h2>
+    <p>
+      Thalia Notes is the name I found most suiting for this mosaique of structured and random thoughts and ideas.
+    </p>
+    <ul class="pill-list">
+      <li>Strategy, systems &amp; energy</li>
+      <li>Mathematics as a thinking partner</li>
+      <li>Teaching notes &amp; public talks</li>
+    </ul>
+    <p class="note">
+      Prefer an email introduction? Reach out at <a href="mailto:{{ site.email }}">{{ site.email }}</a> and let me know
+      what you're working on.
+    </p>
+  </div>
 </section>
