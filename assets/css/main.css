@@ -587,3 +587,61 @@ pre code {
     padding: 2rem;
   }
 }
+.site-header {
+  border: none;
+  box-shadow: none;
+  background: #fff;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+}
+
+.site-title {
+  font-family: "Crimson Pro", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #111;
+}
+
+/* Menu reset & simplification */
+.site-nav .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.25rem; /* space between items */
+}
+
+.site-nav .nav-list li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Links: no borders, no boxes */
+.site-nav .nav-list a {
+  text-decoration: none;
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Simple hover (no border) */
+.site-nav .nav-list a:hover,
+.site-nav .nav-list a:focus {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Optional: active state via .current-page class if you use it */
+.site-nav .nav-list a.current-page {
+  font-weight: 600;
+  text-decoration: underline;
+}
