@@ -28,34 +28,23 @@
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header" role="banner">
-    <div class="site-container header-inner">
-      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | default: 'Research Notes' }}</a>
-      <nav class="site-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ '/about/' | relative_url }}">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ '/publications/' | relative_url }}">Publications &amp; Talks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ '/teaching/' | relative_url }}">Teaching</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ '/blog/' | relative_url }}">Archive</a>
-          </li>
-          {% if site.email %}
-            <li class="nav-item">
-              <a class="nav-link" href="mailto:{{ site.email }}">Contact</a>
-            </li>
-          {% endif %}
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="site-container header-inner">
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | default: 'Research Notes' }}</a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+        <li><a href="{{ '/publications/' | relative_url }}">Publications &amp; Talks</a></li>
+        <li><a href="{{ '/teaching/' | relative_url }}">Teaching</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Archive</a></li>
+        {% if site.email %}
+          <li><a href="mailto:{{ site.email }}">Contact</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+</header>
+
   <main id="content" class="site-main" role="main">
     <div class="site-container">
       {{ content }}
