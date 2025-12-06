@@ -33,41 +33,23 @@
       <nav class="site-nav" aria-label="Primary">
         <ul class="nav-list">
           <li class="nav-item">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
-              <span class="nav-label">Home</span>
-              <span class="nav-hint">Start page</span>
-            </a>
+            <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ '/about/' | relative_url }}">
-              <span class="nav-label">About</span>
-              <span class="nav-hint">Who I am</span>
-            </a>
+            <a class="nav-link" href="{{ '/about/' | relative_url }}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ '/publications/' | relative_url }}">
-              <span class="nav-label">Publications &amp; Talks</span>
-              <span class="nav-hint">Research outputs</span>
-            </a>
+            <a class="nav-link" href="{{ '/publications/' | relative_url }}">Publications &amp; Talks</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ '/teaching/' | relative_url }}">
-              <span class="nav-label">Teaching</span>
-              <span class="nav-hint">Courses &amp; notes</span>
-            </a>
+            <a class="nav-link" href="{{ '/teaching/' | relative_url }}">Teaching</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ '/blog/' | relative_url }}">
-              <span class="nav-label">Archive</span>
-              <span class="nav-hint">All posts</span>
-            </a>
+            <a class="nav-link" href="{{ '/blog/' | relative_url }}">Archive</a>
           </li>
           {% if site.email %}
             <li class="nav-item">
-              <a class="nav-link" href="mailto:{{ site.email }}">
-                <span class="nav-label">Contact</span>
-                <span class="nav-hint">Say hello</span>
-              </a>
+              <a class="nav-link" href="mailto:{{ site.email }}">Contact</a>
             </li>
           {% endif %}
         </ul>
