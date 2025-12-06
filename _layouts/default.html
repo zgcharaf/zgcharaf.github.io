@@ -31,14 +31,46 @@
     <div class="site-container header-inner">
       <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | default: 'Research Notes' }}</a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/about/' | relative_url }}">About</a>
-        <a href="{{ '/publications/' | relative_url }}">Publications &amp; Talks</a>
-        <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
-        <a href="{{ '/blog/' | relative_url }}">Archive</a>
-        {% if site.email %}
-          <a href="mailto:{{ site.email }}">Contact</a>
-        {% endif %}
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/' | relative_url }}">
+              <span class="nav-label">Home</span>
+              <span class="nav-hint">Start page</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/about/' | relative_url }}">
+              <span class="nav-label">About</span>
+              <span class="nav-hint">Who I am</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/publications/' | relative_url }}">
+              <span class="nav-label">Publications &amp; Talks</span>
+              <span class="nav-hint">Research outputs</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/teaching/' | relative_url }}">
+              <span class="nav-label">Teaching</span>
+              <span class="nav-hint">Courses &amp; notes</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/blog/' | relative_url }}">
+              <span class="nav-label">Archive</span>
+              <span class="nav-hint">All posts</span>
+            </a>
+          </li>
+          {% if site.email %}
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:{{ site.email }}">
+                <span class="nav-label">Contact</span>
+                <span class="nav-hint">Say hello</span>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
       </nav>
     </div>
   </header>
