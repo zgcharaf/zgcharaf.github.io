@@ -66,7 +66,7 @@ body {
 
 .header-inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 2.5rem 0 0.75rem;
   gap: 1rem;
@@ -83,29 +83,71 @@ body {
 }
 
 .site-nav {
-  display: flex;
-  gap: 0.75rem;
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  flex-wrap: wrap;
+  flex: 1;
 }
 
-.site-nav a {
-  color: var(--ink);
-  text-decoration: none;
-  padding: 0.35rem 0.75rem;
-  border-radius: 6px;
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.35rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
   background: var(--surface-soft);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
-  transition: background 150ms ease, color 150ms ease, box-shadow 150ms ease;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  box-shadow: var(--shadow-soft);
 }
 
-.site-nav a:hover,
-.site-nav a:focus {
-  color: var(--accent-blue);
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  align-items: flex-start;
+  padding: 0.7rem 0.85rem;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid transparent;
   background: var(--surface);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin-top: 0.2rem;
+  border-radius: 999px;
+  background: var(--rule);
+  transition: background 160ms ease, width 160ms ease;
+}
+
+.nav-label {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.nav-hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 8px 22px -18px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  background: var(--accent-blue);
+  width: 48px;
 }
 
 @media (max-width: 720px) {
@@ -115,17 +157,8 @@ body {
     gap: 1.75rem;
   }
 
-  .site-nav {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-    font-size: 1rem;
-  }
-
-  .site-nav a {
-    display: block;
-    text-align: center;
-    background: var(--surface);
+  .nav-list {
+    grid-template-columns: 1fr;
   }
 }
 
