@@ -59,16 +59,18 @@ body {
 }
 
 .site-header {
-  background: transparent;
-  padding-bottom: 0.5rem;
+  background: #fff;
+  padding: 1.25rem 0 0.75rem;
+  border: none;
+  box-shadow: none;
 }
 
 .header-inner {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  padding: 2.5rem 0 0.75rem;
-  gap: 1rem;
+  padding: 1.25rem 0;
+  gap: 1.25rem;
   flex-wrap: wrap;
 }
 
@@ -90,29 +92,44 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+  align-items: center;
+  gap: 1.25rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .nav-link {
-  display: block;
+  display: inline-block;
   padding: 0.35rem 0;
   text-decoration: none;
-  color: var(--ink);
-  font-weight: 700;
+  color: #444;
+  font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  font-size: 0.95rem;
+  transition: color 120ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #000;
+  text-decoration: underline;
 }
 
 @media (max-width: 720px) {
   .header-inner {
     flex-direction: column;
-    align-items: stretch;
-    gap: 1.75rem;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .site-nav {
+    width: 100%;
   }
 
   .nav-list {
-    gap: 0.5rem;
+    justify-content: flex-start;
   }
 }
 
@@ -586,62 +603,4 @@ pre code {
   .section-card {
     padding: 2rem;
   }
-}
-.site-header {
-  border: none;
-  box-shadow: none;
-  background: #fff;
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.2rem 0;
-}
-
-.site-title {
-  font-family: "Crimson Pro", serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #111;
-}
-
-/* Menu reset & simplification */
-.site-nav .nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1.25rem; /* space between items */
-}
-
-.site-nav .nav-list li {
-  margin: 0;
-  padding: 0;
-}
-
-/* Links: no borders, no boxes */
-.site-nav .nav-list a {
-  text-decoration: none;
-  border: none;
-  background: none;
-  padding: 0;
-  font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.95rem;
-  color: #444;
-}
-
-/* Simple hover (no border) */
-.site-nav .nav-list a:hover,
-.site-nav .nav-list a:focus {
-  color: #000;
-  text-decoration: underline;
-}
-
-/* Optional: active state via .current-page class if you use it */
-.site-nav .nav-list a.current-page {
-  font-weight: 600;
-  text-decoration: underline;
 }
