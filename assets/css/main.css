@@ -12,8 +12,8 @@
   --accent-red: #000000;
   --accent-yellow: #000000;
   --code-bg: #f3f3f3;
-  --shadow-soft: none;
-  --shadow-card: none;
+  --shadow-soft: 0 18px 45px -32px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0 14px 36px -32px rgba(0, 0, 0, 0.28);
 }
 
 * {
@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
   background: var(--page-bg);
   color: var(--ink);
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: 'Latin Modern Roman', 'CMU Serif', 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
   font-size: 1.05rem;
   line-height: 1.8;
   letter-spacing: 0.01em;
@@ -60,7 +60,7 @@ body {
 
 .site-header {
   background: transparent;
-  border-bottom: 1px solid var(--rule);
+  box-shadow: inset 0 -1px 0 var(--rule);
   padding-bottom: 0.5rem;
 }
 
@@ -96,15 +96,16 @@ body {
   text-decoration: none;
   padding: 0.35rem 0.75rem;
   border-radius: 6px;
-  border: 1px solid var(--rule);
-  background: var(--surface);
-  transition: background 150ms ease, color 150ms ease;
+  background: var(--surface-soft);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+  transition: background 150ms ease, color 150ms ease, box-shadow 150ms ease;
 }
 
 .site-nav a:hover,
 .site-nav a:focus {
   color: var(--accent-blue);
-  background: var(--surface-soft);
+  background: var(--surface);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 720px) {
@@ -133,7 +134,7 @@ body {
 }
 
 .site-footer {
-  border-top: 1px solid var(--rule);
+  box-shadow: inset 0 1px 0 var(--rule);
   padding: 1.5rem 0 3rem;
   font-size: 0.9rem;
   color: var(--muted);
@@ -163,7 +164,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Merriweather', 'Georgia', serif;
+  font-family: 'STIX Two Text', 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--ink);
@@ -223,32 +224,35 @@ strong {
   border-radius: 8px;
   font-weight: 700;
   text-decoration: none;
-  border: 1px solid var(--ink);
   color: var(--ink);
   background: var(--surface);
-  transition: background 150ms ease, color 150ms ease;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+  transition: background 150ms ease, color 150ms ease, box-shadow 150ms ease;
 }
 
 .btn-primary {
   background: var(--ink);
   color: var(--surface);
+  box-shadow: 0 4px 16px -10px rgba(0, 0, 0, 0.45);
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
   color: var(--surface);
   background: var(--accent-blue-soft);
+  box-shadow: 0 6px 18px -10px rgba(0, 0, 0, 0.5);
 }
 
 .btn-ghost {
-  border-color: var(--ink);
   color: var(--ink);
   background: var(--surface);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18);
 }
 
 .btn-ghost:hover,
 .btn-ghost:focus {
   background: var(--surface-soft);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.28);
 }
 
 em {
@@ -258,14 +262,15 @@ em {
 blockquote {
   margin: 2rem 0;
   padding-left: 1.25rem;
-  border-left: 3px solid var(--ink);
+  box-shadow: inset 0.25rem 0 0 var(--accent-blue-soft);
   font-style: italic;
   color: var(--muted);
 }
 
 hr {
   border: none;
-  border-top: 1px solid var(--rule);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rule), transparent);
   margin: 3rem 0;
 }
 
@@ -281,25 +286,25 @@ li + li {
 
 table {
   width: 100%;
-  border-collapse: collapse;
   margin: 2rem 0;
   background: var(--surface);
 }
 
 table th,
 table td {
-  border: 1px solid var(--rule);
   padding: 0.65rem 0.8rem;
   text-align: left;
+  box-shadow: inset 0 -1px 0 var(--rule);
 }
 
 table th {
   font-weight: 600;
   color: var(--ink);
+  box-shadow: inset 0 -2px 0 var(--rule);
 }
 
 code {
-  font-family: 'Source Sans 3', 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-family: 'Latin Modern Mono', 'TeX Gyre Cursor', 'Source Code Pro', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
   font-size: 0.95rem;
   padding: 0.1rem 0.35rem;
   background: var(--code-bg);
@@ -307,7 +312,7 @@ code {
 }
 
 pre {
-  font-family: 'Source Sans 3', 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-family: 'Latin Modern Mono', 'TeX Gyre Cursor', 'Source Code Pro', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
   font-size: 0.95rem;
   background: var(--code-bg);
   padding: 1rem;
@@ -323,13 +328,12 @@ pre code {
 .post {
   background: var(--surface);
   padding: 3rem 2.5rem;
-  border: 1px solid var(--rule);
   box-shadow: var(--shadow-soft);
   border-radius: 0;
 }
 
 .post-header {
-  border-bottom: 1px solid var(--rule);
+  box-shadow: inset 0 -1px 0 var(--rule);
   padding-bottom: 1.5rem;
   margin-bottom: 2.5rem;
 }
@@ -367,19 +371,19 @@ pre code {
 .post-footer {
   margin-top: 3rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--rule);
+  box-shadow: inset 0 1px 0 var(--rule);
 }
 
 
 .masthead {
   text-align: center;
-  border-bottom: 1px solid var(--rule);
+  box-shadow: inset 0 -1px 0 var(--rule);
   padding: 1.25rem 0 1.75rem;
   margin-top: 1.5rem;
 }
 
 .masthead .masthead-brand {
-  font-family: 'Merriweather', 'Georgia', serif;
+  font-family: 'STIX Two Text', 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
   font-size: clamp(2.1rem, 4vw, 2.7rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -395,7 +399,6 @@ pre code {
 
 .home-lede {
   background: var(--surface);
-  border: 1px solid var(--rule);
   padding: 2.75rem;
   border-radius: 0;
   box-shadow: var(--shadow-soft);
@@ -415,7 +418,7 @@ pre code {
 }
 
 .lede-aside {
-  border-left: 2px solid var(--rule);
+  box-shadow: inset 0.2rem 0 0 var(--rule);
   padding-left: 1.25rem;
 }
 
@@ -436,7 +439,7 @@ pre code {
 
 .lede-aside li {
   padding: 0.35rem 0;
-  border-bottom: 1px solid var(--rule);
+  box-shadow: inset 0 -1px 0 var(--rule);
   font-size: 0.98rem;
 }
 
@@ -474,15 +477,14 @@ pre code {
   background: var(--surface);
   padding: 1.35rem 1.4rem;
   border-radius: 0;
-  border: 1px solid var(--rule);
   box-shadow: var(--shadow-card);
-  transition: background 150ms ease, border-color 150ms ease;
+  transition: background 150ms ease, box-shadow 150ms ease;
 }
 
 .post-list li:hover,
 .post-list li:focus-within {
   background: var(--surface-soft);
-  border-color: var(--ink);
+  box-shadow: 0 10px 26px -24px rgba(0, 0, 0, 0.35);
 }
 
 .post-list a {
@@ -518,7 +520,7 @@ pre code {
 }
 
 .note {
-  border-left: 3px solid var(--ink);
+  box-shadow: inset 0.25rem 0 0 var(--accent-blue-soft);
   padding-left: 1rem;
   color: var(--muted);
   font-style: italic;
@@ -532,7 +534,7 @@ pre code {
 
 .quote {
   padding: 1rem 0;
-  border-top: 1px solid var(--rule);
+  box-shadow: inset 0 1px 0 var(--rule);
   color: var(--muted);
   font-style: italic;
 }
@@ -546,7 +548,6 @@ pre code {
   background: var(--surface);
   border-radius: 0;
   padding: 2.5rem;
-  border: 1px solid var(--rule);
   box-shadow: var(--shadow-card);
 }
 
@@ -584,9 +585,8 @@ pre code {
   }
 
   .lede-aside {
-    border-left: none;
     padding-left: 0;
-    border-top: 2px solid var(--rule);
+    box-shadow: inset 0 2px 0 var(--rule);
     margin-top: 1.5rem;
     padding-top: 1rem;
   }
