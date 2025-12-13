@@ -25,5 +25,4 @@ In Semester 1, I coached and supervised students for the **DRIM Game** organized
 
 In Semester 2, I teach **Applied Quantitative Reasoning**.
 
-* Course focus: quantitative methods and practical problem-solving for applied finance and data analysis
-* Materials: (add links to slides / notebooks / assignments here when ready)
+* Course focus: quantitative methods and practical problem-solving for quantitative finance.
