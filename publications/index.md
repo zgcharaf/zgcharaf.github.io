@@ -10,8 +10,7 @@ A selection of recent writing, talks, and collaborations. For supporting materia
 
 ## Selected Talks & Panels
 
-- **December 2025:** *Optimal Binning Strategies in Logistic Regression*, [PyData Global 2025 (Accepted)](https://cfp.pydata.org/pydataglobal2025/talk/BT7M3S/)
-
+- **December 2025:** *Optimal Binning Strategies in Logistic Regression*, [PyData Global 2025 (Presented)](https://cfp.pydata.org/pydataglobal2025/talk/BT7M3S/) [Slides](https://github.com/zgcharaf/Pydata-Global-Talk-December-2025/blob/main/Optimal%20binning%20Pydata%20Global%202025.pdf)
 ## Master Thesis
 
 - **Zguiouar, Charaf (2024).** *Rough Volatility: An Agent-Based Model Approach.*  
