@@ -6,6 +6,31 @@
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   {% seo %}
+  {% assign site_url = site.url | append: site.baseurl %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "{{ site.title | xml_escape }}",
+          "url": "{{ site_url }}",
+          "description": "{{ site.description | strip_newlines | strip | escape }}",
+          "inLanguage": "{{ site.lang | default: 'en' }}"
+        },
+        {
+          "@type": "Person",
+          "name": "{{ site.author | default: site.title | xml_escape }}",
+          "url": "{{ site_url }}",
+          "email": "mailto:{{ site.email }}",
+          "sameAs": [
+            "https://github.com/{{ site.github_username }}",
+            "{{ site.linkedin_url }}"
+          ]
+        }
+      ]
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link

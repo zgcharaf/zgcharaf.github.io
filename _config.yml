@@ -1,10 +1,13 @@
 title: Charaf Zguiouar
 description: Personal website and writing hub for research, projects, and notes.
+lang: en
 baseurl: ""
-url: ""
+url: "https://zgcharaf.github.io"
 email: Zgcharaf@gmail.com
 github_username: zgcharaf
 linkedin_username: Charaf ZGUIOUAR
+linkedin_url: https://www.linkedin.com/in/charaf-zguiouar/
+author: Charaf Zguiouar
 permalink: pretty
 collections:
   posts:
@@ -14,6 +17,7 @@ markdown: kramdown
 highlighter: rouge
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 kramdown:
   input: GFM
   math_engine: mathjax
