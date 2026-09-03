@@ -1,45 +1,252 @@
 ---
 layout: default
-title: Charaf Zguiouar
-description: Research notebook presented in a LaTeX-inspired layout.
+title: Charaf Zguiouar | Quantitative Model Risk & AI
+description: Portfolio of Charaf Zguiouar, Senior Data Scientist and adjunct professor working across quantitative model risk, credit analytics, data engineering, and agentic AI.
 ---
 
-<section class="home-lede">
-  <h1>Thalia Notes</h1>
-  <p>
-   “March away from the sound of the guns. Observe from a distance, but do not join the fray. Make a fray of your own.”
-    <span class="accent-red">E.O Wilson </span>  </p>
-    
-    <p>
-   “For every scientist … working at any level of mathematical competence, there exists a discipline for which that level is enough to achieve excellence.”
-    <span class="accent-red">E.O Wilson </span>  </p>
+<div class="portfolio-home">
+  <section class="portfolio-hero" aria-labelledby="portfolio-title">
+    <p class="portfolio-kicker">Quantitative model risk · AI · applied research</p>
+    <h1 id="portfolio-title">Charaf Zguiouar</h1>
+    <p class="portfolio-role">
+      Senior Data Scientist at BNP Paribas Personal Finance<br>
+      Adjunct Professor at the Sorbonne School of Economics
+    </p>
+    <p class="portfolio-intro">
+      I build quantitative systems that turn model risk, credit-performance data, and emerging AI capabilities into
+      decisions people can use. My work spans production monitoring, international portfolio research, data platforms,
+      and responsible deployment of agentic AI.
+    </p>
+    <div class="portfolio-actions" aria-label="Portfolio links">
+      <a class="portfolio-action portfolio-action-primary" href="#experience">View experience</a>
+      <a class="portfolio-action" href="{{ '/publications/' | relative_url }}">Research &amp; talks</a>
+      <a class="portfolio-action" href="mailto:{{ site.email }}">Contact</a>
+    </div>
+  </section>
 
-</section>
+  <dl class="impact-strip" aria-label="Selected professional impact">
+    <div>
+      <dt>€1m+</dt>
+      <dd>annual recurring savings from model-monitoring automation</dd>
+    </div>
+    <div>
+      <dt>70%+</dt>
+      <dd>less manual effort in strategic-planning workflows</dd>
+    </div>
+    <div>
+      <dt>12 markets</dt>
+      <dd>covered through international credit-performance research</dd>
+    </div>
+  </dl>
 
-<section class="home-section">
-  <h2>Latest posts</h2>
-  {% if site.posts.size > 0 %}
-    <ul class="post-list">
-      {% for post in site.posts limit: 5 %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          <div class="post-meta">{{ post.date | date: '%B %d, %Y' }}</div>
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
-        </li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>No entries yet. Drafts are percolating.</p>
-  {% endif %}
-</section>
+  <section class="portfolio-section" aria-labelledby="selected-work-title">
+    <div class="section-heading">
+      <p class="section-index">01</p>
+      <div>
+        <h2 id="selected-work-title">Selected work</h2>
+        <p>Systems and research designed for measurable operational and risk outcomes.</p>
+      </div>
+    </div>
+    <div class="work-grid">
+      <article class="work-item">
+        <p class="work-label">Model monitoring</p>
+        <h3>Industrialized performance oversight</h3>
+        <p>
+          Developed and deployed an internal Python package for automated model-performance monitoring, released
+          through a reusable production pipeline and generating more than €1 million in annual recurring savings.
+        </p>
+      </article>
+      <article class="work-item">
+        <p class="work-label">Agentic AI</p>
+        <h3>Operations' first agentic workflow</h3>
+        <p>
+          Led an LLM-as-a-Service initiative for strategic planning and management reporting, reducing manual effort
+          by more than 70% while embedding responsible-AI and governance requirements.
+        </p>
+      </article>
+      <article class="work-item">
+        <p class="work-label">Data platform</p>
+        <h3>Retail-credit analytics at scale</h3>
+        <p>
+          Industrialized SPORT, a Dataiku, PostgreSQL, and Tableau platform spanning the retail-credit value chain and
+          reducing recurring reporting workload from three full-time equivalents to one.
+        </p>
+      </article>
+      <article class="work-item">
+        <p class="work-label">Research</p>
+        <h3>Credit portfolios across markets</h3>
+        <p>
+          Produce cross-market analysis across 11 geographies and China, covering first-unpaid events, stage
+          migration, collections performance, and non-performing-loan dynamics.
+        </p>
+      </article>
+    </div>
+  </section>
 
-<section class="home-section">
-  <h2>About the notebook</h2>
-  <p>
-   Thalia Notes is the name I found most suiting for this mosaique of structured and random thoughts and ideas. 
-  </p>
-  <p class="note">
-    Prefer an email introduction? Reach out at <a href="mailto:{{ site.email }}">{{ site.email }}</a> and let me know
-    what you're working on.
-  </p>
-</section>
+  <section id="experience" class="portfolio-section" aria-labelledby="experience-title">
+    <div class="section-heading">
+      <p class="section-index">02</p>
+      <div>
+        <h2 id="experience-title">Experience</h2>
+        <p>A path from forecasting and treasury risk to enterprise analytics, model risk, and AI.</p>
+      </div>
+    </div>
+    <ol class="experience-list">
+      <li>
+        <article>
+          <div class="experience-meta">
+            <p>2023–Present</p>
+            <p>Paris, France</p>
+          </div>
+          <div class="experience-copy">
+            <h3>BNP Paribas Personal Finance</h3>
+            <p class="experience-role">Senior Data Scientist · Corporate Operations Analytics</p>
+            <p>
+              Lead model-monitoring automation, international retail-credit research, and AI-enabled operating-model
+              transformation. Partner with IT, Data Management, and collections leaders to move analytical products
+              from prototype to governed production.
+            </p>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article>
+          <div class="experience-meta">
+            <p>2025–Present</p>
+            <p>Paris, France</p>
+          </div>
+          <div class="experience-copy">
+            <h3>Sorbonne School of Economics</h3>
+            <p class="experience-role">Adjunct Professor · Applied Probability &amp; Quantitative Reasoning</p>
+            <p>
+              Teach graduate finance students how probability, statistical reasoning, and computational methods
+              support risk and decision-making. Coach applied econometrics and credit-risk competition teams.
+            </p>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article>
+          <div class="experience-meta">
+            <p>2022–2023</p>
+            <p>Lyon, France</p>
+          </div>
+          <div class="experience-copy">
+            <h3>ALTEN</h3>
+            <p class="experience-role">Risk Analyst · Corporate Treasury</p>
+            <p>
+              Built an internal lending-and-borrowing pricing engine incorporating foreign-exchange, interest-rate,
+              and default risk, alongside FX-exposure dashboards and swap analytics.
+            </p>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article>
+          <div class="experience-meta">
+            <p>2021–2022</p>
+            <p>Lyon, France</p>
+          </div>
+          <div class="experience-copy">
+            <h3>bioMérieux</h3>
+            <p class="experience-role">Data Scientist</p>
+            <p>
+              Developed and backtested champion–challenger demand-forecasting models for key accounts over a
+              twelve-month horizon, benchmarking production forecasts against SARIMAX.
+            </p>
+          </div>
+        </article>
+      </li>
+    </ol>
+  </section>
+
+  <section class="portfolio-section" aria-labelledby="research-title">
+    <div class="section-heading">
+      <p class="section-index">03</p>
+      <div>
+        <h2 id="research-title">Research, teaching &amp; recognition</h2>
+        <p>Work at the intersection of quantitative finance, machine learning, and economic systems.</p>
+      </div>
+    </div>
+    <div class="research-grid">
+      <article>
+        <p class="work-label">Publication</p>
+        <h3>Rough Volatility: An Agent-Based Model Approach</h3>
+        <p>Limit-order-book simulations exploring the microstructure mechanisms behind rough volatility.</p>
+        <a href="https://ssrn.com/abstract=5189552">Read on SSRN <span aria-hidden="true">↗</span></a>
+      </article>
+      <article>
+        <p class="work-label">Talk</p>
+        <h3>PyData Global 2025</h3>
+        <p>Optimal binning in logistic regression, from naive cuts to constrained optimization in regulated settings.</p>
+        <a href="{{ '/publications/' | relative_url }}">View talks and materials <span aria-hidden="true">→</span></a>
+      </article>
+      <article>
+        <p class="work-label">Teaching</p>
+        <h3>Applied quantitative reasoning</h3>
+        <p>Probability and problem-solving for graduate finance students, connected to risk and real decisions.</p>
+        <a href="{{ '/teaching/' | relative_url }}">Explore teaching <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
+    <div class="recognition-row">
+      <p><strong>Sorbonne Data Challenge 2024</strong><br>1st place · €6K prize</p>
+      <p><strong>Deloitte Credit Risk Competition 2023</strong><br>1st place</p>
+      <p><strong>ARPM Bootcamp</strong><br>GARP scholarship</p>
+    </div>
+  </section>
+
+  <section class="portfolio-section portfolio-split" aria-labelledby="background-title">
+    <div class="section-heading">
+      <p class="section-index">04</p>
+      <div>
+        <h2 id="background-title">Background</h2>
+      </div>
+    </div>
+    <div class="background-grid">
+      <div>
+        <h3>Education</h3>
+        <p><strong>MS II, Quantitative Finance &amp; Econometrics</strong><br>Sorbonne School of Economics · Rank 3/26</p>
+        <p><strong>MS I, Finance: Treasury &amp; Risk Management</strong><br>Sorbonne School of Economics · Rank 5/24</p>
+      </div>
+      <div>
+        <h3>Core practice</h3>
+        <p>Python, SQL, PostgreSQL, Dataiku, Polars, PyTorch, scikit-learn, Airflow, FastAPI, Tableau, GitLab CI/CD.</p>
+        <p>Model monitoring, credit analytics, stress testing, MLOps, agentic AI, time series, and AI governance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-section" aria-labelledby="notes-title">
+    <div class="section-heading">
+      <p class="section-index">05</p>
+      <div>
+        <h2 id="notes-title">Latest notes</h2>
+        <p>Technical notes and observations from ongoing work and research.</p>
+      </div>
+    </div>
+    {% if site.posts.size > 0 %}
+      <ul class="post-list portfolio-post-list">
+        {% for post in site.posts limit: 3 %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <div class="post-meta">{{ post.date | date: '%B %d, %Y' }}</div>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No entries yet.</p>
+    {% endif %}
+  </section>
+
+  <section class="portfolio-contact" aria-labelledby="contact-title">
+    <p class="portfolio-kicker">Contact</p>
+    <h2 id="contact-title">Interested in quantitative risk, applied AI, or research collaboration?</h2>
+    <p>I am always glad to exchange ideas with researchers and practitioners working on consequential problems.</p>
+    <div class="portfolio-actions">
+      <a class="portfolio-action portfolio-action-primary" href="mailto:{{ site.email }}">Email me</a>
+      <a class="portfolio-action" href="{{ site.linkedin_url }}">LinkedIn <span aria-hidden="true">↗</span></a>
+      <a class="portfolio-action" href="https://github.com/{{ site.github_username }}">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</div>
