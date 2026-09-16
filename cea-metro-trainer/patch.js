@@ -1,0 +1,1 @@
+(()=>{const examBtn=document.getElementById('exam');if(!examBtn)return;examBtn.onclick=()=>{const subjects=['Finance','Stats','Non-vie','Vie'];let ids=[];subjects.forEach(s=>{ids=ids.concat(shuffle(Q.filter(x=>x.s===s).map(x=>x.id)).slice(0,14))});subject='Tous';sourceYear='Tous';renderFilters();start(ids,56)};})();
