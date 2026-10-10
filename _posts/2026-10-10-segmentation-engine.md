@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "From 10 Million Customer Events to Business Decisions"
-description: "Building a deployed interactive segmentation engine using Streamlit, Python, Polars and C++."
+description: "Building a deployed interactive segmentation engine using Streamlit, Python, Polars, Cython and C++."
 date: 2026-10-10 15:30:00 +0200
 category: ENGINEERING CASE STUDY
-tags: [Streamlit, Python, Polars, C++, Performance]
+tags: [Streamlit, Python, Polars, Cython, C++, Performance]
 ---
 
 *The hardest part of analyzing ten million customer events was not their volume. It was letting business users explore arbitrary segments, repeatedly, without writing code or waiting for a bespoke report.*
@@ -13,7 +13,7 @@ tags: [Streamlit, Python, Polars, C++, Performance]
 
 We needed to analyze approximately **10 million customer events** across multiple axes. A static dashboard could display predefined aggregations, but users needed to explore new combinations on demand: Which populations perform well? Which pockets underperform? What do those differences represent in **euros and event counts**?
 
-The solution was an interactive, **deployed Streamlit application** backed by a calculation engine using **Python, Polars and C++**. Users could narrow the data along several dimensions, inspect a segment, change the selection and immediately recompute its KPIs.
+The solution was an interactive, **deployed Streamlit application** backed by a calculation engine using **Python, Polars, Cython and C++**. Users could narrow the data along several dimensions, inspect a segment, change the selection and immediately recompute its KPIs.
 
 The experience resembled a decision tree, except the business user chose the splits. It was **not a trained decision-tree model**: it was multidimensional, guided analytical exploration.
 
@@ -59,7 +59,7 @@ Suppose a year of data contained **10 million events worth €180 million**. A u
 
 The interesting business question is why a population contributing **3% of events** represents **10% of monetary exposure**, while amount-based performance trails count-based performance. This creates a hypothesis for investigation, **not proof of a causal effect**. An inefficient amount is not automatically recoverable revenue.
 
-## Four technologies, one interactive workload
+## An interactive workload across Python, Cython and C++
 
 The public architectural description is deliberately conceptual:
 
@@ -72,7 +72,10 @@ Streamlit: choose filters and comparison axes
      v
 Python: orchestrate each selection and KPI request
      |
-     +---- C++: performance-critical filter evaluation
+     +---- Cython: compiled Python/C++ interface
+     |         |
+     |         v
+     |       C++: performance-critical filtering
      |
      +---- Polars: columnar aggregation and summarization
      |
@@ -83,9 +86,44 @@ Counts, amounts, monthly averages, rates, segment weights
 Streamlit: render updated business view
 ```
 
-**Streamlit** provided an accessible interface. **Python** coordinated the application and calculations. **Polars** handled columnar computations. **C++** accelerated performance-sensitive filtering paths. The exact binding, execution boundaries and proprietary source code are not presented here.
+**Streamlit** provided an accessible interface. **Python** coordinated the application and calculations. **Polars** handled columnar computations. **Cython** formed the compiled interface between Python and C++, and **C++** accelerated performance-sensitive filtering paths. The precise native APIs, ownership model and proprietary source code are not presented here.
 
 The central engineering challenge was **not a single batch query**. Filters changed repeatedly, requiring fast recalculation of related numerators and denominators while preserving correctness.
+
+## Bridging Python and C++ with Cython
+
+**Cython was the integration layer**, not simply another framework on the technology list. It let the Python application call compiled routines without exposing C++ complexity to the Streamlit interface.
+
+This boundary matters for repeated interactive requests. Compiled native filtering can be fast, but each request still incurs the costs of argument validation, conversion or copying (if needed), calling the compiled code and presenting its results back in Python. The engineering target is the **whole operation**, not only the C++ loop.
+
+To demonstrate the mechanism without publishing employer code, consider this *illustrative* Cython interface for a much smaller operation: counting matches in a contiguous `int32` array.
+
+```cython
+# segment_bridge.pyx — public illustration, not production code
+from libc.stdint cimport int32_t
+from libc.stddef cimport size_t
+
+cdef extern from "segment_core.hpp":
+    size_t count_matches(const int32_t* codes,
+                         size_t length,
+                         int32_t target) nogil
+
+def count_filtered(const int32_t[::1] codes, int target):
+    cdef Py_ssize_t length = codes.shape[0]
+    cdef size_t matches
+    if length == 0:
+        return 0
+    with nogil:
+        matches = count_matches(&codes[0], <size_t>length,
+                                <int32_t>target)
+    return matches
+```
+
+Here a Cython **typed memoryview** describes the contiguous input and the declaration exposes a C++ function through a compiled extension. A public C++ header and extension build configuration would be required to actually compile this small example. Releasing the GIL is safe only if the called routine does not touch Python objects and is thread-safe for concurrent calls.
+
+This is **not** the actual implementation of our multi-axis filter engine; it deliberately demonstrates only the boundary. A real multi-axis implementation may combine masks or row indices, and its best interface depends on the data layout.
+
+One subtlety: a Polars column exported to a NumPy array or other buffer **does not always imply zero-copy**. Nulls, type conversions, memory layout and ownership can force allocations. Any honest benchmark of a Polars–Cython–C++ path must include those costs and verify the lifetime of the input buffer.
 
 ## Optimizing for response time rather than benchmark theater
 
@@ -97,7 +135,7 @@ The practical principles are:
 2. Minimize intermediate materialization and avoid transferring unnecessary columns.
 3. Keep the hot filtering path small, but rely on Polars for operations it already optimizes well.
 4. Recompute dependent metrics from the same segment definition, with unambiguous denominators.
-5. Benchmark entire interactions, including Python/native overhead, aggregation and rendering.
+5. Benchmark entire interactions, including Cython boundary overhead, any copies, aggregation and rendering.
 
 Streamlit reruns application code in response to widget changes. Efficient applications make careful choices about what is reused across reruns, what must be recalculated and what state must stay isolated per user. The use of shared caches or state requires particular care in a multi-user setting.
 
@@ -123,7 +161,7 @@ The result was a business-facing tool that made multidimensional segmentation po
 
 This project shaped my engineering philosophy: **optimization starts with an actual user workflow**. A fast algorithm matters because it allows someone to ask a second question, challenge the first answer and reach a better decision while they are still exploring.
 
-A natural public companion project is a fully synthetic benchmark that compares alternative filtering engines on reproducible event data, records p50/p95 interaction latency, validates KPI invariants and reports the costs of crossing Python/C++ boundaries. Those results would describe the public experiment, not the proprietary application.
+A natural public companion project is a fully synthetic benchmark that compares pure Polars, Cython-wrapped native filtering and other approaches on reproducible event data, records p50/p95 interaction latency, validates KPI invariants and reports the costs of crossing Python/C++ boundaries. Those results would describe the public experiment, not the proprietary application.
 
 ---
 
