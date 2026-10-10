@@ -1,26 +1,26 @@
 ---
 layout: default
-title: Writing archive
-description: Research notes and posts collected in one LaTeX-inspired archive.
+title: Engineering notebook | Charaf Zguiouar
+description: Practical writing about Polars, Python, SQL, ETL architecture, data quality and operating reliable data systems.
+permalink: /blog/
 ---
 
-<section class="home-section">
-  <h1>Archive</h1>
-  <p>
-    Every entry is a small research memo or technical walkthrough. Browse the full list below or use the
-    navigation to return home.
-  </p>
+<section class="eng-archive">
+  <p class="eng-overline">FIELD NOTES / ENGINEERING</p>
+  <h1>Things I learned building <em>real</em> data systems.</h1>
+  <p class="eng-archive-lede">Benchmarks you can reproduce. Pipelines that handle imperfect inputs. System design decisions with explicit trade-offs. No unexplained speed-up claims.</p>
   {% if site.posts.size > 0 %}
-    <ul class="post-list">
+    <div class="eng-article-list">
       {% for post in site.posts %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          <div class="post-meta">{{ post.date | date: '%B %d, %Y' }}</div>
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
-        </li>
+      <article class="eng-article-row">
+        <div class="eng-article-meta"><span>{{ post.date | date: '%d %b %Y' }}</span><span>{{ post.category | default: 'NOTE' }}</span></div>
+        <div><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><p>{{ post.description | default: post.excerpt | strip_html | truncate: 220 }}</p>{% if post.tags %}<p class="eng-tags">{% for tag in post.tags %}<span>{{ tag }}</span>{% endfor %}</p>{% endif %}</div>
+        <span class="eng-article-arrow" aria-hidden="true">↗</span>
+      </article>
       {% endfor %}
-    </ul>
+    </div>
   {% else %}
-    <p>No entries just yet.</p>
+    <p>New engineering notes are on the way.</p>
   {% endif %}
+  <p class="eng-disclaimer">Examples use synthetic or public data and are independent of proprietary systems.</p>
 </section>
