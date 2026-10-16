@@ -16,7 +16,8 @@ const Engine = (()=>{
   return shuffle(list).sort((a,b)=>priority(a)-priority(b));
   function priority(q){const p=progress[q.id];return !p?1:p.due<=now?0:2;}
  }
+ function balanced(questions, quotas, rng=Math.random){const out=[];for(const [topic,n]of Object.entries(quotas)){const choices=shuffle(questions.filter(q=>q.topic===topic),rng);if(choices.length<n)throw Error('Not enough questions for '+topic);out.push(...choices.slice(0,n));}return shuffle(out,rng);}
  function accuracy(progress){const p=Object.values(progress);const n=p.reduce((s,x)=>s+x.attempts,0);return n?Math.round(100*p.reduce((s,x)=>s+x.correct,0)/n):null;}
- return {DAY,shuffle,schedule,pool,accuracy};
+ return {DAY,shuffle,schedule,pool,accuracy,balanced};
 })();
 if(typeof module!=='undefined')module.exports=Engine;
