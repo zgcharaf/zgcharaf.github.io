@@ -11,9 +11,9 @@ const Coach=(()=>{
  function summary(questions,progress,skills){return skills.map(skill=>{
   const qs=questions.filter(q=>q.skill===skill.id),seen=qs.filter(q=>progress[q.id]),known=seen.filter(q=>typeof progress[q.id].firstCorrect==='boolean'),firstRight=known.filter(q=>progress[q.id].firstCorrect).length;
   const unresolved=seen.filter(q=>pending(progress[q.id])).length,confidentWrong=seen.filter(q=>pending(progress[q.id])&&progress[q.id].wrongConfidence==='high').length;
-  const firstAccuracy=known.length?firstRight/known.length:null,weak=unresolved>0||(known.length>=3&&firstAccuracy<.7);
+  const firstAccuracy=known.length?firstRight/known.length:null,weak=unresolved>0;
   const evidence=known.length>=3?'sampled':seen.length?'limited':'unassessed';
-  return {...skill,total:qs.length,seen:seen.length,firstCount:known.length,firstRight,firstAccuracy,unresolved,confidentWrong,weak,evidence,priority:unresolved*3+confidentWrong*4+(known.length>=3?(1-firstAccuracy)*3:0)};
+  return {...skill,total:qs.length,seen:seen.length,firstCount:known.length,firstRight,firstAccuracy,unresolved,confidentWrong,weak,evidence,priority:unresolved*3+confidentWrong*4+(unresolved>0&&known.length>=3?(1-firstAccuracy)*3:0)};
  });}
  function select(questions,progress,skills,{count=10,skill=null,diagnostic=false,evidence=questions,now=Date.now(),rng=Math.random}={}){
   const rows=summary(evidence,progress,skills),map=Object.fromEntries(rows.map(r=>[r.id,r]));

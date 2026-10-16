@@ -174,7 +174,7 @@ document.addEventListener('click',e=>{
 document.addEventListener('input',e=>{if(e.target.id==='formula-search'){search=e.target.value;$('#formula-list').innerHTML=formulaList(FORMULAS.filter(f=>(filter==='all'||f[0]===filter)&&f.join(' ').toLowerCase().includes(search.toLowerCase())));}});
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;});
 window.addEventListener('online',()=>{if(page==='home')render();});window.addEventListener('offline',()=>{if(page==='home')render();});
-async function checkOffline(){try{const cache=await caches.open('frm-pocket-v3');offlineReady=!!(await cache.match(new URL('./index.html',location.href).href));if(page==='home')render();}catch(e){offlineReady=false;}}
+async function checkOffline(){try{const cache=await caches.open('frm-pocket-v4');offlineReady=!!(await cache.match(new URL('./index.html',location.href).href));if(page==='home')render();}catch(e){offlineReady=false;}}
 if('serviceWorker'in navigator){navigator.serviceWorker.addEventListener('controllerchange',checkOffline);navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(()=>navigator.serviceWorker.ready).then(checkOffline).catch(()=>{offlineReady=false;});}
 window.addEventListener('hashchange',()=>{if(location.hash==='#home')navigate('home');});
 render();
