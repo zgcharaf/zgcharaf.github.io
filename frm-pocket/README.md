@@ -5,8 +5,8 @@ Une station, une notion. Application mobile de révision FRM II, sans serveur ni
 ## Utilisation
 
 - Sessions de 5, 10 ou 20 questions, à rythme libre. Repère de cadence pour les cas appliqués : 3 minutes par question.
-- 140 questions originales en anglais : 60 fondamentaux et 80 cas Exam-style, avec corrections et repères en français.
-- 140 cartes liées aux mêmes questions, avec auto-évaluation et suivi séparé.
+- 188 questions originales en anglais : 60 fondamentaux, 80 cas Exam-style et 48 cas Challenge, avec corrections et repères en français.
+- 212 cartes : 188 cartes liées aux questions et 24 cartes de raisonnement ouvertes, avec auto-évaluation et suivi séparé.
 - 22 formules avec hypothèses, recherche et filtres par domaine.
 - Répétition espacée : erreur après 10 minutes ; rappel hésitant le lendemain ; rappel solide après 1 puis 3 jours, puis intervalles croissants.
 - Favoris, notes, reprise après interruption, objectif quotidien et historique.
@@ -14,6 +14,29 @@ Une station, une notion. Application mobile de révision FRM II, sans serveur ni
 - PWA : installation sur l’écran d’accueil et fonctionnement hors ligne après un premier chargement complet. Attendre « Disponible hors ligne ».
 
 Sur iPhone : ouvrir dans Safari, Partager → Sur l’écran d’accueil. Ouvrir ensuite la version installée avec une connexion. Les espaces de stockage du navigateur et de l’app installée peuvent être distincts : exporter/importer la progression si nécessaire.
+
+## Coach et Challenge — version 3
+
+48 nouveaux cas plus exigeants (25 avec contrôle numérique indépendant) et 24 cartes de raisonnement ouvertes. Deux cas Challenge par groupe de compétence ; huit cas par domaine. Cette banque ciblée n’est pas répartie selon le blueprint de l’examen : le bloc Exam-style de 20 questions conserve sa répartition 4/4/4/3/3/2.
+
+### Boucle de travail
+
+1. Ouvrir Coach, puis lancer le diagnostic de 12 questions (deux par domaine).
+2. Répondre et, facultativement, indiquer son degré de certitude avant de valider.
+3. Pour une erreur, revoir le choix incorrect et le corrigé, choisir soi-même une cause (concept, formule, calcul, lecture ou réponse devinée), puis écrire une règle de correction.
+4. Utiliser les questions ciblées et cartes liées du groupe de compétence.
+5. Revenir pour les rappels différés. Une erreur reste à consolider jusqu’à deux réussites espacées sur deux jours distincts, chacune au moins dix minutes après l’erreur la plus récente. Une nouvelle erreur réinitialise cette étape.
+
+### Preuves et limites
+
+- Le suivi comporte 24 groupes de compétences. Sans réponse, le groupe est non évalué. Avec moins de trois premiers essais connus, le signal est limité.
+- Les premiers essais sont observés une seule fois par question après cette mise à jour. Pour des questions déjà travaillées dans les versions précédentes, le premier résultat est inconnu : il n’est pas reconstitué à partir du taux historique.
+- Les reprises n’améliorent pas rétroactivement le premier résultat. Une erreur faite avec certitude est signalée pour attirer l’attention, sans prétendre en déduire sa cause.
+- Les cartes sont auto-évaluées et ne contribuent pas au score objectif des premiers essais en QCM. Les 24 cartes dédiées demandent une réponse ouverte ; les cartes liées aux QCM affichent les propositions et demandent une justification mentale avant révélation.
+- L’entraînement ciblé choisit parmi les banques avancées : erreurs arrivées à échéance, questions inédites sur les compétences fragiles, exploration et rappels, avec diversification des groupes. Il évite une reprise avant son échéance ; une session peut être plus courte quand le stock éligible est épuisé.
+- Les références de lecture repèrent les sujets. La difficulté n’est pas calibrée sur les questions officielles et le tableau de compétences n’est pas une prédiction de réussite.
+
+Le carnet, les causes déclarées, les règles et un maximum de 2 000 réponses détaillées sont enregistrés dans le navigateur et inclus dans l’export JSON. Les anciens identifiants, la clé de stockage et les sessions sont conservés. Pas de télémetrie ni de lecture à distance de la progression du téléphone. Le cache et les URLs de ressources sont passés à v3.
 
 ## Extension Exam-style — 16 octobre 2026
 
@@ -56,12 +79,12 @@ python -m http.server 8000
 node tests/verify.cjs
 ```
 
-`data.js` contient les fondamentaux et formules ; `exam.js` contient les 80 cas appliqués ; `engine.js` la logique de révision ; `app.js` l’interface. `sw.js` met en cache uniquement les fichiers de l’application et limite son interception à son propre dossier. Lors d’une mise à jour, incrémenter le nom du cache dans `sw.js` et la vérification correspondante dans `app.js`.
+`data.js` contient les fondamentaux et formules ; `exam.js` contient les 80 cas appliqués ; `challenge.js` contient les 48 cas avancés, les 24 cartes ouvertes et la classification des compétences ; `coach.js` contient les règles adaptatives locales ; `engine.js` la logique de révision ; `app.js` l’interface. `sw.js` met en cache uniquement les fichiers de l’application et limite son interception à son propre dossier. Lors d’une mise à jour, incrémenter le nom du cache dans `sw.js` et la vérification correspondante dans `app.js`.
 
 Pour GitHub Pages, publier le contenu de `dist/` dans un dossier dédié, par exemple `frm-pocket/`. Les URLs et le scope du service worker sont relatifs. Pas besoin de modifier le site parent ni son workflow Pages.
 
 ## Vérification
 
-27 vérifications Node : banque et réponses, pages, scoring sans double comptage, sauvegarde de session, quiz/cartes séparés, échéances, filtres, échappement du texte, présence des ressources hors ligne, formules numériques. Les calculs des 46 nouvelles questions numériques sont recomputés indépendamment, y compris la cohérence des options sélectionnées. Les filtres, proportions du bloc mixte et sauvegardes antérieures sont contrôlés. Les interactions DOM sont simulées ; affichage, installation et mode avion sur iPhone restent à vérifier sur l’appareil réel.
+42 vérifications Node : banque et réponses, pages, scoring sans double comptage, sauvegarde de session, quiz/cartes séparés, échéances, filtres, échappement du texte, présence des ressources hors ligne, formules numériques. Les calculs des 46 nouvelles questions numériques sont recomputés indépendamment, y compris la cohérence des options sélectionnées. Les filtres, proportions du bloc mixte et sauvegardes antérieures sont contrôlés. Les interactions DOM sont simulées ; affichage, installation et mode avion sur iPhone restent à vérifier sur l’appareil réel.
 
 La progression est locale au navigateur. Aucun compte, télémétrie, clé API ou synchronisation cloud dans le code de l’application.
