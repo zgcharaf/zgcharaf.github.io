@@ -2,6 +2,33 @@
 
 Une station, une notion. Application mobile de révision FRM II, sans serveur ni dépendance externe.
 
+## Version 5 — préparation et évaluations, 17 octobre 2026
+
+- **Préparation /100 et courbe dans le temps**, visibles sur Accueil et Coach, avec relevés chiffrés accessibles. Historique créé à partir des observations réelles, jamais reconstitué à partir d’anciennes moyennes.
+- **40 questions originales réservées** aux checkpoints : 8 Market, 8 Credit, 8 Operational, 6 Liquidity, 6 Investment, 4 Current Issues. Deux blocs inédits de 20 si la réserve n’a pas été entamée. Banque totale : 228 questions, dont 188 accessibles en entraînement habituel ; 212 cartes inchangées. Les 29 nouveaux cas numériques sont recomputés indépendamment.
+- **Évaluations sans corrigé immédiat** : checkpoint 20 Q /60 min, bloc 10 Q /30 min, mock 80 Q /4 h en proportions 16/16/16/12/12/8. Réponses modifiables, drapeaux, grille de navigation, contrôle des réponses manquantes et remise explicite. Le délai absolu persiste après fermeture ; une copie échue est remise à la réouverture avec les choix sauvegardés. Les questions sans réponse sont incorrectes. Remise sans double comptage ; résultats inédits et déjà vus séparés.
+- **Mini-leçons persistantes** : piège du choix incorrect, explication, reformulation personnelle sauvegardée à la saisie, comparaison au repère et auto-vérification, autre cas du même objectif si disponible sinon du même groupe (limite signalée), puis contrôle après 24 h. La reformulation n’est pas automatiquement notée. Les variantes ne consomment pas la réserve de checkpoints.
+- **Objectifs 2026** : inventaire de 107 lectures et 591 objectifs. Les numéros d’objectifs après le point sont locaux et suivent l’ordre des puces dans le guide officiel ; le libellé complet est accessible dans ce guide. 143 questions sont précisément reliées à 77 objectifs. Les autres références restent générales ; aucun crédit automatique pour toute une lecture. Les lacunes sont affichées. Les références LCR/NSFR sont corrigées vers ORR-22.
+- **Détails des erreurs** par cas, objectif, choix et raison associée, avec cause déclarée, erreurs faites avec certitude et leçon correspondante.
+- **Sauvegarde** : rappel hebdomadaire après 10 réponses, export/import incluant score, relevés, leçons, réserve utilisée et copie active. Clé locale et identifiants précédents conservés. Cache et URLs passés à v5 avec les nouveaux modules. Aucun compte ni synchronisation cloud.
+
+### Indice d’étude /100 : formule v1
+
+Fenêtre glissante de 42 jours. 60 points de performance sur premières réponses inédites aux cas appliqués/Challenge/checkpoint, pondérés par domaines 20/20/20/15/15/10 ; 20 points d’étendue (jusqu’à deux réponses inédites réussies par chacun des 24 groupes) ; 10 points de rétention (dernière réponse objective après au moins 24 h depuis la dernière réponse et le dernier affichage, sur 24 questions) ; 10 points de réponses inédites correctes en évaluations chronométrées (20 questions pour le plein poids). Le total est arrondi. Un domaine non évalué contribue zéro ; le signal reste provisoire avant 40 réponses inédites, dont au moins quatre par domaine.
+
+Les fondamentaux, cartes auto-évaluées et répétitions immédiates ne donnent pas de points de performance. Une question déjà pratiquée ou affichée en carte/corrigé dans l’app ne compte pas comme inédite. Ce suivi des affichages commence en v5 ; une ancienne première réponse n’est pas inventée. Les erreurs peuvent faire baisser le score ; les preuves vieillissantes sortent de la fenêtre. L’indice n’est ni une probabilité de réussite, ni une estimation de note GARP. L’étendue de 24 groupes ne prouve pas une couverture intégrale du programme. Les questions sont originales, indépendantes et non étalonnées sur l’examen officiel.
+
+### Vérification v5
+
+71 vérifications Node couvrent l’ancien comportement et les nouveaux calculs, les réserves, la séparation des corrigés, les drapeaux et choix modifiables, le délai absolu et la récupération, les leçons et contrôles différés, les mappings d’objectifs, l’échappement du texte et les sauvegardes. `node tests/offline.cjs` vérifie l’installation du cache, l’isolation des mises à jour, le repli hors ligne et le scope du service worker. Les interactions DOM sont simulées ; Safari, installation et mode avion sur iPhone physique restent à vérifier sur l’appareil.
+
+```bash
+node tests/verify.cjs
+node tests/offline.cjs
+```
+
+Les sections suivantes documentent aussi les versions antérieures ; la description v5 ci-dessus fait référence pour le comportement actuel.
+
 ## Utilisation
 
 - Sessions de 5, 10 ou 20 questions, à rythme libre. Repère de cadence pour les cas appliqués : 3 minutes par question.

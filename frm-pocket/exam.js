@@ -248,17 +248,17 @@ addExam('operational','ORR–1 / ORR–4','Impact tolerance and recovery depende
 'Le service complet ne reprend pas tant qu’une dépendance indispensable reste indisponible. Le test bout en bout peut donc montrer un dépassement des quatre heures, même si une application isolée atteint son objectif de reprise.',
 ['Confond reprise d’un composant et continuité du service.','Les délais des dépendances ne s’agrègent pas par moyenne.','Évalue le service critique dans son ensemble.','Un objectif documenté n’annule pas une dépendance réelle.'],'La reprise se mesure bout en bout.');
 // LIQUIDITY AND TREASURY — 12
-addExam('liquidity','LTR–8','LCR inflow cap',
+addExam('liquidity','ORR–22','LCR inflow cap',
 'A bank has EUR 40m of eligible HQLA after all asset adjustments, EUR 100m of gross stressed 30-day outflows and EUR 90m of eligible inflows before the inflow cap. Assume inflows are capped at 75% of gross outflows and no exemptions apply. The LCR is:',
 ['40%','160%','300%','400%'],1,
 'Inflows retenus = min(90,0,75×100) = 75 M€. Sorties nettes = 100−75 = 25 M€. LCR = 40/25 = 160 %. Utiliser 90 sans plafond donnerait à tort 400 %.',
 ['Utilise les sorties brutes sans reconnaître les inflows autorisés.','Applique d’abord le plafond d’inflows.','Ne correspond pas aux sorties nettes réglementaires données.','Ignore le plafond et retient 90 d’inflows.'],'Le plafond d’inflows vient avant le ratio.',{value:160,unit:'percent',check:'lcrCap'});
-addExam('liquidity','LTR–8','HQLA haircut and Level 2 cap',
+addExam('liquidity','ORR–22','HQLA haircut and Level 2 cap',
 'A bank has EUR 60m of Level 1 assets and EUR 60m market value of Level 2A assets. For this exercise, apply a 15% Level 2A haircut and cap all Level 2 assets at 40% of total eligible HQLA. Assume no other adjustments or secured transactions. Eligible HQLA is closest to:',
 ['EUR 84m','EUR 100m','EUR 111m','EUR 120m'],1,
 'Après haircut, Level 2A = 60×0,85 = 51. Avec 60 de Level 1, le plafond impose L2/(60+L2) ≤ 40 %, donc L2 ≤ 40. HQLA = 60+40 = 100 M€.',
 ['Applique le plafond de 40 % directement aux seuls actifs Level 1.','Combine haircut puis plafond portant sur le total.','Applique le haircut mais omet le plafond de composition.','Omet haircut et plafond.'],'Un plafond de composition porte sur le total final.',{value:100,unit:'EUR m',check:'hqlaCap'});
-addExam('liquidity','LTR–8','NSFR with weighted funding and assets',
+addExam('liquidity','ORR–22','NSFR with weighted funding and assets',
 'Assume a bank has EUR 100m of deposits assigned a 95% ASF factor and EUR 40m of funding assigned 50% ASF. Its assets are EUR 100m of loans at an 85% RSF factor and EUR 20m of assets at 5% RSF. There are no other items. Its NSFR is closest to:',
 ['74.8%','95.8%','115.0%','133.7%'],3,
 'ASF = 100×0,95 + 40×0,50 = 115. RSF = 100×0,85 + 20×0,05 = 86. NSFR = 115/86 = 133,72 %. Les facteurs de stabilité sont appliqués à chaque catégorie avant l’agrégation.',
