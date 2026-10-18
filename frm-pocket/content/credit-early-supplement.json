@@ -1,0 +1,1086 @@
+{
+  "questions": [
+    {
+      "id": "yc001",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-2.2",
+      "reading": "CR-2",
+      "concept": "Origination stages and commitment timing",
+      "question": "A deal team signs a legally binding commitment before independent credit assessment, relying on a later committee meeting to approve the risk. The agreement gives the bank no credit-related withdrawal right. Which process criticism is strongest?",
+      "choices": [
+        "The later committee can eliminate the exposure by recording a rejection internally.",
+        "Origination is complete once the client signs, so assessment belongs only in annual monitoring.",
+        "The bank has taken a contractual risk before its assessment and approval process could meaningfully control that commitment.",
+        "Independent assessment is redundant once expected revenue is included in the signed term sheet."
+      ],
+      "answer": 2,
+      "explanation": "Le contrôle doit pouvoir influencer la prise de risque avant que celle-ci devienne irrévocable. Un refus interne ultérieur ne défait pas une obligation contractuelle sans droit de retrait.",
+      "why": [
+        "Une décision interne n’annule pas à elle seule le contrat.",
+        "La surveillance n’est pas un substitut à l’évaluation préalable.",
+        "L’ordre du processus détermine si l’approbation est encore un véritable contrôle.",
+        "La rentabilité annoncée n’établit pas l’acceptabilité du risque."
+      ],
+      "cue": "À quel instant l’engagement devient-il opposable, et qui a approuvé avant?",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 2,
+        "pdfPages": [
+          27,
+          33
+        ]
+      }
+    },
+    {
+      "id": "yc002",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-3.1",
+      "reading": "CR-3",
+      "concept": "Lending policy as a lifecycle framework",
+      "question": "A bank’s lending policy specifies a target return and an approval signature but leaves collateral valuation, exceptions, maturity limits and collection responsibilities to informal local practice. Which revision best addresses the policy weakness?",
+      "choices": [
+        "Add documented product and maturity boundaries, valuation and monitoring standards, exception governance and collection responsibilities across the loan lifecycle.",
+        "Raise the target return until it covers the highest recent realized loss.",
+        "Require the same collateral discount for every asset and borrower, regardless of enforceability or marketability.",
+        "Retain local practices but replace the approval signature with a longer checklist that has no assigned owners."
+      ],
+      "answer": 0,
+      "explanation": "Une politique de crédit doit organiser l’octroi puis le suivi et le recouvrement. Rendement et signature ne couvrent pas les limites, méthodes, exceptions et responsabilités nécessaires.",
+      "why": [
+        "Ces éléments rendent les règles applicables pendant toute la vie du crédit.",
+        "Un rendement plus élevé ne répare pas des contrôles absents.",
+        "Une règle uniforme non liée au risque peut rester inadéquate.",
+        "Une liste sans responsabilité ni standard ne résout pas le défaut de gouvernance."
+      ],
+      "cue": "Une politique efficace indique quoi accepter, qui décide et comment surveiller ensuite.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 3,
+        "pdfPages": [
+          37,
+          40
+        ]
+      }
+    },
+    {
+      "id": "yc003",
+      "topic": "credit",
+      "skill": "c-exposure",
+      "objective": "CR-3.3",
+      "reading": "CR-3",
+      "concept": "Facility allocation without double use of capacity",
+      "question": "A corporate facility has an approved combined risk limit of EUR 50m. Current utilization is EUR 30m in loans and EUR 15m in guarantees, with no separate product sublimit restricting the residual capacity. Each product desk then approves another EUR 5m because its own system displays the same EUR 5m of unused combined capacity. Assume both new uses consume capacity one-for-one. What is the central allocation failure?",
+      "choices": [
+        "Guarantees never consume a financing facility because they are off balance sheet.",
+        "Both desks may each use the same residual combined capacity unless sublimits and aggregate utilization are coordinated.",
+        "Product allocations establish separate legal borrower groups, making the combined limit unnecessary.",
+        "A future annual review automatically authorizes excess utilization today."
+      ],
+      "answer": 1,
+      "explanation": "Les sous-limites ne doivent pas permettre d’utiliser deux fois une capacité commune. Les emplois au bilan et hors bilan doivent être suivis sur une base cohérente et agrégée selon la politique.",
+      "why": [
+        "Leur consommation dépend de la mesure approuvée; ici elle vaut un pour un.",
+        "La coordination du disponible évite une autorisation concurrente sur la même capacité.",
+        "Des produits différents ne créent pas des groupes de risque indépendants.",
+        "Un contrôle futur ne vaut pas autorisation présente."
+      ],
+      "cue": "Le disponible commun ne peut pas être promis simultanément par deux systèmes.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 3,
+        "pdfPages": [
+          37,
+          41
+        ]
+      }
+    },
+    {
+      "id": "yc004",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-3.5",
+      "reading": "CR-3",
+      "concept": "Provision expense versus allowance stock",
+      "question": "For this accounting exercise, opening loan-loss allowance is EUR 8m. A EUR 3m provision expense increases the allowance, EUR 4m of charge-offs reduces it, and EUR 1m of cash recoveries is credited to the allowance. There are no other entries. What is the closing allowance?",
+      "choices": [
+        "EUR 12m.",
+        "EUR 7m.",
+        "EUR 4m.",
+        "EUR 8m."
+      ],
+      "answer": 3,
+      "explanation": "Le stock se réconcilie avec ses mouvements: \\(8+3-4+1=8\\) M€. La provision est un flux de charge; elle n’est pas le stock final. Les conventions comptables du cas sont explicitement données.",
+      "why": [
+        "Ignore les charge-offs qui consomment le stock.",
+        "Oublie le recouvrement crédité à l’allowance.",
+        "Retire les charge-offs sans ajouter les autres mouvements.",
+        "Réconcilie stock initial, dotation, consommation et recouvrement."
+      ],
+      "cue": "Distingue le flux de dotation du stock de couverture.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 3,
+        "pdfPages": [
+          43,
+          44
+        ]
+      },
+      "numeric": {
+        "expression": "8+3-4+1",
+        "value": 8,
+        "optionValue": 8,
+        "tolerance": 1e-08
+      }
+    },
+    {
+      "id": "yc005",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-3.6",
+      "reading": "CR-3",
+      "concept": "Expected loss coverage versus adverse deviation",
+      "question": "A bank’s prices and provisions fully cover its unbiased expected credit loss estimate. Management concludes that additional loss-absorbing capacity is unnecessary. Which qualification is most important?",
+      "choices": [
+        "Covering the mean does not cover adverse deviations around it; the distribution and chosen solvency standard determine the additional buffer.",
+        "Expected loss and unexpected loss are the same amount whenever PD is estimated without bias.",
+        "Once the mean is covered, only interest-rate risk can produce further losses.",
+        "Provisions remove the economic dependence between borrowers by reducing their recorded carrying values."
+      ],
+      "answer": 0,
+      "explanation": "L’EL est une moyenne probabilisée. Même juste et couverte, elle ne borne pas les réalisations défavorables. Le capital et les autres mitigants répondent à la dispersion et à la queue sous un objectif explicite.",
+      "why": [
+        "La moyenne et les scénarios extrêmes sont des quantités distinctes.",
+        "L’absence de biais ne supprime pas la variance.",
+        "Les pertes de crédit peuvent dépasser leur moyenne.",
+        "Un traitement comptable ne change pas la dépendance économique."
+      ],
+      "cue": "Couvrir la moyenne n’est pas absorber la queue.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 3,
+        "pdfPages": [
+          43,
+          44
+        ]
+      }
+    },
+    {
+      "id": "yc006",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-3.9",
+      "reading": "CR-3",
+      "concept": "Credit analysis after rapid new-vintage growth",
+      "question": "A lender’s nonperforming-loan ratio falls after a large volume of new loans is originated. Most new loans have not yet reached their first material repayment date. Management calls this proof of better underwriting. Which analysis best challenges the claim?",
+      "choices": [
+        "Compare only total loan balances, because seasoning cannot affect a credit ratio.",
+        "Compare delinquency and loss paths for origination vintages at comparable ages, while examining changes in borrower mix and products.",
+        "Assume every new loan has the mature portfolio’s eventual realized loss rate.",
+        "Remove all older loans from reporting so the denominator reflects current origination strategy."
+      ],
+      "answer": 1,
+      "explanation": "La croissance du dénominateur avec des prêts non encore exposés aux mêmes échéances peut diluer le ratio. Une analyse par cohorte à âge comparable distingue effet de croissance et performance d’octroi.",
+      "why": [
+        "Les échéances et l’âge des prêts modifient le temps disponible pour observer les difficultés.",
+        "La comparaison contrôle le mécanisme de dilution et le changement de composition.",
+        "Cette hypothèse imposerait la conclusion au lieu de la tester.",
+        "Supprimer les anciennes cohortes masque les risques restants."
+      ],
+      "cue": "Compare les générations au même âge, pas seulement les ratios du jour.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 3,
+        "pdfPages": [
+          45,
+          46
+        ]
+      }
+    },
+    {
+      "id": "yc007",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-3.10",
+      "reading": "CR-3",
+      "concept": "Management capacity beyond policy existence",
+      "question": "A bank has approved credit manuals and a sophisticated rating model. However, account officers cannot obtain current borrower statements, collection teams have persistent vacancies, and exception reports reach the board two quarters late. Which board response best tests credit-risk management capacity?",
+      "choices": [
+        "Use the existence of approved manuals as sufficient evidence that capacity is adequate.",
+        "Focus solely on whether the rating algorithm has the highest available AUC.",
+        "Request evidence on process execution, staffing skills and workload, and the timeliness and completeness of information, with accountable remediation.",
+        "Delegate the assessment entirely to sales managers because they observe client demand directly."
+      ],
+      "answer": 2,
+      "explanation": "La capacité dépend du processus réellement exécuté, des équipes et de l’information disponible. Un manuel ou une bonne discrimination statistique ne compense pas un suivi impossible ou tardif.",
+      "why": [
+        "Le document ne prouve pas que les moyens d’exécution existent.",
+        "La prédiction n’assure ni le suivi ni le recouvrement.",
+        "L’évaluation couvre les trois dimensions opérationnelles pertinentes.",
+        "La surveillance doit intégrer une contestation indépendante et des preuves."
+      ],
+      "cue": "Processus, personnes, information: quelle pièce manque en pratique?",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 3,
+        "pdfPages": [
+          46,
+          47
+        ]
+      }
+    },
+    {
+      "id": "yc008",
+      "topic": "credit",
+      "skill": "c-pool",
+      "objective": "CR-4.1",
+      "reading": "CR-4",
+      "concept": "Economic capital with a discrete upper loss quantile",
+      "question": "A portfolio’s one-year loss is EUR 0m with probability 95%, EUR 10m with probability 4%, and EUR 40m with probability 1%. Define \\(Q_\\alpha=\\inf\\{x:F(x)\\ge\\alpha\\}\\) and economic capital as \\(Q_{99.5\\%}-E[L]\\). Available capital is EUR 30m. What is the economic-capital shortfall?",
+      "choices": [
+        "EUR 10.0m.",
+        "EUR 9.2m.",
+        "EUR 0m.",
+        "EUR 0.8m."
+      ],
+      "answer": 1,
+      "explanation": "La CDF atteint99% à10 M€ et100% à40 M€: le quantile99.5% vaut40. L’EL vaut \\(0.04(10)+0.01(40)=0.8\\). EC vaut39.2, donc manque \\(39.2-30=9.2\\) M€.",
+      "why": [
+        "Ne retire pas l’EL du quantile avant de comparer au capital.",
+        "Applique la convention de quantile, puis la définition du capital au-delà de l’EL.",
+        "Le capital30 est inférieur au besoin39.2.",
+        "C’est l’EL, pas le déficit de capital."
+      ],
+      "cue": "Calcule quantile, moyenne, puis buffer: trois étapes distinctes.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 4,
+        "pdfPages": [
+          54,
+          56
+        ]
+      },
+      "numeric": {
+        "expression": "40-(.04*10+.01*40)-30",
+        "value": 9.2,
+        "optionValue": 9.2,
+        "tolerance": 1e-08
+      }
+    },
+    {
+      "id": "yc009",
+      "topic": "credit",
+      "skill": "c-exposure",
+      "objective": "CR-4.2",
+      "reading": "CR-4",
+      "concept": "Exposure at default versus ordinary utilization",
+      "question": "For a revolving borrower group, utilization averages 30% in ordinary months but rises to 85% shortly before default. A risk estimate applies the ordinary 30% utilization to the defaulted exposure while using correctly estimated PD and LGD. What is the principal issue?",
+      "choices": [
+        "The correctly estimated PD makes utilization irrelevant to expected loss.",
+        "The ordinary utilization is automatically conservative because it averages more months.",
+        "The estimate should replace PD with the current drawdown percentage.",
+        "Exposure must reflect drawdown behavior relevant to default; an unconditional utilization average can understate EAD despite correct PD and LGD."
+      ],
+      "answer": 3,
+      "explanation": "L’EAD vise le montant exposé au défaut, non la moyenne des tirages tous états confondus. Un comportement de tirage défavorable peut accroître la perte au moment du défaut.",
+      "why": [
+        "La perte reste multipliée par le montant effectivement exposé.",
+        "Plus de périodes ne corrige pas un conditionnement inadapté.",
+        "PD et utilisation décrivent des mécanismes différents.",
+        "Le choix de l’exposition doit correspondre à l’événement de perte."
+      ],
+      "cue": "Quel encours existe quand le défaut survient?",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 4,
+        "pdfPages": [
+          50,
+          51
+        ]
+      }
+    },
+    {
+      "id": "yc010",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-4.3",
+      "reading": "CR-4",
+      "concept": "Expected loss with state-dependent credit inputs",
+      "question": "In a one-year two-state model, the normal state has probability 80%, conditional PD 1%, EAD EUR 10m and LGD 20%. The stress state has probability 20%, conditional PD 10%, EAD EUR 15m and LGD 60%. Within each state EAD and LGD are fixed; ignore discounting. What is unconditional expected loss?",
+      "choices": [
+        "EUR 86,240.",
+        "EUR 180,000.",
+        "EUR 196,000.",
+        "EUR 920,000."
+      ],
+      "answer": 2,
+      "explanation": "Calculer la perte moyenne dans chaque état puis pondérer: \\(0.8(0.01)(10)(0.2)+0.2(0.10)(15)(0.6)=0.196\\) M€. Multiplier les moyennes non conditionnelles des trois paramètres donnerait une autre quantité.",
+      "why": [
+        "Multiplie séparément les moyennes dePD,EAD etLGD, en perdant leur dépendance commune.",
+        "Ne conserve que la contribution de l’état stressé.",
+        "Pondère les produits cohérents à chaque état.",
+        "Additionne les EL des états sans pondérer leur probabilité."
+      ],
+      "cue": "Fais le produit dans chaque état avant de moyenner les états.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 4,
+        "pdfPages": [
+          50,
+          51
+        ]
+      },
+      "numeric": {
+        "expression": ".8*.01*10000000*.2+.2*.10*15000000*.6",
+        "value": 196000,
+        "optionValue": 196000,
+        "tolerance": 1e-08
+      }
+    },
+    {
+      "id": "yc011",
+      "topic": "credit",
+      "skill": "c-pool",
+      "objective": "CR-4.8",
+      "reading": "CR-4",
+      "concept": "Loss distribution support and moment fit",
+      "question": "A default-only portfolio has three fixed exposures whose maximum losses are EUR 5m, EUR 10m and EUR 20m. A fitted normal loss distribution matches mean and variance but assigns material probability to losses above EUR 35m and below zero. Which modeling challenge is most direct?",
+      "choices": [
+        "Matching two moments does not enforce the feasible loss support or validate the relevant upper tail.",
+        "A normal fit becomes exact once the exposure amounts are added correctly.",
+        "The portfolio must be assigned a negative recovery rate to accommodate losses above its maximum.",
+        "Mean and variance should be discarded because bounded loss distributions have no moments."
+      ],
+      "answer": 0,
+      "explanation": "La perte totale est bornée entre0 et35 M€ dans ce modèle. Une approximation ajustée aux deux premiers moments peut violer ces bornes ou représenter mal la queue utile au capital.",
+      "why": [
+        "La forme et les bornes sont des propriétés supplémentaires à contrôler.",
+        "L’agrégation des montants ne rend pas la loi normale exacte.",
+        "Il faut challenger le modèle plutôt que forcer des paramètres absurdes.",
+        "Une variable bornée possède au contraire des moments finis."
+      ],
+      "cue": "Un bon ajustement des moments ne valide ni le support ni la queue.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 4,
+        "pdfPages": [
+          55,
+          56
+        ]
+      }
+    },
+    {
+      "id": "yc012",
+      "topic": "credit",
+      "skill": "c-pool",
+      "objective": "CR-4.9",
+      "reading": "CR-4",
+      "concept": "Default-only capital omits migration value risk",
+      "question": "A bank starts actively marking and trading loans. Its credit-capital engine still models only one-year defaults and recoveries, treating all surviving loans as unchanged in value and estimating market risk separately without reconciliation. Which limitation has become more consequential?",
+      "choices": [
+        "The engine must use a longer Monte Carlo run before any conceptual review.",
+        "A default-only one-period approach can omit migration and market-value changes, and separate risk modules can miss their interactions.",
+        "Once loans are tradable, default losses no longer matter.",
+        "Using a one-year horizon guarantees that every relevant value change is represented."
+      ],
+      "answer": 1,
+      "explanation": "Une approche default-only simplifie les variations de qualité et de valeur des survivants. Quand les créances sont négociées, ces mouvements et leur articulation avec les risques de marché deviennent importants.",
+      "why": [
+        "Plus de simulations ne rajoute pas les canaux absents.",
+        "Le périmètre économique du modèle doit suivre l’usage des prêts et la mesure des pertes.",
+        "La négociabilité ne supprime pas le défaut.",
+        "La durée ne définit pas à elle seule les facteurs modélisés."
+      ],
+      "cue": "Le modèle mesure-t-il la perte pertinente pour l’usage actuel des actifs?",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 4,
+        "pdfPages": [
+          56
+        ]
+      }
+    },
+    {
+      "id": "yc013",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-5.2",
+      "reading": "CR-5",
+      "concept": "Horizon-consistent cumulative PD and EL",
+      "question": "A loan has a constant 2% annual conditional probability of default given survival. If default occurs during the next three years, EAD is fixed at EUR 50m and LGD at 40%. There are no repayments, recoveries beyond the stated LGD or discounting. What is expected loss over the three-year horizon?",
+      "choices": [
+        "EUR 0.40m.",
+        "EUR 1.20m exactly.",
+        "EUR 2.94m.",
+        "Approximately EUR 1.176m."
+      ],
+      "answer": 3,
+      "explanation": "La survie à trois ans vaut \\(0.98^3\\), donc PD cumulée \\(1-0.98^3=0.058808\\). La perte moyenne vaut \\(50(0.4)(0.058808)=1.17616\\) M€.",
+      "why": [
+        "Utilise seulement le PD d’un an.",
+        "Additionner3 fois2% est une approximation, pas le cumul exact avec survie.",
+        "Utilise le PD cumulé sans appliquerLGD40%.",
+        "Harmonise le PD à l’horizon puis applique la perte conditionnelle."
+      ],
+      "cue": "Trois ans de risque ne signifient pas trois défauts possibles du même prêt.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 5,
+        "pdfPages": [
+          62,
+          63
+        ]
+      },
+      "numeric": {
+        "expression": "50*.4*(1-.98**3)",
+        "value": 1.17616,
+        "optionValue": 1.17616,
+        "tolerance": 1e-08
+      }
+    },
+    {
+      "id": "yc014",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-5.4",
+      "reading": "CR-5",
+      "concept": "Expert empirical and structural methods",
+      "question": "A lender compares three assessments: A uses documented analyst judgment over the borrower’s character and repayment capacity; B fits coefficients to historical defaults and financial ratios; C treats equity as an option on firm assets. Which classification is most appropriate?",
+      "choices": [
+        "A empirical, B structural, C judgmental.",
+        "A structural, B judgmental, C empirical.",
+        "A judgmental, B empirical, C financial/structural.",
+        "All three are empirical solely because financial statements appear in the inputs."
+      ],
+      "answer": 2,
+      "explanation": "La classification suit le mécanisme: jugement d’expert, estimation statistique à partir de résultats observés, ou structure financière théorique reliant actifs, dette et actions.",
+      "why": [
+        "Les mécanismesB etC sont inversés avec celui du jugement.",
+        "L’option sur les actifs relève deC, pas deA.",
+        "Le mode de construction distingue les trois approches.",
+        "Les mêmes données peuvent alimenter des méthodes fondées sur des mécanismes différents."
+      ],
+      "cue": "Classe la méthode par ce qui relie les données à la prédiction.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 5,
+        "pdfPages": [
+          65,
+          67
+        ]
+      }
+    },
+    {
+      "id": "yc015",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-5.5",
+      "reading": "CR-5",
+      "concept": "Merton physical distance to default calculation",
+      "question": "In a basic one-year Merton terminal-default model, \\(V_0/D=e^{0.20}\\), physical asset drift is 6% per year and asset volatility is 20% per square-root year, with no payouts. Use \\(DD=[\\ln(V_0/D)+(\\mu-\\sigma_V^2/2)T]/(\\sigma_V\\sqrt T)\\). Given \\(\\Phi(-1.2)=0.1151\\), which pair is correct?",
+      "choices": [
+        "DD 1.20; physical PD 11.51%.",
+        "DD1.30; physical PD9.68%.",
+        "DD 1.20; physical PD 88.49%.",
+        "DD 0.20; physical PD 20.00%."
+      ],
+      "answer": 0,
+      "explanation": "Le numérateur vaut \\(0.20+0.06-0.5(0.20)^2=0.24\\). Diviser par0.20 donneDD1.20; la queue défavorable est \\(\\Phi(-DD)=0.1151\\). Il s’agit du drift physique spécifié.",
+      "why": [
+        "Applique la correction de dérive et la bonne queue normale.",
+        "Oublie la correction de volatilité dans leDD.",
+        "Utilise la probabilité de survie au lieu du défaut.",
+        "Confond ratio logarithmique, distance standardisée et probabilité."
+      ],
+      "cue": "Drift, correction de variance, standardisation, puis queue basse.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 5,
+        "pdfPages": [
+          67
+        ]
+      },
+      "numeric": {
+        "expression": "(.20+.06-.5*.20**2)/.20",
+        "value": 1.2,
+        "optionValue": 1.2,
+        "tolerance": 1e-08
+      }
+    },
+    {
+      "id": "yc016",
+      "topic": "credit",
+      "skill": "c-price",
+      "objective": "CR-7.1",
+      "reading": "CR-7",
+      "concept": "Retail residual-value risk without borrower default",
+      "question": "Every customer in an auto-leasing book makes all contracted payments. At lease expiry, used-vehicle sale prices are much lower than the residual values built into pricing. Which risk best explains the shortfall?",
+      "choices": [
+        "Borrower default risk, because every reduction in revenue is a default.",
+        "Residual asset-valuation risk, even though the customers performed their payment obligations.",
+        "A change in the legal definition of the customers’ bankruptcy.",
+        "A lower credit-utilization rate that necessarily reduces the bank’s loss."
+      ],
+      "answer": 1,
+      "explanation": "La réalisation du véhicule fait partie de l’économie du leasing. Une valeur résiduelle surestimée crée une perte sans défaut de paiement du locataire; la gestion du retail ne se réduit pas à laPD.",
+      "why": [
+        "Le scénario exclut précisément les paiements manqués.",
+        "Le mécanisme porte sur le prix réalisé de l’actif à la sortie.",
+        "Aucun événement juridique de ce type n’est décrit.",
+        "La rotation ou utilisation du crédit ne compense pas nécessairement cette valeur."
+      ],
+      "cue": "Identifie le flux manquant avant de l’appeler défaut.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 7,
+        "pdfPages": [
+          88
+        ]
+      }
+    },
+    {
+      "id": "yc017",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-7.2",
+      "reading": "CR-7",
+      "concept": "Retail standardization and error propagation",
+      "question": "A corporate team negotiates and reviews a small number of bespoke transactions. A retail lender makes millions of automated decisions using one shared rule engine. Which difference is most consequential when designing credit controls?",
+      "choices": [
+        "Large retail name counts remove the need to test the central decision logic.",
+        "Corporate reviews should adopt every retail cutoff unchanged because both activities involve credit.",
+        "Retail controls should focus only on individual exceptions because common rules affect no portfolio-wide exposure.",
+        "Retail standardization enables scalable consistency but makes a shared rule defect capable of affecting many accounts simultaneously; tailored corporate review has different scale and process needs."
+      ],
+      "answer": 3,
+      "explanation": "Les économies de traitement reposent sur des règles communes. Une erreur du dispositif peut donc affecter un grand volume de décisions; les contrôles doivent être adaptés à cette échelle et pas copiés d’un traitement individuel.",
+      "why": [
+        "Le nombre de clients diversifie des risques spécifiques, pas une règle erronée commune.",
+        "Les produits, montants et modes d’analyse ne sont pas interchangeables.",
+        "Le moteur commun est justement un canal de propagation.",
+        "La comparaison relie l’organisation du crédit à la nature du contrôle nécessaire."
+      ],
+      "cue": "À grande échelle, une même règle peut diffuser la même erreur.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 7,
+        "pdfPages": [
+          85,
+          88
+        ]
+      }
+    },
+    {
+      "id": "yc018",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-7.4",
+      "reading": "CR-7",
+      "concept": "Pooled versus generic and custom retail scores",
+      "question": "A lender launches its first revolving-credit product and lacks its own mature performance history. It wants a product-specific score trained on comparable revolving accounts from several lenders, while planning local validation before use. Which model type most closely matches that request?",
+      "choices": [
+        "A fully custom model estimated solely on the lender’s nonexistent mature history.",
+        "A generic bureau score designed to summarize overall credit history without that product-specific pooled fit.",
+        "A pooled product model, with its transferability and calibration checked on the intended population.",
+        "An expert-only corporate rating system based on interviews with each card applicant."
+      ],
+      "answer": 2,
+      "explanation": "Un modèle pooled exploite des données de plusieurs prêteurs sur un produit comparable. Il répond au manque d’historique interne sans rendre inutile la validation sur la population et l’usage locaux.",
+      "why": [
+        "Un modèle custom nécessite les données internes adaptées.",
+        "Le score générique peut être utile, mais ne correspond pas au modèle produit partagé demandé.",
+        "C’est la structure des données et de spécialisation décrite.",
+        "Une expertise individuelle différente ne satisfait pas l’objectif de modèle statistique produit."
+      ],
+      "cue": "Qui fournit les données, et à quel produit le score est-il ajusté?",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 7,
+        "pdfPages": [
+          89,
+          90
+        ]
+      }
+    },
+    {
+      "id": "yc019",
+      "topic": "credit",
+      "skill": "c-price",
+      "objective": "CR-8.2",
+      "reading": "CR-8",
+      "concept": "Cross-currency yields and country-risk measurement",
+      "question": "Country A’s local-currency sovereign bond yields 9%, while country B’s euro-denominated sovereign bond yields 5%. Maturities are similar, but currencies and inflation expectations differ. An analyst ranks A as having exactly 4 percentage points more default risk. Which objection is strongest?",
+      "choices": [
+        "The yield difference mixes currency-specific benchmark rates and other premiums; compare appropriate same-currency risk-free references and examine remaining spread components.",
+        "Higher nominal yield always identifies an equal-sized difference in physical default probability.",
+        "The comparison becomes exact if both bonds are labelled sovereign.",
+        "A sovereign yield contains only expected inflation, so no credit information can ever be extracted."
+      ],
+      "answer": 0,
+      "explanation": "Comparer des rendements dans des devises différentes mélange taux de référence, inflation et primes. Un spread construit avec une référence comparable renseigne mieux, tout en conservant des limites d’interprétation.",
+      "why": [
+        "Le benchmark et les composantes doivent être rendus comparables avant le classement crédit.",
+        "Rendement et probabilité physique ne sont pas des unités interchangeables.",
+        "La catégorie juridique ne neutralise pas les différences de devise.",
+        "Le défaut peut affecter le rendement; il faut le distinguer des autres éléments."
+      ],
+      "cue": "Avant de comparer les primes, harmonise la monnaie et le benchmark.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 8,
+        "pdfPages": [
+          116,
+          118
+        ]
+      }
+    },
+    {
+      "id": "yc020",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-8.4",
+      "reading": "CR-8",
+      "concept": "Sovereign default feedback into domestic intermediation",
+      "question": "A sovereign restructuring reduces domestic banks’ bond values. Banks respond by cutting lending to otherwise operating firms, which postpone investment. Which assessment best captures a consequence beyond the government’s direct debt-service saving?",
+      "choices": [
+        "The debt-service saving guarantees a larger equal increase in private credit supply.",
+        "The default can damage banking intermediation and private investment, so fiscal cash relief is not the whole economic cost.",
+        "Private firms are insulated because they did not issue the restructured debt.",
+        "Only foreign bondholders can bear economic effects of sovereign default."
+      ],
+      "answer": 1,
+      "explanation": "Le défaut peut fragiliser les banques et leur capacité de financement de l’économie. Les effets sur l’investissement privé et l’activité doivent être comparés au soulagement budgétaire, pas ignorés.",
+      "why": [
+        "Le canal des bilans bancaires peut aller dans le sens opposé.",
+        "La transmission via l’intermédiation élargit le coût au-delà du Trésor.",
+        "Les liens de financement exposent des entreprises sans obligation souveraine émise.",
+        "Les détentions et interactions domestiques créent aussi des effets."
+      ],
+      "cue": "Le défaut public peut se transmettre par la capacité des banques à financer le privé.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 8,
+        "pdfPages": [
+          106
+        ]
+      }
+    },
+    {
+      "id": "yc021",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-8.6",
+      "reading": "CR-8",
+      "concept": "Sovereign rating consensus and common information gaps",
+      "question": "Three agencies keep a sovereign’s rating unchanged. Their reports rely heavily on the same delayed government fiscal release, which excludes newly revealed guarantees. An investor treats agency agreement as three independent confirmations that risk is unchanged. What is the main weakness?",
+      "choices": [
+        "The number of agencies alone determines the probability of default.",
+        "The agencies must immediately produce identical market spreads to be useful.",
+        "Shared stale or incomplete inputs can make rating agreement less independent and less timely than assumed.",
+        "A delayed release proves the sovereign has already defaulted."
+      ],
+      "answer": 2,
+      "explanation": "L’accord peut refléter une même source lacunaire plutôt que trois ensembles de preuves indépendants. Les limites d’information et la lenteur d’ajustement comptent même sans défaut encore observé.",
+      "why": [
+        "Le comptage ne résout pas le risque de source commune.",
+        "Une notation n’est pas une cotation de spread.",
+        "La qualité et l’indépendance des preuves doivent être examinées.",
+        "Une information tardive n’est pas une preuve de défaut réalisé."
+      ],
+      "cue": "Trois avis fondés sur la même lacune ne sont pas trois preuves indépendantes.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 8,
+        "pdfPages": [
+          114,
+          115
+        ]
+      }
+    },
+    {
+      "id": "yc022",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-9.1",
+      "reading": "CR-9",
+      "concept": "Internal versus agency scale crosswalk",
+      "question": "A bank assigns grade 4 to an unrated private firm. It wants to map this grade to an agency’s BBB rating solely because both lie near the middle of their respective scales. Which comparison is necessary?",
+      "choices": [
+        "Use the rank position alone; equal order within two scales implies equal default probability.",
+        "Use the grade number as a percentage PD, independently of calibration.",
+        "Assume internal ratings are always point-in-time and agency ratings always have the same numerical horizon.",
+        "Compare grade definitions, horizon, calibration population and rating philosophy before constructing and validating a mapping."
+      ],
+      "answer": 3,
+      "explanation": "Des échelles ordinales différentes n’ont pas un raccordement automatique. Il faut connaître ce qu’elles notent, leur horizon, leurs données et leur mode d’ajustement au cycle.",
+      "why": [
+        "Le rang ordinal ne crée pas une correspondance de risque absolu.",
+        "Le numéro du grade n’est pas une probabilité.",
+        "La philosophie et l’horizon doivent être vérifiés, pas supposés.",
+        "Le rapprochement exige une base comparable et une validation."
+      ],
+      "cue": "Un grade est un label: quel risque, quelle population et quel horizon représente-t-il?",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 9,
+        "pdfPages": [
+          121,
+          122
+        ]
+      }
+    },
+    {
+      "id": "yc023",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-9.3",
+      "reading": "CR-9",
+      "concept": "Rating default rates have explicit horizons",
+      "question": "A historical rating cohort has a one-year cumulative default rate of 0.5% and a three-year cumulative rate of 1.8%. An issuer newly assigned that rating is assessed for a three-year exposure. Which interpretation is most defensible if that cohort is used as the reference?",
+      "choices": [
+        "The 1.8% figure is the relevant cohort-level cumulative three-year estimate, subject to applicability; it is not a guarantee for the individual issuer.",
+        "The three-year estimate is 0.5% because a rating has one PD independent of maturity.",
+        "The three-year estimate is exactly 1.5%, because every cumulative rate must scale linearly with time.",
+        "The issuer must default if its individual outcome differs from the cohort mean."
+      ],
+      "answer": 0,
+      "explanation": "La fréquence cumulative est définie sur un horizon et une cohorte. La référence à trois ans est1.8% dans les données fournies, mais son transfert à un nouvel émetteur exige une analyse de pertinence.",
+      "why": [
+        "Distingue l’horizon de la statistique et son interprétation collective.",
+        "Le même grade peut avoir une courbe de défaut par horizon.",
+        "L’extrapolation linéaire remplace sans raison la donnée fournie.",
+        "Un résultat individuel n’est pas tenu d’égaler une moyenne probabiliste."
+      ],
+      "cue": "À un grade correspond une courbe de défaut, pas un chiffre sans horizon.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 9,
+        "pdfPages": [
+          121,
+          123
+        ]
+      }
+    },
+    {
+      "id": "yc024",
+      "topic": "credit",
+      "skill": "c-price",
+      "objective": "CR-9.10",
+      "reading": "CR-9",
+      "concept": "Physical budget versus market-consistent valuation inputs",
+      "question": "For the same borrower and one-year horizon, a well-matched historical model estimates 0.4% physical PD. After excluding noncredit spread components, a market calibration gives 1.5% risk-neutral PD. Which use is most consistent with the distinction between the measures?",
+      "choices": [
+        "Replace the budget forecast with 1.5% solely because market data update faster.",
+        "Use 0.4% as the physical default-budget reference and the market-consistent risk-neutral calibration for pricing, while validating each estimate for its purpose.",
+        "Average the two PDs and use the result for every forecasting and valuation decision.",
+        "Use the lower PD for pricing and the higher for budgeting solely to make both decisions conservative."
+      ],
+      "answer": 1,
+      "explanation": "Les mesures répondent à des objectifs différents. La valorisation cohérente avec les prix utilise une calibration de pricing; un budget de défauts réalisés vise une prévision physique. La vitesse d’actualisation ne rend pas ces probabilités interchangeables.",
+      "why": [
+        "La fraîcheur ne supprime pas la prime de risque ni le changement de mesure.",
+        "Le choix suit l’usage: prévision réelle ou valorisation.",
+        "Une moyenne sans modèle n’a pas de signification de mesure définie.",
+        "La prudence ne remplace pas la cohérence de l’objectif probabiliste."
+      ],
+      "cue": "Prévoir la fréquence et valoriser le risque ne demandent pas nécessairement la même mesure.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 9,
+        "pdfPages": [
+          129,
+          133
+        ]
+      }
+    },
+    {
+      "id": "yc025",
+      "topic": "credit",
+      "skill": "c-default",
+      "objective": "CR-9.14",
+      "reading": "CR-9",
+      "concept": "Structural ranking versus empirical EDF calibration",
+      "question": "A raw Merton-based score ranks firms well, but its probabilities overstate subsequent defaults. A team proposes a KMV-style empirical distance-to-default mapping and, separately, a Kamakura-style reduced-form probability model. Which validation result best supports better probability estimates?",
+      "choices": [
+        "The mapping preserves ranking on the calibration sample, so its numerical probabilities need no further tests.",
+        "The mapping’s average forecast equals the fitting sample’s default rate, proving calibration in every later regime.",
+        "Independent later cohorts show improved probability calibration at the target horizon, while discrimination and model stability are also checked.",
+        "A monotone mapping changes every pairwise rank, which itself demonstrates better default prediction."
+      ],
+      "answer": 2,
+      "explanation": "Un bon classement peut coexister avec une mauvaise calibration absolue. Les deux approches ne reposent pas sur la même mécanique d’estimation. Aucune ne garantit une bonne prévision hors échantillon; il faut des cohortes indépendantes, le bon horizon et des contrôles distincts de classement et de calibration.",
+      "why": [
+        "Préserver l’ordre ne valide pas les probabilités absolues.",
+        "L’égalité dans l’échantillon ajusté ne prouve pas le transfert futur.",
+        "Le test confronte la promesse probabiliste à des résultats indépendants.",
+        "Une transformation monotone préserve normalement l’ordre plutôt que le bouleverser."
+      ],
+      "cue": "Classement, calibration et stabilité: teste séparément ces trois promesses.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 9,
+        "pdfPages": [
+          132,
+          133
+        ]
+      }
+    },
+    {
+      "id": "yc026",
+      "topic": "credit",
+      "skill": "c-pool",
+      "objective": "CR-11.3",
+      "reading": "CR-11",
+      "concept": "Correlation and a finite-portfolio VaR counterexample",
+      "question": "Two loans each lose EUR 10m upon default and zero otherwise, with individual PD 2%. Compare independent defaults with perfectly comoving defaults (both default with probability 2%, neither otherwise). Using \\(Q_{0.97}=\\inf\\{x:F_L(x)\\ge0.97\\}\\), what happens to the portfolio loss VaR?",
+      "choices": [
+        "It rises from EUR 10m to EUR 20m.",
+        "It rises from EUR 0m to EUR 20m.",
+        "It falls from EUR 20m to EUR 10m.",
+        "It falls from EUR 10m to EUR 0m, illustrating that finite-portfolio VaR need not increase monotonically with dependence at every confidence level."
+      ],
+      "answer": 3,
+      "explanation": "Sous indépendance, \\(P(L=0)=0.98^2=0.9604<0.97\\), et \\(P(L\\le10)=1-0.02^2=0.9996\\), donc VaR10. Sous codéfaut, \\(P(L=0)=0.98\\ge0.97\\), donc VaR0. Le risque de perte20 augmente pourtant: le quantile choisi masque cette queue.",
+      "why": [
+        "C’est l’intuition usuelle de queue haute, mais elle ne respecte pas ici le seuil deCDF à97%.",
+        "Le quantile indépendant n’est pas nul puisque0.9604 est inférieur à0.97.",
+        "La probabilité indépendante de perte20 est trop faible pour fixer le quantile97%.",
+        "Applique la convention exacte; l’augmentation de perte extrême ne force pas chaque quantile à monter."
+      ],
+      "cue": "Une dépendance plus forte peut déplacer de la masse au-delà du quantile choisi.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 11,
+        "pdfPages": [
+          149,
+          150
+        ]
+      },
+      "numeric": {
+        "expression": "20*(0.98<0.97)-10*(0.98**2<0.97)",
+        "value": -10,
+        "optionValue": -10,
+        "tolerance": 1e-08
+      }
+    },
+    {
+      "id": "yc027",
+      "topic": "credit",
+      "skill": "c-pool",
+      "objective": "CR-11.4",
+      "reading": "CR-11",
+      "concept": "Single-factor conditional diversification limit",
+      "question": "In a homogeneous one-factor default model, defaults are independent conditional on a common factor Z, with conditional PD p(Z). Each loan has fixed 40% LGD and equal exposure. As the number of infinitesimal loans tends to infinity, what best describes the portfolio loss fraction conditional on Z?",
+      "choices": [
+        "It converges to \\(0.40p(Z)\\); idiosyncratic noise diversifies, but the unconditional loss remains sensitive to the random common factor.",
+        "It converges to \\(0.40E[p(Z)]\\) for every realization of Z, removing common-factor risk.",
+        "It converges to 40% regardless of Z, because all idiosyncratic risk disappears.",
+        "It remains a Bernoulli variable that is either zero or40%, even for independent residual shocks conditional on Z."
+      ],
+      "answer": 0,
+      "explanation": "La loi des grands nombres s’applique conditionnellement au facteur. La fraction de défaut converge versp(Z), et non vers sa moyenne inconditionnelle dans chaque état. Le facteur commun laisse donc un risque résiduel de portefeuille.",
+      "why": [
+        "Sépare la diversification conditionnelle et l’incertitude systématique.",
+        "MoyennerZ avant de regarder sa réalisation supprime artificiellement le risque commun.",
+        "L’absence de bruit spécifique ne signifie pas défaut certain.",
+        "Le résultat tout-ou-rien correspondrait à une autre dépendance des résidus."
+      ],
+      "cue": "Diversifie les résidus en gardant le facteur commun aléatoire.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 11,
+        "pdfPages": [
+          151,
+          156
+        ]
+      }
+    },
+    {
+      "id": "yc028",
+      "topic": "credit",
+      "skill": "c-pool",
+      "objective": "CR-11.6",
+      "reading": "CR-11",
+      "concept": "Joint default from conditional independence quadrature",
+      "question": "A supplied two-node approximation to a single-factor integral has weights 80% and20%. At node1, conditional PDs are1% and2%; at node2, they are10% and15%. Defaults are independent conditional on each node. Using this approximation, what are joint PD and default-indicator correlation, approximately?",
+      "choices": [
+        "Joint PD0.1288%; correlation0.",
+        "Joint PD0.3160%; correlation5.42%.",
+        "Joint PD3.1600%; correlation54.2%.",
+        "Joint PD0.3160%; correlation100%."
+      ],
+      "answer": 1,
+      "explanation": "Les PD marginales approchées sont \\(p_1=0.8(0.01)+0.2(0.10)=0.028\\) et \\(p_2=0.046\\). La probabilité jointe est \\(0.8(0.01)(0.02)+0.2(0.10)(0.15)=0.00316\\). La corrélation vaut \\((0.00316-0.028(0.046))/\\sqrt{0.028(0.972)0.046(0.954)}\\approx0.0542\\).",
+      "why": [
+        "Multiplie les marginales après mélange, comme si les défauts étaient indépendants sans conditionner.",
+        "Moyenne les produits conditionnels puis convertit la probabilité jointe en corrélation.",
+        "Introduit une erreur d’échelle de dix sur la probabilité et la corrélation.",
+        "Le facteur partagé ne rend pas les indicatrices identiques."
+      ],
+      "cue": "Indépendance conditionnelle: intègre le produit, pas le produit des intégrales.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 11,
+        "pdfPages": [
+          153,
+          154
+        ]
+      },
+      "numeric": {
+        "expression": ".8*.01*.02+.2*.10*.15",
+        "value": 0.00316,
+        "optionValue": 0.00316,
+        "tolerance": 1e-08
+      }
+    },
+    {
+      "id": "yc029",
+      "topic": "credit",
+      "skill": "c-pool",
+      "objective": "CR-11.7",
+      "reading": "CR-11",
+      "concept": "Joint-default simulation protocol",
+      "question": "A bank simulates a default-only single-factor model for unequal loan exposures. Which path-generation procedure best preserves the model’s intended dependence before estimating Credit VaR as a loss quantile minus expected loss?",
+      "choices": [
+        "Draw a new common factor separately for every borrower, then sum their losses within a path.",
+        "Use one common factor and one shared idiosyncratic shock for all borrowers in the path.",
+        "Draw one common factor per path and separate independent idiosyncratic shocks per borrower, apply each borrower’s threshold and loss amount, sum the path losses, then estimate the distribution across paths.",
+        "Average each borrower’s simulated default indicator first, then take a quantile of the single resulting expected portfolio loss."
+      ],
+      "answer": 2,
+      "explanation": "Un tirage commun par scénario crée la dépendance systématique voulue; des résidus distincts conservent la diversification conditionnelle. Les pertes monétaires sont agrégées dans chaque scénario avant d’en estimer la distribution et le quantile.",
+      "why": [
+        "Cela détruit le facteur systématique commun entre les noms.",
+        "Partager aussi le résidu ajoute une dépendance non prévue.",
+        "L’ordre tirages, seuils, pertes, agrégation puis quantile respecte le modèle.",
+        "Moyenner avant le quantile remplace la distribution par une seule espérance."
+      ],
+      "cue": "Un facteur commun par monde simulé; un résidu propre par emprunteur.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 11,
+        "pdfPages": [
+          151,
+          156
+        ]
+      }
+    }
+  ]
+}

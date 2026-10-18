@@ -1,0 +1,740 @@
+{
+  "questions": [
+    {
+      "id": "ym001",
+      "topic": "market",
+      "skill": "m-tail",
+      "objective": "MR-3.2",
+      "reading": "MR-3",
+      "concept": "What an extreme-value limit does and does not model",
+      "question": "A risk team fits a generalized extreme-value distribution to annual maximum daily losses. The fit is stable over reasonable block definitions. A colleague proposes replacing the distribution of every daily loss by that same fitted GEV distribution. Which assessment is strongest?",
+      "choices": [
+        "The replacement is valid because convergence of normalized block maxima establishes the same distribution for each constituent daily loss.",
+        "The replacement is valid if annual maxima are larger than the average daily loss.",
+        "The fitted limit describes appropriately normalized extremes; it does not identify the full parent distribution of ordinary daily losses.",
+        "The stable fit proves that estimates beyond the largest historical loss have no parameter uncertainty."
+      ],
+      "answer": 2,
+      "explanation": "EVT apporte des lois limites pour des extrêmes convenablement normalisés, sous conditions. La loi des maxima annuels n’est pas la loi de chaque observation journalière. Une approximation de queue utile pour un niveau extrême ne doit pas être étendue sans justification au centre, ni interprétée comme suppression de l’incertitude.",
+      "why": [
+        "La conclusion passe à tort de la loi du maximum à celle des observations qui le composent.",
+        "Un ordre de grandeur entre maximum et moyenne ne démontre aucune égalité de lois.",
+        "Correct: le domaine d’application de la limite extrême doit être respecté.",
+        "La stabilité du diagnostic ne supprime ni l’erreur de paramètres ni l’incertitude d’extrapolation."
+      ],
+      "cue": "Une loi des extrêmes ne devient pas la loi de toutes les journées.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 3,
+        "pdfPages": [
+          49,
+          50
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      }
+    },
+    {
+      "id": "ym002",
+      "topic": "market",
+      "skill": "m-valid",
+      "objective": "MR-4.6",
+      "reading": "MR-4",
+      "concept": "Historical Basel traffic-light zone and multiplier",
+      "question": "Use the historical Basel traffic-light framework described in the reading, not a claim about a current jurisdiction’s implementation. It assesses 250 one-day 99% VaR observations: 0–4 exceptions are green, 5–9 yellow, and 10 or more red. For eight exceptions, the tabulated addition to the baseline multiplier of 3 is 0.75. Which interpretation is correct?",
+      "choices": [
+        "Red zone; multiplier 3.75; the exception count alone proves deliberate model manipulation.",
+        "Yellow zone; indicated multiplier 3.75, with investigation of the exceptions and their causes.",
+        "Yellow zone; multiplier 0.75, because the addition replaces the baseline.",
+        "Green zone; multiplier 3.00, because eight exceptions are less than 5% of 250."
+      ],
+      "answer": 1,
+      "explanation": "Huit exceptions se situent dans la zone jaune de la table historique donnée. L’addition de 0.75 s’ajoute au socle3: \\(3+0.75=3.75\\). La zone ne prouve pas une manipulation; les causes, la qualité du modèle et le processus de surveillance doivent être examinés. Cette question versionne explicitement le cadre ancien étudié.",
+      "why": [
+        "La zone rouge commence à10 dans la règle fournie; le seul compteur ne démontre pas une intention.",
+        "Correct: classement jaune, addition au socle et analyse des causes.",
+        "0.75 est une majoration, pas le multiplicateur total.",
+        "Le seuil de confiance de la VaR ne doit pas être remplacé par un seuil ad hoc de5% d’exceptions."
+      ],
+      "cue": "Table versionnée: zone, majoration, puis analyse des causes.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 4,
+        "pdfPages": [
+          67,
+          68
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      },
+      "numeric": {
+        "expression": "3+0.75",
+        "value": 3.75,
+        "optionValue": 3.75,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "ym003",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-5.4",
+      "reading": "MR-5",
+      "concept": "Map a cash flow with present value and parallel sensitivity constraints",
+      "question": "A single cash flow has present value EUR100m and maturity four years. With continuously compounded rates, a zero-coupon position of present value x and maturity T has first-order price sensitivity \\(-Tx\\) to a parallel decimal-rate rise. Map the cash flow into three-year and seven-year zero-coupon positions while preserving present value and this parallel sensitivity. What present values should be allocated?",
+      "choices": [
+        "EUR50m to each zero, because four years lies between the two maturities.",
+        "EUR25m to the three-year zero and EUR75m to the seven-year zero.",
+        "EUR100m to the three-year zero and zero to the seven-year zero.",
+        "EUR75m to the three-year zero and EUR25m to the seven-year zero."
+      ],
+      "answer": 3,
+      "explanation": "Noter \\(x+y=100\\) et \\(3x+7y=4(100)=400\\). Soustraire trois fois la première équation: \\(4y=100\\), donc \\(y=25\\), \\(x=75\\). Ce mapping préserve les deux quantités demandées; il ne garantit pas la même réaction à tous les twists ni l’égalité exacte des variances.",
+      "why": [
+        "Les poids égaux donnent une durée moyenne de5ans, pas4.",
+        "Ces poids inversés donnent une durée moyenne de6ans.",
+        "La valeur est préservée mais la sensibilité serait celle d’un zéro3ans.",
+        "Correct: valeur totale100 et moyenne de maturité pondérée4."
+      ],
+      "cue": "Deux contraintes de mapping: valeur et sensibilité.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 5,
+        "pdfPages": [
+          76,
+          77
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      },
+      "numeric": {
+        "expression": "(4*100-3*100)/(7-3)",
+        "value": 25,
+        "optionValue": 25,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "ym004",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-5.5",
+      "reading": "MR-5",
+      "concept": "Mapped stress can reveal a loss hidden by the parallel scenario",
+      "question": "A mapped bond portfolio has signed DV01 EUR60,000/bp at the two-year vertex and −EUR40,000/bp at the ten-year vertex. Define local P&L as \\(-\\sum_jDV01_j\\Delta y_j\\), with yield changes in bp. Compare a parallel +10bp shock with a twist of +30bp at two years and −20bp at ten years. Ignoring convexity and other factors, what losses result?",
+      "choices": [
+        "EUR0.20m under the parallel shock and EUR2.60m under the twist.",
+        "EUR1.00m under the parallel shock and EUR1.00m under the twist.",
+        "EUR0.20m under the parallel shock and EUR1.00m under the twist.",
+        "EUR0.20m under the parallel shock and a EUR2.60m gain under the twist."
+      ],
+      "answer": 0,
+      "explanation": "Le choc parallèle produit une perte \\((60000-40000)(10)=200000\\). Le twist produit \\(60000(30)+(-40000)(-20)=2600000\\) de perte. Les deux segments perdent dans ce twist malgré la compensation partielle de DV01 sous un déplacement parallèle. La covariance historique n’est pas requise pour valoriser ce scénario déterministe linéaire.",
+      "why": [
+        "Correct: les chocs signés révèlent un risque de forme de courbe.",
+        "Ce choix ignore la structure de maturités et de signes.",
+        "La contribution du segment dix ans vaut une perte de0.8m et doit être ajoutée à1.8m.",
+        "Le produit de DV01 négatif et choc de taux négatif est positif dans la mesure de perte indiquée."
+      ],
+      "cue": "Mapper les maturités, puis appliquer chaque choc signé.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 5,
+        "pdfPages": [
+          77,
+          78
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      },
+      "numeric": {
+        "expression": "60000*30+(-40000)*(-20)",
+        "value": 2600000,
+        "optionValue": 2600000,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "id": "ym005",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-8.1",
+      "reading": "MR-8",
+      "concept": "Correlation risk links physical demand and market price",
+      "question": "An electricity supplier commits to a fixed sales price, but next month’s customer demand Q is uncertain and must be sourced at random spot price P. Its procurement cost is QP. A revised joint model leaves both marginal distributions unchanged but raises \\(\\operatorname{Cov}(Q,P)\\). Which implication is correct, assuming finite second moments?",
+      "choices": [
+        "Expected procurement cost cannot change because both marginal means are unchanged.",
+        "Only correlations between listed securities create financial correlation risk.",
+        "Expected procurement cost rises because \\(E[QP]=E[Q]E[P]+\\operatorname{Cov}(Q,P)\\); a nonfinancial demand variable can contribute to financial loss risk.",
+        "The change must be recorded as a higher marginal mean of spot electricity prices."
+      ],
+      "answer": 2,
+      "explanation": "Le paiement dépend du produit de la quantité et du prix. À moyennes marginales fixées, une covariance plus forte augmente \\(E[QP]\\). La corrélation entre une grandeur physique et un prix financier peut donc affecter un coût ou un payoff. Elle n’exige pas que les deux variables soient des titres cotés.",
+      "why": [
+        "Les marginales ne déterminent pas à elles seules l’espérance d’un produit.",
+        "Le risque financier peut dépendre de variables de demande, météo ou activité.",
+        "Correct: l’identité de covariance montre le canal économique.",
+        "Le changement décrit est joint; les marginales restent explicitement fixes."
+      ],
+      "cue": "Le payoff relie les variables; les marginales ne suffisent pas.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 7,
+        "pdfPages": [
+          119,
+          122
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      }
+    },
+    {
+      "id": "ym006",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-8.2",
+      "reading": "MR-8",
+      "concept": "Mortgage default clustering moves senior-tranche risk without changing marginal PDs",
+      "question": "Consider a stylized mortgage pool with four equal loans. Each default causes one unit of pool loss, with zero recovery, and each loan’s PD is20%. A senior claim loses one unit only if all four loans default. Compare independent defaults with a common-state model in which all four default together with probability20% and otherwise none defaults. Which comparison best illustrates a correlation channel relevant to structured-credit losses in the2007–2009 crisis?",
+      "choices": [
+        "Expected pool loss rises from0.8 to3.2 units, so every tranche’s risk change is explained by higher marginal PDs.",
+        "Expected pool loss stays0.8 units, while the senior claim’s expected loss rises from0.0016 to0.20 units because defaults cluster.",
+        "Expected pool loss stays0.8 units and every tranche’s loss distribution is therefore unchanged.",
+        "The senior expected loss falls because higher dependence makes the number of defaults less dispersed."
+      ],
+      "answer": 1,
+      "explanation": "Dans les deux modèles, la perte moyenne du pool est \\(4(0.20)=0.8\\). Sous indépendance, les quatre défauts ont probabilité \\(0.20^4=0.0016\\); sous état commun, elle vaut0.20. Le senior est donc bien plus exposé à une perte systémique groupée, même sans changement de PD marginale. Le cas stylisé isole un mécanisme, pas une description complète de la crise.",
+      "why": [
+        "Les PD marginales n’ont pas changé, donc la perte moyenne du pool reste0.8.",
+        "Correct: même moyenne totale, queue et allocation des pertes aux tranches très différentes.",
+        "La distribution de la somme change, donc les payoffs non linéaires de tranches peuvent changer.",
+        "Le passage au tout-ou-rien augmente ici la dispersion et la probabilité de perte senior."
+      ],
+      "cue": "Même perte moyenne du pool, queue senior différente.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 7,
+        "pdfPages": [
+          127,
+          129
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      },
+      "numeric": {
+        "expression": "Math.pow(0.20,4)",
+        "value": 0.0016,
+        "optionValue": 0.0016,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "ym007",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-11.2",
+      "reading": "MR-11",
+      "concept": "Measure the variance gain from a regression hedge",
+      "question": "A position’s yield change satisfies \\(\\Delta y_A=0.6\\Delta y_H+\\varepsilon\\), where \\(\\Delta y_H\\) has standard deviation10bp and the independent residual has standard deviation4bp. The position and one hedge unit have the same DV01; shorting h hedge units leaves yield-equivalent P&L risk proportional to \\((0.6-h)\\Delta y_H+\\varepsilon\\). Ignoring costs, how much does the variance of the remaining hedged-position P&L fall when a DV01-neutral hedge \\(h=1\\) is replaced by the regression hedge \\(h=0.6\\)?",
+      "choices": [
+        "0%; both hedges are identical because the initial DV01s match.",
+        "29.3%; variance and standard deviation fall by the same percentage.",
+        "75%; the regression residual standard deviation is only4bp.",
+        "50%; variance falls from32 to16 squared bp."
+      ],
+      "answer": 3,
+      "explanation": "À \\(h=1\\), la variance vaut \\((0.6-1)^2(10^2)+4^2=16+16=32\\). À \\(h=0.6\\), le facteur expliqué est éliminé et la variance reste16. La baisse relative est \\((32-16)/32=50\\%\\). La baisse d’écart-type est différente: \\(1-\\sqrt{16/32}\\approx29.3\\%\\).",
+      "why": [
+        "Le lien empirique entre variations de taux n’est pas un pour un.",
+        "29.3% concerne l’écart-type, pas la variance.",
+        "La variance résiduelle16 est la moitié de32, pas le quart.",
+        "Correct: le hedge minimise ici la variance plutôt que le DV01 parallèle."
+      ],
+      "cue": "Comparer les variances avant de comparer les pourcentages.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 10,
+        "pdfPages": [
+          153,
+          156
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      },
+      "numeric": {
+        "expression": "(32-16)/32",
+        "value": 0.5,
+        "optionValue": 0.5,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "ym008",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-12.4",
+      "reading": "MR-12",
+      "concept": "Separate real-world drift from pricing-measure drift",
+      "question": "Over one year, a short rate moves up20bp or down10bp. The physical probability of the up move is0.40; probabilities inferred from current replicating security prices give risk-neutral up probability0.70. Holding these state rate changes fixed, what are the physical and risk-neutral expected changes?",
+      "choices": [
+        "Physical +2bp; risk-neutral +11bp. The pricing drift must not automatically be used as the physical forecast.",
+        "Physical +11bp; risk-neutral +2bp, because pricing probabilities should be replaced by historical frequencies.",
+        "Both +5bp, because a two-state model always assigns equal probabilities.",
+        "Physical +2bp; risk-neutral +11bp, which proves the true short rate will rise by11bp."
+      ],
+      "answer": 0,
+      "explanation": "\\(E_P[\\Delta r]=0.4(20)+0.6(-10)=2\\)bp. Sous pricing, \\(E_Q[\\Delta r]=0.7(20)+0.3(-10)=11\\)bp. L’écart vient du changement de mesure calibré aux prix et à la compensation du risque; aucune des deux espérances n’est une réalisation certaine.",
+      "why": [
+        "Correct: calculs et interprétation des mesures sont distincts.",
+        "Les probabilités données ont été interverties.",
+        "Les probabilités ne sont pas fixées à une moitié dans l’énoncé.",
+        "La moyenne sous Q n’est ni une prévision physique directe ni une certitude."
+      ],
+      "cue": "Nommer la mesure avant de nommer le drift.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 11,
+        "pdfPages": [
+          171,
+          172
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      },
+      "numeric": {
+        "expression": "0.7*20+0.3*(-10)",
+        "value": 11,
+        "optionValue": 11,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "ym009",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-12.7",
+      "reading": "MR-12",
+      "concept": "Recombination requires a sufficient payoff state",
+      "question": "Two paths in a short-rate tree reach the same current short rate. For a European option whose future payoffs depend only on the current Markov rate state, they can share a continuation node. The desk now prices a claim depending on the running average of past rates, which differs between those paths. What is the correct implication?",
+      "choices": [
+        "The two paths can still be merged using only the short rate because a recombining tree preserves every path-dependent payoff automatically.",
+        "The entire interest-rate model becomes invalid whenever any path-dependent claim is introduced.",
+        "The pricing state must retain the relevant accumulated information, or use another suitable method; the same short rate alone is no longer sufficient for that payoff.",
+        "The correct running average is the unweighted average across all merged paths, regardless of their probabilities and payoffs."
+      ],
+      "answer": 2,
+      "explanation": "La recombinaison économise des nœuds lorsque les états fusionnés ont la même information pertinente pour la continuation. Un payoff dépendant d’une moyenne passée demande une variable d’état supplémentaire ou une méthode adaptée. Le modèle de taux peut rester valide, mais sa représentation de pricing doit conserver l’histoire qui compte.",
+      "why": [
+        "La recombinaison du facteur ne conserve pas automatiquement une somme ou une moyenne historique.",
+        "Il s’agit d’un problème de représentation du payoff, pas d’une invalidité automatique de la dynamique.",
+        "Correct: augmenter l’état ou choisir une méthode qui respecte la dépendance du chemin.",
+        "Moyenner les histoires peut modifier un payoff non linéaire et perdre leur information de distribution."
+      ],
+      "cue": "On fusionne des états suffisants, pas seulement des taux égaux.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 11,
+        "pdfPages": [
+          172,
+          174
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      }
+    },
+    {
+      "id": "ym010",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-12.8",
+      "reading": "MR-12",
+      "concept": "Price a delayed constant-maturity Treasury coupon on a rate tree",
+      "question": "A single remaining coupon on a receive-floating constant-maturity Treasury swap resets at year1 and pays at year2. It equals \\(N(R_{CMT,1}-K)\\) for a one-year accrual, with \\(N=\\mathrm{EUR}1m\\) and \\(K=4\\%\\). At year1, the two-year CMT quote is5% in the up state and3% in the down state; the corresponding one-year simple short rates are6% and2%. The year0 one-year simple short rate is4%, and the risk-neutral up probability is0.60. Ignore credit and any other cash flows. What is the time0 coupon value?",
+      "choices": [
+        "About EUR1,923, obtained by discounting the expected EUR2,000 coupon once.",
+        "About EUR1,672, obtained by discounting each year2 coupon at its year1 state rate, then averaging and discounting to year0.",
+        "About EUR1,842, obtained by using the expected year1 rate in a single deterministic discount factor.",
+        "About −EUR178, obtained by assigning probability0.50 to each state."
+      ],
+      "answer": 1,
+      "explanation": "Les coupons à2ans sont \\(10{,}000\\) et \\(-10{,}000\\). À1an, leurs valeurs sont \\(10{,}000/1.06\\) et \\(-10{,}000/1.02\\). On remonte: \\(V_0=[0.6(10{,}000/1.06)+0.4(-10{,}000/1.02)]/1.04\\approx1{,}671.93\\). La date de paiement et le taux de l’état modifient le prix, même si le coupon est fixé un an avant son paiement.",
+      "why": [
+        "Le coupon est payé à2ans, donc la deuxième année d’actualisation manque.",
+        "Correct: paiement daté, actualisation par état et probabilités risque-neutres.",
+        "La moyenne de ratios de cash-flows signés n’est pas le ratio construit avec le taux moyen.",
+        "Le prix utilise la probabilité risque-neutre0.60 donnée, pas une probabilité inventée égale à0.50."
+      ],
+      "cue": "Le reset détermine le coupon; le paiement détermine son actualisation.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 11,
+        "pdfPages": [
+          174,
+          175
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      },
+      "numeric": {
+        "expression": "(0.6*(1000000*(0.05-0.04)/1.06)+0.4*(1000000*(0.03-0.04)/1.02))/1.04",
+        "value": 1671.9314721534474,
+        "optionValue": 1672,
+        "tolerance": 0.1
+      }
+    },
+    {
+      "id": "ym011",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-12.10",
+      "reading": "MR-12",
+      "concept": "A bond underlying is not structurally an unrestricted GBM",
+      "question": "A dealer uses an unmodified Black–Scholes–Merton model with constant bond-price volatility and deterministic discounting for an option on a default-free zero-coupon bond. The bond itself matures shortly after the option. Which concern most directly challenges treating that BSM process as a full structural bond model?",
+      "choices": [
+        "The bond’s price must converge to its fixed redemption amount, while its volatility and discounting are linked to the evolving yield curve; a constant-volatility unrestricted GBM does not enforce those features.",
+        "The model is invalid solely because bond prices are positive, whereas stock prices in BSM must be negative in some states.",
+        "Fixed-income derivatives cannot be priced by arbitrage because bonds have finite maturities.",
+        "The finite bond maturity guarantees that every option on the bond has zero value before option expiry."
+      ],
+      "answer": 0,
+      "explanation": "Un zéro sans défaut a un paiement fixé à son échéance; sa dispersion future disparaît alors, contrairement à un GBM à volatilité constante prolongé sans contrainte. Les taux qui actualisent le payoff et ceux qui font varier l’obligation sont liés. Des formules de type Black peuvent servir de cotations ou d’approximations sous hypothèses adaptées; cela ne rend pas le BSM non modifié une dynamique complète de la courbe.",
+      "why": [
+        "Correct: maturité, pull-to-par, volatilité et taux d’actualisation doivent être cohérents.",
+        "Les prix positifs sont compatibles avec BSM; le problème porte sur la structure du sous-jacent obligataire.",
+        "Les obligations et leurs dérivés peuvent bien être pricés par réplication et absence d’arbitrage.",
+        "Avant maturité, les prix des obligations et les payoffs optionnels peuvent rester incertains."
+      ],
+      "cue": "La maturité de l’obligation contraint sa dynamique.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 11,
+        "pdfPages": [
+          177,
+          178
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      }
+    },
+    {
+      "id": "ym012",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-14.1",
+      "reading": "MR-14",
+      "concept": "Construct a normal short-rate tree with drift",
+      "question": "For one binomial quarter-step, approximate \\(dr=\\theta dt+\\sigma dW\\) using equal branch probabilities and nodes \\(r_0+\\theta\\Delta t\\pm\\sigma\\sqrt{\\Delta t}\\). Let \\(r_0=3.0\\%\\), \\(\\theta=0.004\\) decimal-rate units per year, \\(\\sigma=0.008\\) per square-root year and \\(\\Delta t=0.25\\). What are the upper and lower short-rate nodes?",
+      "choices": [
+        "3.3% and2.9%.",
+        "3.6% and2.8%.",
+        "3.5% and2.7%.",
+        "3.4% and2.6%."
+      ],
+      "answer": 2,
+      "explanation": "Le drift ajoute \\(0.004(0.25)=0.001\\), soit10bp. Le choc binomial vaut \\(0.008\\sqrt{0.25}=0.004\\), soit40bp. Les nœuds sont \\(3.0\\%+0.1\\%\\pm0.4\\%\\): 3.5% et2.7%. Leur moyenne vaut3.1% et leur écart-type40bp. Sans drift, les deux nœuds seraient décalés de10bp vers le bas.",
+      "why": [
+        "Le choc aléatoire a été multiplié par le temps au lieu de sa racine.",
+        "Le drift a été multiplié par la racine du temps plutôt que par le temps.",
+        "Correct: drift10bp, choc±40bp.",
+        "Ces nœuds omettent le drift."
+      ],
+      "cue": "Drift × temps; bruit × racine du temps.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 13,
+        "pdfPages": [
+          189,
+          192
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      },
+      "numeric": {
+        "expression": "(0.03+0.004*0.25+0.008*Math.sqrt(0.25))*100",
+        "value": 3.5,
+        "optionValue": 3.5,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "ym013",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-14.6",
+      "reading": "MR-14",
+      "concept": "Construct a recombining Vasicek branch by matching two moments",
+      "question": "At one node of a Vasicek approximation, the required next-step conditional mean is3.4% and standard deviation is80bp. A recombining construction fixes one child node at3.0%, shared with a neighboring branch. Which other child and transition probability match both moments? Treat the two outcomes as exact for this moment-matching exercise.",
+      "choices": [
+        "Other child3.8%, probability0.50 of that child.",
+        "Other child5.0%, probability0.20 of that child.",
+        "Other child4.0%, probability0.40 of that child.",
+        "Other child5.0%, probability0.50 of that child."
+      ],
+      "answer": 1,
+      "explanation": "Le choix \\(u=0.05\\), \\(c=0.03\\), \\(p=0.20\\) donne \\(E[r]=0.2(0.05)+0.8(0.03)=0.034\\). Sa variance vaut \\(p(1-p)(u-c)^2=0.2(0.8)(0.02)^2=0.000064\\), donc \\(SD=0.008=80\\)bp. Les autres propositions manquent la moyenne ou la variance. Fixer un nœud partagé exige d’ajuster les autres éléments plutôt que de garder systématiquement une probabilité une moitié.",
+      "why": [
+        "La moyenne est correcte, mais l’écart-type n’est que40bp.",
+        "Correct: moyenne3.4%, écart-type80bp et enfant partagé conservé.",
+        "La moyenne est correcte, mais l’écart-type vaut environ49bp.",
+        "La moyenne serait4.0% et l’écart-type100bp."
+      ],
+      "cue": "Recombiner sans perdre les deux moments conditionnels.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 13,
+        "pdfPages": [
+          195,
+          196
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      },
+      "numeric": {
+        "expression": "Math.sqrt(0.2*0.8*Math.pow(0.05-0.03,2))*10000",
+        "value": 80,
+        "optionValue": 80,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "ym014",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-14.8",
+      "reading": "MR-14",
+      "concept": "A one-factor Vasicek volatility shape can fail empirical data",
+      "question": "For a constant-parameter one-factor Vasicek model with positive mean-reversion speed a, the instantaneous volatility of a continuously compounded zero yield of maturity T is \\(\\sigma(1-e^{-aT})/(aT)\\). The observed two-year zero-yield volatility is50bp, while the ten-year volatility is70bp. Which assessment of model effectiveness is strongest?",
+      "choices": [
+        "Changing the long-run rate level alone can fit both observed volatilities without altering the formula.",
+        "An exact fit of today’s zero-coupon prices guarantees that both volatility targets will also fit.",
+        "The model must fit because mean reversion can make the ten-year loading arbitrarily larger than the two-year loading.",
+        "The stated Vasicek volatility loading decreases with maturity, so no single positive a and common sigma can fit this upward pair; the dynamics or factor structure need reconsideration."
+      ],
+      "answer": 3,
+      "explanation": "La fonction \\((1-e^{-aT})/(aT)\\) est décroissante enT pour \\(a>0\\). Le modèle impose donc une volatilité10ans inférieure à celle2ans àsigma identique. Changer le niveau de long terme n’inverse pas cette forme. Une bonne calibration des prix initiaux ne garantit pas une bonne dynamique; des facteurs ou spécifications supplémentaires peuvent être nécessaires.",
+      "why": [
+        "Le niveau de long terme n’apparaît pas dans cette volatilité instantanée.",
+        "Les prix présents et les covariances de leurs variations sont des cibles différentes.",
+        "Le rappel positif atténue les maturités longues dans le modèle décrit.",
+        "Correct: identifier une restriction testable avant de prétendre que le modèle représente toute la courbe."
+      ],
+      "cue": "Vasicek un facteur: forme de volatilité restrictive.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 13,
+        "pdfPages": [
+          197,
+          199
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      }
+    },
+    {
+      "id": "ym015",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-15.1",
+      "reading": "MR-15",
+      "concept": "Declining calendar volatility is not mean reversion of an existing shock",
+      "question": "A Gaussian short-rate model is \\(dr=\\theta(t)dt+\\sigma_0e^{-bt}dW_t\\), where theta and b are deterministic and there is no state-dependent mean-reversion term. At calendar time t, the current short rate unexpectedly rises10bp. Holding all future deterministic functions unchanged, how does this affect the conditional expected short rate at later horizons?",
+      "choices": [
+        "The 10bp change persists in each later conditional expected short rate; declining future diffusion volatility does not itself pull an existing level shock back.",
+        "The effect decays as \\(10e^{-b(T-t)}\\)bp because any exponentially declining volatility necessarily implies mean reversion.",
+        "The effect disappears immediately because the drift is deterministic.",
+        "The conditional expectation rises by10bp only when b is zero; otherwise it falls below its pre-shock value."
+      ],
+      "answer": 0,
+      "explanation": "Pour ce modèle sans rappel, \\(E_t[r_T]=r_t+\\int_t^T\\theta(s)ds\\). Modifier \\(r_t\\) de10bp modifie donc chaque espérance conditionnelle future de10bp. La fonction de volatilité règle l’amplitude des nouveaux chocs à chaque date; elle n’amortit pas le choc déjà inscrit dans le niveau.",
+      "why": [
+        "Correct: distinguer calendrier des nouveaux bruits et propagation d’un choc de niveau.",
+        "Ce facteur d’amortissement apparaîtrait dans une dérive de rappel, absente ici.",
+        "Une dérive déterministe ne retire pas la nouvelle condition initiale.",
+        "La baisse du niveau attendu ne découle pas de la diffusion de moyenne nulle."
+      ],
+      "cue": "Volatilité future plus faible ≠ effacement du choc présent.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 14,
+        "pdfPages": [
+          201,
+          202
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      }
+    },
+    {
+      "id": "ym016",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-17.1",
+      "reading": "MR-17",
+      "concept": "Classify a smile and a skew at a fixed expiry",
+      "question": "At one fixed expiry, implied volatilities at low, ATM and high strikes are30%,20%,27% for asset A and32%,25%,21% for asset B. Each quote uses consistent call-put parity and the same strike conventions. Which description is most accurate?",
+      "choices": [
+        "A has a strictly downward skew; B has a symmetric smile.",
+        "A has no smile because its two wings are not exactly equal.",
+        "A has a smile with unequal wings; B has a downward volatility skew over the quoted strikes.",
+        "B’s higher low-strike volatility must apply only to puts, never to calls at that same strike and expiry."
+      ],
+      "answer": 2,
+      "explanation": "PourA, les deux ailes ont une volatilité supérieure à l’ATM: un sourire peut être asymétrique. PourB, la volatilité décroît avec le strike: skew baissier sur les points donnés. À même strike/maturité et conventions cohérentes, call et put partagent l’implied vol; qualifier un point par son type d’option seul serait trompeur.",
+      "why": [
+        "A remonte dans l’aile haute; B ne forme pas deU sur ces trois points.",
+        "L’égalité exacte des ailes n’est pas nécessaire pour parler de sourire.",
+        "Correct: la forme se lit à échéance et coordonnées fixées.",
+        "La parité lie les options de même strike et maturité, pas seulement les puts."
+      ],
+      "cue": "Sourire: deux ailes; skew: pente.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 15,
+        "pdfPages": [
+          207,
+          208
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      }
+    },
+    {
+      "id": "ym017",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-17.5",
+      "reading": "MR-17",
+      "concept": "Compare economic mechanisms behind equity skew and FX wings",
+      "question": "A desk explains a typical equity downside skew and a two-sided FX smile. Which pairing of mechanisms is most defensible as an economic explanation, rather than a universal law?",
+      "choices": [
+        "Equity skew is explained solely by deterministic dividends; an FX smile requires constant volatility and continuous price paths.",
+        "Equity downside moves can raise leverage and volatility, while uncertain FX volatility and jumps in either direction can raise the prices of both wings relative to a flat-volatility lognormal model.",
+        "Equity skew proves that stock prices must follow a symmetric normal distribution; an FX smile proves that exchange rates never jump.",
+        "Neither shape can occur in arbitrage-free option prices because call-put parity requires a flat volatility surface."
+      ],
+      "answer": 1,
+      "explanation": "Le mécanisme de levier/volatility feedback et la demande de protection contre les crises aident à expliquer l’aile gauche chère des actions. Une volatilité FX variable et des sauts peuvent épaissir les deux queues par rapport à un modèle lognormal àvolatilité fixe, favorisant un sourire. Les formes dépendent du marché, de l’échéance et du régime; elles ne sont pas universelles.",
+      "why": [
+        "Des dividendes déterministes ne suffisent pas à créer ces écarts à la volatilité constante dans le modèle standard; les conditions FX citées produisent justement un lognormal sans ces sauts.",
+        "Correct: mécanismes plausibles, avec qualification empirique.",
+        "Les conclusions de distribution et d’absence de saut contredisent les mécanismes discutés.",
+        "La parité impose la cohérence call-put àchaque point, pas la platitude en strike."
+      ],
+      "cue": "Actions: asymétrie baisse–volatilité; FX: risques possibles dans les deux ailes.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 15,
+        "pdfPages": [
+          209,
+          210
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      }
+    },
+    {
+      "id": "ym018",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-17.6",
+      "reading": "MR-17",
+      "concept": "Normalize a smile by forward and square-root maturity",
+      "question": "A dealer characterizes a smile by \\(z=\\ln(K/F_T)/\\sqrt T\\), rather than strike or spot moneyness. For maturity \\(T_1=0.25\\) year, forward \\(F_1=100\\), a quote has strike \\(K_1=105\\). At maturity \\(T_2=1\\) year and forward \\(F_2=110\\), which strike has the same z coordinate?",
+      "choices": [
+        "105.00, because the original strike should be retained.",
+        "115.50, because keeping K/F constant also keeps z constant across maturities.",
+        "112.72, obtained by scaling the logarithmic distance by one half.",
+        "121.28, because \\(K_2=110\\exp[2\\ln(1.05)]\\)."
+      ],
+      "answer": 3,
+      "explanation": "Le premier point vaut \\(z_1=\\ln(1.05)/\\sqrt{0.25}=2\\ln(1.05)\\). À1an, \\(\\sqrt{T_2}=1\\), donc \\(\\ln(K_2/110)=2\\ln(1.05)\\). Ainsi \\(K_2=110(1.05)^2=121.275\\), arrondi121.28. Le repère choisi inclut le forward et le temps; ni le strike constant ni le simple ratioK/F ne suffisent.",
+      "why": [
+        "Le strike fixe ne préserve pas ce repère lorsque forward et maturité changent.",
+        "K/F constant préserve le log-moneyness, mais pas sa normalisation par racine de maturité.",
+        "Le facteur de maturité a été inversé.",
+        "Correct: le ratio des racines des maturités vaut2."
+      ],
+      "cue": "Définir le repère avant de transporter un point de smile.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 15,
+        "pdfPages": [
+          211,
+          212
+        ],
+        "note": "Référence conceptuelle de la lecture2024; question originale, pas une reproduction d’un problème du livre."
+      },
+      "numeric": {
+        "expression": "110*Math.exp(2*Math.log(1.05))",
+        "value": 121.275,
+        "optionValue": 121.28,
+        "tolerance": 0.006
+      }
+    }
+  ],
+  "auditScope": {
+    "purpose": "Close18currentlyunpractisedmarketobjectives withoneoriginalquestionperlistedobjective; a practice mapping doesnotestablishmastery.",
+    "source": "Uploaded2024Marketbookconcepts crosswalked toactual2026objectivewording in frm-objective-map.json.",
+    "review": "Stems and distractors checked against existing market questions and54xm questions. Independent arithmetic and KaTeX validation recorded separately.",
+    "limitations": [
+      "One question per objective is a minimum practice sample, not exhaustive objective testing.",
+      "Historical Basel rules are explicitly versioned as the framework in the reading, not asserted to govern a current jurisdiction.",
+      "All pricing and factor assumptions needed for numerical answers are specified; formula questions are original, not copied from book exercises."
+    ]
+  }
+}

@@ -1,0 +1,3251 @@
+{
+  "topic": "market",
+  "chapters": [
+    {
+      "bookChapter": 1,
+      "title": "Estimating Market Risk Measures",
+      "pdfStart": 14,
+      "pdfEnd": 29,
+      "readingIds": [
+        "MR-1"
+      ],
+      "status": "matched",
+      "difference": "Objectifs essentiellement alignés; conventions de quantile à préciser."
+    },
+    {
+      "bookChapter": 2,
+      "title": "Non-Parametric Approaches",
+      "pdfStart": 30,
+      "pdfEnd": 47,
+      "readingIds": [
+        "MR-2"
+      ],
+      "status": "matched",
+      "difference": "Méthodes reprises; préserver la dépendance lors du rééchantillonnage."
+    },
+    {
+      "bookChapter": 3,
+      "title": "Parametric Approaches (II): Extreme Value",
+      "pdfStart": 48,
+      "pdfEnd": 61,
+      "readingIds": [
+        "MR-3"
+      ],
+      "status": "matched",
+      "difference": "Objectifs alignés; erreur numérique apparente dans ES de l’exemple final, recalcul indépendant requis."
+    },
+    {
+      "bookChapter": 4,
+      "title": "Backtesting VaR",
+      "pdfStart": 62,
+      "pdfEnd": 71,
+      "readingIds": [
+        "MR-4"
+      ],
+      "status": "matched",
+      "difference": "Cadre pédagogique repris; règles historiques Basel à distinguer des règles actualisées."
+    },
+    {
+      "bookChapter": 5,
+      "title": "VaR Mapping",
+      "pdfStart": 72,
+      "pdfEnd": 85,
+      "readingIds": [
+        "MR-5"
+      ],
+      "status": "matched",
+      "difference": "Correspondance directe, avec hypothèses de linéarisation explicites."
+    },
+    {
+      "bookChapter": 6,
+      "title": "Messages from the Academic Literature on Risk Management for the Trading Book",
+      "pdfStart": 86,
+      "pdfEnd": 117,
+      "readingIds": [],
+      "status": "supplementary",
+      "difference": "Pas un chapitre actuel autonome. Utile pour risques endogènes, liquidité, agrégation et limites de la VaR; ne remplace pas MR-6/MR-7."
+    },
+    {
+      "bookChapter": 7,
+      "title": "Correlation Basics: Definitions, Applications, and Terminology",
+      "pdfStart": 118,
+      "pdfEnd": 137,
+      "readingIds": [
+        "MR-8"
+      ],
+      "status": "matched",
+      "difference": "Correspondance directe; ne pas généraliser les signes de corrélation à tous les portefeuilles ni à toutes les cotations FX."
+    },
+    {
+      "bookChapter": 8,
+      "title": "Empirical Properties of Correlation",
+      "pdfStart": 138,
+      "pdfEnd": 145,
+      "readingIds": [
+        "MR-9"
+      ],
+      "status": "matched",
+      "difference": "Résultats empiriques datés, pas des lois universelles ni des prévisions certaines."
+    },
+    {
+      "bookChapter": 9,
+      "title": "Financial Correlation Modeling—Bottom-Up Approaches",
+      "pdfStart": 146,
+      "pdfEnd": 151,
+      "readingIds": [
+        "MR-10"
+      ],
+      "status": "partial",
+      "difference": "Pages courtes consacrées à la copule gaussienne; numérotation et périmètre de pages différents en 2026. Simulation clarifiée par transformation composante par composante."
+    },
+    {
+      "bookChapter": 10,
+      "title": "Empirical Approaches to Risk Metrics and Hedging",
+      "pdfStart": 152,
+      "pdfEnd": 167,
+      "readingIds": [
+        "MR-11"
+      ],
+      "status": "partial",
+      "difference": "Titre 2026 modifié: Regression Hedging and Principal Component Analysis; principes communs, édition et exemples différents."
+    },
+    {
+      "bookChapter": 11,
+      "title": "The Science of Term Structure Models",
+      "pdfStart": 168,
+      "pdfEnd": 179,
+      "readingIds": [
+        "MR-12"
+      ],
+      "status": "partial",
+      "difference": "Titre 2026 modifié: Arbitrage Pricing with Term Structure Models; noyau conceptuel commun."
+    },
+    {
+      "bookChapter": 12,
+      "title": "The Evolution of Short Rates and the Shape of the Term Structure",
+      "pdfStart": 180,
+      "pdfEnd": 187,
+      "readingIds": [
+        "MR-13"
+      ],
+      "status": "partial",
+      "difference": "Titre 2026 modifié; attentes, prime et convexité restent le noyau."
+    },
+    {
+      "bookChapter": 13,
+      "title": "The Art of Term Structure Models: Drift",
+      "pdfStart": 188,
+      "pdfEnd": 199,
+      "readingIds": [
+        "MR-14",
+        "MR-16"
+      ],
+      "status": "partial",
+      "difference": "Couvre MR-14 et la base Vasicek de MR-16, mais ne contient pas le traitement Gauss+ actuel."
+    },
+    {
+      "bookChapter": 14,
+      "title": "The Art of Term Structure Models: Volatility and Distribution",
+      "pdfStart": 200,
+      "pdfEnd": 205,
+      "readingIds": [
+        "MR-15"
+      ],
+      "status": "matched",
+      "difference": "Diffusions communes; contrôle visuel effectué des équations Black–Karasinski avant réécriture."
+    },
+    {
+      "bookChapter": 15,
+      "title": "Volatility Smiles",
+      "pdfStart": 206,
+      "pdfEnd": 215,
+      "readingIds": [
+        "MR-17"
+      ],
+      "status": "partial",
+      "difference": "Titre 2026 étendu aux surfaces; principes repris avec distinctions mesure risque-neutre/physique."
+    },
+    {
+      "bookChapter": 16,
+      "title": "Fundamental Review of the Trading Book",
+      "pdfStart": 216,
+      "pdfEnd": 223,
+      "readingIds": [
+        "MR-18"
+      ],
+      "status": "partial",
+      "difference": "Source historiquement fondée sur propositions 2014/2016: ne pas réutiliser automatiquement dates ou seuils PLA comme réglementation actuelle."
+    }
+  ],
+  "guides": [
+    {
+      "readingId": "MR-1",
+      "title": "Estimating Market Risk Measures: An Introduction and Overview",
+      "principles": [
+        "La VaR est un quantile de perte; changer le signe de P&L change la queue à utiliser. Donner la convention empirique avant de trier.",
+        "L’ES moyenne exactement la masse de queue demandée. Dans une distribution discrète, une fraction de la masse située au quantile peut être nécessaire.",
+        "Une estimation de risque n’est pas une constante connue: sa précision dépend de la taille d’échantillon et de la densité au voisinage du quantile."
+      ],
+      "recallPrompts": [
+        "À quelle queue correspond une perte positive si les données sont des profits?",
+        "Comment calculer une ES lorsque la queue coupe une barre de probabilité?",
+        "Pourquoi deux quantiles au même niveau peuvent-ils avoir des erreurs standard différentes?"
+      ],
+      "traps": [
+        {
+          "mistake": "Trier des profits par ordre décroissant pour mesurer la perte.",
+          "correction": "Passer en pertes ou utiliser la queue gauche des profits avec changement de signe.",
+          "check": "Écrire un scénario de perte avant le calcul."
+        },
+        {
+          "mistake": "Croire qu’un intervalle de confiance est une nouvelle VaR à un autre niveau.",
+          "correction": "Le niveau de risque concerne la distribution des pertes; la confiance concerne l’incertitude d’estimation.",
+          "check": "Identifier les deux distributions."
+        }
+      ],
+      "worked": {
+        "prompt": "Deux estimateurs de quantile ont le même nombre de données et le même niveau. La densité au quantile vaut 0,04 pour A et 0,02 pour B. Comparer leurs erreurs standard.",
+        "steps": [
+          "À taille et niveau fixés, \\(\\operatorname{SE}(\\hat q_p)\\propto1/f(q_p)\\).",
+          "La densité est divisée par deux, donc l’erreur standard est multipliée par deux."
+        ],
+        "result": "B a une erreur standard double.",
+        "check": "Une queue localement moins dense localise moins précisément le quantile."
+      },
+      "formulas": [
+        {
+          "name": "Erreur standard asymptotique du quantile",
+          "tex": "\\operatorname{SE}(\\hat q_p)\\approx\\frac{\\sqrt{p(1-p)}}{\\sqrt n\\,f(q_p)}",
+          "variables": "p: niveau; n: taille; f: densité au quantile.",
+          "assumptions": "Observations iid; densité positive et régulière; approximation asymptotique.",
+          "trap": "Une densité estimée très faible rend l’approximation instable."
+        },
+        {
+          "name": "ES par intégration de quantiles",
+          "tex": "\\operatorname{ES}_\\alpha=\\frac{1}{1-\\alpha}\\int_\\alpha^1 q_p\\,dp",
+          "variables": "q_p: quantile de perte; alpha: confiance.",
+          "assumptions": "Pertes intégrables; définition valable avec atomes via quantiles.",
+          "trap": "Ne pas conditionner simplement sur une inégalité stricte en présence d’atomes."
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "readingId": "MR-2",
+      "title": "Non-Parametric Approaches",
+      "principles": [
+        "La simulation historique réévalue le portefeuille actuel sous des chocs passés; les anciens P&L d’un ancien portefeuille ne sont pas équivalents.",
+        "Pondérer les probabilités par l’âge et redimensionner les amplitudes par la volatilité sont deux opérations différentes.",
+        "Le bootstrap estime l’incertitude conditionnellement aux données disponibles; il ne découvre pas les scénarios absents."
+      ],
+      "recallPrompts": [
+        "Comment transporter un choc ancien vers la volatilité courante?",
+        "Pourquoi rééchantillonner les vecteurs de résidus ensemble?",
+        "Quand employer des blocs plutôt que des jours indépendants?"
+      ],
+      "traps": [
+        {
+          "mistake": "Confondre poids de probabilité et taille du choc.",
+          "correction": "L’âge change la masse attribuée; le filtre de volatilité change l’amplitude.",
+          "check": "Vérifier ce qui somme à un."
+        },
+        {
+          "mistake": "Tirer séparément les résidus de chaque actif.",
+          "correction": "Tirer des lignes communes pour conserver leur dépendance instantanée.",
+          "check": "Vérifier que les chocs simultanés restent simultanés."
+        }
+      ],
+      "worked": {
+        "prompt": "Dans une simulation multiactifs, deux résidus standardisés ont covariance identité après blanchiment. Comment produire des chocs avec une nouvelle matrice de corrélation \\(C\\)?",
+        "steps": [
+          "Trouver \\(A\\) tel que \\(AA^\\top=C\\).",
+          "Appliquer \\(\\tilde z=Az\\), puis réappliquer les volatilités courantes."
+        ],
+        "result": "La covariance des chocs recolorés est C.",
+        "check": "Calculer la covariance du résultat, pas seulement chaque variance."
+      },
+      "formulas": [
+        {
+          "name": "Filtre et remise à échelle",
+          "tex": "\\tilde r_{i,t}=\\frac{\\sigma_{i,T}}{\\sigma_{i,t}}r_{i,t}",
+          "variables": "r: innovation centrée; sigma_t: volatilité historique; sigma_T: prévision courante.",
+          "assumptions": "Même définition de rendement et de volatilité; moyenne traitée séparément si nécessaire.",
+          "trap": "Ne pas multiplier par le ratio inverse."
+        },
+        {
+          "name": "Taille effective des poids",
+          "tex": "n_{\\mathrm{eff}}=\\frac{1}{\\sum_i w_i^2}",
+          "variables": "Poids normalisés positifs.",
+          "assumptions": "Diagnostic de concentration des poids, pas correction universelle de dépendance.",
+          "trap": "Un grand historique peut avoir une petite taille effective."
+        }
+      ],
+      "prerequisites": [
+        "MR-1"
+      ]
+    },
+    {
+      "readingId": "MR-3",
+      "title": "Parametric Approaches (II): Extreme Value",
+      "principles": [
+        "Les méthodes EVT modélisent une queue asymptotique, pas la totalité de la distribution.",
+        "POT retient les excès au-dessus d’un seuil; GEV retient les maxima de blocs. Le choix utilise les données différemment.",
+        "Le seuil règle un compromis biais-variance. Une extrapolation très éloignée exige des diagnostics de stabilité et d’incertitude."
+      ],
+      "recallPrompts": [
+        "Que devient la GPD quand son paramètre de forme tend vers zéro?",
+        "Comment distinguer probabilité conditionnelle d’excès et probabilité totale de perte?",
+        "Que change une dépendance des événements extrêmes dans plusieurs dimensions?"
+      ],
+      "traps": [
+        {
+          "mistake": "Oublier la probabilité de dépasser le seuil.",
+          "correction": "Multiplier la survie conditionnelle par la fréquence de dépassement du seuil.",
+          "check": "Au seuil, retrouver cette fréquence."
+        },
+        {
+          "mistake": "Calculer une ES avec une forme au moins égale à un.",
+          "correction": "La moyenne de la queue GPD est alors infinie.",
+          "check": "Vérifier l’existence du moment avant toute division."
+        }
+      ],
+      "worked": {
+        "prompt": "Les pertes dépassent \\(u=4\\) millions avec probabilité 5%; les excès sont exponentiels de moyenne 2 millions. Trouver la perte dépassée avec probabilité 1%.",
+        "steps": [
+          "\\(0.01=0.05\\exp[-(x-4)/2]\\).",
+          "\\(x=4+2\\ln5\\)."
+        ],
+        "result": "\\(x\\approx7.219\\) millions.",
+        "check": "Le quantile est supérieur au seuil et la probabilité de queue est réduite."
+      },
+      "formulas": [
+        {
+          "name": "Survie POT",
+          "tex": "P(L>x)=p_u\\left(1+\\xi\\frac{x-u}{\\beta}\\right)^{-1/\\xi}",
+          "variables": "\\(p_u=P(L>u)\\); \\(\\beta>0\\): échelle; \\(\\xi\\): forme.",
+          "assumptions": "x>u et support positif; approximation GPD valide au seuil.",
+          "trap": "Le terme de forme ne remplace pas p_u."
+        },
+        {
+          "name": "Limite exponentielle et ES",
+          "tex": "\\xi=0:\\quad q_\\alpha=u+\\beta\\ln\\frac{p_u}{1-\\alpha},\\qquad \\operatorname{ES}_\\alpha=q_\\alpha+\\beta",
+          "variables": "beta: échelle des excès.",
+          "assumptions": "Niveau de quantile au-dessus du seuil, \\(\\xi=0\\).",
+          "trap": "Ne pas ajouter le seuil une deuxième fois dans ES."
+        }
+      ],
+      "prerequisites": [
+        "MR-1",
+        "MR-2"
+      ]
+    },
+    {
+      "readingId": "MR-4",
+      "title": "Backtesting VaR",
+      "principles": [
+        "Une exception est une perte supérieure au quantile prévu. Le backtest doit comparer des objets cohérents en positions, horizon et valorisation.",
+        "La fréquence détecte un mauvais niveau moyen; l’indépendance détecte une mauvaise dynamique. Les deux sont nécessaires.",
+        "Un test peut manquer une erreur réelle lorsque les exceptions sont rares. Ne pas rejeter n’est pas prouver."
+      ],
+      "recallPrompts": [
+        "Comment distinguer erreurs de type I et II avec le modèle correct comme hypothèse nulle?",
+        "Pourquoi des horizons chevauchants créent-ils une dépendance mécanique?",
+        "Que permet réellement une année sans exception à très haut niveau?"
+      ],
+      "traps": [
+        {
+          "mistake": "Tester des pertes chevauchantes comme des Bernoulli indépendantes.",
+          "correction": "Tenir compte du chevauchement ou construire un échantillon adapté.",
+          "check": "Repérer les jours qui partagent un même choc."
+        },
+        {
+          "mistake": "Accepter automatiquement un modèle très conservateur.",
+          "correction": "Trop peu d’exceptions peuvent aussi rejeter un test bilatéral de couverture.",
+          "check": "Écrire le sens du test avant d’interpréter zéro."
+        }
+      ],
+      "worked": {
+        "prompt": "Un modèle 95% produit 10 exceptions sur 400 jours. Tester son taux observé avant toute conclusion.",
+        "steps": [
+          "Le nombre attendu est \\(400(0.05)=20\\).",
+          "Le taux observé est \\(10/400=2.5\\%\\), inférieur à 5%."
+        ],
+        "result": "Une sous-fréquence est compatible avec une VaR trop conservatrice; il faut un test et ses hypothèses.",
+        "check": "Un nombre faible n’est pas automatiquement meilleur."
+      },
+      "formulas": [
+        {
+          "name": "Exceptions attendues",
+          "tex": "E[N]=np,\\qquad \\operatorname{Var}(N)=np(1-p)",
+          "variables": "p: probabilité d’exception; n: observations.",
+          "assumptions": "Bernoulli iid sous calibration correcte pour la variance indiquée.",
+          "trap": "Le nombre attendu n’est pas un seuil de rejet."
+        },
+        {
+          "name": "Couverture inconditionnelle",
+          "tex": "LR_{\\mathrm{uc}}=2\\left[(n-x)\\ln\\frac{1-x/n}{1-p}+x\\ln\\frac{x/n}{p}\\right]",
+          "variables": "x: exceptions; p: cible.",
+          "assumptions": "Limite asymptotique khi-deux à un degré; termes zéro pris par continuité.",
+          "trap": "Le test ne vérifie pas l’indépendance des exceptions."
+        }
+      ],
+      "prerequisites": [
+        "MR-1"
+      ]
+    },
+    {
+      "readingId": "MR-5",
+      "title": "VaR Mapping",
+      "principles": [
+        "Le mapping remplace des positions par leurs expositions à des facteurs primitifs. Le nombre d’instruments n’est pas le nombre de risques indépendants.",
+        "Le risque spécifique dépend du détail des facteurs généraux retenus; l’ajout d’un facteur redistribue le risque sans nécessairement supprimer le risque total.",
+        "Pour les options, un mapping local peut échouer sous grand choc: gamma, vega et changement de delta doivent être réévalués."
+      ],
+      "recallPrompts": [
+        "Comment une position de valeur initiale nulle peut-elle être risquée?",
+        "Pourquoi le DV01 total ne suffit-il pas pour comparer un fonds à son indice?",
+        "Quelle erreur un mapping delta seul fait-il pour une option courte proche de l’échéance?"
+      ],
+      "traps": [
+        {
+          "mistake": "Déduire une exposition nulle d’une valeur de marché nulle.",
+          "correction": "Les sensibilités de deux jambes peuvent être opposées sans annuler tous les facteurs.",
+          "check": "Écrire les jambes et leurs dérivées."
+        },
+        {
+          "mistake": "Additionner les VaR signées sans covariance.",
+          "correction": "Agréger les expositions signées avec leur matrice de covariance.",
+          "check": "Tester le cas de deux expositions opposées au même facteur."
+        }
+      ],
+      "worked": {
+        "prompt": "Un portefeuille possède 30 unités de sensibilité au facteur 1 et −20 au facteur 2. Le scénario impose +2 au premier et +1 au second.",
+        "steps": [
+          "Le P&L linéaire est \\(30(2)-20(1)\\).",
+          "Conserver les signes des expositions et des chocs."
+        ],
+        "result": "P&L de +40 unités.",
+        "check": "Une exposition courte profite d’un choc négatif et perd sur un choc positif."
+      },
+      "formulas": [
+        {
+          "name": "Mapping linéaire",
+          "tex": "\\Delta V\\approx x^\\top\\Delta f,\\qquad \\operatorname{Var}(\\Delta V)=x^\\top\\Sigma x",
+          "variables": "x: sensibilités; f: facteurs; Sigma: covariance.",
+          "assumptions": "Approximation locale; unités compatibles.",
+          "trap": "Ne pas remplacer les sensibilités par les valeurs de marché sans justification."
+        },
+        {
+          "name": "Risque relatif au benchmark",
+          "tex": "\\sigma_{\\mathrm{actif}}^2=(x-x_b)^\\top\\Sigma(x-x_b)",
+          "variables": "x_b: expositions du benchmark.",
+          "assumptions": "Même base de facteurs et mêmes unités.",
+          "trap": "Différence d’expositions plutôt que différence de volatilités."
+        }
+      ],
+      "prerequisites": [
+        "MR-1"
+      ]
+    },
+    {
+      "readingId": "MR-6",
+      "title": "Validating Bank Holding Companies’ Value-at-Risk Models for Market Risk",
+      "principles": [
+        "La validation combine fondement conceptuel, analyse des résultats et comparaison à des références pertinentes. Un backtest réussi n’efface pas une omission économique.",
+        "La sensibilité explore les hypothèses du modèle autant que les prix: fenêtre, pondération, dépendance, volatilité et valorisation.",
+        "Une référence n’est comparable qu’après harmonisation du portefeuille, du périmètre, de l’horizon, du niveau et du traitement de P&L."
+      ],
+      "recallPrompts": [
+        "Que faut-il harmoniser avant de comparer deux VaR?",
+        "Pourquoi une sensibilité attendue peut-elle être faible pour un quantile empirique?",
+        "Comment distinguer incertitude Monte Carlo et incertitude de données?"
+      ],
+      "traps": [
+        {
+          "mistake": "Traiter la moyenne des autres banques comme vérité.",
+          "correction": "Les portefeuilles et périmètres diffèrent; construire un exercice comparable.",
+          "check": "Comparer sur un portefeuille commun."
+        },
+        {
+          "mistake": "Confondre plus de simulations et plus de données indépendantes.",
+          "correction": "Plus de tirages réduisent le bruit numérique, pas le manque d’information historique.",
+          "check": "Identifier quelle source d’incertitude diminue."
+        }
+      ],
+      "worked": {
+        "prompt": "Un portefeuille linéaire et toutes ses positions sont doublés, sans coûts, limites de marché ni changement du modèle de facteurs. Sa VaR absolue devrait-elle rester inchangée?",
+        "steps": [
+          "Chaque P&L de scénario est multiplié par deux puisque le portefeuille et la valorisation sont linéaires.",
+          "Le quantile de perte est donc aussi multiplié par deux; une VaR inchangée nécessite une explication ou un contrôle du périmètre."
+        ],
+        "result": "Sous ces hypothèses, la VaR double.",
+        "check": "Ne pas étendre cet argument à une liquidation avec coûts de marché non linéaires."
+      },
+      "formulas": [
+        {
+          "name": "Décomposition de variance",
+          "tex": "\\operatorname{Var}(\\hat q)=E[\\operatorname{Var}(\\hat q\\mid D)]+\\operatorname{Var}(E[\\hat q\\mid D])",
+          "variables": "D: échantillon de données; qhat: estimateur simulé.",
+          "assumptions": "Moments existants; décomposition conceptuelle des sources d’erreur.",
+          "trap": "Faire tendre les simulations vers l’infini laisse l’incertitude liée à D."
+        }
+      ],
+      "prerequisites": [
+        "MR-1",
+        "MR-2",
+        "MR-4"
+      ],
+      "currentSource": {
+        "url": "https://www.cambridge.org/core/books/abs/validation-of-risk-management-models-for-financial-institutions/validating-bank-holding-companies-valueatrisk-models-for-market-risk/AC740C16108EF1A7D3926F00BCFB8D70",
+        "access": "Publisher abstract verified; full chapter not available. The original questions use the explicit 2026 objectives and general validation principles, not claimed quotations."
+      },
+      "editionStatus": "current-reading-absent-from-upload"
+    },
+    {
+      "readingId": "MR-7",
+      "title": "Beyond Exceedance-Based Backtesting of Value-at-Risk Models: Methods for Backtesting the Entire Forecasting Distribution Using Probability Integral Transform",
+      "principles": [
+        "Le PIT transforme chaque observation par la CDF prévisionnelle disponible avant sa réalisation. Sous une prévision continue correcte, les PIT sont uniformes et sans dépendance prévisible.",
+        "Une histogramme uniforme ne vérifie pas l’ordre temporel; une séquence peut avoir la bonne distribution et une dynamique fausse.",
+        "KS mesure le plus grand écart de CDF; Cramér–von Mises intègre les écarts carrés; Anderson–Darling renforce le poids des queues."
+      ],
+      "recallPrompts": [
+        "Pourquoi la CDF doit-elle être prévisionnelle plutôt qu’ajustée après réalisation?",
+        "Comment traiter une distribution prédite avec atomes?",
+        "Quel défaut un test de fréquence à 99% peut-il manquer dans le centre?"
+      ],
+      "traps": [
+        {
+          "mistake": "Appliquer le PIT continu directement à une distribution discrète.",
+          "correction": "Les atomes créent des sauts; utiliser un PIT randomisé si le test uniforme le nécessite.",
+          "check": "Vérifier la continuité de la CDF."
+        },
+        {
+          "mistake": "Confondre une bonne forme marginale avec une calibration conditionnelle.",
+          "correction": "Tester aussi dépendance, régimes et informations passées.",
+          "check": "Réordonner mentalement les observations: l’histogramme ne change pas."
+        }
+      ],
+      "worked": {
+        "prompt": "Une perte vaut zéro avec probabilité prévue 80%, et les 20% restants sont strictement positifs; une réalisation égale zéro donne quel PIT randomisé?",
+        "steps": [
+          "À zéro, la CDF gauche vaut 0 et la CDF droite 0.8.",
+          "\\(U=F(0^-)+V[F(0)-F(0^-)]=0.8V\\), avec \\(V\\sim U(0,1)\\)."
+        ],
+        "result": "Un uniforme sur [0,0.8], pas la constante 0.8.",
+        "check": "Les atomes n’empilent plus toutes les valeurs au même point."
+      },
+      "formulas": [
+        {
+          "name": "PIT continu",
+          "tex": "U_t=F_t(L_t)",
+          "variables": "F_t: CDF connue avant L_t.",
+          "assumptions": "Distribution prédite continue; calibration conditionnelle correcte pour iid uniforme.",
+          "trap": "F_t ajustée ex post rend le diagnostic trompeur."
+        },
+        {
+          "name": "PIT randomisé",
+          "tex": "U_t=F_t(L_t^-)+V_t\\left[F_t(L_t)-F_t(L_t^-)\\right]",
+          "variables": "V_t: uniforme indépendant.",
+          "assumptions": "Distribution discrète ou mixte; convention explicitée.",
+          "trap": "Ce bruit auxiliaire ne corrige pas un mauvais modèle."
+        }
+      ],
+      "prerequisites": [
+        "MR-1",
+        "MR-4",
+        "MR-6"
+      ],
+      "currentSource": {
+        "url": "https://www.cambridge.org/core/books/validation-of-risk-management-models-for-financial-institutions/beyond-exceedancebased-backtesting-of-valueatrisk-models-methods-for-backtesting-the-entire-forecasting-distribution-using-probability-integral-transform/6077935FB75663AF3242178AEDA75520",
+        "access": "Publisher metadata verified; no claim of full current chapter access. PIT, KS and randomization questions derive directly from their stated mathematical definitions."
+      },
+      "editionStatus": "current-reading-absent-from-upload"
+    },
+    {
+      "readingId": "MR-8",
+      "title": "Correlation Basics: Definitions, Applications, and Terminology",
+      "principles": [
+        "La corrélation affecte une position selon le signe de ses expositions. Elle accroît typiquement le risque d’un panier long, mais peut améliorer une couverture long-court.",
+        "Une corrélation faible n’implique pas indépendance. Les dépendances non linéaires ou extrêmes peuvent survivre à une covariance nulle.",
+        "Un swap de corrélation règle une moyenne définie des corrélations réalisées, pas une corrélation avec les diagonales incluses."
+      ],
+      "recallPrompts": [
+        "Pourquoi une hausse de corrélation peut-elle réduire le risque d’un spread?",
+        "Quelle cotation FX faut-il préciser pour le signe d’un ajustement quanto?",
+        "Quelles paires faut-il inclure dans une corrélation réalisée moyenne?"
+      ],
+      "traps": [
+        {
+          "mistake": "Affirmer que toute hausse de corrélation accroît toute VaR.",
+          "correction": "Inspecter les produits des expositions signées dans le terme de covariance.",
+          "check": "Comparer panier long et spread long-court."
+        },
+        {
+          "mistake": "Compter les diagonales et deux fois chaque paire.",
+          "correction": "Moyenner uniquement les paires distinctes selon la convention du contrat.",
+          "check": "Le nombre de paires est \\(n(n-1)/2\\)."
+        }
+      ],
+      "worked": {
+        "prompt": "Les variations de valeur de deux actifs avant application du signe des positions ont chacune une volatilité de 4 millions. Le portefeuille est long le premier et court le second, de même taille. Comparer sa volatilité lorsque la corrélation entre ces variations non signées passe de 0 à 0,75.",
+        "steps": [
+          "\\(\\sigma^2=4^2+4^2-2\\rho(4)(4)\\).",
+          "La volatilité passe de \\(\\sqrt{32}\\) à \\(\\sqrt8\\)."
+        ],
+        "result": "La volatilité est divisée par deux lorsque la corrélation passe de 0 à 0,75.",
+        "check": "Le signe négatif vient de la position courte, pas d’une corrélation négative."
+      },
+      "formulas": [
+        {
+          "name": "Deux expositions signées",
+          "tex": "\\sigma_P^2=x_1^2\\sigma_1^2+x_2^2\\sigma_2^2+2x_1x_2\\rho\\sigma_1\\sigma_2",
+          "variables": "x_i: positions signées.",
+          "assumptions": "Deux facteurs à second moment fini.",
+          "trap": "Le signe du terme croisé dépend aussi des positions."
+        },
+        {
+          "name": "Moyenne des corrélations par paires",
+          "tex": "\\bar\\rho=\\frac{2}{n(n-1)}\\sum_{i<j}\\rho_{ij}",
+          "variables": "n: actifs; paires sans diagonale.",
+          "assumptions": "Moyenne équipondérée contractuelle.",
+          "trap": "Ne pas employer \\(n^2\\) au dénominateur."
+        }
+      ],
+      "prerequisites": [
+        "MR-1",
+        "MR-5"
+      ]
+    },
+    {
+      "readingId": "MR-9",
+      "title": "Empirical Properties of Correlation: How Do Correlations Behave in the Real World?",
+      "principles": [
+        "Les corrélations et leur volatilité changent selon les régimes; les résultats historiques ne garantissent pas le prochain régime.",
+        "Dans un AR(1), la pente d’une régression de variation sur niveau est la persistance moins un.",
+        "Le support des corrélations est borné. Un bon ajustement dans le centre peut donner des probabilités impossibles hors de cet intervalle."
+      ],
+      "recallPrompts": [
+        "Comment passer de la régression variation/niveau à une équation en niveaux?",
+        "Que signifie une persistance négative mais de valeur absolue inférieure à un?",
+        "Pourquoi ne pas mémoriser une distribution empirique comme vérité universelle?"
+      ],
+      "traps": [
+        {
+          "mistake": "Identifier la pente de la régression en différences à l’autocorrélation.",
+          "correction": "Ajouter un à cette pente dans le modèle discret correspondant.",
+          "check": "Réécrire rho_t des deux côtés."
+        },
+        {
+          "mistake": "Confondre corrélation élevée et volatilité de corrélation élevée.",
+          "correction": "Ce sont deux statistiques distinctes.",
+          "check": "Une série stable à 0,9 a un niveau élevé mais une faible volatilité."
+        }
+      ],
+      "worked": {
+        "prompt": "On estime \\(\\Delta\\rho_t=0.09-0.30\\rho_{t-1}+\\varepsilon_t\\). Trouver moyenne et persistance.",
+        "steps": [
+          "\\(\\rho_t=0.09+0.70\\rho_{t-1}+\\varepsilon_t\\).",
+          "La moyenne stationnaire est \\(0.09/(1-0.70)=0.30\\)."
+        ],
+        "result": "Moyenne 0,30; persistance 0,70.",
+        "check": "La moyenne annule la dérive attendue."
+      },
+      "formulas": [
+        {
+          "name": "Régression de corrélation en différences",
+          "tex": "\\Delta\\rho_t=c+b\\rho_{t-1}+\\varepsilon_t,\\quad \\phi=1+b,\\quad \\bar\\rho=-\\frac{c}{b}",
+          "variables": "b: pente; phi: persistance AR(1).",
+          "assumptions": "b non nul et |phi|<1; innovations de moyenne nulle.",
+          "trap": "Le taux discret de rappel est −b, pas phi."
+        }
+      ],
+      "prerequisites": [
+        "MR-8"
+      ]
+    },
+    {
+      "readingId": "MR-10",
+      "title": "Financial Correlation Modeling — Bottom-Up Approaches (pp. 126-134 only)",
+      "principles": [
+        "Une copule combine des distributions marginales et une structure de dépendance; changer la copule peut modifier les pertes jointes sans modifier les PD individuelles.",
+        "La corrélation des normales latentes n’est pas la corrélation des indicatrices de défaut.",
+        "Simuler des temps de défaut demande des normales corrélées, puis des uniformes marginaux et enfin les inverses des CDF marginales de défaut."
+      ],
+      "recallPrompts": [
+        "Que devient la probabilité jointe lorsque les normales latentes ont corrélation un?",
+        "Pourquoi le paramètre gaussien et la corrélation de défaut observée diffèrent-ils?",
+        "Quelle transformation préserve chaque loi marginale de temps de défaut?"
+      ],
+      "traps": [
+        {
+          "mistake": "Lire la CDF multivariée comme un uniforme marginal pour chaque nom.",
+          "correction": "Transformer chaque coordonnée normale par la CDF univariée.",
+          "check": "Vérifier que chaque U_i est uniforme."
+        },
+        {
+          "mistake": "Poser la probabilité jointe égale à rho multiplié par le produit des PD.",
+          "correction": "Utiliser la CDF bivariée avec seuils marginaux ou une simulation cohérente.",
+          "check": "Tester les cas \\(\\rho=0\\) et \\(\\rho=1\\)."
+        }
+      ],
+      "worked": {
+        "prompt": "Deux défauts sont déclenchés par la même variable uniforme: A si \\(U<0.02\\), B si \\(U<0.07\\). Trouver \\(P(B\\mid A)\\).",
+        "steps": [
+          "Le défaut de A implique celui de B car 0.02<0.07.",
+          "\\(P(A\\cap B)=0.02\\); diviser par \\(P(A)=0.02\\)."
+        ],
+        "result": "La probabilité conditionnelle vaut 100%.",
+        "check": "Ne pas confondre avec \\(P(A\\mid B)=2/7\\)."
+      },
+      "formulas": [
+        {
+          "name": "Copule gaussienne bivariée",
+          "tex": "P(D_1\\cap D_2)=\\Phi_2\\left(\\Phi^{-1}(p_1),\\Phi^{-1}(p_2);\\rho\\right)",
+          "variables": "p_i: PD marginales; rho: corrélation latente.",
+          "assumptions": "Deux normales standard corrélées et seuils monotones.",
+          "trap": "Le paramètre rho ne vaut pas forcément la corrélation des défauts."
+        },
+        {
+          "name": "Temps de défaut marginal",
+          "tex": "Z\\sim N(0,R),\\qquad U_i=\\Phi(Z_i),\\qquad \\tau_i=F_i^{-1}(U_i)",
+          "variables": "R: matrice admissible; F_i: CDF de temps de défaut.",
+          "assumptions": "Inverse généralisée au besoin; lois marginales cohérentes.",
+          "trap": "Ne pas transformer toutes les coordonnées par une seule probabilité jointe."
+        }
+      ],
+      "prerequisites": [
+        "MR-8",
+        "MR-3"
+      ]
+    },
+    {
+      "readingId": "MR-11",
+      "title": "Regression Hedging and Principal Component Analysis",
+      "principles": [
+        "Un hedge de régression minimise la variance du P&L selon une relation estimée; il ne garantit ni rendement nul ni neutralité de tous les facteurs.",
+        "Le sens de la régression compte: expliquer la variable à couvrir par la variable de couverture. Inverser une régression change le problème de minimisation.",
+        "Les composantes PCA sont orthogonales dans l’échantillon. Une composante faiblement volatile peut porter l’essentiel du risque d’un portefeuille spécialement chargé dessus."
+      ],
+      "recallPrompts": [
+        "Comment construire le montant de couverture avec des DV01 et une pente?",
+        "Pourquoi une PCA expliquant 99% de la variance des taux peut-elle être insuffisante pour un butterfly?",
+        "Que vérifie-t-on après estimation plutôt que dans le seul \\(R^2\\) en échantillon?"
+      ],
+      "traps": [
+        {
+          "mistake": "Utiliser la fraction de variance expliquée du marché comme fraction de risque couvert du portefeuille.",
+          "correction": "Pondérer chaque facteur par la sensibilité du portefeuille.",
+          "check": "Calculer expositio\\(n^2\\) fois variance pour chaque PC."
+        },
+        {
+          "mistake": "Intervertir deux variables OLS et prendre la pente réciproque.",
+          "correction": "Le produit des deux pentes vaut \\(R^2\\) dans la régression simple avec constante.",
+          "check": "Le produit doit être inférieur ou égal à un."
+        }
+      ],
+      "worked": {
+        "prompt": "Deux PC indépendantes ont variances 100 et 1. Le portefeuille a des sensibilités respectives 0,1 et 5. Quel facteur domine son risque?",
+        "steps": [
+          "Les contributions à la variance sont \\(0.1^2(100)=1\\) et \\(5^2(1)=25\\).",
+          "La seconde PC représente \\(25/26\\) de la variance du portefeuille."
+        ],
+        "result": "La petite PC domine avec environ 96,15% du risque en variance.",
+        "check": "La variance des taux ne mesure pas directement la variance du portefeuille."
+      },
+      "formulas": [
+        {
+          "name": "Hedge minimum variance en P&L",
+          "tex": "h^*=\\frac{\\operatorname{Cov}(\\Delta A,\\Delta H)}{\\operatorname{Var}(\\Delta H)}",
+          "variables": "P&L couvert: Delta A−h Delta H.",
+          "assumptions": "Covariance stable; objectif variance; coûts/contraintes ignorés.",
+          "trap": "Avec un hedge de rendement ou de taux, convertir les unités et DV01."
+        },
+        {
+          "name": "Risque selon PC orthogonales",
+          "tex": "\\operatorname{Var}(\\Delta V)=\\sum_j b_j^2\\lambda_j",
+          "variables": "b_j: exposition au score PC; lambda_j: variance.",
+          "assumptions": "Scores non corrélés, base et normalisation cohérentes.",
+          "trap": "Un faible lambda ne compense pas une exposition énorme."
+        }
+      ],
+      "prerequisites": [
+        "MR-5",
+        "MR-8"
+      ]
+    },
+    {
+      "readingId": "MR-12",
+      "title": "Arbitrage Pricing with Term Structure Models",
+      "principles": [
+        "Le prix d’un payoff réplicable est celui de sa réplication. Les probabilités physiques n’entrent pas directement une fois les prix des instruments de réplication donnés.",
+        "Dans un arbre de taux, on fait la moyenne risque-neutre des valeurs futures puis on actualise au taux du nœud courant. Sur plusieurs périodes, l’actualisation dépend du chemin.",
+        "L’OAS est un écart par rapport à un modèle et à ses hypothèses d’options. Son interprétation comme rendement garanti serait erronée."
+      ],
+      "recallPrompts": [
+        "Pourquoi une probabilité risque-neutre calculée hors de [0,1] est-elle un signal?",
+        "Quelle différence entre changer un taux servant au payoff et un spread d’actualisation OAS?",
+        "Pourquoi un modèle de volatilité peut-il changer le classement de deux obligations callable?"
+      ],
+      "traps": [
+        {
+          "mistake": "Utiliser une fréquence historique à la place de la probabilité de pricing.",
+          "correction": "Identifier la mesure et calibrer les probabilités aux prix de réplication.",
+          "check": "Le prix obtenu doit reproduire les instruments de base."
+        },
+        {
+          "mistake": "Actualiser tous les payoffs futurs à un taux moyen unique.",
+          "correction": "Calculer par récurrence avec les taux de chaque nœud.",
+          "check": "Vérifier le produit des facteurs sur chaque chemin."
+        }
+      ],
+      "worked": {
+        "prompt": "Un zéro vaut demain 92 ou 104. Le facteur monétaire courant vaut 1,02 et son prix aujourd’hui est 96. Déduire la probabilité risque-neutre de la valeur 92.",
+        "steps": [
+          "\\(96(1.02)=92q+104(1-q)\\).",
+          "\\(q=(104-97.92)/12\\)."
+        ],
+        "result": "\\(q\\approx0.5067\\).",
+        "check": "Une probabilité dans [0,1] et un prix entre les payoffs actualisés."
+      },
+      "formulas": [
+        {
+          "name": "Récurrence risque-neutre",
+          "tex": "V_t=\\frac{q_tV_{t+\\Delta t}^{u}+(1-q_t)V_{t+\\Delta t}^{d}+C_{t+\\Delta t}}{1+r_t\\Delta t}",
+          "variables": "C_{t+Delta t}: cash-flow certain payé à la fin du pas, non déjà inclus dans V futur; q_t: probabilité risque-neutre.",
+          "assumptions": "Taux simple par pas; ajuster la date du cash-flow si payé immédiatement.",
+          "trap": "Un cash-flow payé immédiatement à t est ajouté hors de l’actualisation; un cash-flow d’état doit rester dans chaque branche."
+        },
+        {
+          "name": "Probabilité implicite un pas",
+          "tex": "q=\\frac{V_d-V_0(1+r\\Delta t)}{V_d-V_u}",
+          "variables": "V_u,V_d: valeurs futures sans cash-flow intermédiaire.",
+          "assumptions": "Deux états, réplication par actif et monétaire, V_u différent de V_d.",
+          "trap": "Une probabilité hors support signale des hypothèses/prix incompatibles."
+        }
+      ],
+      "prerequisites": [
+        "MR-5"
+      ]
+    },
+    {
+      "readingId": "MR-13",
+      "title": "Expectations, Risk Premium, Convexity, and the Shape of the Term Structure",
+      "principles": [
+        "La courbe reflète attentes, compensation du risque et convexité. Une pente ne révèle pas à elle seule l’évolution physique attendue des taux.",
+        "La convexité fait différer la moyenne des prix du prix évalué au taux moyen. Son sens dépend de la fonction de valorisation.",
+        "Une prime de risque peut être positive ou négative selon la covariance du payoff avec les états utiles aux investisseurs."
+      ],
+      "recallPrompts": [
+        "Pourquoi une hausse de volatilité à moyenne inchangée augmente-t-elle un prix convexe?",
+        "Quel terme de second ordre ajoute une approximation de Jensen?",
+        "Pourquoi le rendement attendu d’une assurance peut-il être inférieur au taux sans risque?"
+      ],
+      "traps": [
+        {
+          "mistake": "Présenter un taux forward comme une prévision physique certaine.",
+          "correction": "Distinguer mesure de pricing, prime de risque et convexité.",
+          "check": "Écrire la décomposition avant toute interprétation."
+        },
+        {
+          "mistake": "Appliquer Jensen à un prix contenant une option sans vérifier sa convexité.",
+          "correction": "Identifier les zones de convexité ou de convexité négative.",
+          "check": "Tester le signe de la dérivée seconde."
+        }
+      ],
+      "worked": {
+        "prompt": "Une fonction de prix a \\(P(\\mu)=100\\), \\(P^{\\prime\\prime}(\\mu)=600\\) et un choc de taux centré de variance 0,0004. Approximer le gain de convexité.",
+        "steps": [
+          "Le premier ordre disparaît car le choc est centré.",
+          "Le second ordre vaut \\(\\tfrac12(600)(0.0004)\\)."
+        ],
+        "result": "Gain attendu de 0,12; prix moyen approximatif 100,12.",
+        "check": "Le coefficient une moitié est indispensable."
+      },
+      "formulas": [
+        {
+          "name": "Approximation locale de Jensen",
+          "tex": "E[P(r)]\\approx P(E[r])+\\frac12P^{\\prime\\prime}(E[r])\\operatorname{Var}(r)",
+          "variables": "r: facteur aléatoire; P: fonction de prix.",
+          "assumptions": "Développement local suffisamment précis; moments et dérivées adéquats.",
+          "trap": "La relation est une approximation, pas une égalité universelle."
+        },
+        {
+          "name": "Rendement attendu et prime",
+          "tex": "E[R]=r_f+\\pi",
+          "variables": "pi: prime de risque de la période.",
+          "assumptions": "Même horizon et même convention de rendement.",
+          "trap": "Pi peut être négative pour un actif de couverture utile."
+        }
+      ],
+      "prerequisites": [
+        "MR-12"
+      ]
+    },
+    {
+      "readingId": "MR-14",
+      "title": "The Art of Term Structure Models: Drift",
+      "principles": [
+        "Un drift déterministe dépend du calendrier; un drift de rappel dépend de l’état courant. Ils n’impliquent pas la même réaction aux chocs.",
+        "Ho–Lee peut ajuster la courbe initiale par sa fonction de drift, tout en gardant des limites dynamiques d’un facteur gaussien.",
+        "Vasicek amortit progressivement les chocs: variance et moyenne conditionnelles ne suivent pas une simple multiplication par le temps."
+      ],
+      "recallPrompts": [
+        "Qu’est-ce qui permet à un arbre Ho–Lee de recombiner?",
+        "Pourquoi une discrétisation naïve de Vasicek peut-elle ne pas recombiner?",
+        "Comment la variance conditionnelle se comporte-t-elle à très long horizon?"
+      ],
+      "traps": [
+        {
+          "mistake": "Tronquer des taux négatifs à zéro sans modifier le reste du modèle.",
+          "correction": "La troncature change les moments, la calibration et potentiellement les prix.",
+          "check": "Recalculer la moyenne au nœud proche de zéro."
+        },
+        {
+          "mistake": "Multiplier le drift par la racine du temps.",
+          "correction": "Le drift se multiplie par le temps; l’écart-type du choc brownien par sa racine.",
+          "check": "Contrôle d’unités sur chaque terme."
+        }
+      ],
+      "worked": {
+        "prompt": "Un incrément normal a un drift de 24 bp par an et une diffusion de 90 bp par racine d’année. Donner moyenne et écart-type sur un trimestre.",
+        "steps": [
+          "La moyenne est \\(24(0.25)=6\\) bp.",
+          "L’écart-type est \\(90\\sqrt{0.25}=45\\) bp."
+        ],
+        "result": "Moyenne +6 bp; écart-type 45 bp.",
+        "check": "La moyenne suit le temps et l’écart-type sa racine; ne pas les intervertir."
+      },
+      "formulas": [
+        {
+          "name": "Vasicek: variance conditionnelle exacte",
+          "tex": "\\operatorname{Var}(r_T\\mid r_0)=\\frac{\\sigma^2}{2a}\\left(1-e^{-2aT}\\right)",
+          "variables": "a>0: vitesse; sigma: diffusion constante.",
+          "assumptions": "Paramètres constants sous une mesure précisée.",
+          "trap": "La variance est bornée à long terme, contrairement au brownien sans rappel."
+        },
+        {
+          "name": "Ho–Lee: incrément discret",
+          "tex": "\\Delta r\\approx\\theta(t)\\Delta t+\\sigma\\sqrt{\\Delta t}\\,Z",
+          "variables": "Z: normale standard; theta: drift calendaire.",
+          "assumptions": "Approximation par pas, sigma constant.",
+          "trap": "Le drift seul ne supprime pas la possibilité de taux négatifs."
+        }
+      ],
+      "prerequisites": [
+        "MR-12",
+        "MR-13"
+      ]
+    },
+    {
+      "readingId": "MR-15",
+      "title": "The Art of Term Structure Models: Volatility and Distribution",
+      "principles": [
+        "Les modèles distinguent volatilité absolue du taux et volatilité proportionnelle. Leur réaction au niveau des taux est différente.",
+        "Une volatilité déterministe peut ajuster la variance à une échéance sans reproduire les covariances entre échéances d’un modèle à rappel.",
+        "Black–Karasinski spécifie une dynamique gaussienne du logarithme du taux. La conversion vers la dynamique du taux exige le terme d’Itô."
+      ],
+      "recallPrompts": [
+        "Comment comparer CIR et lognormal quand le taux est multiplié par quatre?",
+        "Deux processus ayant la même loi à un an ont-ils les mêmes prix de produits dépendant du chemin?",
+        "Quel terme manque si on remplace simplement d log r par dr/r?"
+      ],
+      "traps": [
+        {
+          "mistake": "Écrire \\(dr/r=d\\ln r\\) pour une diffusion.",
+          "correction": "Ajouter le terme de correction d’Itô dans le drift.",
+          "check": "Vérifier la moitié du carré de volatilité."
+        },
+        {
+          "mistake": "Déduire la même dynamique de la même variance terminale.",
+          "correction": "Il faut aussi les covariances et la dépendance du chemin.",
+          "check": "Comparer la covariance entre la valeur à mi-parcours et la valeur finale."
+        }
+      ],
+      "worked": {
+        "prompt": "Un taux suit \\(d\\ln r=-0.02\\,dt+0.30\\,dW\\). Quel est son drift proportionnel en niveau?",
+        "steps": [
+          "Itô donne \\(dr/r=(-0.02+0.5(0.30)^2)dt+0.30dW\\).",
+          "\\(-0.02+0.045=0.025\\)."
+        ],
+        "result": "Drift proportionnel de 2,5% par an.",
+        "check": "Le drift du logarithme peut être négatif alors que le drift moyen du niveau est positif."
+      },
+      "formulas": [
+        {
+          "name": "Conversion logarithme vers niveau",
+          "tex": "d\\ln r=\\mu_\\ell dt+\\sigma dW\\quad\\Longrightarrow\\quad \\frac{dr}{r}=\\left(\\mu_\\ell+\\frac12\\sigma^2\\right)dt+\\sigma dW",
+          "variables": "r>0; mu_l: drift log.",
+          "assumptions": "Diffusion d’Itô continue; coefficients au point courant.",
+          "trap": "Ne pas confondre drift logarithmique et croissance moyenne du niveau."
+        },
+        {
+          "name": "Diffusions absolues",
+          "tex": "\\sigma_{\\mathrm{abs}}^{\\mathrm{CIR}}=\\sigma\\sqrt r,\\qquad \\sigma_{\\mathrm{abs}}^{\\mathrm{log}}=\\sigma r",
+          "variables": "r en décimal; sigma selon chaque modèle.",
+          "assumptions": "Comparaison à sigma fixé dans un même modèle, pas entre paramètres non comparables.",
+          "trap": "Le paramètre sigma n’a pas la même unité dans les deux modèles."
+        }
+      ],
+      "prerequisites": [
+        "MR-14"
+      ]
+    },
+    {
+      "readingId": "MR-16",
+      "title": "The Vasicek and Gauss+ Models",
+      "principles": [
+        "Le livre 2024 contient la base Vasicek mais pas le chapitre Gauss+ courant; une lecture 2026 dédiée reste nécessaire.",
+        "Une cascade de facteurs permet que la cible de rappel du taux court varie elle-même, plutôt que rester constante comme dans Vasicek un facteur.",
+        "Plus de facteurs améliorent la souplesse, au prix de davantage de paramètres, de risques d’identification et de besoins de validation hors échantillon."
+      ],
+      "recallPrompts": [
+        "Pourquoi un taux court sans choc direct peut-il rester aléatoire dans le futur?",
+        "Quelles données aident à identifier une cible de long terme par rapport à une vitesse de rappel?",
+        "Pourquoi trois variables d’état n’impliquent-elles pas forcément trois Brownien indépendants?"
+      ],
+      "traps": [
+        {
+          "mistake": "Conclure déterministe parce que le taux court n’a pas de terme dW direct.",
+          "correction": "Une cible aléatoire transmet l’incertitude au fil du temps.",
+          "check": "Distinguer variation instantanée et valeur à horizon fini."
+        },
+        {
+          "mistake": "Estimer une cible lente sur quelques semaines seulement.",
+          "correction": "Examiner identifiabilité, historique, contraintes et sensibilité des paramètres.",
+          "check": "Chercher plusieurs paramétrisations donnant les mêmes prix initiaux."
+        }
+      ],
+      "worked": {
+        "prompt": "Pour deux innovations de facteurs explicitement définies par \\(dm=80\\,dW_1\\) et \\(dl=40[0.25dW_1+\\sqrt{1-0.25^2}dW_2]\\), les coefficients sont en bp par racine d’année et les Brownien indépendants. Trouver leur covariance sur un pas de 0,25 an.",
+        "steps": [
+          "Seul le Brownien partagé contribue: \\(\\operatorname{Cov}(dm,dl)=80(40)(0.25)dt\\).",
+          "Pour \\(dt=0.25\\), la covariance vaut \\(80(40)(0.25)(0.25)=200\\) bp carrés."
+        ],
+        "result": "Covariance des innovations de 200 bp².",
+        "check": "Deux facteurs peuvent utiliser deux sources de bruit tout en partageant une composante; ne pas assimiler nombre de facteurs et indépendance."
+      },
+      "formulas": [
+        {
+          "name": "Cascade de rappel: exemple explicitement spécifié",
+          "tex": "dr=a(m-r)dt,\\qquad dm=b(l-m)dt+\\sigma_m dW_m",
+          "variables": "r: court; m: cible intermédiaire; l: cible longue.",
+          "assumptions": "Équations d’exemple pédagogiques; la spécification Gauss+ exacte et les corrélations doivent être lues dans le texte 2026.",
+          "trap": "Ne pas importer cette simplification comme modèle canonique complet."
+        }
+      ],
+      "prerequisites": [
+        "MR-11",
+        "MR-14",
+        "MR-15"
+      ],
+      "currentSource": {
+        "url": "https://onlinelibrary.wiley.com/doi/10.1002/9781119835622.ch9",
+        "access": "Publisher summary verified, full current chapter not available. Cascade equations are explicitly specified examples, not asserted to be the complete canonical Gauss+ model."
+      },
+      "editionStatus": "current-reading-absent-from-upload"
+    },
+    {
+      "readingId": "MR-17",
+      "title": "Volatility Smiles and Volatility Surfaces",
+      "principles": [
+        "Une surface d’implied vol est un système de prix risque-neutres. Elle n’est pas directement une distribution physique ou une prévision de rendements.",
+        "La parité call-put relie des options européennes de même strike et maturité avec les mêmes taux, dividendes et conventions.",
+        "Interpoler une surface doit préserver les contraintes de prix. Une courbe de volatilité visuellement lisse peut produire une densité implicite négative."
+      ],
+      "recallPrompts": [
+        "Comment détecter une densité implicite négative à partir de trois prix de call?",
+        "Pourquoi variance totale et volatilité ne se comparent-elles pas de la même façon entre échéances?",
+        "Comment un saut binaire attendu peut-il produire une bosse plutôt qu’un sourire en U?"
+      ],
+      "traps": [
+        {
+          "mistake": "Lire une prime élevée de put comme probabilité physique exacte de crise.",
+          "correction": "Les prix incorporent les prix d’état et la compensation du risque.",
+          "check": "Identifier la mesure avant toute interprétation probabiliste."
+        },
+        {
+          "mistake": "Interpoler les volatilités sans contrôler les prix.",
+          "correction": "Tester monotonicité et convexité en strike et contraintes calendaires adaptées.",
+          "check": "Former un butterfly à coût non négatif."
+        }
+      ],
+      "worked": {
+        "prompt": "À une même échéance, les calls aux strikes 90,100,110 valent 14,9,3. Contrôler la convexité.",
+        "steps": [
+          "Le butterfly a un coût \\(14-2(9)+3=-1\\).",
+          "Son payoff terminal est partout non négatif."
+        ],
+        "result": "Ces prix violent l’absence d’arbitrage, sous hypothèses de marché frictionless.",
+        "check": "La pente discrète doit augmenter avec le strike."
+      },
+      "formulas": [
+        {
+          "name": "Densité implicite par strike",
+          "tex": "f_Q(K)=e^{rT}\\frac{\\partial^2 C(K,T)}{\\partial K^2}",
+          "variables": "C: call européen; Q: mesure risque-neutre; r: taux zéro à maturité T, en capitalisation continue, tel que le facteur déterministe soit exp(−rT).",
+          "assumptions": "Prix suffisamment réguliers; taux déterministes; même actif et échéance.",
+          "trap": "Une seconde dérivée négative n’est pas une probabilité admissible."
+        },
+        {
+          "name": "Correction de delta de surface",
+          "tex": "\\frac{dV}{dS}=\\frac{\\partial V}{\\partial S}+\\frac{\\partial V}{\\partial\\sigma}\\frac{d\\sigma}{dS}",
+          "variables": "Vega par unité décimale de volatilité.",
+          "assumptions": "Règle de déplacement de surface explicitée.",
+          "trap": "Le signe de d sigma/dS dépend du modèle de smile choisi."
+        }
+      ],
+      "prerequisites": [
+        "MR-12",
+        "MR-13",
+        "MR-15"
+      ]
+    },
+    {
+      "readingId": "MR-18",
+      "title": "Fundamental Review of the Trading Book",
+      "principles": [
+        "FRTB vise notamment gravité des queues, liquidité des facteurs, risque de modèle et arbitrage entre livres. Les règles du texte 2024 ont un contexte historique.",
+        "La formule à horizons emboîtés agrège des ES calculées sur des sous-ensembles successifs de facteurs; elle ne somme pas des ES isolées par horizon.",
+        "Un desk doit satisfaire plusieurs critères de modèle; une bonne fréquence d’exceptions ne garantit pas une bonne explication des P&L."
+      ],
+      "recallPrompts": [
+        "Pourquoi ne pas remplacer automatiquement 99% VaR par 97,5% ES sous une loi à queue épaisse?",
+        "Quels facteurs restent inclus dans chaque sous-ensemble d’horizon long?",
+        "Pourquoi un transfert entre livres pour réduire le capital pose-t-il problème?"
+      ],
+      "traps": [
+        {
+          "mistake": "Traiter les ES emboîtées comme des charges marginales indépendantes par catégorie.",
+          "correction": "Le sous-ensemble long contient tous les facteurs ayant au moins cet horizon.",
+          "check": "Écrire les ensembles avant la racine carrée."
+        },
+        {
+          "mistake": "Copier les dates et ratios PLA d’une ancienne proposition comme réglementation actuelle.",
+          "correction": "Distinguer syllabus pédagogique et texte réglementaire en vigueur.",
+          "check": "Vérifier la version et la juridiction avant une affirmation réglementaire."
+        }
+      ],
+      "worked": {
+        "prompt": "Dans une illustration à horizons 10 et 20 jours, \\(ES_{10}(\\mathrm{tous})=6\\) et \\(ES_{10}(\\mathrm{horizon}\\ge20)=4\\). Calculer l’agrégat de liquidité.",
+        "steps": [
+          "Le supplément d’horizon est \\((20-10)/10=1\\).",
+          "\\(ES_{LH}=\\sqrt{6^2+4^2}\\)."
+        ],
+        "result": "\\(ES_{LH}=\\sqrt{52}\\approx7.211\\).",
+        "check": "Le 6 inclut déjà le facteur à horizon long sur les dix premiers jours."
+      },
+      "formulas": [
+        {
+          "name": "Agrégat pédagogique des horizons emboîtés",
+          "tex": "ES_{LH}=\\sqrt{ES_{10}(P)^2+\\sum_{j=2}^{J}\\frac{LH_j-LH_{j-1}}{10}ES_{10}(P_j)^2}",
+          "variables": "P_j: facteurs de P avec horizon au moins LH_j.",
+          "assumptions": "Hypothèses et construction FRTB du texte étudié; horizons en jours.",
+          "trap": "Ne pas utiliser les ES de catégories isolées à la place des ensembles emboîtés."
+        }
+      ],
+      "prerequisites": [
+        "MR-1",
+        "MR-4",
+        "MR-5",
+        "MR-7"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "xm001",
+      "topic": "market",
+      "skill": "m-tail",
+      "objective": "MR-1.4",
+      "reading": "MR-1",
+      "concept": "Quantile convention and interpolation",
+      "question": "A sample contains 200 equally weighted losses. An analyst defines \\(q_p=\\inf\\{x:F_n(x)\\ge p\\}\\), while a vendor linearly interpolates between adjacent order statistics. Both report a 97.5% VaR but obtain different values. Which conclusion is most defensible?",
+      "choices": [
+        "The larger number proves that its input data contain more tail observations.",
+        "A difference can arise solely from the quantile convention; compare the definitions before alleging a coding error.",
+        "The empirical CDF definition necessarily requires linear interpolation.",
+        "Every valid convention produces the same finite-sample VaR whenever the confidence level is fixed."
+      ],
+      "answer": 1,
+      "explanation": "Un quantile empirique par inverse généralisée est une fonction en escalier; un estimateur interpolé utilise une convention différente. Le niveau identique ne force pas l’égalité sur un échantillon fini. Il faut harmoniser les définitions, puis les données et le tri.",
+      "why": [
+        "La grandeur du chiffre ne révèle pas le nombre d’observations extrêmes.",
+        "Correct: une différence de convention peut suffire, sans prouver un bug.",
+        "L’inverse généralisée sélectionne un saut de la CDF, pas automatiquement une interpolation.",
+        "L’égalité est fausse en général pour un échantillon fini."
+      ],
+      "cue": "Confiance identique ≠ convention identique.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 1,
+        "pdfPages": [
+          14,
+          29
+        ]
+      }
+    },
+    {
+      "id": "xm002",
+      "topic": "market",
+      "skill": "m-tail",
+      "objective": "MR-1.5",
+      "reading": "MR-1",
+      "concept": "Tail density and required sample size",
+      "question": "Two iid quantile estimators use the same confidence level. Near the target quantile, sample A has density 0.03 and sample B has density 0.015, in identical loss units. A uses 900 observations. Using \\(\\operatorname{SE}(\\hat q)\\approx\\sqrt{p(1-p)}/[\\sqrt n f(q)]\\), how many observations does B need to match A’s asymptotic standard error?",
+      "choices": [
+        "450",
+        "1,800",
+        "3,600",
+        "7,200"
+      ],
+      "answer": 2,
+      "explanation": "Égaliser \\(\\sqrt{n_A}f_A=\\sqrt{n_B}f_B\\). Donc \\(n_B=900(0.03/0.015)^2=3600\\). Une densité divisée par deux exige quatre fois plus de données indépendantes, à niveau fixé.",
+      "why": [
+        "Ce choix réduit encore l’information alors que la densité est plus faible.",
+        "Le ratio de densités intervient au carré, pas linéairement.",
+        "Correct: le nombre nécessaire quadruple.",
+        "Huit fois la taille serait excessif pour cette formule."
+      ],
+      "cue": "Densité divisée par deux → taille multipliée par quatre.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 1,
+        "pdfPages": [
+          14,
+          29
+        ]
+      },
+      "numeric": {
+        "expression": "900*Math.pow(0.03/0.015,2)",
+        "value": 3600,
+        "optionValue": 3600,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "xm003",
+      "topic": "market",
+      "skill": "m-tail",
+      "objective": "MR-1.3",
+      "reading": "MR-1",
+      "concept": "ES monotonicity under a localized tail loss change",
+      "question": "Both the original and modified distributions have finite 99% ES. A loss distribution has a continuous, strictly increasing CDF around its 99% quantile. A model change increases losses only in the worst 0.2% of scenarios, leaving their probabilities and every other loss unchanged; the changed losses remain above the old 99% quantile. What must happen to 99% VaR and 99% ES?",
+      "choices": [
+        "Both must increase by the same amount.",
+        "VaR must increase, while ES is unchanged.",
+        "Both are unchanged because the modified scenarios were already in the tail.",
+        "VaR is unchanged, while ES increases if the loss increase has positive expected mass."
+      ],
+      "answer": 3,
+      "explanation": "Le seuil à 99% dépend de la masse située avant ce quantile, restée inchangée. L’ES moyenne le pire 1% et inclut les scénarios aggravés: son augmentation est leur hausse de perte pondérée, divisée par 1%. La modification des sévérités dans la queue ne déplace pas nécessairement sa frontière.",
+      "why": [
+        "Le seuil et la moyenne de queue ne réagissent pas de la même façon.",
+        "C’est l’ES, pas la VaR, qui utilise la sévérité au-delà du seuil.",
+        "Être déjà dans la queue n’empêche pas une hausse de sa moyenne.",
+        "Correct sous les conditions de continuité et de maintien au-delà du seuil."
+      ],
+      "cue": "Modifier la queue sans déplacer sa frontière.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 1,
+        "pdfPages": [
+          14,
+          29
+        ]
+      }
+    },
+    {
+      "id": "xm004",
+      "topic": "market",
+      "skill": "m-tail",
+      "objective": "MR-2.3",
+      "reading": "MR-2",
+      "concept": "Recoloring multivariate historical innovations",
+      "question": "A filtered historical simulation first standardizes each asset’s returns. Historical standardized vectors still have correlation matrix \\(C_{old}\\). Management wants to impose \\(C_{new}\\), both positive definite. Let \\(A_{old}A_{old}^{\\top}=C_{old}\\) and \\(A_{new}A_{new}^{\\top}=C_{new}\\), using column vectors. Which transformation is appropriate?",
+      "choices": [
+        "\\(z_{new}=A_{new}A_{old}^{-1}z_{old}\\).",
+        "\\(z_{new}=A_{old}A_{new}^{-1}z_{old}\\).",
+        "Multiply every standardized coordinate by the same scalar.",
+        "Shuffle the coordinates independently and retain the original vectors."
+      ],
+      "answer": 0,
+      "explanation": "Il faut d’abord blanchir \\(\\varepsilon=A_{old}^{-1}z_{old}\\), puis recolorer \\(z_{new}=A_{new}\\varepsilon\\). La covariance devient \\(A_{new}IA_{new}^{\\top}=C_{new}\\). L’ordre des matrices et la convention de vecteur sont essentiels.",
+      "why": [
+        "Correct: retirer l’ancienne structure puis appliquer la nouvelle.",
+        "Cet ordre effectue la transformation inverse de celle souhaitée.",
+        "Un facteur scalaire ne change pas une corrélation.",
+        "Le mélange détruit la dépendance empirique mais ne construit pas en général la matrice cible."
+      ],
+      "cue": "Blanchir, puis recolorer.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 2,
+        "pdfPages": [
+          30,
+          47
+        ]
+      }
+    },
+    {
+      "id": "xm005",
+      "topic": "market",
+      "skill": "m-tail",
+      "objective": "MR-2.3",
+      "reading": "MR-2",
+      "concept": "Probability weights versus shock size",
+      "question": "An age-weighted historical scenario has normalized weight 4% and return innovation −3%. The model then rescales innovations from historical volatility 1.5% to forecast volatility 2.0%, without changing probability weights. Which pair is correct after rescaling?",
+      "choices": [
+        "Weight 3%; innovation −4%.",
+        "Weight 4%; innovation −2.25%.",
+        "Weight 4%; innovation −4%.",
+        "Weight 5.33%; innovation −3%."
+      ],
+      "answer": 2,
+      "explanation": "Le choc devient \\(-3\\%\\times2.0/1.5=-4\\%\\). Le filtre d’amplitude ne change pas la probabilité 4% fixée par la pondération d’âge. Confondre les deux modifie à tort la masse de queue.",
+      "why": [
+        "Le poids a été modifié sans instruction.",
+        "Le ratio de volatilités est inversé.",
+        "Correct: seule l’amplitude augmente.",
+        "La hausse de volatilité n’est pas un multiplicateur du poids de probabilité."
+      ],
+      "cue": "Poids et amplitude sont deux leviers distincts.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 2,
+        "pdfPages": [
+          30,
+          47
+        ]
+      },
+      "numeric": {
+        "expression": "-3*2/1.5",
+        "value": -4,
+        "optionValue": -4,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "xm006",
+      "topic": "market",
+      "skill": "m-tail",
+      "objective": "MR-2.1",
+      "reading": "MR-2",
+      "concept": "Path-dependent bootstrap design",
+      "question": "A desk estimates the ES of a five-day liquidation strategy whose sales on day 2 depend on day 1’s loss. Returns exhibit persistent volatility regimes. Which bootstrap design most directly addresses both the strategy and the data dependence?",
+      "choices": [
+        "Resample joint one-day vectors independently, preserve asset correlations, and assume this also preserves volatility-regime persistence.",
+        "Resample suitable blocks of joint asset-return vectors, run the strategy sequentially within each path, and assess sensitivity to block length.",
+        "Preserve each asset’s temporal blocks but sample the asset blocks independently to preserve cross-asset stress dependence.",
+        "Apply the strategy once to a bootstrapped five-day total, assuming the order of returns cannot affect adaptive sales."
+      ],
+      "answer": 1,
+      "explanation": "Il faut préserver la dépendance entre actifs, une part de la dépendance temporelle et les décisions successives de la stratégie. Un bootstrap par blocs de vecteurs et une simulation de la règle de vente à chaque étape répondent à ces trois besoins; le choix des blocs reste une hypothèse à tester.",
+      "why": [
+        "Tirer des jours indépendants conserve la dépendance instantanée entre actifs, mais pas la persistance temporelle des régimes.",
+        "Correct: structure jointe, séquence et contrôle du bloc sont pris en compte.",
+        "Échantillonner les actifs séparément casse les chocs simultanés malgré des blocs temporels par actif.",
+        "Une règle de vente dépendant du jour précédent peut répondre différemment à deux chemins ayant le même rendement total."
+      ],
+      "cue": "Pour une règle de liquidation, simuler des chemins, pas juste des sommes.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 2,
+        "pdfPages": [
+          30,
+          47
+        ]
+      }
+    },
+    {
+      "id": "xm007",
+      "topic": "market",
+      "skill": "m-tail",
+      "objective": "MR-3.4",
+      "reading": "MR-3",
+      "concept": "Block maxima discard multiple extremes",
+      "question": "One month contains three large losses, all above a scientifically chosen high threshold, while another month contains no threshold exceedance. Which comparison of monthly block maxima and POT is correct?",
+      "choices": [
+        "Both methods necessarily use all three losses as tail observations.",
+        "POT retains exactly one loss per month, while block maxima retains all exceedances.",
+        "POT requires the three losses to occur in different months.",
+        "Block maxima keeps only the largest loss in the first month; POT can retain all three exceedances, subject to dependence treatment."
+      ],
+      "answer": 3,
+      "explanation": "Les maxima de blocs ne retiennent qu’une observation par bloc. POT exploite tous les excès au seuil, mais les trois pertes peuvent appartenir à un même cluster et ne pas représenter trois observations indépendantes. Plus de points ne signifie pas automatiquement plus d’information indépendante.",
+      "why": [
+        "Les maxima de blocs n’utilisent pas tous les extrêmes du même bloc.",
+        "Les rôles des méthodes sont inversés.",
+        "POT n’impose pas une observation au plus par mois.",
+        "Correct: avantage d’utilisation des données, à nuancer par la dépendance."
+      ],
+      "cue": "Nombre d’excès ≠ nombre de clusters indépendants.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 3,
+        "pdfPages": [
+          48,
+          61
+        ]
+      }
+    },
+    {
+      "id": "xm008",
+      "topic": "market",
+      "skill": "m-tail",
+      "objective": "MR-3.5",
+      "reading": "MR-3",
+      "concept": "Threshold stability of GPD scale",
+      "question": "A fitted POT model above \\(u=5\\) million has GPD shape \\(\\xi=0.25\\) and scale \\(\\beta_u=2\\) million. Assume exact GPD threshold stability. If the threshold is raised to \\(v=9\\) million, use \\(\\beta_v=\\beta_u+\\xi(v-u)\\). What are the new shape and scale?",
+      "choices": [
+        "\\(\\xi=0.25,\\ \\beta_v=3\\) million.",
+        "\\(\\xi=0.50,\\ \\beta_v=2\\) million.",
+        "\\(\\xi=0.25,\\ \\beta_v=1\\) million.",
+        "\\(\\xi=0,\\ \\beta_v=3\\) million."
+      ],
+      "answer": 0,
+      "explanation": "La stabilité au seuil conserve la forme et transforme l’échelle: \\(2+0.25(9-5)=3\\). Le changement de seuil change aussi la probabilité de dépassement; il ne suffit donc pas de conserver tous les autres éléments du modèle inchangés.",
+      "why": [
+        "Correct: forme conservée et échelle augmentée de 1.",
+        "La forme n’est pas doublée par le relèvement du seuil.",
+        "Le signe du déplacement d’échelle est erroné.",
+        "Une hausse de seuil ne force pas la forme à zéro."
+      ],
+      "cue": "Seuil plus haut: même forme, nouvelle échelle.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 3,
+        "pdfPages": [
+          48,
+          61
+        ]
+      },
+      "numeric": {
+        "expression": "2+0.25*(9-5)",
+        "value": 3,
+        "optionValue": 3,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "xm009",
+      "topic": "market",
+      "skill": "m-tail",
+      "objective": "MR-3.3",
+      "reading": "MR-3",
+      "concept": "Conditional EVT and residual misspecification",
+      "question": "An analyst filters returns with a volatility model and fits EVT to the resulting residuals. Residual magnitudes still form long clusters and their tail index changes sharply across subsamples. What is the most defensible conclusion?",
+      "choices": [
+        "Keep the filter unchanged because a residual volatility model guarantees independence once the mean residual is zero.",
+        "Treat the stable center of the residual distribution as sufficient evidence that its extreme tail is stable.",
+        "The conditional tail model remains questionable; revisit filtering, dependence, threshold and parameter stability before relying on extrapolated ES.",
+        "Retain the specification and report a narrower Monte Carlo interval as evidence that the historical tail instability has been resolved."
+      ],
+      "answer": 2,
+      "explanation": "EVT conditionnelle s’appuie sur une filtration adéquate et une approximation de queue suffisamment stable. Des résidus encore groupés et un indice instable signalent des hypothèses non résolues. Ajouter des simulations rend seulement plus précise la simulation d’un modèle possiblement mal spécifié.",
+      "why": [
+        "Une moyenne de résidus nulle ne démontre pas l’absence de dépendance de leurs amplitudes.",
+        "La stabilité du centre ne démontre pas celle des événements extrêmes.",
+        "Correct: les diagnostics touchent la validité économique et statistique de l’extrapolation.",
+        "La précision Monte Carlo ne résout pas une instabilité statistique du modèle ajusté."
+      ],
+      "cue": "Valider les résidus avant d’extrapoler la queue.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 3,
+        "pdfPages": [
+          48,
+          61
+        ]
+      }
+    },
+    {
+      "id": "xm010",
+      "topic": "market",
+      "skill": "m-valid",
+      "objective": "MR-4.3",
+      "reading": "MR-4",
+      "concept": "Too few exceptions in a two-sided test",
+      "question": "A validator uses a two-sided likelihood-ratio test of the null that a 95% VaR model has the correct unconditional exception rate. The bank reports zero exceptions in a long sample. Which statement is correct?",
+      "choices": [
+        "Zero exceptions necessarily give a test statistic of zero.",
+        "The test can reject because excessive conservatism also violates the stated null.",
+        "Only an excess number of exceptions can reject a two-sided coverage test.",
+        "The lack of exceptions proves that losses are independent."
+      ],
+      "answer": 1,
+      "explanation": "Le test annoncé est bilatéral: des taux nettement au-dessous de 5% peuvent aussi être incompatibles avec la calibration exacte. On peut avoir une bonne protection économique et un quantile statistiquement mal calibré. L’indépendance constitue une autre propriété.",
+      "why": [
+        "Le terme de vraisemblance restant n’est pas nul quand le taux observé vaut zéro.",
+        "Correct: la cible nulle est le taux exact, pas simplement un plafond.",
+        "Cette propriété correspondrait à une règle unilatérale, pas au test annoncé.",
+        "L’absence d’événements est pauvre en information sur leur dépendance."
+      ],
+      "cue": "Moins d’exceptions peut aussi signifier mauvaise calibration.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 4,
+        "pdfPages": [
+          62,
+          71
+        ]
+      }
+    },
+    {
+      "id": "xm011",
+      "topic": "market",
+      "skill": "m-valid",
+      "objective": "MR-4.3",
+      "reading": "MR-4",
+      "concept": "Exact zero-exception likelihood ratio",
+      "question": "In 100 independent observations, a 95% VaR produces zero exceptions. For this boundary case use \\(LR_{uc}=-2n\\ln(1-p)\\), where \\(p=0.05\\). With a stated 5% asymptotic critical value 3.841, what is the result?",
+      "choices": [
+        "\\(LR\\approx0\\); do not reject.",
+        "\\(LR\\approx2.565\\); do not reject.",
+        "\\(LR\\approx5.129\\); reject.",
+        "\\(LR\\approx10.259\\); reject."
+      ],
+      "answer": 3,
+      "explanation": "\\(LR=-200\\ln(0.95)\\approx10.2587\\), donc supérieur à 3.841. Le test rejette selon le seuil asymptotique donné. Pour un petit échantillon et un point frontière, la qualité de l’approximation peut demander une calibration exacte; cela ne change pas la réponse à la règle explicitement demandée.",
+      "why": [
+        "Zéro exceptions ne signifie pas vraisemblance maximale sous la cible 5%.",
+        "Ce nombre ne suit pas la formule avec \\(n=100\\).",
+        "La moitié du facteur −2 est oubliée.",
+        "Correct selon la formule et la règle de décision données."
+      ],
+      "cue": "Au bord, prendre la limite du terme zéro; garder le facteur deux.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 4,
+        "pdfPages": [
+          62,
+          71
+        ]
+      },
+      "numeric": {
+        "expression": "-2*100*Math.log(0.95)",
+        "value": 10.258658877510115,
+        "optionValue": 10.259,
+        "tolerance": 0.001
+      }
+    },
+    {
+      "id": "xm012",
+      "topic": "market",
+      "skill": "m-valid",
+      "objective": "MR-4.2",
+      "reading": "MR-4",
+      "concept": "Overlapping horizons invalidate a naive binomial test",
+      "question": "A bank backtests a ten-day VaR every day, using realized losses summed over days t+1 through t+10. An analyst applies the ordinary iid binomial exception-count test to all daily starting dates. What is the key flaw even if daily returns themselves are iid?",
+      "choices": [
+        "Adjacent ten-day losses share nine daily returns, creating dependence in overlapping backtest outcomes.",
+        "A ten-day VaR can never be backtested with any data.",
+        "The confidence level must automatically be divided by ten.",
+        "Iid daily returns guarantee independence of all overlapping ten-day sums."
+      ],
+      "answer": 0,
+      "explanation": "Deux fenêtres voisines partagent neuf chocs; une grosse perte journalière peut provoquer plusieurs exceptions successives. La loi binomiale iid du compteur n’est donc pas automatiquement applicable. On peut utiliser des fenêtres non chevauchantes ou un test qui traite explicitement la dépendance.",
+      "why": [
+        "Correct: le chevauchement suffit à créer une dépendance mécanique.",
+        "Le problème est la méthode du test, pas l’impossibilité de tout backtest.",
+        "Le niveau ne se divise pas ainsi.",
+        "L’indépendance des entrées ne survit pas au partage d’entrées entre sommes."
+      ],
+      "cue": "Fenêtres communes → chocs communs → exceptions dépendantes.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 4,
+        "pdfPages": [
+          62,
+          71
+        ]
+      }
+    },
+    {
+      "id": "xm013",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-5.7",
+      "reading": "MR-5",
+      "concept": "Zero initial forward value does not mean zero risk",
+      "question": "A newly entered FX forward has exactly zero market value. A risk analyst proposes excluding it from VaR because mapping exposures should sum to the contract’s market value. Which response is best?",
+      "choices": [
+        "Accept: a zero market value implies every risk-factor derivative is zero.",
+        "Accept only if the notional is denominated in domestic currency.",
+        "Reject: offsetting present values can have nonzero sensitivities to spot FX and domestic and foreign discount curves.",
+        "Reject because the forward must have a positive market value at inception."
+      ],
+      "answer": 2,
+      "explanation": "La valeur nulle résulte de deux jambes de même valeur actuelle, pas d’une fonction constante des facteurs. Le mapping doit conserver les sensibilités de spot et de taux. Un contrat peut coûter zéro à l’initiation et présenter une perte future importante.",
+      "why": [
+        "La dérivée d’une fonction en un point n’est pas déterminée par sa valeur.",
+        "La devise du notionnel ne supprime pas les facteurs économiques.",
+        "Correct: exposer les jambes révèle le risque.",
+        "Un forward conclu au prix de marché peut valoir zéro."
+      ],
+      "cue": "Valeur zéro n’est pas sensibilité zéro.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 5,
+        "pdfPages": [
+          72,
+          85
+        ]
+      }
+    },
+    {
+      "id": "xm014",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-5.2",
+      "reading": "MR-5",
+      "concept": "Factor refinement redistributes specific risk",
+      "question": "A mapped equity portfolio has total daily P&L variance 25 in million-squared units. A one-factor model attributes 16 to general market risk and 9 to orthogonal specific risk. A valid expanded factor model explains an additional 5 units previously in the specific residual, with total portfolio variance unchanged. What are general and specific variance after refinement?",
+      "choices": [
+        "General 16; specific 4; total 20.",
+        "General 21; specific 4; total 25.",
+        "General 21; specific 9; total 30.",
+        "General 25; specific 0; total 25."
+      ],
+      "answer": 1,
+      "explanation": "Le nouveau facteur déplace cinq unités du résidu vers la partie expliquée: \\(16+5=21\\) et \\(9-5=4\\). Le risque total n’est pas réduit par une description statistique plus détaillée. L’orthogonalité précisée rend l’addition cohérente.",
+      "why": [
+        "Le risque expliqué supplémentaire a été omis du total.",
+        "Correct: le modèle redistribue le même risque total.",
+        "Cinq unités sont comptées deux fois.",
+        "Le facteur additionnel n’explique pas tout le résidu."
+      ],
+      "cue": "Mieux expliquer n’est pas faire disparaître.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 5,
+        "pdfPages": [
+          72,
+          85
+        ]
+      },
+      "numeric": {
+        "expression": "9-5",
+        "value": 4,
+        "optionValue": 4,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "xm015",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-5.7",
+      "reading": "MR-5",
+      "concept": "Delta-neutral mapping misses a curvature stress",
+      "question": "A short near-expiry straddle is delta neutral at current spot. Its mapping retains only spot delta and assumes unchanged implied volatility. Which scenario is most likely to reveal a material omission?",
+      "choices": [
+        "An infinitesimal spot change evaluated only to first order.",
+        "No price or volatility change before any passage of time.",
+        "Replacing the option’s market value by zero in the accounting ledger.",
+        "A large spot move in either direction, because negative gamma can create losses despite zero initial delta."
+      ],
+      "answer": 3,
+      "explanation": "Le delta nul annule seulement le premier ordre local. Une straddle vendue présente typiquement du gamma négatif; un grand mouvement de spot fait perdre par courbure dans les deux directions. La volatilité et le temps sont d’autres facteurs possibles, mais le scénario donné suffit à montrer l’omission.",
+      "why": [
+        "Le premier ordre est justement neutralisé au point courant.",
+        "Sans changement ni temps, ce scénario ne déclenche pas la courbure.",
+        "Une écriture comptable ne teste pas une sensibilité économique.",
+        "Correct: le risque de second ordre subsiste."
+      ],
+      "cue": "Delta zéro ne couvre pas le carré du mouvement.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 5,
+        "pdfPages": [
+          72,
+          85
+        ]
+      }
+    },
+    {
+      "id": "xm016",
+      "topic": "market",
+      "skill": "m-valid",
+      "objective": "MR-6.4",
+      "reading": "MR-6",
+      "concept": "Benchmark differences need a common portfolio",
+      "question": "Two banks report the same one-day 99% VaR, but their option portfolios, market-data cutoffs and valuation models differ. A supervisor wants to compare model quality. Which first step gives the most interpretable benchmark?",
+      "choices": [
+        "Run both engines on a common test portfolio with aligned risk factors, inputs, valuation scope and conventions.",
+        "Rank the banks by their reported VaR divided by total headcount.",
+        "Require both VaR outputs to be identical on their original portfolios.",
+        "Treat either bank’s estimate as the true loss quantile."
+      ],
+      "answer": 0,
+      "explanation": "Un portefeuille commun et des conventions harmonisées réduisent les écarts non liés au moteur. Ensuite, des scénarios ciblés et une analyse des différences peuvent isoler les choix méthodologiques. Deux nombres égaux sur des risques différents ne constituent pas une validation croisée.",
+      "why": [
+        "Correct: l’exercice rend les différences attribuables et contrôlables.",
+        "Le headcount ne rend pas les risques comparables.",
+        "Des portefeuilles différents n’ont aucune raison de présenter la même VaR.",
+        "Un modèle de référence n’est pas une vérité observée."
+      ],
+      "cue": "Même portefeuille, mêmes conventions, puis comparer.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": null,
+        "pdfPages": [],
+        "note": "Chapitre actuel absent comme lecture dédiée du livre 2024; ne pas attribuer ces ajouts à une page inexistante."
+      },
+      "currentSource": {
+        "url": "https://www.cambridge.org/core/books/abs/validation-of-risk-management-models-for-financial-institutions/validating-bank-holding-companies-valueatrisk-models-for-market-risk/AC740C16108EF1A7D3926F00BCFB8D70",
+        "access": "Publisher abstract verified; full chapter not available. The original questions use the explicit 2026 objectives and general validation principles, not claimed quotations."
+      }
+    },
+    {
+      "id": "xm017",
+      "topic": "market",
+      "skill": "m-valid",
+      "objective": "MR-6.3",
+      "reading": "MR-6",
+      "concept": "Monte Carlo precision versus historical uncertainty",
+      "question": "A VaR estimate has independent uncertainty components: Monte Carlo standard deviation EUR 0.30m and historical-data standard deviation EUR 0.40m. Assume Monte Carlo variance is inversely proportional to path count and historical uncertainty is unchanged. If path count is multiplied by nine, what is the new total standard deviation?",
+      "choices": [
+        "EUR 0.167m.",
+        "EUR 0.300m.",
+        "EUR 0.412m.",
+        "EUR 0.500m."
+      ],
+      "answer": 2,
+      "explanation": "Le bruit Monte Carlo est divisé par \\(\\sqrt9=3\\), donc passe à 0.10m. Les composantes sont indépendantes: \\(\\sqrt{0.10^2+0.40^2}=\\sqrt{0.17}\\approx0.4123\\)m. Les données limitent la précision même avec beaucoup plus de chemins.",
+      "why": [
+        "Toutes les incertitudes ont été réduites comme si elles venaient des simulations.",
+        "Ce choix ignore la composante de données de 0.40m.",
+        "Correct: addition des variances, pas des écarts-types.",
+        "0.50m est l’incertitude totale avant augmentation des chemins."
+      ],
+      "cue": "Plus de chemins ne crée pas plus d’histoire.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": null,
+        "pdfPages": [],
+        "note": "Chapitre actuel absent comme lecture dédiée du livre 2024; ne pas attribuer ces ajouts à une page inexistante."
+      },
+      "numeric": {
+        "expression": "Math.sqrt(Math.pow(0.30/3,2)+Math.pow(0.40,2))",
+        "value": 0.41231056256176607,
+        "optionValue": 0.412,
+        "tolerance": 0.001
+      },
+      "currentSource": {
+        "url": "https://www.cambridge.org/core/books/abs/validation-of-risk-management-models-for-financial-institutions/validating-bank-holding-companies-valueatrisk-models-for-market-risk/AC740C16108EF1A7D3926F00BCFB8D70",
+        "access": "Publisher abstract verified; full chapter not available. The original questions use the explicit 2026 objectives and general validation principles, not claimed quotations."
+      }
+    },
+    {
+      "id": "xm018",
+      "topic": "market",
+      "skill": "m-valid",
+      "objective": "MR-6.2",
+      "reading": "MR-6",
+      "concept": "A rank switch can change the VaR derivative without a value jump",
+      "question": "A historical-simulation VaR is an order statistic of scenario losses that are continuous in a portfolio weight. The VaR value is continuous, but its estimated derivative changes abruptly when two scenario losses cross near the quantile rank. A validator claims that this kink proves a coding defect. What is the best response?",
+      "choices": [
+        "A correctly implemented empirical quantile must have a continuously varying derivative at every weight, even when the selected scenario changes.",
+        "A rank-selected empirical quantile can be continuous yet nondifferentiable at a scenario crossing; inspect the scenarios and derivative estimation before diagnosing a bug.",
+        "A kink in the derivative proves that the underlying market regime changed during the calculation.",
+        "Remove whichever scenario changes rank so that the sensitivity estimate becomes smooth, then validate using the modified sample."
+      ],
+      "answer": 1,
+      "explanation": "Le maximum, minimum ou ordre statistique d’un nombre fini de fonctions continues reste continu. Si deux pertes se croisent au rang retenu, elles ont la même valeur au croisement; changer de scénario sélectionné ne crée donc pas à lui seul un saut de VaR. En revanche, leurs dérivées peuvent différer: la pente de VaR peut présenter un coude. Cela justifie un contrôle des sensibilités, pas un diagnostic automatique de bug.",
+      "why": [
+        "La continuité des pertes ne garantit pas celle de la dérivée de leur ordre statistique.",
+        "Correct: une valeur continue peut avoir une dérivée discontinue ou ne pas être différentiable au croisement.",
+        "Le coude peut être une propriété de l’estimateur sur des données fixes, sans changement de régime de marché.",
+        "Supprimer une observation pour lisser modifie arbitrairement la queue et ne valide pas la méthode."
+      ],
+      "cue": "Rang qui change: valeur continue, pente possiblement différente.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": null,
+        "pdfPages": [],
+        "note": "Chapitre actuel absent comme lecture dédiée du livre 2024; ne pas attribuer ces ajouts à une page inexistante."
+      },
+      "currentSource": {
+        "url": "https://www.cambridge.org/core/books/abs/validation-of-risk-management-models-for-financial-institutions/validating-bank-holding-companies-valueatrisk-models-for-market-risk/AC740C16108EF1A7D3926F00BCFB8D70",
+        "access": "Publisher abstract verified; full chapter not available. The original questions use the explicit 2026 objectives and general validation principles, not claimed quotations."
+      }
+    },
+    {
+      "id": "xm019",
+      "topic": "market",
+      "skill": "m-valid",
+      "objective": "MR-7.2",
+      "reading": "MR-7",
+      "concept": "Discrete distributions need a randomized PIT",
+      "question": "A forecast loss distribution has a 70% atom at zero and a continuous positive tail. A validator computes \\(U=F(L)\\) and rejects uniformity because many values equal 0.70. Which conclusion is best?",
+      "choices": [
+        "The mass at 0.70 alone proves the forecast probabilities are wrong.",
+        "A correct discrete distribution must produce ordinary continuous uniform PITs without modification.",
+        "Every observation of zero must be deleted before validation.",
+        "The ordinary PIT is not continuous-uniform for this distribution; use an appropriate randomized PIT or a test calibrated to the discrete null."
+      ],
+      "answer": 3,
+      "explanation": "Un atome de perte concentre la CDF transformée sur une même valeur. La propriété uniforme continue exige une CDF continue; pour une distribution mixte, randomiser entre CDF gauche et droite ou adapter le test. Ce traitement ne garantit pas que le modèle soit bon: il rend le diagnostic correctement défini.",
+      "why": [
+        "L’atome peut simplement refléter une masse correctement prévue.",
+        "La condition de continuité manque.",
+        "Supprimer les zéros fausse précisément la fréquence à tester.",
+        "Correct: adapter la transformation ou la loi nulle."
+      ],
+      "cue": "CDF avec saut → PIT avec convention adaptée.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": null,
+        "pdfPages": [],
+        "note": "Chapitre actuel absent comme lecture dédiée du livre 2024; ne pas attribuer ces ajouts à une page inexistante."
+      },
+      "currentSource": {
+        "url": "https://www.cambridge.org/core/books/validation-of-risk-management-models-for-financial-institutions/beyond-exceedancebased-backtesting-of-valueatrisk-models-methods-for-backtesting-the-entire-forecasting-distribution-using-probability-integral-transform/6077935FB75663AF3242178AEDA75520",
+        "access": "Publisher metadata verified; no claim of full current chapter access. PIT, KS and randomization questions derive directly from their stated mathematical definitions."
+      }
+    },
+    {
+      "id": "xm020",
+      "topic": "market",
+      "skill": "m-valid",
+      "objective": "MR-7.4",
+      "reading": "MR-7",
+      "concept": "Computing a KS distance on uniform PITs",
+      "question": "Four ordered PIT observations are 0.10, 0.40, 0.60 and 0.90. Against a continuous uniform null, compute \\(D=\\max_i\\{i/n-u_i,\\ u_i-(i-1)/n\\}\\). What is the Kolmogorov–Smirnov distance?",
+      "choices": [
+        "0.10",
+        "0.15",
+        "0.25",
+        "0.40"
+      ],
+      "answer": 1,
+      "explanation": "Les distances à droite sont 0.15,0.10,0.15,0.10. Les distances à gauche sont 0.10,0.15,0.10,0.15. Leur maximum vaut 0.15. Il s’agit de la statistique, pas d’une p-value ni d’une décision sans seuil critique.",
+      "why": [
+        "Ce choix ne prend pas le plus grand des deux côtés des sauts.",
+        "Correct: distance maximale 0.15.",
+        "0.25 est la taille d’un saut de CDF empirique, pas son écart maximal ici.",
+        "0.40 est une observation, pas une distance de CDF maximale."
+      ],
+      "cue": "Pour KS, vérifier les deux côtés de chaque saut.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": null,
+        "pdfPages": [],
+        "note": "Chapitre actuel absent comme lecture dédiée du livre 2024; ne pas attribuer ces ajouts à une page inexistante."
+      },
+      "numeric": {
+        "expression": "Math.max(...[0.10,0.40,0.60,0.90].flatMap((u,i)=>[(i+1)/4-u,u-i/4]))",
+        "value": 0.15,
+        "optionValue": 0.15,
+        "tolerance": 1e-09
+      },
+      "currentSource": {
+        "url": "https://www.cambridge.org/core/books/validation-of-risk-management-models-for-financial-institutions/beyond-exceedancebased-backtesting-of-valueatrisk-models-methods-for-backtesting-the-entire-forecasting-distribution-using-probability-integral-transform/6077935FB75663AF3242178AEDA75520",
+        "access": "Publisher metadata verified; no claim of full current chapter access. PIT, KS and randomization questions derive directly from their stated mathematical definitions."
+      }
+    },
+    {
+      "id": "xm021",
+      "topic": "market",
+      "skill": "m-valid",
+      "objective": "MR-7.3",
+      "reading": "MR-7",
+      "concept": "PIT skew distinguishes forecast location bias",
+      "question": "A continuous forecast CDF is used with the loss convention \\(U_t=F_t(L_t)\\). PITs are heavily concentrated near one, rather than symmetrically near both endpoints. Which diagnostic is most consistent?",
+      "choices": [
+        "Realized losses tend to be larger than the forecast distribution expects, indicating a possible location or one-sided tail bias.",
+        "The forecast distribution is necessarily too narrow symmetrically around the correct center.",
+        "Realized losses tend to be systematically smaller than forecast.",
+        "A concentration near one proves exact conditional calibration."
+      ],
+      "answer": 0,
+      "explanation": "Un PIT proche de un signifie que la perte réalisée se situe haut dans la distribution prédite. Une accumulation de ce côté suggère des pertes sous-prévues, un biais de localisation ou une mauvaise queue supérieure. Une forme en U symétrique indiquerait plutôt une dispersion insuffisante des prévisions, à centre convenable.",
+      "why": [
+        "Correct: le sens découle de la CDF de pertes annoncée.",
+        "La concentration unilatérale ne correspond pas au diagnostic symétrique proposé.",
+        "Des pertes trop faibles produiraient plutôt de petits PIT.",
+        "Sous calibration continue correcte, la distribution marginale attendue est uniforme."
+      ],
+      "cue": "PIT haut: perte haute par rapport à la prévision.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": null,
+        "pdfPages": [],
+        "note": "Chapitre actuel absent comme lecture dédiée du livre 2024; ne pas attribuer ces ajouts à une page inexistante."
+      },
+      "currentSource": {
+        "url": "https://www.cambridge.org/core/books/validation-of-risk-management-models-for-financial-institutions/beyond-exceedancebased-backtesting-of-valueatrisk-models-methods-for-backtesting-the-entire-forecasting-distribution-using-probability-integral-transform/6077935FB75663AF3242178AEDA75520",
+        "access": "Publisher metadata verified; no claim of full current chapter access. PIT, KS and randomization questions derive directly from their stated mathematical definitions."
+      }
+    },
+    {
+      "id": "xm022",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-8.5",
+      "reading": "MR-8",
+      "concept": "Sign of correlation risk in a spread book",
+      "question": "A portfolio is long one asset and short another, with fixed position sizes and positive volatilities. Their price-change correlation rises, all else equal. Under a linear two-factor P&L approximation, what happens to portfolio variance?",
+      "choices": [
+        "It necessarily rises because correlation always increases portfolio risk.",
+        "It is unchanged because the net market value is zero.",
+        "It falls because the covariance term is multiplied by opposite-signed exposures.",
+        "It cannot be evaluated even when the signed exposures and volatilities are known."
+      ],
+      "answer": 2,
+      "explanation": "Le terme croisé de variance est \\(2x_1x_2\\rho\\sigma_1\\sigma_2\\). Avec \\(x_1x_2<0\\), une hausse de corrélation réduit ce terme. Le risque d’un panier long-long et celui d’une couverture long-court ne réagissent donc pas dans le même sens.",
+      "why": [
+        "La règle omet le signe des positions.",
+        "Une valeur nette nulle ne fixe pas la variance.",
+        "Correct dans le cadre linéaire et à expositions fixées annoncé.",
+        "Le signe est déterminé par les hypothèses données."
+      ],
+      "cue": "Regarder le produit des expositions avant le signe de rho.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 7,
+        "pdfPages": [
+          118,
+          137
+        ]
+      }
+    },
+    {
+      "id": "xm023",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-8.4",
+      "reading": "MR-8",
+      "concept": "Pair counting in a correlation swap",
+      "question": "A correlation swap on four assets pays EUR 5m per unit of realized average correlation above a strike of 0.20. Its six distinct pairwise realized correlations are 0.10, 0.20, 0.30, 0.40, 0.50 and 0.60. The contract uses their equal-weighted average, excluding diagonals. What is the payoff to the receiver of realized correlation?",
+      "choices": [
+        "EUR 250,000",
+        "EUR 500,000",
+        "EUR 1,750,000",
+        "EUR 750,000"
+      ],
+      "answer": 3,
+      "explanation": "Quatre actifs donnent \\(4(3)/2=6\\) paires. Leur moyenne vaut \\(2.10/6=0.35\\). Le payoff est \\(5m(0.35-0.20)=0.75m\\). Le notionnel est par unité de corrélation, pas par point de pourcentage.",
+      "why": [
+        "Ce montant ne suit pas la moyenne des six paires.",
+        "La moyenne et le strike ne donnent pas un écart de 0.10.",
+        "Ce choix paie la corrélation réalisée sans retirer le strike.",
+        "Correct: écart 0.15 multiplié par le notionnel."
+      ],
+      "cue": "Six paires, aucune diagonale, puis retirer le strike.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 7,
+        "pdfPages": [
+          118,
+          137
+        ]
+      },
+      "numeric": {
+        "expression": "5000000*((0.1+0.2+0.3+0.4+0.5+0.6)/6-0.2)",
+        "value": 750000,
+        "optionValue": 750000,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "id": "xm024",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-8.6",
+      "reading": "MR-8",
+      "concept": "Uncorrelated but dependent loss drivers",
+      "question": "Let \\(X\\) be standard normal and \\(Y=X^2-1\\). A risk manager observes \\(\\operatorname{Cov}(X,Y)=0\\) and proposes treating them as independent shocks in a nonlinear portfolio model. What is the best objection?",
+      "choices": [
+        "The covariance must be positive because Y is a function of X.",
+        "Y is fully determined by X, so zero linear covariance does not establish independence.",
+        "Every nonlinear transformation of a normal variable is independent of it.",
+        "Zero covariance establishes independence for any pair with finite second moments."
+      ],
+      "answer": 1,
+      "explanation": "Par symétrie, \\(E[X^3]-E[X]=0\\), donc la covariance est nulle. Pourtant Y est déterminé par X: de grands mouvements absolus de X impliquent de grandes valeurs de Y. L’indépendance découle de covariance nulle pour un couple conjointement normal, pas pour toute transformation non linéaire.",
+      "why": [
+        "Une relation fonctionnelle peut avoir covariance nulle.",
+        "Correct: dépendance forte mais non linéaire.",
+        "La transformation peut au contraire créer une dépendance déterministe.",
+        "La condition de normalité jointe manque."
+      ],
+      "cue": "Covariance mesure une liaison linéaire, pas toute dépendance.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 7,
+        "pdfPages": [
+          118,
+          137
+        ]
+      }
+    },
+    {
+      "id": "xm025",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-9.1",
+      "reading": "MR-9",
+      "concept": "Correlation level versus correlation volatility",
+      "question": "Two markets have monthly average correlations: A stays near 0.90 with tiny fluctuations; B alternates between 0.10 and 0.70. Which statement is correct?",
+      "choices": [
+        "A has the higher correlation level, while B can have the higher volatility of correlation.",
+        "A necessarily has both the higher level and higher volatility because its correlations are closer to one.",
+        "B necessarily gives a higher long-only portfolio variance in every month.",
+        "A low volatility of correlation proves independence among asset returns."
+      ],
+      "answer": 0,
+      "explanation": "Le niveau est la moyenne de la série des corrélations; sa volatilité mesure les fluctuations autour de cette moyenne. Une corrélation élevée mais stable ne fluctue pas forcément beaucoup. Le risque de portefeuille dépend aussi des expositions et volatilités des actifs.",
+      "why": [
+        "Correct: deux statistiques distinctes.",
+        "La proximité de un ne définit pas une volatilité élevée.",
+        "Avec les mêmes paramètres ailleurs, les corrélations indiquées de B restent inférieures à celles de A.",
+        "Une corrélation stable à 0.90 est très éloignée de l’indépendance."
+      ],
+      "cue": "Niveau moyen et instabilité sont deux axes.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 8,
+        "pdfPages": [
+          138,
+          145
+        ]
+      }
+    },
+    {
+      "id": "xm026",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-9.2",
+      "reading": "MR-9",
+      "concept": "Mean reversion with alternating deviations",
+      "question": "A quarterly model is \\(\\Delta\\rho_t=0.18-1.20\\rho_{t-1}+\\varepsilon_t\\), with mean-zero independent innovations. Ignore support violations for this local linear model. What are its stationary mean and lag-one AR coefficient?",
+      "choices": [
+        "Mean 0.90; coefficient 1.20.",
+        "Mean 0.15; coefficient 1.20.",
+        "Mean 0.15; coefficient −0.20.",
+        "Mean −0.15; coefficient −1.20."
+      ],
+      "answer": 2,
+      "explanation": "Réécrire \\(\\rho_t=0.18-0.20\\rho_{t-1}+\\varepsilon_t\\). Puis \\(\\bar\\rho=0.18/(1+0.20)=0.15\\). La persistance négative implique des écarts qui alternent en moyenne; sa valeur absolue inférieure à un rend le modèle AR local stationnaire.",
+      "why": [
+        "La pente de différence a été confondue avec la persistance en niveau.",
+        "La moyenne est correcte mais le coefficient ne l’est pas.",
+        "Correct: ajouter un à la pente −1.20 donne −0.20.",
+        "Le signe de la moyenne et le coefficient en niveau sont erronés."
+      ],
+      "cue": "Régression de variation: ajouter un à la pente.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 8,
+        "pdfPages": [
+          138,
+          145
+        ]
+      },
+      "numeric": {
+        "expression": "0.18/(1-(-0.20))",
+        "value": 0.15,
+        "optionValue": 0.15,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "xm027",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-9.3",
+      "reading": "MR-9",
+      "concept": "Empirical best fit is not a universal correlation law",
+      "question": "A study finds that one bounded distribution fits a particular equity-correlation sample better than a normal distribution. A model owner wants to impose that same fitted distribution and parameters on every asset class and future regime. Which response is most defensible?",
+      "choices": [
+        "Accept because a statistical best fit establishes a universal financial law.",
+        "Accept because bounded support alone guarantees correct dependence forecasts.",
+        "Reject all bounded models and use a normal distribution even near the support boundaries.",
+        "Retain support-aware modeling, but validate fit, parameter stability and regime relevance for the actual data and intended use."
+      ],
+      "answer": 3,
+      "explanation": "Un résultat empirique est conditionnel à son échantillon, son estimation et son critère de comparaison. Le support borné constitue une contrainte utile, pas une validation complète. Il faut tester l’adéquation au périmètre et la stabilité hors période d’ajustement.",
+      "why": [
+        "Un classement dans un échantillon ne constitue pas une loi universelle.",
+        "Une loi peut respecter le support et être mal spécifiée.",
+        "La normale peut attribuer de la masse à des corrélations impossibles.",
+        "Correct: support et validation empirique sont complémentaires."
+      ],
+      "cue": "Bon support, puis bon ajustement, puis stabilité.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 8,
+        "pdfPages": [
+          138,
+          145
+        ]
+      }
+    },
+    {
+      "id": "xm028",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-10.1",
+      "reading": "MR-10",
+      "concept": "Copula parameter versus indicator correlation",
+      "question": "In a Gaussian default model, two obligors have small marginal default probabilities and latent-normal correlation 0.50. Which statement is necessarily correct?",
+      "choices": [
+        "The correlation between their default indicators is exactly 0.50.",
+        "The joint default probability depends on both marginal PDs and the latent correlation; indicator correlation need not equal 0.50.",
+        "Their joint default probability is 50%, regardless of the marginal PDs.",
+        "Changing either marginal PD leaves the joint default probability unchanged."
+      ],
+      "answer": 1,
+      "explanation": "La probabilité jointe est une CDF normale bivariée aux seuils \\(\\Phi^{-1}(p_1)\\) et \\(\\Phi^{-1}(p_2)\\). La corrélation des indicatrices est une transformation de cette probabilité jointe et des PD. Le paramètre latent ne se lit pas directement comme une corrélation de défauts binaires.",
+      "why": [
+        "La transformation en indicatrices est non linéaire.",
+        "Correct: seuils et dépendance sont tous nécessaires.",
+        "La probabilité jointe ne peut excéder la plus petite PD.",
+        "Les seuils changent avec les PD et affectent la probabilité jointe."
+      ],
+      "cue": "Latent rho ≠ corrélation des défauts.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 9,
+        "pdfPages": [
+          146,
+          151
+        ]
+      }
+    },
+    {
+      "id": "xm029",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-10.2",
+      "reading": "MR-10",
+      "concept": "Comonotonic defaults and conditional probability",
+      "question": "In the comonotonic limiting case of a Gaussian copula as latent correlation tends to one, two obligors default when the same uniform variable U falls below their marginal PDs: A defaults if \\(U<0.04\\), B if \\(U<0.10\\). What is \\(P(A\\mid B)\\)?",
+      "choices": [
+        "4%",
+        "10%",
+        "100%",
+        "40%"
+      ],
+      "answer": 3,
+      "explanation": "La probabilité jointe vaut \\(\\min(0.04,0.10)=0.04\\). Donc \\(P(A\\mid B)=0.04/0.10=40\\%\\). Le défaut de A implique celui de B, mais pas l’inverse. Une dépendance maximale des variables latentes ne rend pas identiques les événements de défaut si les seuils diffèrent.",
+      "why": [
+        "4% est la PD marginale de A, pas la probabilité conditionnelle donnée B.",
+        "10% est la PD marginale de B.",
+        "100% correspond à P(B|A), dans l’autre sens.",
+        "Correct: la masse commune représente 40% de la masse de B."
+      ],
+      "cue": "Même uniforme, seuils différents, conditionnement orienté.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 9,
+        "pdfPages": [
+          146,
+          151
+        ]
+      },
+      "numeric": {
+        "expression": "0.04/0.10",
+        "value": 0.4,
+        "optionValue": 0.4,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "xm030",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-10.3",
+      "reading": "MR-10",
+      "concept": "A single joint CDF draw is not a vector of uniforms",
+      "question": "A programmer draws a correlated Gaussian vector Z, evaluates its single joint CDF \\(\\Phi_n(Z;R)\\), and feeds that same scalar into every obligor’s inverse default-time CDF. What is the principal problem?",
+      "choices": [
+        "The procedure does not preserve the intended Gaussian-copula marginals and dependence; use each coordinate’s \\(U_i=\\Phi(Z_i)\\) before inverse marginal transformation.",
+        "A joint Gaussian CDF can never be numerically evaluated.",
+        "The resulting scalar is always independent uniform for every coordinate by definition.",
+        "The error is solved by using a larger portfolio while retaining the same scalar mapping."
+      ],
+      "answer": 0,
+      "explanation": "Le théorème de transformation uniforme s’applique ici aux CDF marginales de chaque coordonnée. Une valeur de CDF jointe n’est généralement pas uniforme et la réutiliser pour tous les noms fabrique en plus une dépendance commune artificielle. Il faut construire un vecteur d’uniformes marginaux corrélés.",
+      "why": [
+        "Correct: transformation composante par composante, puis inverse de chaque CDF de défaut.",
+        "Des algorithmes existent; ce n’est pas la question centrale.",
+        "Une CDF multivariée évaluée sur son vecteur n’a pas en général cette propriété uniforme univariée.",
+        "La taille ne corrige pas une mauvaise transformation probabiliste."
+      ],
+      "cue": "Copule: un uniforme marginal par nom, pas un scalaire joint pour tous.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 9,
+        "pdfPages": [
+          146,
+          151
+        ]
+      }
+    },
+    {
+      "id": "xm031",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-11.8",
+      "reading": "MR-11",
+      "concept": "A low-variance PC can dominate portfolio risk",
+      "question": "A PCA of yield changes attributes 99% of total rate variance to PC1 and 1% to PC2. A portfolio has zero PC1 exposure and a large PC2 exposure. Which statement is best?",
+      "choices": [
+        "Its risk is necessarily negligible because PC1 explains 99% of rate variance.",
+        "Neutralizing PC1 removes 99% of every portfolio’s variance.",
+        "Its risk can be dominated entirely by PC2; variance explained for the yield data is not the same as risk explained for this portfolio.",
+        "PC2 must be correlated with PC1 whenever a portfolio loads on it."
+      ],
+      "answer": 2,
+      "explanation": "Le risque du portefeuille dépend de ses charges: \\(\\sum_j b_j^2\\lambda_j\\). Avec une charge nulle sur PC1, cette composante ne contribue pas à sa variance. Une petite variance de facteur peut être amplifiée par une grande exposition. L’orthogonalité des facteurs n’est pas modifiée par le portefeuille.",
+      "why": [
+        "Ce pourcentage décrit les données de taux, pas les expositions du portefeuille.",
+        "La fraction éliminée dépend de chaque charge factorielle.",
+        "Correct: le risque est évalué après projection des sensibilités.",
+        "Les positions ne changent pas la covariance des facteurs eux-mêmes."
+      ],
+      "cue": "PC importante pour le marché ≠ PC importante pour mon portefeuille.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 10,
+        "pdfPages": [
+          152,
+          167
+        ]
+      }
+    },
+    {
+      "id": "xm032",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-11.5",
+      "reading": "MR-11",
+      "concept": "Hedge notionals from two regression coefficients and DV01s",
+      "question": "A bond position has total DV01 EUR 120,000/bp. Its yield change is modeled as \\(\\Delta y_A=0.30\\Delta y_1+0.80\\Delta y_2+\\varepsilon\\). One EUR 1m notional of hedge 1 has DV01 EUR 800/bp and hedge 2 EUR 1,600/bp. Using the local rate-P&L approximation, what short hedge notionals cancel the fitted factor exposures?",
+      "choices": [
+        "EUR 45m in hedge 1 and EUR 60m in hedge 2.",
+        "EUR 36m in hedge 1 and EUR 96m in hedge 2.",
+        "EUR 50m in each hedge.",
+        "EUR 150m in hedge 1 and EUR 75m in hedge 2."
+      ],
+      "answer": 0,
+      "explanation": "Le risque expliqué par le facteur 1 est \\(120000(0.30)=36000\\) euros par bp, et celui du facteur 2 est \\(120000(0.80)=96000\\). Diviser par les DV01 par million: \\(36000/800=45\\) et \\(96000/1600=60\\). Les coefficients ne sont pas obligés de sommer à un.",
+      "why": [
+        "Correct: sensibilité factorielle divisée par DV01 par unité de notionnel.",
+        "Ces nombres confondent milliers d’euros de DV01 et millions de notionnel.",
+        "Une répartition égale ignore les coefficients et les DV01 distincts.",
+        "Ces montants couvriraient séparément tout le DV01 sans les coefficients."
+      ],
+      "cue": "Coefficient × DV01 du portefeuille, puis convertir en notionnel.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 10,
+        "pdfPages": [
+          152,
+          167
+        ]
+      },
+      "numeric": {
+        "expression": "120000*0.8/1600",
+        "value": 60,
+        "optionValue": 60,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "xm033",
+      "topic": "market",
+      "skill": "m-hedge",
+      "objective": "MR-11.6",
+      "reading": "MR-11",
+      "concept": "Levels versus changes and residual persistence",
+      "question": "A levels-based hedge \\(y_t=a+bx_t+e_t\\) is economically justified by an assumed tendency of pricing deviations to close, while a changes hedge does not force yesterday’s deviation to close today. A trader sees a high levels \\(R^2\\) but large, persistent out-of-sample hedge residuals. What is the best action?",
+      "choices": [
+        "Use the high levels \\(R^2\\) to retain the original hedge, since long-run fit alone establishes the minimum daily P&L variance.",
+        "Fit both regressions to the same full history and select whichever has the highest unadjusted \\(R^2\\), without considering their different dependent variables.",
+        "Use the reciprocal of the levels slope as the change hedge, because it is unaffected by residual dynamics.",
+        "Examine stationarity and residual dynamics, estimate relevant change-based or dynamic hedges, and compare genuine out-of-sample P&L performance."
+      ],
+      "answer": 3,
+      "explanation": "Une forte corrélation en niveaux peut refléter une tendance commune ou un équilibre de long terme sans donner la bonne couverture à court terme. Le choix dépend de la dynamique des écarts, de l’horizon de détention et de la stabilité hors échantillon. La régression inverse résout un autre problème.",
+      "why": [
+        "Une bonne explication en niveaux ne garantit pas une bonne couverture des variations quotidiennes.",
+        "Les \\(R^2\\) de régressions portant sur des variables différentes ne se comparent pas comme une même fonction de perte de couverture.",
+        "La réciproque ne corrige ni la dynamique des résidus ni l’orientation OLS.",
+        "Correct: relier la spécification à l’objectif économique et à la validation temporelle."
+      ],
+      "cue": "Couvrir une variation exige de comprendre la dynamique des écarts.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 10,
+        "pdfPages": [
+          152,
+          167
+        ]
+      }
+    },
+    {
+      "id": "xm034",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-12.3",
+      "reading": "MR-12",
+      "concept": "Risk-neutral probabilities outside the unit interval",
+      "question": "A one-period asset pays either 80 or 100, with no interim cash flow. The risk-free growth factor is 1.02. Its observed price implies a risk-neutral probability of 1.15 for the 80 state. Under a frictionless two-state replication framework, what does this indicate?",
+      "choices": [
+        "A 115% probability is acceptable because risk-neutral probabilities need not sum to one.",
+        "The stated prices and state payoffs are incompatible with an arbitrage-free positive-probability model under these assumptions.",
+        "The physical probability must also equal 1.15.",
+        "The option should simply be priced using the absolute value of each probability."
+      ],
+      "answer": 1,
+      "explanation": "Une probabilité risque-neutre doit rester entre zéro et un. Le prix actualisé doit être compris entre les deux payoffs actualisés lorsqu’ils peuvent être répliqués avec le monétaire. Une valeur hors support signale des entrées incohérentes ou une violation des hypothèses, pas une nouvelle règle de probabilité.",
+      "why": [
+        "Les probabilités risque-neutres sont bien des probabilités.",
+        "Correct: contrôler prix, conventions, cash-flows et hypothèses avant usage.",
+        "La probabilité physique n’est pas obtenue par cette incohérence.",
+        "Prendre une valeur absolue détruit les équations de réplication."
+      ],
+      "cue": "Avant de pricer, vérifier \\(0\\le q\\le1\\).",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 11,
+        "pdfPages": [
+          168,
+          179
+        ]
+      }
+    },
+    {
+      "id": "xm035",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-12.5",
+      "reading": "MR-12",
+      "concept": "Two-step discounting follows state-dependent rates",
+      "question": "A unit face-value claim pays 100 at year 2. The year-0 one-year simple rate is 4%. At year 1, the one-year rate is 2% or 8%, each with risk-neutral probability 0.5. There are no intermediate cash flows. What is its time-0 price?",
+      "choices": [
+        "\\(100/(1.04\\times1.05)\\approx91.575\\).",
+        "\\(100/1.04^2\\approx92.456\\).",
+        "\\(\\{0.5(100/1.02)+0.5(100/1.08)\\}/1.04\\approx91.650\\).",
+        "\\(0.5(100/1.02)+0.5(100/1.08)\\approx95.316\\)."
+      ],
+      "answer": 2,
+      "explanation": "À l’année 1, les prix sont \\(100/1.02\\) et \\(100/1.08\\). Leur moyenne risque-neutre est ensuite actualisée au taux courant 4%: \\([50/1.02+50/1.08]/1.04\\approx91.6499\\). Actualiser au taux futur moyen oublie la convexité; omettre le premier facteur oublie une année.",
+      "why": [
+        "Utiliser le taux moyen de 5% à la place de la moyenne des facteurs d’actualisation supprime la convexité.",
+        "Le taux courant ne reste pas fixé pour la deuxième année dans l’arbre donné.",
+        "Correct: récurrence nœud par nœud.",
+        "Cette quantité est une moyenne de prix à un an, pas le prix à la date zéro."
+      ],
+      "cue": "Actualiser chaque état, moyenner, puis reculer.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 11,
+        "pdfPages": [
+          168,
+          179
+        ]
+      },
+      "numeric": {
+        "expression": "(0.5*100/1.02+0.5*100/1.08)/1.04",
+        "value": 91.6499078263784,
+        "optionValue": 91.65,
+        "tolerance": 0.001
+      }
+    },
+    {
+      "id": "xm036",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-12.6",
+      "reading": "MR-12",
+      "concept": "OAS model sensitivity is not pure credit value",
+      "question": "Two models both fit current vanilla bond prices, but use different interest-rate volatility and exercise dynamics for a callable bond. They infer different OAS for that same callable bond. Which interpretation is most defensible?",
+      "choices": [
+        "The OAS difference necessarily identifies a change in the issuer’s physical default probability.",
+        "OAS must be model invariant once today’s yield curve is fitted.",
+        "A positive OAS guarantees an excess realized return regardless of future rates and spread changes.",
+        "OAS is a model-relative residual spread; differences may reflect option valuation assumptions, so compare model risk before interpreting relative cheapness."
+      ],
+      "answer": 3,
+      "explanation": "L’OAS retire une valeur d’option calculée par un modèle. Ajuster les obligations de base ne détermine pas entièrement la dynamique de volatilité ni l’exercice de la callable. Deux modèles peuvent donc attribuer différemment le spread à l’option et au résidu; ce n’est pas une mesure pure de défaut ni un rendement garanti.",
+      "why": [
+        "La variation peut venir de la valeur d’option plutôt que du risque de défaut physique.",
+        "La calibration initiale n’identifie pas toutes les dynamiques.",
+        "Des changements de taux, de spread ou de modèle peuvent modifier le rendement réalisé.",
+        "Correct: examiner le modèle avant de classer la valeur relative."
+      ],
+      "cue": "OAS appartient à un modèle, pas seulement à un titre.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 11,
+        "pdfPages": [
+          168,
+          179
+        ]
+      }
+    },
+    {
+      "id": "xm037",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-13.3",
+      "reading": "MR-13",
+      "concept": "Convexity depends on the pricing function",
+      "question": "A risk manager claims that higher rate volatility at unchanged mean must increase the value of every fixed-income instrument. What is the most important qualification?",
+      "choices": [
+        "Jensen’s argument requires convexity of the relevant price function; embedded options can create regions of negative convexity.",
+        "Jensen’s inequality applies only when the rate is deterministic.",
+        "Higher volatility never changes an expected discounted payoff.",
+        "All callable bonds have globally the same positive convexity as zero-coupon bonds."
+      ],
+      "answer": 0,
+      "explanation": "Le signe du second ordre dépend de la courbure de la fonction de prix. Un zéro sans option est convexe en rendement sous les conventions usuelles; une obligation callable peut devenir négativement convexe lorsque l’option limite la hausse du prix. Il faut préciser instrument, facteur et hypothèses de dynamique.",
+      "why": [
+        "Correct: la convexité est une condition, pas un slogan universel.",
+        "Jensen est précisément utile pour une variable aléatoire.",
+        "Une fonction non linéaire peut modifier son espérance lorsque la dispersion change.",
+        "L’option de remboursement modifie la forme de prix."
+      ],
+      "cue": "Toujours vérifier la dérivée seconde de l’instrument.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 12,
+        "pdfPages": [
+          180,
+          187
+        ]
+      }
+    },
+    {
+      "id": "xm038",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-13.3",
+      "reading": "MR-13",
+      "concept": "Second-order convexity correction",
+      "question": "For a local rate shock, \\(P(\\mu)=98\\), \\(P^{\\prime\\prime}(\\mu)=800\\) price units per squared decimal rate, \\(E[\\Delta r]=0\\), and \\(\\operatorname{Var}(\\Delta r)=0.000225\\). Neglect higher orders. What is \\(E[P]\\)?",
+      "choices": [
+        "97.91",
+        "98.00",
+        "98.18",
+        "98.09"
+      ],
+      "answer": 3,
+      "explanation": "La correction est \\(\\tfrac12P^{\\prime\\prime}\\operatorname{Var}(\\Delta r)=0.5(800)(0.000225)=0.09\\). Donc le prix moyen approximatif vaut 98.09. Les taux sont en décimal; convertir encore les 0.000225 comme des pourcentages serait une double conversion.",
+      "why": [
+        "Ce choix applique le mauvais signe à une courbure positive.",
+        "L’espérance du premier ordre est nulle, mais pas celle du second ordre.",
+        "Le facteur une moitié est oublié.",
+        "Correct: prix initial plus correction positive de 0.09."
+      ],
+      "cue": "Moyenne du choc zéro, moyenne du carré positive.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 12,
+        "pdfPages": [
+          180,
+          187
+        ]
+      },
+      "numeric": {
+        "expression": "98+0.5*800*0.000225",
+        "value": 98.09,
+        "optionValue": 98.09,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "xm039",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-13.4",
+      "reading": "MR-13",
+      "concept": "A hedging asset may have a negative risk premium",
+      "question": "An asset pays especially well in states where investors’ aggregate wealth is low. A manager rejects a model because the asset’s expected return is below the risk-free rate. Which response is best?",
+      "choices": [
+        "Any risky asset must have a strictly positive risk premium in every equilibrium.",
+        "A useful hedge can command a high price and a negative risk premium; assess its covariance with adverse economic states.",
+        "An expected return below the risk-free rate proves an arbitrage regardless of its payoff risk.",
+        "The asset must be riskless if its expected return is low."
+      ],
+      "answer": 1,
+      "explanation": "Une assurance contre les mauvais états rend un service de couverture. Les investisseurs peuvent accepter une rémunération moyenne plus faible pour ce payoff utile. L’arbitrage concerne les payoffs et la réplication, pas le seul classement des espérances de rendement.",
+      "why": [
+        "Le signe de la prime dépend du risque systématique et de l’utilité dans les états.",
+        "Correct: le rôle de couverture peut expliquer une prime négative.",
+        "Des rendements aléatoires différents ne sont pas arbitrables sur la seule moyenne.",
+        "Un faible rendement moyen ne supprime pas l’aléa."
+      ],
+      "cue": "Un payoff utile dans la crise peut être cher en moyenne.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 12,
+        "pdfPages": [
+          180,
+          187
+        ]
+      }
+    },
+    {
+      "id": "xm040",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-14.4",
+      "reading": "MR-14",
+      "concept": "Ho-Lee recombination versus state-dependent drift",
+      "question": "In a binomial Ho–Lee approximation, volatility and step length are constant and drift depends only on calendar time. Why do up-then-down and down-then-up paths recombine after two steps?",
+      "choices": [
+        "The risk-neutral probability must equal one at every node.",
+        "All future short rates are deterministic.",
+        "Each path accumulates the same calendar drifts, while its equal-and-opposite volatility increments cancel.",
+        "A normal distribution cannot generate negative short rates."
+      ],
+      "answer": 2,
+      "explanation": "Le premier chemin ajoute un choc positif puis négatif; le second fait l’inverse. Comme les deux pas ont la même amplitude et que le drift dépend de la date, les sommes sont identiques. Une dérive dépendant de l’état rend cette égalité moins immédiate et peut nécessiter un arbre construit autrement.",
+      "why": [
+        "Le phénomène de recombinaison n’exige pas des probabilités dégénérées.",
+        "Les nœuds intermédiaires restent aléatoires.",
+        "Correct: égalité des sommes de drift et de bruit.",
+        "Le modèle gaussien autorise au contraire des taux négatifs."
+      ],
+      "cue": "Même drift de calendrier, chocs qui se compensent.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 13,
+        "pdfPages": [
+          188,
+          199
+        ]
+      }
+    },
+    {
+      "id": "xm041",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-14.7",
+      "reading": "MR-14",
+      "concept": "Vasicek terminal variance versus naive time scaling",
+      "question": "Under Vasicek, \\(a=0.40\\) per year and \\(\\sigma=1.2\\%\\) per square-root year. For \\(T=5\\) years, use \\(\\operatorname{Var}(r_T\\mid r_0)=\\sigma^2(1-e^{-2aT})/(2a)\\). What is the conditional standard deviation, in basis points?",
+      "choices": [
+        "About 133 bp.",
+        "About 60 bp.",
+        "About 268 bp.",
+        "About 12 bp."
+      ],
+      "answer": 0,
+      "explanation": "\\(SD=0.012\\sqrt{(1-e^{-4})/0.8}\\approx0.013293\\), soit environ 132.93 bp. Le rappel limite la dispersion; la formule sans rappel \\(\\sigma\\sqrt5\\) donnerait environ 268 bp et surestimerait ici le risque terminal.",
+      "why": [
+        "Correct: écart-type exact de Vasicek à paramètres constants.",
+        "Ce chiffre sous-estime la variance intégrée donnée.",
+        "C’est le résultat brownien sans mean reversion.",
+        "Confusion de pourcentage, décimal ou bp."
+      ],
+      "cue": "Avec rappel, intégrer la variance; ne pas multiplier aveuglément par √T.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 13,
+        "pdfPages": [
+          188,
+          199
+        ]
+      },
+      "numeric": {
+        "expression": "0.012*Math.sqrt((1-Math.exp(-2*0.4*5))/(2*0.4))*10000",
+        "value": 132.92975024426542,
+        "optionValue": 133,
+        "tolerance": 0.1
+      }
+    },
+    {
+      "id": "xm042",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-14.3",
+      "reading": "MR-14",
+      "concept": "Clipping negative rates changes calibration",
+      "question": "A calibrated Gaussian short-rate tree contains some negative nodes. A developer replaces every negative rate by zero while leaving transition probabilities and all other node rates unchanged. Which conclusion is most defensible?",
+      "choices": [
+        "Retain the original calibration because replacing only negative nodes does not alter the nodes’ expected discount factors.",
+        "Treat the new tree as equivalent whenever the probability of negative rates is below 50%, without pricing a test portfolio.",
+        "Label the truncated tree a CIR approximation solely because both trees avoid negative rates.",
+        "The truncation changes local moments and discount factors; revalidate calibration and derivative prices rather than treating it as a neutral display change."
+      ],
+      "answer": 3,
+      "explanation": "Fixer un taux négatif à zéro change ses facteurs d’actualisation et les moyennes de transitions proches de la frontière. Les prix des zéros et des options peuvent donc changer. Cela ne crée pas une diffusion CIR et demande une nouvelle justification/calibration.",
+      "why": [
+        "Le taux de chaque nœud modifié intervient dans son facteur d’actualisation.",
+        "Un seuil arbitraire de probabilité ne garantit aucune invariance des prix ou des moments.",
+        "Éviter des nœuds négatifs n’implique pas une diffusion CIR racine carrée.",
+        "Correct: il s’agit d’un changement de modèle, pas de présentation."
+      ],
+      "cue": "Couper un nœud modifie le modèle.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 13,
+        "pdfPages": [
+          188,
+          199
+        ]
+      }
+    },
+    {
+      "id": "xm043",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-15.6",
+      "reading": "MR-15",
+      "concept": "Black–Karasinski models the logarithm",
+      "question": "A Black–Karasinski specification is written for \\(x_t=\\ln r_t\\) as a Gaussian mean-reverting process. Starting from a positive short rate, which statement is correct for the continuous-time model?",
+      "choices": [
+        "The short rate itself is Gaussian and can freely take negative values.",
+        "The log rate can take any real value, while the level \\(r_t=e^{x_t}\\) remains positive.",
+        "The short rate becomes deterministic because its logarithm mean reverts.",
+        "A constant volatility in x implies a constant absolute basis-point volatility in r."
+      ],
+      "answer": 1,
+      "explanation": "Une valeur réelle de x donne toujours un taux positif par exponentiation. La volatilité en logarithme correspond à une volatilité proportionnelle du niveau; la volatilité absolue dépend du niveau du taux. Le rappel n’élimine pas les chocs aléatoires.",
+      "why": [
+        "C’est le logarithme qui est gaussien, pas le taux en niveau.",
+        "Correct: l’exponentielle préserve la positivité.",
+        "Une diffusion mean-reverting reste aléatoire.",
+        "Une volatilité proportionnelle donne une volatilité absolue variable avec r."
+      ],
+      "cue": "Normal dans le log, positif dans le niveau.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 14,
+        "pdfPages": [
+          200,
+          205
+        ]
+      }
+    },
+    {
+      "id": "xm044",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-15.6",
+      "reading": "MR-15",
+      "concept": "Ito correction when converting a log-rate SDE",
+      "question": "The log short rate follows \\(d\\ln r=-0.01dt+0.20dW\\), with time in years. By Itô’s lemma, what is the instantaneous expected proportional change \\(E[dr/r]/dt\\)?",
+      "choices": [
+        "−1% per year.",
+        "0% per year.",
+        "1% per year.",
+        "3% per year."
+      ],
+      "answer": 2,
+      "explanation": "Itô donne \\(dr/r=(-0.01+\\tfrac12(0.20)^2)dt+0.20dW\\). Le drift est donc \\(-0.01+0.02=0.01\\), soit 1% par an. Ce pourcentage est une croissance proportionnelle du taux, pas un ajout de 100 bp au taux court.",
+      "why": [
+        "C’est le drift du logarithme, avant correction.",
+        "Ce résultat ne suit pas la correction de 0.02.",
+        "Correct: ajouter une moitié du carré de la volatilité log.",
+        "Ce choix ajoute tout le carré au lieu de la moitié."
+      ],
+      "cue": "\\(\\mu_{\\mathrm{niveau}}=\\mu_{\\log}+\\sigma^2/2\\).",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 14,
+        "pdfPages": [
+          200,
+          205
+        ]
+      },
+      "numeric": {
+        "expression": "-0.01+0.5*Math.pow(0.20,2)",
+        "value": 0.01,
+        "optionValue": 0.01,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "xm045",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-15.3",
+      "reading": "MR-15",
+      "concept": "Same terminal rate variance does not fix path-sensitive prices",
+      "question": "Model A has a deterministic time-dependent short-rate volatility; model B has mean reversion. They are calibrated to the same mean and variance of the one-year short rate. Does this ensure identical prices for all one-year path-dependent rate claims?",
+      "choices": [
+        "No; joint distributions across intermediate dates and integrated rates can differ even when the one-year marginal moments match.",
+        "Yes; two moments at the final date determine every path distribution.",
+        "Yes; mean reversion is only another name for deterministic declining volatility.",
+        "No, solely because a Gaussian distribution cannot have a finite variance."
+      ],
+      "answer": 0,
+      "explanation": "Le payoff peut dépendre des taux intermédiaires ou de leur intégrale. Une égalité de deux moments terminaux n’identifie pas les covariances entre dates, ni même toute la loi terminale sans hypothèse supplémentaire. Les effets de rappel sur les chocs diffèrent d’une volatilité réglée par calendrier.",
+      "why": [
+        "Correct: la dynamique du chemin compte.",
+        "Deux moments ne déterminent pas une loi de chemins.",
+        "Le rappel dépend de l’état et propage les chocs différemment.",
+        "Une gaussienne a une variance finie dans les modèles indiqués."
+      ],
+      "cue": "Même photo finale, pas forcément le même film.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 14,
+        "pdfPages": [
+          200,
+          205
+        ]
+      }
+    },
+    {
+      "id": "xm046",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-16.1",
+      "reading": "MR-16",
+      "concept": "An indirectly stochastic short rate",
+      "question": "Consider an explicitly stated cascade \\(dr=a(m-r)dt\\), \\(dm=b(l-m)dt+\\sigma_m dW_m\\), with positive a and nonzero \\(\\sigma_m\\). A student claims that r is deterministic because its equation has no direct Brownian increment. Which response is best?",
+      "choices": [
+        "The claim is correct for every future horizon.",
+        "Any variable without a direct Brownian term is independent of all Brownian motions.",
+        "The absence of direct diffusion makes the entire yield curve riskless.",
+        "The future path of r depends on the random path of m; no direct instantaneous shock does not imply a deterministic finite-horizon value."
+      ],
+      "answer": 3,
+      "explanation": "La solution de r intègre sa cible m, qui devient aléatoire. Un choc sur m modifie la dérive future du taux court et se transmet progressivement. On distingue ainsi variation quadratique instantanée et incertitude à horizon fini. L’équation donnée est un exemple de cascade, pas une prétention de spécification canonique complète.",
+      "why": [
+        "La cible future est aléatoire et transmet son risque.",
+        "Une dépendance peut passer par une dérive aléatoire.",
+        "Les facteurs intermédiaires et longs peuvent modifier les prix.",
+        "Correct: l’aléa peut être transmis indirectement."
+      ],
+      "cue": "Une cible aléatoire rend l’avenir aléatoire.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": null,
+        "pdfPages": [],
+        "note": "Chapitre actuel absent comme lecture dédiée du livre 2024; ne pas attribuer ces ajouts à une page inexistante."
+      },
+      "currentSource": {
+        "url": "https://onlinelibrary.wiley.com/doi/10.1002/9781119835622.ch9",
+        "access": "Publisher summary verified, full current chapter not available. Cascade equations are explicitly specified examples, not asserted to be the complete canonical Gauss+ model."
+      }
+    },
+    {
+      "id": "xm047",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-16.3",
+      "reading": "MR-16",
+      "concept": "Cascade response to a medium-factor surprise",
+      "question": "For this specified cascade, \\(dr=2(m-r)dt\\) and \\(dm=0.5(l-m)dt\\) during a drift-only step. Initially \\(r=2\\%\\), \\(m=3\\%\\), \\(l=4\\%\\). Just before the step, m unexpectedly jumps by +0.50 percentage points, while r and l do not jump. Using initial post-jump values and \\(dt=0.10\\) year, what is r after one Euler step?",
+      "choices": [
+        "2.20%",
+        "2.30%",
+        "2.70%",
+        "3.50%"
+      ],
+      "answer": 1,
+      "explanation": "Après le choc, \\(m=3.5\\%\\). Le pas de r vaut \\(2(3.5\\%-2\\%)(0.10)=0.30\\%\\), soit 30 bp. Le taux après le pas est donc 2.30%. Euler utilise ici la cible au début du pas, comme précisé; mettre à jour m puis r utiliserait une autre discrétisation.",
+      "why": [
+        "Ce résultat ignore le saut préalable de m.",
+        "Correct: écart de 1.5 point ×2×0.1.",
+        "Le choc sur m ne se répercute pas immédiatement en totalité sur r.",
+        "Ce choix remplace instantanément r par sa cible."
+      ],
+      "cue": "Mettre à jour la cible, puis appliquer le drift défini.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": null,
+        "pdfPages": [],
+        "note": "Chapitre actuel absent comme lecture dédiée du livre 2024; ne pas attribuer ces ajouts à une page inexistante."
+      },
+      "numeric": {
+        "expression": "2+2*(3.5-2)*0.10",
+        "value": 2.3,
+        "optionValue": 2.3,
+        "tolerance": 1e-09
+      },
+      "currentSource": {
+        "url": "https://onlinelibrary.wiley.com/doi/10.1002/9781119835622.ch9",
+        "access": "Publisher summary verified, full current chapter not available. Cascade equations are explicitly specified examples, not asserted to be the complete canonical Gauss+ model."
+      }
+    },
+    {
+      "id": "xm048",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-16.4",
+      "reading": "MR-16",
+      "concept": "More factors create identification demands",
+      "question": "A three-factor Gaussian term-structure model exactly fits today’s yield curve. Several very different mean-reversion and volatility parameter sets produce nearly identical current prices but sharply different hedge behavior. Which validation response is strongest?",
+      "choices": [
+        "Choose the parameter set with the smallest in-sample yield fitting error, even when all errors are numerically indistinguishable.",
+        "Treat exact curve fit as sufficient identification because a Gaussian model’s dynamics are fully determined by current mean yields.",
+        "Use historical changes, option information where appropriate, stability checks and out-of-sample hedging tests to assess identification and model-use uncertainty.",
+        "Average all parameter sets and assume this automatically removes parameter uncertainty from future hedging outcomes."
+      ],
+      "answer": 2,
+      "explanation": "Une courbe à un instant donne une information différente de celle des variations dans le temps ou des prix d’options. Plusieurs paramètres peuvent compenser leurs effets sur la calibration initiale. Il faut documenter l’identifiabilité et tester la dynamique pertinente pour la couverture, sans croire que des données supplémentaires garantissent une identification parfaite.",
+      "why": [
+        "Des erreurs de prix indiscernables ne classent pas de façon informative des dynamiques très différentes.",
+        "Les rendements moyens courants ne fixent pas toutes les vitesses de rappel et volatilités.",
+        "Correct: combiner sources d’information et validation de l’usage.",
+        "Une moyenne de paramètres n’annule pas automatiquement leur incertitude et peut changer les prix."
+      ],
+      "cue": "Ajuster les prix n’identifie pas toutes les dynamiques.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": null,
+        "pdfPages": [],
+        "note": "Chapitre actuel absent comme lecture dédiée du livre 2024; ne pas attribuer ces ajouts à une page inexistante."
+      },
+      "currentSource": {
+        "url": "https://onlinelibrary.wiley.com/doi/10.1002/9781119835622.ch9",
+        "access": "Publisher summary verified, full current chapter not available. Cascade equations are explicitly specified examples, not asserted to be the complete canonical Gauss+ model."
+      }
+    },
+    {
+      "id": "xm049",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-17.7",
+      "reading": "MR-17",
+      "concept": "Calendar comparison uses total variance",
+      "question": "Under zero rates and dividends, compare European call prices at fixed strike for two maturities on the same nonnegative martingale stock. A surface has ATM implied volatility 30% at 0.25 year and 20% at 1 year. Which conclusion follows from those two ATM volatilities alone?",
+      "choices": [
+        "The decline in volatility alone does not establish calendar arbitrage; total implied variances are 0.0225 and 0.0400, respectively.",
+        "Calendar arbitrage is certain whenever longer-maturity implied volatility is lower.",
+        "The one-year total implied variance is lower because 20% is lower than 30%.",
+        "The two implied volatilities must be equal under no arbitrage."
+      ],
+      "answer": 0,
+      "explanation": "La variance totale vaut \\(\\sigma^2T\\): \\(0.30^2(0.25)=0.0225\\) puis \\(0.20^2(1)=0.04\\). Une volatilité annualisée décroissante peut accompagner une variance totale croissante. Deux points ATM ne valident pas toute la surface ni tous les strikes, mais ne prouvent pas l’arbitrage annoncé.",
+      "why": [
+        "Correct: contrôler le bon objet et éviter de valider toute la surface à partir de deux chiffres.",
+        "La volatilité annualisée peut décroître sans violer la monotonie du prix à strike fixé sous ces hypothèses.",
+        "Le temps de maturité est oublié.",
+        "La parité call-put ne force pas l’égalité des volatilités à différentes échéances."
+      ],
+      "cue": "Comparer \\(\\sigma^2T\\) avant de conclure sur une baisse de \\(\\sigma\\).",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 15,
+        "pdfPages": [
+          206,
+          215
+        ]
+      }
+    },
+    {
+      "id": "xm050",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-17.3",
+      "reading": "MR-17",
+      "concept": "Butterfly consistency of a volatility surface",
+      "question": "At one maturity, European calls with equally spaced strikes 95, 100 and 105 cost 8.4, 5.7 and 2.6. Assume zero transaction costs and a frictionless market. What is the cost of buying one 95 call, selling two 100 calls and buying one 105 call, and what does it imply?",
+      "choices": [
+        "Cost +0.4; the butterfly necessarily creates an arbitrage.",
+        "Cost −0.4; its nonnegative terminal payoff makes the quoted prices inconsistent with no arbitrage.",
+        "Cost −3.0; the payoff is always negative.",
+        "Cost 0; equally spaced strikes guarantee exact linearity of call prices."
+      ],
+      "answer": 1,
+      "explanation": "Le coût est \\(8.4-2(5.7)+2.6=-0.4\\). Le payoff du butterfly est nul hors de l’intervalle et positif entre les strikes extrêmes. On reçoit donc 0.4 aujourd’hui pour un payoff terminal jamais négatif: incohérence de prix. Une surface lisse en volatilité n’exclut pas ce défaut.",
+      "why": [
+        "Le signe du coût est erroné; payer pour un payoff positif ne crée pas seul un arbitrage.",
+        "Correct: convexité discrète des prix de call violée.",
+        "Le coût et le signe du payoff ne correspondent pas au portefeuille indiqué.",
+        "Les prix de call doivent être convexes, pas linéaires, en strike."
+      ],
+      "cue": "Prix de butterfly négatif + payoff non négatif = alerte.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 15,
+        "pdfPages": [
+          206,
+          215
+        ]
+      },
+      "numeric": {
+        "expression": "8.4-2*5.7+2.6",
+        "value": -0.4,
+        "optionValue": -0.4,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "xm051",
+      "topic": "market",
+      "skill": "m-rates",
+      "objective": "MR-17.3",
+      "reading": "MR-17",
+      "concept": "Risk-neutral skew is not a physical probability forecast",
+      "question": "After a selloff, downside put implied volatilities rise sharply relative to ATM. A portfolio manager concludes that the options reveal the exact physical probability of a crash next month. What is the best qualification?",
+      "choices": [
+        "Use the skew only as evidence about a volatility level; option prices cannot constrain the risk-neutral distribution’s tail shape.",
+        "Read the implied distribution as physical because put-call parity eliminates risk premia between calls and puts.",
+        "Use the ATM-implied lognormal distribution to infer physical crash odds, since including downside strikes would double-count crash risk.",
+        "Option prices encode risk-neutral state prices; physical crash probabilities also require assumptions about risk premia and the pricing kernel."
+      ],
+      "answer": 3,
+      "explanation": "Les prix d’options permettent d’extraire une distribution de pricing sous des hypothèses d’absence d’arbitrage. Les mauvais états peuvent coûter cher parce que les investisseurs les craignent et paient une protection, pas uniquement parce qu’ils sont fréquents. Passer aux probabilités physiques demande une information ou un modèle additionnel.",
+      "why": [
+        "Les prix d’options à différents strikes contraignent bien la forme de la distribution risque-neutre.",
+        "La parité relie des prix cohérents; elle n’identifie pas la distribution physique ni le prix du risque.",
+        "Un seul point ATM ne suffit pas à identifier la queue physique; ajouter des strikes n’est pas un double comptage.",
+        "Correct: distinguer croyance physique et prix du risque."
+      ],
+      "cue": "Le prix d’une protection reflète fréquence et valeur dans la crise.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 15,
+        "pdfPages": [
+          206,
+          215
+        ]
+      }
+    },
+    {
+      "id": "xm052",
+      "topic": "market",
+      "skill": "m-tail",
+      "objective": "MR-18.2",
+      "reading": "MR-18",
+      "concept": "Nested liquidity sets are not isolated categories",
+      "question": "In a pedagogical FRTB liquidity-horizon calculation, \\(ES_{10}(P_j)\\) is defined using factors whose liquidity horizons are at least \\(LH_j\\). A model owner replaces each \\(P_j\\) by only the factors whose horizon equals \\(LH_j\\). What is the key issue?",
+      "choices": [
+        "This is always equivalent because factors with longer horizons never appear in multiple increments.",
+        "The change affects only labels, not the mathematical inputs.",
+        "It changes the nested-set construction: long-horizon factors should contribute to successive additional horizon intervals.",
+        "It is required because expected shortfall is never computed on a portfolio."
+      ],
+      "answer": 2,
+      "explanation": "Un facteur à horizon long reste exposé durant plusieurs intervalles supplémentaires. Les ensembles se rétrécissent par seuil d’horizon; ils ne sont pas des catégories disjointes. Remplacer les sous-ensembles emboîtés par des buckets isolés modifie le calcul et peut omettre des risques de longue liquidation.",
+      "why": [
+        "Un facteur long apparaît justement dans plusieurs intervalles emboîtés.",
+        "Les facteurs inclus dans chaque ES changent.",
+        "Correct: l’horizon est construit par incréments successifs.",
+        "L’ES s’applique naturellement à une distribution de perte de portefeuille."
+      ],
+      "cue": "Écrire les ensembles avant d’agréger les horizons.",
+      "tier": "deep",
+      "level": 3,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 16,
+        "pdfPages": [
+          216,
+          223
+        ]
+      }
+    },
+    {
+      "id": "xm053",
+      "topic": "market",
+      "skill": "m-tail",
+      "objective": "MR-18.2",
+      "reading": "MR-18",
+      "concept": "Liquidity horizon aggregation with a nested subset",
+      "question": "Use the explicitly supplied two-horizon rule \\(ES_{LH}=\\sqrt{ES_{10}(P)^2+[(40-10)/10]ES_{10}(P_{40})^2}\\). Here \\(P_{40}\\) contains all factors with 40-day horizon, \\(ES_{10}(P)=8\\) million, and \\(ES_{10}(P_{40})=3\\) million. What is the liquidity-adjusted ES?",
+      "choices": [
+        "About EUR 9.54m.",
+        "About EUR 11.00m.",
+        "About EUR 13.86m.",
+        "About EUR 16.00m."
+      ],
+      "answer": 0,
+      "explanation": "Le supplément d’horizon est \\((40-10)/10=3\\). Donc \\(ES_{LH}=\\sqrt{8^2+3(3^2)}=\\sqrt{91}\\approx9.5394\\)m. Le portefeuille total couvre déjà les dix premiers jours; on ne multiplie pas toute son ES par deux.",
+      "why": [
+        "Correct: racine de 91.",
+        "Ce choix additionne linéairement les deux ES en ignorant la règle fournie.",
+        "Ce choix utilise une mauvaise pondération ou double compte le portefeuille complet.",
+        "Ce résultat applique 40 jours à tous les facteurs, contrairement à la composition donnée."
+      ],
+      "cue": "Les 10 premiers jours sont déjà dans ES du portefeuille.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 16,
+        "pdfPages": [
+          216,
+          223
+        ]
+      },
+      "numeric": {
+        "expression": "Math.sqrt(8*8+((40-10)/10)*3*3)",
+        "value": 9.539392014169456,
+        "optionValue": 9.54,
+        "tolerance": 0.001
+      }
+    },
+    {
+      "id": "xm054",
+      "topic": "market",
+      "skill": "m-valid",
+      "objective": "MR-18.3",
+      "reading": "MR-18",
+      "concept": "Old regulatory material and version control",
+      "question": "A training book explicitly discusses an older FRTB proposal and gives implementation dates and a P&L-attribution ratio rule. The bank is implementing a later framework in a specific jurisdiction. What is the strongest approach?",
+      "choices": [
+        "Apply every old date and ratio verbatim because a training book cannot become outdated.",
+        "Use the book for concepts, but verify the applicable final text, version, effective dates and jurisdiction before coding eligibility or capital rules.",
+        "Discard the economic ideas of liquidity horizons and tail severity because any old chapter is useless.",
+        "Infer the current rule from whichever interpretation produces the lowest capital requirement."
+      ],
+      "answer": 1,
+      "explanation": "Une lecture historique aide à comprendre les objectifs et l’architecture, mais ses dates, ratios ou règles de test peuvent appartenir à une proposition antérieure. La mise en œuvre doit pointer vers le texte final et les règles locales applicables. Une source pédagogique ne remplace pas un contrôle de version réglementaire.",
+      "why": [
+        "Les propositions et calendriers évoluent.",
+        "Correct: séparer concepts pédagogiques et règles applicables.",
+        "Les principes restent utiles même si certains détails datent.",
+        "Le capital le plus faible n’est pas un critère de validité juridique ou méthodologique."
+      ],
+      "cue": "Concepts réutilisables, règles versionnées.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 16,
+        "pdfPages": [
+          216,
+          223
+        ]
+      }
+    }
+  ],
+  "review": {
+    "pdfPageCount": 229,
+    "substantivePageRange": [
+      14,
+      223
+    ],
+    "method": "Chronological structured review of all 16 substantive chapters, full text for selected core explanations, extracted section/equation passages throughout, end questions of chapters 7–8, and visual checks of two formula pages. This is not a word-for-word proofread of every sentence or every figure.",
+    "visualChecks": [
+      58,
+      204
+    ],
+    "sourceDifferences": [
+      "Current MR-6 and MR-7 absent as dedicated 2024 chapters.",
+      "Current MR-16 Gauss+ absent; Vasicek background appears in 2024 chapter13.",
+      "Current MR-11/MR-12/MR-13 use renamed/revised editions.",
+      "Historical FRTB proposal wording is not implementation guidance for a current jurisdiction."
+    ],
+    "contentPolicy": "Only original derived study material and new questions. No copied book problems, long excerpts or book PDFs included.",
+    "limitations": [
+      "Full current publisher chapters for MR-6/MR-7/MR-16 were not available. Guides identify these as current supplements, not verified replacements for those full readings.",
+      "Three new questions per reading provide one sample of each dimension, not exhaustive testing of every learning objective.",
+      "Original independent numerical recomputation accompanies all application questions; no claim that the bank is official or predicts the exam."
+    ]
+  }
+}

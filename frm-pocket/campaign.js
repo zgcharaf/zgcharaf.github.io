@@ -31,6 +31,11 @@ const Campaign=(()=>{
  }
  const hash=str=>[...str].reduce((n,c)=>(n*31+c.charCodeAt(0))>>>0,0);
  function select(state,questions,{count=12,phase:part='cover',date=dateKey(),now=Date.now()}={}){
+  if(typeof Roadmap!=='undefined'&&typeof SYLLABUS!=='undefined'&&typeof CHAPTER_GUIDES!=='undefined'){
+   const known=new Set(questions.filter(q=>state.quiz?.[q.id]).map(q=>Roadmap.readingOf(q)));
+   const source=part==='taper'?questions.filter(q=>known.has(Roadmap.readingOf(q))):questions;
+   return Roadmap.select(state,source,SYLLABUS,CHAPTER_GUIDES,{count,now});
+  }
   const eligible=questions.filter(q=>q.tier&&q.tier!=='checkpoint'&&(!state.quiz[q.id]||state.quiz[q.id].due<=now)),seenObjectives=new Set(questions.filter(q=>q.objective&&state.quiz[q.id]).map(q=>q.objective));
   const weakReadings=new Set(state.campaign?.mockResults.filter(m=>m.date<=date).at(-1)?.weakReadings||[]);
   const byTopic=Object.fromEntries(Object.keys(weights).map(id=>[id,[]]));
@@ -39,6 +44,7 @@ const Campaign=(()=>{
   const selected=[],counts={},objectiveCounts={};while(selected.length<count){let best=null;for(const [topic,xs]of Object.entries(byTopic)){const candidate=xs[0];if(!candidate)continue;const priority=candidate.priority-(counts[topic]||0)/weights[topic]*1.4-(objectiveCounts[candidate.q.objective]||0)*3;if(!best||priority>best.priority)best={topic,...candidate,priority};}if(!best)break;selected.push(best.q);counts[best.topic]=(counts[best.topic]||0)+1;objectiveCounts[best.q.objective]=(objectiveCounts[best.q.objective]||0)+1;byTopic[best.topic].shift();}return selected;
  }
  function readingQueue(state,questions,readings,{count=2,date=dateKey(),now=Date.now()}={}){
+  if(typeof Roadmap!=='undefined'&&typeof CHAPTER_GUIDES!=='undefined')return Roadmap.order(Roadmap.rows(state,questions,readings,CHAPTER_GUIDES,now)).slice(0,count);
   const seen=new Set(questions.filter(q=>q.objective&&state.quiz[q.id]).map(q=>q.objective.split('.')[0]));const latest=state.campaign.mockResults.filter(m=>m.date<=date).at(-1),weak=new Set(latest?.weakReadings||[]);
   const offset=distance(state.campaign.start,date);
   return readings.map((r,i)=>{const progress=state.campaign.readings[r.id],errors=questions.filter(q=>q.objective?.split('.')[0]===r.id&&pending(state.quiz[q.id])).length;const cycle=(i-Math.max(0,offset)*2+readings.length*100)%readings.length;return {...r,priority:(weak.has(r.id)?20:0)+(errors?12:0)+(!seen.has(r.id)?6:0)+(progress?.status==='revisit'?8:!progress?5:0)-(progress?.status==='read'&&now-progress.at<7*DAY&&!weak.has(r.id)&&!errors?30:0),cycle};}).sort((a,b)=>b.priority-a.priority||a.cycle-b.cycle).slice(0,count);
@@ -47,7 +53,9 @@ const Campaign=(()=>{
   const left=distance(date,state.exam),part=phase(left),entry=calendar(state.campaign,state.exam,date).find(x=>x.date===date)||{date,left,phase:part,event:event(date,state.exam),minutes:part==='exam'||part==='finished'?0:30};
   const fresh=questions.filter(q=>q.tier&&q.tier!=='checkpoint'&&!state.quiz[q.id]&&!state.cards[q.id]&&!state.exposed[q.id]).length;
   const questionCount=entry.event?0:part==='taper'?5:part==='exam'||part==='finished'?0:Math.max(5,Math.min(25,Math.floor(entry.minutes*.45/3)));
-  const queue=select(state,questions,{count:questionCount,phase:part,date,now});const unread=readings.filter(r=>state.campaign.readings[r.id]?.status!=='read').length;const readingCount=part==='taper'?1:Math.min(4,Math.max(2,Math.ceil(unread/Math.max(1,left-3))));const readingsToReview=state.campaign.assignments[date]?state.campaign.assignments[date].map(id=>readings.find(r=>r.id===id)).filter(Boolean):readingQueue(state,questions,readings,{count:readingCount,date,now});
+  const queue=select(state,questions,{count:questionCount,phase:part,date,now});const unread=readings.filter(r=>state.campaign.readings[r.id]?.status!=='read').length;const readingCount=part==='taper'?1:Math.min(4,Math.max(2,Math.ceil(unread/Math.max(1,left-3))));const readingsToReview=typeof Roadmap==='undefined'&&state.campaign.assignments[date]?state.campaign.assignments[date].map(id=>readings.find(r=>r.id===id)).filter(Boolean):readingQueue(state,questions,readings,{count:readingCount,date,now});
+  if(typeof Roadmap!=='undefined'&&part==='taper'){const observed=new Set(questions.filter(q=>state.quiz[q.id]).map(q=>q.objective?.split('.')[0]));readingsToReview.splice(0,readingsToReview.length,...readingQueue(state,questions,readings.filter(r=>observed.has(r.id)),{count:1,date,now}));}
+  if(['mock','official1','official2'].includes(entry.event))readingsToReview.length=0;
   const due=questions.filter(q=>pending(state.quiz[q.id])&&state.quiz[q.id].due<=now),high=due.filter(q=>state.quiz[q.id].wrongConfidence==='high');const sessions=state.history.filter(h=>dateKey(h.date)===date&&h.type==='quiz'),completed=sessions.reduce((n,h)=>n+h.total,0);
   return {...entry,queue,readings:readingsToReview,due:due.length,high:high.length,fresh,questionCount,completed,done:state.campaign.done[date]||{reading:[],review:false}};
  }

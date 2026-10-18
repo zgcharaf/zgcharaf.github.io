@@ -7,7 +7,7 @@
  const percent=x=>Math.round(x*100)+'%';
  const scoreNow=()=>Readiness.score(state,registry,SKILLS);
  function remember(reason='refresh'){Readiness.snapshot(state,registry,SKILLS,Date.now(),reason);persist();}
- function expose(id){state.exposed[id]=Date.now();persist();}
+ function expose(id,{questionView=false}={}){if(!questionView&&state.session?.type==='quiz')for(const item of state.session.items)if(item.id===id&&!item.answered)item.fresh=false;state.exposed[id]=Date.now();persist();}
  function evidence(q,correct,fresh,timed,previous,priorExposure=0,now=Date.now()){
   if(!q.tier)return;
   if(fresh&&!state.evidence[q.id])state.evidence[q.id]={at:now,correct,timed:!!timed};
@@ -23,7 +23,7 @@
  }
  record=function(q,quality){const previous=state[state.session.type][q.id],item=state.session.items[state.session.index],quiz=state.session.type==='quiz';original.record(q,quality);if(quiz){evidence(q,quality>0,item.fresh,false,previous,item.priorExposure);persist();}};
  finish=function(){if(state.session?.assessment)return submitExam();original.finish();remember('practice');render();};
- function viewItem(s){const item=s.items[s.index];if(!item.viewed){item.priorExposure=state.exposed[item.id]||0;item.fresh=item.fresh===true&&Readiness.fresh(state,item.id);item.viewed=true;expose(item.id);}}
+ function viewItem(s){const item=s.items[s.index];if(!item.viewed){item.priorExposure=state.exposed[item.id]||0;item.fresh=item.fresh===true&&Readiness.fresh(state,item.id);item.viewed=true;expose(item.id,{questionView:s.type==='quiz'});}}
  study=function(){const s=state.session;if(s)viewItem(s);return original.study();};
  home=function(){remember();const base=original.home();return base.replace('<div class="herogrid">',readinessCard(false)+backupReminder()+'<div class="herogrid">');};
  coachPage=function(){remember();return readinessCard(true)+assessmentPanel()+lessonDuePanel()+microPanel()+coveragePanel()+assessmentHistory()+original.coachPage();};

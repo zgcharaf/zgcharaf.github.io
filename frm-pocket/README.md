@@ -2,6 +2,40 @@
 
 Une station, une notion. Application mobile de révision FRM II, sans serveur ni dépendance externe.
 
+## Version 8 — roadmap adaptative et apprentissage par chapitre
+
+**Plan → Roadmap** affiche les 107 lectures du programme 2026, les cinq priorités expliquées, une projection selon le budget, et les changements observés avec les réponses. Accès direct : `#roadmap`. Chaque chapitre relie compréhension, application, raisonnement critique et rappel différé ; les prérequis sont conseillés sans bloquer l’accès.
+
+| Contenu actuel | Nombre | Lecture du compteur |
+| --- | ---: | --- |
+| Questions originales uniques | 1 102 | 1 062 en pratique + 40 checkpoints réservés |
+| Nouveaux cas Approfondir | 502 | 143 compréhension, 187 application, 172 raisonnement critique |
+| Guides de chapitre | 107 | Principes, rappels, pièges, problème travaillé et références |
+| Objectifs avec au moins un cas précisément relié | 591/591 | Une présence ne couvre pas toutes les composantes d’un objectif |
+| Cartes | 1 193 | 1 062 reprises de questions + 131 cartes ouvertes, dont 107 nouvelles |
+| Fiches de formules | 174 | Dont 152 nouvelles avec variables, hypothèses et pièges |
+| Diagnostics de pièges | 231 | Dans les guides ; pas 231 objectifs supplémentaires |
+| Questions ouvertes de rappel | 321 | Trois prompts par lecture |
+
+La roadmap tient compte des erreurs, de la certitude erronée, des dimensions non testées, des rappels et des faiblesses déclarées dans les mocks. Les notes, lectures cochées, perceptions et cartes orientent le travail sans gonfler les scores. Les recommandations quotidiennes se recalculent avec les preuves ; le plan v6 gardait ses lectures fixes dans la journée. Les mocks de quatre heures remplacent les tâches de lecture du jour. Une étape de 25 minutes n’est pas une promesse d’apprendre un chapitre entier ; les lectures sans créneau distinct restent visibles.
+
+Le **score global de préparation v1 /100 et son historique sont conservés**. Les indices de chapitre, séparés, exposent leurs échantillons et ne créent aucun historique passé. Un corrigé consulté pendant une session en pause annule le caractère inédit de sa question. Les sauvegardes conservent l’ancienne clé et les identifiants ; les nouveaux champs sont inclus dans l’export/import.
+
+Les cinq livres 2024 ont fait l’objet d’une correspondance complète de leurs **93 chapitres**, de revues des sections substantielles et mécanismes d’exercices, et de contrôles ciblés des formules/pages. Cela ne constitue pas une vérification ligne par ligne des 1 709 pages ou de chaque exercice. Les différences 2024–2026, lectures absentes, sources récentes partiellement accessibles et corrections sont tracées dans [la revue détaillée](docs/ROADMAP_V8.md) et [les audits](docs/review-v8/). Les PDFs fournis ne sont jamais publiés. Tous les nouveaux problèmes sont originaux ; la difficulté n’est pas étalonnée sur l’examen réel.
+
+Vérification : 101 contrôles de comportement, 16 de roadmap, 13 de typographie ; 149 calculs des nouveaux cas recomputés, 835 segments LaTeX explicites plus 152 formules compilés strictement ; intégrité des questions, mappings et cache hors ligne. Le moteur réel rend les 12 406 champs de la banque sans erreur LaTeX. Les auteurs et relecteurs ont aussi contrôlé les réponses depuis les énoncés. L’interface DOM est simulée en Node ; les gestes et l’affichage sur iPhone physique restent non vérifiés.
+
+```bash
+node tests/verify.cjs
+node tests/roadmap.cjs
+node tests/enrichment.cjs
+node tests/content.cjs
+node tests/math.cjs
+node tests/offline.cjs
+```
+
+Les données relues sont dans `content/` ; `node scripts/build-enrichment.cjs` produit les six packs `deep-*.js` et leur registre. Cache et URL en v8, LaTeX et polices locaux, fonctionnement hors ligne après téléchargement complet. [Brief d’apprentissage renforcé](docs/LEARNING_BRIEF_V8.md).
+
 ## Version 7 — formules LaTeX lisibles, 18 octobre 2026
 
 Les équations des questions, réponses, cartes, corrigés, leçons et fiches sont rendues avec KaTeX 0.19.0 local : fractions, racines, puissances, indices et symboles grecs. Les fiches affichent leurs équations dans un bloc distinct. Les longues expressions se défilent horizontalement dans leur propre zone, avec espacement renforcé sur téléphone. Les notes personnelles acceptent `\( ... \)` et `\[ ... \]` et montrent un aperçu mathématique à la saisie.
@@ -52,7 +86,7 @@ node tests/offline.cjs
 
 Sources primaires vérifiées le 18 octobre 2026 : GARP [format de l’examen](https://www.garp.org/frm/program-exams), [supports et deux mocks Part II](https://www.garp.org/frm/study-materials), [objectifs 2026](https://www.garp.org/landing/frm-learning-objectives), [lectures obligatoires](https://www.garp.org/frm/readings/required). Les sources propres aux questions sont renseignées dans leurs corrections. Questions originales indépendantes, pas des questions officielles ni des reproductions de mocks. L’index de pratique v1 reste inchangé pour conserver la comparabilité de son historique.
 
-Les descriptions de versions précédentes ci-dessous sont conservées pour historique ; la v7 et la v6 ci-dessus font référence pour le comportement actuel.
+Les descriptions de versions précédentes ci-dessous sont conservées pour historique ; la v8 ci-dessus fait référence pour le comportement actuel.
 
 ## Version 5 — préparation et évaluations, 17 octobre 2026
 

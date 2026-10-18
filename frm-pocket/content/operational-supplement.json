@@ -1,0 +1,634 @@
+{
+  "questions": [
+    {
+      "id": "yo001",
+      "topic": "operational",
+      "skill": "o-measure",
+      "objective": "ORR-4.2",
+      "reading": "ORR-4",
+      "concept": "Comparable scales in consolidated RCSA",
+      "question": "Two units independently rate the same risk as likelihood 2 and impact 4, producing a score of 8. Unit A defines likelihood 2 as once in twenty years and measures impact against total group income. Unit B defines it as once in two years and measures impact against its much smaller local income. Management wants to rank the units as equally exposed. What should be done first?",
+      "choices": [
+        "Average the two likelihood definitions and keep the existing impact categories unchanged.",
+        "Align or explicitly reconcile the likelihood horizon, impact definitions and control-effectiveness evidence before comparing residual-risk ratings.",
+        "Treat the identical score as sufficient evidence of equal annual expected loss.",
+        "Multiply both scores by group revenue; a common monetary scale is then guaranteed."
+      ],
+      "answer": 1,
+      "explanation": "Un même code ordinal ne représente pas le même risque lorsque fréquence, horizon et échelle d’impact diffèrent. Le RCSA doit aussi distinguer risque inhérent et risque résiduel étayé par l’efficacité des contrôles ; harmoniser les conventions avant de comparer.",
+      "why": [
+        "Une moyenne arbitraire ne réconcilie ni les populations ni les seuils d’impact.",
+        "Un même code ordinal ne représente pas le même risque lorsque fréquence, horizon et échelle d’impact diffèrent. Le RCSA doit aussi distinguer risque inhérent et risque résiduel étayé par l’efficacité des contrôles ; harmoniser les conventions avant de comparer.",
+        "Le produit de catégories ordinales n’est pas une espérance monétaire comparable.",
+        "Une multiplication par un revenu ne répare pas des définitions de fréquence et d’impact incompatibles."
+      ],
+      "cue": "Avant de comparer une couleur, comparer les définitions derrière la couleur.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 4,
+        "pdfPages": [
+          76,
+          79
+        ]
+      }
+    },
+    {
+      "id": "yo002",
+      "topic": "operational",
+      "skill": "o-measure",
+      "objective": "ORR-4.4",
+      "reading": "ORR-4",
+      "concept": "Bowtie placement and Swiss-cheese layering",
+      "question": "A bank models accidental confidential-data disclosure as its central bowtie event. Mandatory recipient verification is intended to prevent sending; a post-send leak alert triggers containment and customer support. Both controls share one administrator who can disable them. Which interpretation is strongest?",
+      "choices": [
+        "Post-send containment belongs only in the cause taxonomy and cannot affect severity.",
+        "Two control layers imply independent failure probabilities even when both can be disabled by the same administrator.",
+        "Recipient verification belongs before the central event, containment belongs after it, and shared administration can align weaknesses across Swiss-cheese layers.",
+        "Both controls belong before the central event because every control reduces the original sending probability."
+      ],
+      "answer": 2,
+      "explanation": "Le bowtie place les barrières de prévention du côté des causes et les barrières de limitation des conséquences de l’autre côté de l’événement. Le modèle Swiss cheese rappelle que plusieurs couches peuvent partager des trous ou des causes communes ; leur nombre ne garantit pas leur indépendance.",
+      "why": [
+        "La limitation des conséquences agit précisément sur les dommages après l’événement.",
+        "Une administration commune peut faire échouer les couches ensemble.",
+        "Le bowtie place les barrières de prévention du côté des causes et les barrières de limitation des conséquences de l’autre côté de l’événement. Le modèle Swiss cheese rappelle que plusieurs couches peuvent partager des trous ou des causes communes ; leur nombre ne garantit pas leur indépendance.",
+        "Une mesure postérieure peut réduire l’impact sans empêcher l’envoi initial."
+      ],
+      "cue": "Bowtie : avant/après l’événement ; Swiss cheese : comment les failles se combinent.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 4,
+        "pdfPages": [
+          82,
+          84
+        ]
+      }
+    },
+    {
+      "id": "yo003",
+      "topic": "operational",
+      "skill": "o-govern",
+      "objective": "ORR-5.1",
+      "reading": "ORR-5",
+      "concept": "Risk response versus accountability",
+      "question": "A bank faces a critical process risk above appetite. Four proposals are presented: stop the product, redesign the process, retain the exposure with explicit approval, or insure some direct losses while continuing the process. Which comparison is most accurate?",
+      "choices": [
+        "Buying insurance is equivalent to stopping the product because both remove the possibility of an event.",
+        "Acceptance means no monitoring or reassessment is needed once a manager signs.",
+        "Process redesign and insurance are equivalent responses because both necessarily reduce event frequency by the same amount.",
+        "These correspond to avoidance, treatment, acceptance and transfer of specified financial consequences; insurance does not by itself transfer customer accountability or restore operations."
+      ],
+      "answer": 3,
+      "explanation": "Les réponses ont des objets distincts. Terminer supprime l’exposition de l’activité visée ; traiter change probabilité ou impact ; tolérer exige une décision dans le cadre d’appétence ; transférer certains coûts laisse des obligations et dommages résiduels.",
+      "why": [
+        "L’assurance rembourse selon contrat ; elle n’empêche pas nécessairement l’événement.",
+        "Une acceptation doit rester compatible avec l’appétence et faire l’objet de suivi et réévaluation.",
+        "Le redesign peut prévenir la faute, alors qu’une assurance peut ne changer que la rétention financière.",
+        "Les réponses ont des objets distincts. Terminer supprime l’exposition de l’activité visée ; traiter change probabilité ou impact ; tolérer exige une décision dans le cadre d’appétence ; transférer certains coûts laisse des obligations et dommages résiduels."
+      ],
+      "cue": "Quelle composante la réponse change-t-elle : exposition, fréquence, impact ou porteur de coût ?",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 5,
+        "pdfPages": [
+          95,
+          97
+        ]
+      }
+    },
+    {
+      "id": "yo004",
+      "topic": "operational",
+      "skill": "o-govern",
+      "objective": "ORR-5.6",
+      "reading": "ORR-5",
+      "concept": "Crisis response under uncertain incident scope",
+      "question": "A bank discovers a service outage affecting some customer payments, but the full affected population is still being established. Its crisis team must choose a first response. Which approach best limits event impact?",
+      "choices": [
+        "Activate accountable specialist teams and tested continuity arrangements, communicate verified facts and protective instructions promptly, and update stakeholders as uncertainty is resolved.",
+        "Delay every external statement until the final root cause is known, while leaving customers without operational guidance.",
+        "Immediately promise that no customer was affected to stabilize confidence, then correct the statement if necessary.",
+        "Allow separate departments to announce incompatible recovery estimates without a central incident process to increase response speed."
+      ],
+      "answer": 0,
+      "explanation": "La gestion d’événement combine rapidité, compétence et transparence. Il faut protéger les clients et activer la continuité avec les faits disponibles, préciser les incertitudes et coordonner les mises à jour ; improviser des assurances non vérifiées peut aggraver le préjudice et la réputation.",
+      "why": [
+        "La gestion d’événement combine rapidité, compétence et transparence. Il faut protéger les clients et activer la continuité avec les faits disponibles, préciser les incertitudes et coordonner les mises à jour ; improviser des assurances non vérifiées peut aggraver le préjudice et la réputation.",
+        "Attendre une certitude complète peut laisser se propager le dommage et empêcher les clients d’agir.",
+        "Une garantie non établie détruit la confiance si elle est contredite.",
+        "La vitesse sans coordination peut produire des instructions contradictoires et retarder la reprise."
+      ],
+      "cue": "Agir sur le préjudice, dire ce qui est vérifié, nommer ce qui reste incertain.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 5,
+        "pdfPages": [
+          105,
+          109
+        ]
+      }
+    },
+    {
+      "id": "yo005",
+      "topic": "operational",
+      "skill": "o-govern",
+      "objective": "ORR-6.4",
+      "reading": "ORR-6",
+      "concept": "External risk reporting and coherent disclosure",
+      "question": "A bank discloses a large operational incident to its supervisor using gross loss, received recoveries and a reconciled net loss. Its investor presentation reports only the net amount and claims that insurance eliminated the operational exposure, although customer remediation remains incomplete. What is the strongest improvement?",
+      "choices": [
+        "Withhold all description of remaining risk whenever a claim has been accepted by an insurer.",
+        "Reconcile measures and scope across disclosures, explain recoveries and remaining exposure, and describe credible remediation without presenting reimbursement as prevention.",
+        "Publish only whichever gross or net measure produces the smallest number, provided it appears in one internal report.",
+        "Use a different definition of loss for investors without explaining the change because the audiences differ."
+      ],
+      "answer": 1,
+      "explanation": "Adapter le niveau de détail à l’audience ne permet pas une histoire contradictoire. Les montants doivent être traçables, leurs définitions explicites et le risque résiduel présenté honnêtement ; un paiement d’assurance ne répare pas automatiquement le service ou le préjudice client.",
+      "why": [
+        "Une acceptation de sinistre ne prouve pas la disparition du risque ni l’achèvement des corrections.",
+        "Adapter le niveau de détail à l’audience ne permet pas une histoire contradictoire. Les montants doivent être traçables, leurs définitions explicites et le risque résiduel présenté honnêtement ; un paiement d’assurance ne répare pas automatiquement le service ou le préjudice client.",
+        "Choisir le minimum sans expliquer le périmètre peut induire en erreur.",
+        "Des définitions différentes peuvent parfois être pertinentes mais doivent être expliquées et réconciliées."
+      ],
+      "cue": "Adapter le détail sans changer la réalité ni masquer le risque résiduel.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 6,
+        "pdfPages": [
+          127,
+          128
+        ]
+      }
+    },
+    {
+      "id": "yo006",
+      "topic": "operational",
+      "skill": "o-govern",
+      "objective": "ORR-8.1",
+      "reading": "ORR-8",
+      "concept": "Comparing historical cyber regulatory approaches",
+      "question": "In the historical supervisory range-of-practices reading, one jurisdiction uses explicit information-security requirements with board accountability and testing; another incorporates cyber expectations into a broader IT-governance and risk-management framework. A director says only the first can support cyber-resilience because the second lacks a separately titled cyber rule. Which assessment is strongest?",
+      "choices": [
+        "An integrated IT framework necessarily excludes third-party and incident-response expectations.",
+        "The two approaches can be treated as identical without examining scope, enforcement or proportionality.",
+        "Compare the substantive coverage of governance, protection, detection, response, recovery and dependencies rather than infer effectiveness from whether a standalone rule exists.",
+        "A standalone rule title proves that disruption cannot occur under the first regime."
+      ],
+      "answer": 2,
+      "explanation": "Le chapitre compare plusieurs modes de supervision, dont exigences dédiées et intégration dans des cadres plus larges. Le fond du dispositif et sa mise en œuvre comptent ; la résilience inclut aussi maintenir et rétablir les opérations malgré une perturbation. Le cas vise les approches historiques du texte, pas une affirmation sur le droit actuel.",
+      "why": [
+        "Un cadre intégré peut couvrir dépendances et réponse ; il faut lire son périmètre.",
+        "Des objectifs communs n’impliquent pas identité de portée ou d’exécution.",
+        "Le chapitre compare plusieurs modes de supervision, dont exigences dédiées et intégration dans des cadres plus larges. Le fond du dispositif et sa mise en œuvre comptent ; la résilience inclut aussi maintenir et rétablir les opérations malgré une perturbation. Le cas vise les approches historiques du texte, pas une affirmation sur le droit actuel.",
+        "Une norme n’est pas une garantie d’absence d’incident."
+      ],
+      "cue": "Comparer ce que les cadres exigent et permettent de démontrer, pas seulement leur étiquette.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 8,
+        "pdfPages": [
+          151,
+          154
+        ]
+      }
+    },
+    {
+      "id": "yo007",
+      "topic": "operational",
+      "skill": "o-model",
+      "objective": "ORR-15.2",
+      "reading": "ORR-15",
+      "concept": "Model lifecycle inventory and downstream use",
+      "question": "A vendor model is replaced by a new version in a bank’s pricing engine. The legacy version remains active in collateral calls and is also an input to a stress model. The owner proposes removing it from the model inventory because the pricing team no longer uses it. What is the best model-risk process?",
+      "choices": [
+        "Remove the legacy model immediately because one team has selected a successor.",
+        "Keep only the vendor product name in the inventory; versions and business uses cannot change model risk.",
+        "Treat downstream uses as validated automatically whenever the replacement passes a pricing benchmark.",
+        "Track active versions, owners, uses and dependencies across the bank, and retire a model only after its actual uses and transition risks have been addressed."
+      ],
+      "answer": 3,
+      "explanation": "L’inventaire doit refléter l’usage réel sur tout le cycle de vie. Une ancienne version peut encore produire des appels de marge et influencer d’autres modèles ; ownership, dépendances, validation et retrait contrôlé doivent rester visibles.",
+      "why": [
+        "Un changement dans une équipe n’arrête pas les usages ailleurs.",
+        "Les versions et finalités modifient hypothèses, limites et exposition.",
+        "Une validation pour le pricing ne démontre pas l’adéquation des usages aval.",
+        "L’inventaire doit refléter l’usage réel sur tout le cycle de vie. Une ancienne version peut encore produire des appels de marge et influencer d’autres modèles ; ownership, dépendances, validation et retrait contrôlé doivent rester visibles."
+      ],
+      "cue": "Retiré de quel usage, de quelle version et de quelle chaîne de décision ?",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 15,
+        "pdfPages": [
+          230,
+          232
+        ]
+      }
+    },
+    {
+      "id": "yo008",
+      "topic": "operational",
+      "skill": "o-capital",
+      "objective": "ORR-18.1",
+      "reading": "ORR-18",
+      "concept": "Available capital versus two required-capital measures",
+      "question": "A bank has EUR 25bn of available loss-absorbing resources under its stated accounting definition. Its regulatory framework requires EUR 18bn, while its internal solvency assessment estimates EUR 22bn for its chosen horizon and confidence level. Which interpretation is most accurate?",
+      "choices": [
+        "Available resources, regulatory required capital and internally estimated economic capital are different quantities; economic-capital allocation can inform pricing and business choices even when regulatory capital is not binding.",
+        "The EUR 25bn available amount must be called economic capital, so the internal EUR 22bn estimate is conceptually invalid.",
+        "A regulatory requirement of EUR 18bn proves that no internal capital above 18 can be economically justified.",
+        "Because 22 exceeds 18, the regulatory requirement automatically changes to 22 without any supervisory process."
+      ],
+      "answer": 0,
+      "explanation": "Le stock disponible répond à la question de la capacité présente ; le besoin réglementaire à celle du cadre prudentiel ; le besoin économique à une estimation interne du risque. Ces notions éclairent des décisions différentes et ne doivent pas être forcées à l’égalité.",
+      "why": [
+        "Le stock disponible répond à la question de la capacité présente ; le besoin réglementaire à celle du cadre prudentiel ; le besoin économique à une estimation interne du risque. Ces notions éclairent des décisions différentes et ne doivent pas être forcées à l’égalité.",
+        "Le besoin économique n’est pas défini par le seul stock comptable détenu.",
+        "Le minimum prudentiel ne couvre pas nécessairement tous les risques selon les objectifs internes.",
+        "Une estimation interne ne modifie pas mécaniquement un texte réglementaire."
+      ],
+      "cue": "Distinguer capital détenu, capital réglementaire requis et capital économique estimé.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 18,
+        "pdfPages": [
+          257,
+          259
+        ]
+      }
+    },
+    {
+      "id": "yo009",
+      "topic": "operational",
+      "skill": "o-capital",
+      "objective": "ORR-18.2",
+      "reading": "ORR-18",
+      "concept": "Capital budgeting beyond highest RAROC",
+      "question": "A bank can choose only one of two mutually exclusive one-year projects and has EUR 30m economic-capital capacity. A generates EUR 3m risk-adjusted annual income on EUR 10m capital; B generates EUR 6.3m on EUR 30m. Define economic profit as income minus a 12% capital charge. Ignore taxes and strategic differences. If the objective is to maximize economic profit subject to the capital constraint, which choice follows?",
+      "choices": [
+        "Take both: passing the hurdle automatically removes the stated capital-capacity and exclusivity constraints.",
+        "B: its RAROC is 21% and economic profit EUR 2.7m, versus A’s 30% and EUR 1.8m.",
+        "A: the higher RAROC always maximizes total economic profit regardless of project scale.",
+        "Reject B because its 21% RAROC is below the stated 12% hurdle."
+      ],
+      "answer": 1,
+      "explanation": "A : \\(RAROC=3/10=30\\%\\), profit \\(3-0.12\\times10=1.8\\) million. B : \\(6.3/30=21\\%\\), profit \\(6.3-0.12\\times30=2.7\\) millions. B consomme la capacité disponible et maximise l’objectif donné ; le meilleur ratio seul ne choisit pas toujours le plus grand profit résiduel.",
+      "why": [
+        "Les deux projets exigeraient 40 millions et sont explicitement mutuellement exclusifs.",
+        "A : \\(RAROC=3/10=30\\%\\), profit \\(3-0.12\\times10=1.8\\) million. B : \\(6.3/30=21\\%\\), profit \\(6.3-0.12\\times30=2.7\\) millions. B consomme la capacité disponible et maximise l’objectif donné ; le meilleur ratio seul ne choisit pas toujours le plus grand profit résiduel.",
+        "Le ratio mesure une intensité de rendement, pas le montant total de valeur créée.",
+        "21% est supérieur à 12% ; la conclusion inverse contredit les données."
+      ],
+      "cue": "Préciser l’objectif et les contraintes avant de classer des ratios.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 18,
+        "pdfPages": [
+          259,
+          261
+        ]
+      },
+      "numeric": {
+        "expression": "6.3-0.12*30",
+        "value": 2.7,
+        "optionValue": 2.7,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "yo010",
+      "topic": "operational",
+      "skill": "o-capital",
+      "objective": "ORR-18.8",
+      "reading": "ORR-18",
+      "concept": "RAROC implementation and incentives to smooth capital",
+      "question": "A new RAROC framework creates volatile allocated capital, and business heads demand that each desk select a smoothing parameter after observing its annual bonus outcome. Which implementation response is strongest?",
+      "choices": [
+        "Keep every parameter secret so business managers cannot challenge the model.",
+        "Eliminate reconciliation and documentation because management commitment alone is sufficient.",
+        "Use senior-management sponsorship, transparent methodology and a governed review forum; apply justified changes prospectively and consistently rather than letting bonus beneficiaries choose outcomes.",
+        "Permit retrospective desk-specific smoothing because a risk-adjusted incentive remains objective whenever it is named RAROC."
+      ],
+      "answer": 2,
+      "explanation": "La mise en œuvre exige buy-in, transparence et un processus de débat et de contrôle des paramètres. Une modification choisie après le résultat pour protéger un bonus introduit un conflit ; elle ne démontre pas une meilleure mesure du risque.",
+      "why": [
+        "Le secret empêche compréhension et challenge utile sans corriger les faiblesses.",
+        "L’engagement du management doit soutenir les contrôles, pas les remplacer.",
+        "La mise en œuvre exige buy-in, transparence et un processus de débat et de contrôle des paramètres. Une modification choisie après le résultat pour protéger un bonus introduit un conflit ; elle ne démontre pas une meilleure mesure du risque.",
+        "Le nom du ratio n’élimine pas la manipulation de son dénominateur."
+      ],
+      "cue": "La méthode sert-elle à mesurer le risque ou à obtenir la rémunération voulue ?",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 18,
+        "pdfPages": [
+          266,
+          267
+        ]
+      }
+    },
+    {
+      "id": "yo011",
+      "topic": "operational",
+      "skill": "o-capital",
+      "objective": "ORR-19.2",
+      "reading": "ORR-19",
+      "concept": "Supervisory use of internal economic capital",
+      "question": "A supervisor receives an internal economic-capital estimate with a large diversification benefit. The bank asks for unqualified acceptance because the model was designed for internal use rather than regulatory minimums. Which supervisory approach best reflects the recommendations in the economic-capital reading?",
+      "choices": [
+        "Accept internal-purpose models without challenge because supervisory review applies only to Pillar 1 formulas.",
+        "Require every bank to use the same internal risk measure regardless of its business or the measure’s limitations.",
+        "Review only the final diversified number because robust stand-alone risks and interactions cannot affect aggregate reliability.",
+        "Assess fitness for purpose, risk identification, stand-alone estimates, aggregation assumptions, validation and management use, while requiring complementary treatment of material risks that are hard to quantify."
+      ],
+      "answer": 3,
+      "explanation": "L’usage interne n’exonère pas d’un examen de pertinence et de limites. Le texte recommande une identification robuste, compréhension des mesures et de l’agrégation, validation multiforme et contrôles complémentaires pour les risques matériels non directement quantifiables.",
+      "why": [
+        "L’évaluation prudentielle peut s’intéresser aux mesures internes utilisées dans l’adéquation du capital.",
+        "Il n’existe pas une mesure interne universellement préférable pour tous les usages.",
+        "La qualité de l’agrégation dépend des composantes et interactions ; le total seul est insuffisant.",
+        "L’usage interne n’exonère pas d’un examen de pertinence et de limites. Le texte recommande une identification robuste, compréhension des mesures et de l’agrégation, validation multiforme et contrôles complémentaires pour les risques matériels non directement quantifiables."
+      ],
+      "cue": "Examiner la chaîne d’arguments et les angles morts, pas seulement le chiffre final.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 19,
+        "pdfPages": [
+          271,
+          273
+        ]
+      }
+    },
+    {
+      "id": "yo012",
+      "topic": "operational",
+      "skill": "o-capital",
+      "objective": "ORR-21.1",
+      "reading": "ORR-21",
+      "concept": "Why capital frameworks evolved",
+      "question": "Under a simplified Basel I design, two corporate loans receive the same risk weight despite materially different default risk. A bank replaces safer lending with riskier lending while maintaining the same nominal exposure and regulatory ratio. Which historical motivation for later reforms does this most directly illustrate?",
+      "choices": [
+        "Coarse capital weights can encourage risk substitution without a measured capital increase, motivating greater risk sensitivity and broader supervisory attention.",
+        "A constant regulatory ratio proves the bank’s economic solvency risk did not change.",
+        "The original risk-weight approach already modeled each borrower’s PD and tail dependence individually.",
+        "The problem can be solved solely by increasing the reporting frequency of the unchanged coarse ratio."
+      ],
+      "answer": 0,
+      "explanation": "Des catégories trop larges peuvent masquer une hausse du risque et encourager l’arbitrage. Les révisions cherchent notamment une mesure plus sensible, une revue prudentielle et une discipline de marché ; cela ne prouve pas que tout modèle interne devient exact.",
+      "why": [
+        "Des catégories trop larges peuvent masquer une hausse du risque et encourager l’arbitrage. Les révisions cherchent notamment une mesure plus sensible, une revue prudentielle et une discipline de marché ; cela ne prouve pas que tout modèle interne devient exact.",
+        "Le risque réel peut changer à l’intérieur d’une même pondération.",
+        "Cette granularité n’est pas celle du cadre simplifié décrit.",
+        "Mesurer plus souvent le même indicateur aveugle à la substitution ne corrige pas sa sensibilité."
+      ],
+      "cue": "Une contrainte qui ne voit pas le changement peut récompenser le mauvais changement.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 21,
+        "pdfPages": [
+          341,
+          348
+        ]
+      }
+    },
+    {
+      "id": "yo013",
+      "topic": "operational",
+      "skill": "o-capital",
+      "objective": "ORR-21.3",
+      "reading": "ORR-21",
+      "concept": "Historical bilateral netting and market-risk extension",
+      "question": "For this historical 1995–1996 amendment exercise, assume enforceable bilateral close-out netting separately with each counterparty. With A, two derivatives have values +9 and -7; with B, two have +5 and -9, all EUR m. Ignore collateral. Which statement correctly combines current credit exposure and the amendments’ broader risk treatment?",
+      "choices": [
+        "Current exposure is EUR 2m and therefore all potential-future-exposure add-ons and trading-book market-risk requirements disappear.",
+        "Current exposure is EUR 2m with A and zero with B; one cannot offset A’s positive exposure with B’s negative net value, and market-risk capital for trading positions is a separate issue from current replacement cost.",
+        "Current exposure is zero because the entire four-trade portfolio sums to EUR -2m, making all trading-book risk charges unnecessary.",
+        "Current exposure is EUR 14m because the amendments prohibited recognizing enforceable bilateral netting."
+      ],
+      "answer": 1,
+      "explanation": "La compensation se fait par contrepartie : \\(\\max(9-7,0)=2\\), \\(\\max(5-9,0)=0\\). Une valeur négative chez B ne paie pas A. Les amendements reconnaissent davantage le netting et ajoutent une couverture du risque de marché ; l’exposition actuelle ne remplace ni les add-ons ni cette autre exigence.",
+      "why": [
+        "Un remplacement net faible n’implique pas un futur mouvement nul ni une absence de risque de marché.",
+        "La compensation se fait par contrepartie : \\(\\max(9-7,0)=2\\), \\(\\max(5-9,0)=0\\). Une valeur négative chez B ne paie pas A. Les amendements reconnaissent davantage le netting et ajoutent une couverture du risque de marché ; l’exposition actuelle ne remplace ni les add-ons ni cette autre exigence.",
+        "Les accords sont bilatéraux, pas une compensation universelle entre noms.",
+        "14 est la somme des valeurs positives sans reconnaissance du netting admis dans l’exercice."
+      ],
+      "cue": "Compter les ensembles juridiquement compensables, puis distinguer crédit futur et risque de marché.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 21,
+        "pdfPages": [
+          344,
+          346
+        ]
+      },
+      "numeric": {
+        "expression": "Math.max(9-7,0)+Math.max(5-9,0)",
+        "value": 2,
+        "optionValue": 2,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "yo014",
+      "topic": "operational",
+      "skill": "o-capital",
+      "objective": "ORR-21.6",
+      "reading": "ORR-21",
+      "concept": "IRB unexpected loss and RWA across two segments",
+      "question": "Use this simplified historical Basel II IRB exercise formula per segment: \\(K=EAD\\times LGD\\times(DR_{99.9}-PD)\\times MA\\), then \\(RWA=12.5K\\). A corporate segment has EAD EUR 40m, LGD 45%, stress default rate 12%, PD 2%, and supplied maturity adjustment 1.25. A retail segment has EAD EUR 60m, LGD 25%, stress default rate 8%, PD 1%, with no maturity adjustment (MA=1). Ignore every other adjustment and shortfall. What are total capital K and RWA?",
+      "choices": [
+        "K=EUR 3.30m and RWA=EUR 3.30m.",
+        "K=EUR 3.5625m and RWA=EUR 44.53125m.",
+        "K=EUR 3.30m and RWA=EUR 41.25m.",
+        "K=EUR 3.75m and RWA=EUR 46.875m."
+      ],
+      "answer": 2,
+      "explanation": "Corporate : \\(40\\times0.45\\times(0.12-0.02)\\times1.25=2.25\\) millions. Retail : \\(60\\times0.25\\times(0.08-0.01)=1.05\\). Total \\(K=3.30\\), puis \\(RWA=12.5\\times3.30=41.25\\). Les taux stressés et ajustements sont fournis pour isoler le mécanisme de perte inattendue.",
+      "why": [
+        "Le facteur 12.5 convertit le capital K en RWA dans l’exercice ; ces grandeurs ne sont pas identiques.",
+        "3.5625 applique à tort le même ajustement 1.25 au retail : sa contribution passerait de 1.05 à 1.3125.",
+        "Corporate : \\(40\\times0.45\\times(0.12-0.02)\\times1.25=2.25\\) millions. Retail : \\(60\\times0.25\\times(0.08-0.01)=1.05\\). Total \\(K=3.30\\), puis \\(RWA=12.5\\times3.30=41.25\\). Les taux stressés et ajustements sont fournis pour isoler le mécanisme de perte inattendue.",
+        "3.75 provient de l’oubli de la soustraction des pertes attendues sur le segment corporate : le capital demandé est net de PD dans la formule."
+      ],
+      "cue": "Soustraire PD au taux stressé, appliquer l’ajustement du bon segment, puis convertir capital en RWA.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "application",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 21,
+        "pdfPages": [
+          348,
+          350
+        ]
+      },
+      "numeric": {
+        "expression": "40*0.45*(0.12-0.02)*1.25+60*0.25*(0.08-0.01)",
+        "value": 3.3,
+        "optionValue": 3.3,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "id": "yo015",
+      "topic": "operational",
+      "skill": "o-capital",
+      "objective": "ORR-22.2",
+      "reading": "ORR-22",
+      "concept": "Historical IRC migration risk and liquidity horizon",
+      "question": "In the historical Basel 2.5 incremental-risk framework, a bank holds a trading credit position that rarely defaults but can suffer a severe downgrade. Its ten-day spread VaR is small. The bank proposes excluding the position from longer-horizon incremental-risk modeling because it can usually quote a price daily. What is the strongest challenge?",
+      "choices": [
+        "IRC captures only default events, so downgrade losses are outside its purpose even if large.",
+        "A daily quoted price guarantees that the full position can be replaced at that price under a crisis scenario.",
+        "The one-year framework means all positions must be treated as continuously unchanged with no replacement or liquidity-horizon assumptions.",
+        "IRC addresses default and rating-migration losses under the specified longer-horizon and constant-risk assumptions; a daily quote or small short-horizon VaR does not establish reliable liquidation in stress."
+      ],
+      "answer": 3,
+      "explanation": "Le cadre historique étend la charge incrémentale au défaut et à la migration, avec hypothèses de maintien du niveau de risque et horizons de liquidité. La cotation quotidienne n’est pas une preuve de liquidation de toute la position sous stress ; la VaR courte ne remplace pas cette analyse.",
+      "why": [
+        "L’extension aux migrations répond précisément aux pertes de crise sans défaut immédiat.",
+        "Une cotation ne démontre ni profondeur ni capacité de sortie stressée.",
+        "Le cadre décrit des hypothèses de remplacement pour maintenir le profil de risque, pas seulement un portefeuille figé.",
+        "Le cadre historique étend la charge incrémentale au défaut et à la migration, avec hypothèses de maintien du niveau de risque et horizons de liquidité. La cotation quotidienne n’est pas une preuve de liquidation de toute la position sous stress ; la VaR courte ne remplace pas cette analyse."
+      ],
+      "cue": "Défaut, migration, horizon de sortie et remplacement : quatre éléments à distinguer.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 22,
+        "pdfPages": [
+          355,
+          356
+        ]
+      }
+    },
+    {
+      "id": "yo016",
+      "topic": "operational",
+      "skill": "o-capital",
+      "objective": "ORR-22.3",
+      "reading": "ORR-22",
+      "concept": "Comprehensive correlation risk beyond marginal defaults",
+      "question": "A historical correlation-trading portfolio contains tranche and index hedges. A proposed comprehensive-risk model perfectly matches marginal default probabilities but fixes dependence and recovery rates and assumes index/tranche hedges remain exact in all states. Which assessment is strongest?",
+      "choices": [
+        "Matching marginal defaults is insufficient: correlation and recovery variability, spread and basis risks, joint events and hedge dynamics can materially alter full-portfolio losses.",
+        "Matching each marginal default probability uniquely determines tranche losses and makes dependence irrelevant.",
+        "An index hedge eliminates every change in tranche value because both reference the same credit pool.",
+        "Recovery and basis uncertainty belong only to the banking book and cannot affect a trading correlation portfolio."
+      ],
+      "answer": 0,
+      "explanation": "Les tranches sont sensibles à la structure jointe et aux récupérations, et leurs couvertures peuvent devenir imparfaites. La mesure complète décrite dans le cadre historique doit traiter ces canaux et idéalement revaloriser le portefeuille dans les scénarios, pas seulement caler les marges de défaut.",
+      "why": [
+        "Les tranches sont sensibles à la structure jointe et aux récupérations, et leurs couvertures peuvent devenir imparfaites. La mesure complète décrite dans le cadre historique doit traiter ces canaux et idéalement revaloriser le portefeuille dans les scénarios, pas seulement caler les marges de défaut.",
+        "Les mêmes probabilités marginales peuvent produire des pertes de tranche différentes sous d’autres dépendances.",
+        "La tranche est non linéaire et la base ainsi que les sensibilités de couverture peuvent changer.",
+        "Ces incertitudes peuvent modifier directement la valeur et les pertes du portefeuille de trading."
+      ],
+      "cue": "Même marginales ne signifie pas même queue jointe ni même couverture.",
+      "tier": "deep",
+      "level": 5,
+      "dimension": "critical",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 22,
+        "pdfPages": [
+          356,
+          356
+        ]
+      }
+    },
+    {
+      "id": "yo017",
+      "topic": "operational",
+      "skill": "o-capital",
+      "objective": "ORR-22.8",
+      "reading": "ORR-22",
+      "concept": "Historical macroprudential institutional reforms",
+      "question": "Following the global financial crisis, authorities observed that individually defensible bank actions could jointly amplify system-wide fire sales. Which reform-purpose pairing best addresses that institutional blind spot, as discussed in the historical post-crisis reading?",
+      "choices": [
+        "Additional credit-rating-agency oversight seeks to address weaknesses in the production and governance of credit ratings.",
+        "Macroprudential bodies such as the US FSOC and the UK Financial Policy Committee support a system-wide perspective beyond assessing each firm in isolation.",
+        "Risk-sensitive compensation principles seek to align individual managers’ incentives with the risks their activities create.",
+        "Central clearing of eligible standardized derivatives seeks to improve counterparty-risk management relative to bilateral arrangements."
+      ],
+      "answer": 1,
+      "explanation": "Le chapitre cite la création d’instances macroprudentielles pour examiner les risques collectifs et les effets systémiques. Les autres réformes peuvent être utiles, mais l’ajout explicite d’un mandat et d’une perspective système répond le plus directement au point aveugle institutionnel décrit.",
+      "why": [
+        "La supervision des notations répond à leur qualité et gouvernance ; elle n’est pas l’instance macroprudentielle dédiée aux effets collectifs de décisions bancaires.",
+        "Le chapitre cite la création d’instances macroprudentielles pour examiner les risques collectifs et les effets systémiques. Les autres réformes peuvent être utiles, mais l’ajout explicite d’un mandat et d’une perspective système répond le plus directement au point aveugle institutionnel décrit.",
+        "Cette réforme agit sur les incitations individuelles ; elle ne crée pas à elle seule une instance chargée de l’analyse et des actions macroprudentielles.",
+        "La réforme de compensation traite une architecture de contrepartie ; le point aveugle institutionnel décrit vise d’abord un mandat de surveillance du système au-delà de chaque firme."
+      ],
+      "cue": "Identifier le niveau du problème : comportement d’une firme ou externalité du système.",
+      "tier": "deep",
+      "level": 4,
+      "dimension": "understanding",
+      "source": "https://www.garp.org/landing/frm-learning-objectives",
+      "bookRef": {
+        "year": 2024,
+        "chapter": 22,
+        "pdfPages": [
+          363,
+          363
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1403 @@
+/* Reviewed original learning content; source provenance is recorded separately. */
+const DEEP_CURRENT={
+ "topic": "current",
+ "chapters": [],
+ "guides": [
+  {
+   "readingId": "CI-1",
+   "title": "Advances in Artificial Intelligence: Implications for Capital Markets Activities",
+   "principles": [
+    "La vitesse d’analyse et la liquidité habituelle ne garantissent pas la capacité d’absorption en crise.",
+    "Évaluer une adoption exige de préciser la tâche, le degré d’autonomie et les conséquences d’une erreur.",
+    "Un test systémique doit intégrer les réactions des autres acteurs aux ordres et contraintes de l’agent."
+   ],
+   "recallPrompts": [
+    "Pourquoi une baisse du spread affiché ne suffit-elle pas à établir une meilleure résilience?",
+    "Quel risque un replay historique sans impact ne peut-il pas valider?",
+    "Quelle donnée demander pour tester un comportement collectif sous stress?"
+   ],
+   "traps": [
+    {
+     "mistake": "Confondre une meilleure prévision avec une meilleure dynamique collective.",
+     "correction": "Tester l’impact, la réaction des autres agents et la liquidité conditionnelle.",
+     "check": "Que devient la stratégie si ses ordres modifient son prochain signal?"
+    },
+    {
+     "mistake": "Valider la nouvelle autonomie avec le score de l’ancienne tâche.",
+     "correction": "Refaire la validation sur les décisions et les conséquences réellement autorisées.",
+     "check": "L’évaluation teste-t-elle l’action proposée ou seulement la classification antérieure?"
+    }
+   ],
+   "worked": {
+    "prompt": "Deux agents vendent chacun 8 unités après le même signal. La profondeur acheteuse exécutable est 10 au prix courant. Ignore le renouvellement du carnet. Peut-on supposer que chacun exécute sans impact?",
+    "steps": [
+     "Additionner la demande commune: \\(8+8=16\\).",
+     "Comparer à la profondeur de 10 au même instant.",
+     "Distinguer les ordres non exécutés d’une perte déjà chiffrée."
+    ],
+    "result": "Non: 6 unités excèdent la profondeur indiquée; une exécution totale exige d’autres prix ou de nouveaux acheteurs.",
+    "check": "On ne peut pas calculer la perte de marché sans le reste du carnet."
+   },
+   "formulas": [],
+   "prerequisites": [
+    "MR-4",
+    "MR-7",
+    "LTR-2"
+   ],
+   "source": "https://www.imf.org/en/Blogs/Articles/2024/10/15/artificial-intelligence-can-make-markets-more-efficient-and-more-volatile",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   },
+   "topic": "current",
+   "reviewNote": "Le chapitre IMF complet n’était pas accessible lors de la revue. Ce guide et ses cas s’appuient sur les objectifs 2026 et le résumé publié par ses auteurs ; vérifie le chapitre assigné dans ton support officiel."
+  },
+  {
+   "readingId": "CI-2",
+   "title": "The Financial Stability Implications of Artificial Intelligence",
+   "principles": [
+    "La technologie et les modèles disponibles relèvent de l’offre; concurrence et gains attendus stimulent la demande.",
+    "La diversification apparente peut masquer une même lignée de modèles ou une mise à jour commune.",
+    "L’IA du superviseur conserve des risques de sélection, de données et de gouvernance."
+   ],
+   "recallPrompts": [
+    "Comment distinguer incitation économique et progrès technique?",
+    "Pourquoi deux applications indépendantes peuvent-elles faire la même erreur?",
+    "Comment vérifier les cas manqués si seules les alertes sont inspectées?"
+   ],
+   "traps": [
+    {
+     "mistake": "Mesurer la concentration seulement avec les marques commerciales.",
+     "correction": "Remonter les dépendances critiques de modèles, données et mises à jour.",
+     "check": "Quel composant est capable de provoquer une erreur simultanée?"
+    },
+    {
+     "mistake": "Assimiler rendement des inspections et couverture de toutes les infractions.",
+     "correction": "Mesurer les non-signalés avec un protocole approprié.",
+     "check": "Connais-tu le nombre d’infractions manquées?"
+    }
+   ],
+   "worked": {
+    "prompt": "Sur100 dossiers,20 sont signalés et12 de ces20 comportent un manquement confirmé. Un audit aléatoire de10 des80 non-signalés trouve2 manquements. Fournir une estimation ponctuelle du rappel, sans prétendre qu’elle est exacte.",
+    "steps": [
+     "Estimer les manquements parmi les non-signalés: \\(80(2/10)=16\\).",
+     "Estimer le total: \\(12+16=28\\).",
+     "Estimation du rappel: \\(12/28\\approx42.9\\%\\)."
+    ],
+    "result": "Rappel estimé à42.9%, sous représentativité de l’audit aléatoire.",
+    "check": "Le petit audit laisse une forte incertitude; le nombre16 est une extrapolation, pas un comptage exhaustif."
+   },
+   "formulas": [],
+   "prerequisites": [
+    "ORR-15",
+    "ORR-8"
+   ],
+   "source": "https://www.fsb.org/uploads/P14112024.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   },
+   "topic": "current"
+  },
+  {
+   "readingId": "CI-3",
+   "title": "The Global Drivers of Private Credit",
+   "principles": [
+    "Séparer structure du véhicule, terme de son capital et dépendances de dette bancaire.",
+    "Un résultat de régression doit être lu avec les contrôles et les sources de variation qui l’identifient.",
+    "Un effet mécanique de poids dans le coût du capital n’inclut pas automatiquement la réaction du prix du risque."
+   ],
+   "recallPrompts": [
+    "Quels passifs peuvent refinancer avant la maturité des prêts?",
+    "Que retirent des effets fixes, et que laissent-ils varier?",
+    "Quel coût des fonds propres annule le gain apparent d’un recours accru à la dette?"
+   ],
+   "traps": [
+    {
+     "mistake": "Prendre une association contrôlée pour une expérience aléatoire.",
+     "correction": "Chercher les changements simultanés de demande et de risque.",
+     "check": "Quel autre mécanisme explique le même coefficient?"
+    },
+    {
+     "mistake": "Augmenter la dette en gardant tous ses coûts fixes sans le dire.",
+     "correction": "Distinguer contrefactuel mécanique et nouvel équilibre.",
+     "check": "Qui exige une prime supplémentaire lorsque le levier augmente?"
+    }
+   ],
+   "worked": {
+    "prompt": "Un prêteur maintient des poids fixes de80% dette et20% fonds propres. Son coût de dette baisse de1 point; le coût des fonds propres monte de3 points. Sans taxes, frais ni autre financement, quelle variation du coût pondéré?",
+    "steps": [
+     "Contribution de la dette: \\(0.8(-1)=-0.8\\) point.",
+     "Contribution des fonds propres: \\(0.2(3)=0.6\\) point.",
+     "Additionner: \\(-0.8+0.6=-0.2\\) point."
+    ],
+    "result": "Le coût pondéré baisse de0.2 point de pourcentage.",
+    "check": "C’est un contrefactuel à poids fixes; il ne prédit pas un nouvel équilibre du levier."
+   },
+   "formulas": [
+    {
+     "name": "Coût moyen pondéré: contrefactuel simple",
+     "tex": "k_A=w_Dk_D+(1-w_D)k_E",
+     "variables": "w_D: poids de la dette; k_D et k_E: coûts de dette et de fonds propres; k_A: coût pondéré.",
+     "assumptions": "Deux sources de financement seulement; pas de taxes ni frais; taux et pondérations définis sur la même base.",
+     "trap": "Les coûts k_D et k_E peuvent changer avec le levier; ne pas traiter une identité de pondération comme une loi causale."
+    }
+   ],
+   "prerequisites": [
+    "IM-10",
+    "IM-11",
+    "CR-4"
+   ],
+   "source": "https://www.bis.org/publ/qtrpdf/r_qt2503b.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   },
+   "topic": "current"
+  },
+  {
+   "readingId": "CI-4",
+   "title": "Geopolitical Risks: Implications for Asset Prices and Financial Stability",
+   "principles": [
+    "Le signe du choc dépend des expositions économiques et des flux effectivement réalisables.",
+    "Décomposer rendement de référence et prime souveraine avant d’interpréter un mouvement de taux.",
+    "Des prix de couverture révèlent une valorisation du risque, pas la probabilité physique isolée d’un conflit."
+   ],
+   "recallPrompts": [
+    "Pourquoi un exportateur peut-il perdre malgré un prix mondial plus élevé?",
+    "Comment le spread peut-il augmenter alors que le rendement souverain baisse?",
+    "Comment construire un contrefactuel pour une réaction boursière à une annonce?"
+   ],
+   "traps": [
+    {
+     "mistake": "Étiqueter les expositions avec le seul pays de siège.",
+     "correction": "Tracer fournisseurs, ventes, financement et actifs communs.",
+     "check": "Quel flux traverse réellement la zone affectée?"
+    },
+    {
+     "mistake": "Lire un put cher comme une probabilité d’événement observable directement.",
+     "correction": "Séparer paiement, sévérité, distribution et prix du risque.",
+     "check": "Quel autre changement de valorisation donne le même prix?"
+    }
+   ],
+   "worked": {
+    "prompt": "Un exportateur encaisse initialement100 unités de revenu pétrolier. Dans un scénario de sanctions, le prix unitaire monte de20% et le volume vendable tombe de25%; tout paiement est encaissé, sans autre effet. Quelle variation de recette?",
+    "steps": [
+     "Multiplier prix et quantité: \\(1.20\\times0.75=0.90\\).",
+     "La nouvelle recette vaut \\(100(0.90)=90\\)."
+    ],
+    "result": "La recette diminue de10%, malgré la hausse du prix.",
+    "check": "La direction du prix mondial n’identifie pas seule le flux net du pays."
+   },
+   "formulas": [
+    {
+     "name": "Décomposition de la variation de spread",
+     "tex": "\\Delta s=\\Delta y-\\Delta r",
+     "variables": "y: rendement souverain; r: rendement de référence comparable; s: différence.",
+     "assumptions": "Référence de même devise, maturité et convention; interpréter séparément les primes de liquidité et de crédit.",
+     "trap": "Une baisse du rendement total ne signifie pas que la prime de risque baisse."
+    }
+   ],
+   "prerequisites": [
+    "MR-17",
+    "CR-8",
+    "IM-15"
+   ],
+   "source": "https://www.imf.org/-/media/files/publications/gfsr/2025/april/english/ch2.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   },
+   "topic": "current"
+  },
+  {
+   "readingId": "CI-5",
+   "title": "Monetary and Fiscal Policy: Safeguarding Stability and Trust",
+   "principles": [
+    "Les comptes du Trésor et de la banque centrale doivent être consolidés pour observer certaines sensibilités publiques.",
+    "La région de stabilité dépend de la confiance et des fragilités; elle n’est pas un seuil universel fixe.",
+    "La liquidité de crise, les pertes de solvabilité et la stance monétaire répondent à des problèmes différents."
+   ],
+   "recallPrompts": [
+    "Comment des achats de dette longue peuvent-ils raccourcir l’exposition publique aux taux?",
+    "Pourquoi une politique apparemment stable peut-elle devenir fragile sans changer ses paramètres?",
+    "Comment traiter une panne de paiement sans confondre tous les objectifs de politique?"
+   ],
+   "traps": [
+    {
+     "mistake": "Regarder uniquement les coupons fixes du Trésor.",
+     "correction": "Inclure les réserves rémunérées et les reversements de la banque centrale.",
+     "check": "Quel passif du secteur public consolidé se réajuste demain?"
+    },
+    {
+     "mistake": "Croire que faible inflation suffit à certifier la stabilité.",
+     "correction": "Examiner levier, financement et confiance dans le temps.",
+     "check": "Quelles fragilités augmentent avant de devenir visibles dans les prix?"
+    }
+   ],
+   "worked": {
+    "prompt": "Une banque centrale détient12 de prêts au jour le jour et8 de titres publics à coupon fixe, financés par20 de réserves rémunérées. Le taux des prêts et celui des réserves montent tous deux de2 points pour un an. Ignore valorisation, impôt et autres effets. Quelle variation du résultat d’intérêt?",
+    "steps": [
+     "Intérêt supplémentaire reçu: \\(12(0.02)=0.24\\).",
+     "Intérêt supplémentaire payé: \\(20(0.02)=0.40\\).",
+     "Variation du résultat: \\(0.24-0.40=-0.16\\)."
+    ],
+    "result": "Le résultat d’intérêt baisse de0.16 unité.",
+    "check": "Les actifs révisables compensent une partie du coût des réserves; la seule taille du passif ne suffit pas toujours."
+   },
+   "formulas": [
+    {
+     "name": "Sensibilité des intérêts des réserves",
+     "tex": "\\Delta I=R\\,\\Delta i",
+     "variables": "R: réserves rémunérées constantes; Δi: variation annuelle de taux en décimal; ΔI: charge annuelle supplémentaire.",
+     "assumptions": "Période annuelle complète, encours constant, sans effet de valorisation ni changement des autres actifs/passifs.",
+     "trap": "Les coupons du Trésor ne suffisent pas à mesurer cette exposition après consolidation."
+    }
+   ],
+   "prerequisites": [
+    "LTR-17",
+    "ORR-22"
+   ],
+   "source": "https://www.bis.org/publications/aer-2023/monetary-fiscal-policy-safeguarding-stability-trust",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   },
+   "topic": "current"
+  },
+  {
+   "readingId": "CI-6",
+   "title": "Regulating the Crypto Ecosystem: The Case of Unbacked Crypto Assets",
+   "principles": [
+    "Classer un jeton à partir des droits, réserves et recours vérifiables plutôt que de son nom.",
+    "La protection dépend des fonctions exercées et des sauvegardes effectivement supervisées.",
+    "Une lecture réglementaire de 2022 doit rester datée; les risques indirects dépassent les seules détentions de jetons."
+   ],
+   "recallPrompts": [
+    "Quelle preuve distingue un prix proche d’un dollar d’un droit de remboursement?",
+    "Que reste-t-il à contrôler après l’obtention d’une licence?",
+    "Comment un prêteur sans jetons au bilan reste-t-il exposé à l’écosystème?"
+   ],
+   "traps": [
+    {
+     "mistake": "Confondre cotation stable et actif légalement adossé.",
+     "correction": "Identifier le débiteur, le recours et les actifs réservés.",
+     "check": "Quel paiement le détenteur peut-il juridiquement exiger?"
+    },
+    {
+     "mistake": "Présenter une proposition historique comme le droit actuel universel.",
+     "correction": "Préciser la date et la portée de la lecture.",
+     "check": "Parle-t-on d’une proposition de 2022 ou d’une règle en vigueur?"
+    }
+   ],
+   "worked": {
+    "prompt": "Une banque ne détient aucun jeton. Elle prête 10 à une bourse crypto contre une garantie initiale de 14 en jetons. Dans un stress hypothétique la garantie perd 50%, puis la bourse fait défaut. Ignore tous frais et autres recouvrements. Quelle perte après réalisation de la garantie?",
+    "steps": [
+     "Garantie après choc: \\(14(1-0.5)=7\\).",
+     "Créance de 10 moins recouvrement de 7."
+    ],
+    "result": "Perte de 3, bien que la détention directe initiale soit nulle.",
+    "check": "Ce scénario pédagogique illustre le risque indirect; ce n’est ni une mesure de capital réglementaire ni une prévision."
+   },
+   "formulas": [],
+   "prerequisites": [
+    "CR-17",
+    "ORR-10"
+   ],
+   "source": "https://www.imf.org/-/media/files/publications/ftn063/2022/english/ftnea2022007.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   },
+   "topic": "current"
+  },
+  {
+   "readingId": "CI-7",
+   "title": "Tokenization and Financial Market Inefficiencies",
+   "principles": [
+    "Partage, programmation et confiance sont des caractéristiques; plusieurs architectures peuvent les fournir.",
+    "Règlement initial simultané et engagement futur sont deux expositions distinctes.",
+    "Des frais réduits peuvent coexister avec des erreurs d’investissement et des fragilités collectives accrues."
+   ],
+   "recallPrompts": [
+    "Pourquoi un opérateur central n’exclut-il pas le cadre conceptuel de tokenisation?",
+    "Quelle obligation subsiste après la livraison simultanée d’une option et de sa prime?",
+    "Comment une technologie plus fiable peut-elle inciter à diminuer les amortisseurs financiers?"
+   ],
+   "traps": [
+    {
+     "mistake": "Prendre consensus technique pour vérité d’une donnée externe.",
+     "correction": "Examiner les sources, responsabilités et procédures de correction.",
+     "check": "Le système peut-il enregistrer fidèlement une donnée fausse?"
+    },
+    {
+     "mistake": "Déduire la disparition du risque de contrepartie futur de l’atomicité initiale.",
+     "correction": "Suivre les obligations et garanties jusqu’à leur échéance.",
+     "check": "Qu’est-ce qui est réellement immobilisé pour payer demain?"
+    }
+   ],
+   "worked": {
+    "prompt": "Pour garantir une prestation future, un vendeur immobilise100 actions de valeur30 chacune pendant six mois. Son coût de financement simple est4% par an. Suppose valeur constante, aucun revenu de l’action et aucune autre sûreté. Quel coût de mobilisation?",
+    "steps": [
+     "Valeur immobilisée: \\(100(30)=3000\\).",
+     "Coût pour six mois: \\(3000(0.04)(0.5)=60\\)."
+    ],
+    "result": "Coût de60 unités de financement dans cette illustration.",
+    "check": "Immobiliser des actifs peut réduire un risque de prestation tout en créant un coût de capital mobilisé; ce coût n’est pas une perte de défaut."
+   },
+   "formulas": [],
+   "prerequisites": [
+    "CR-18",
+    "LTR-6",
+    "ORR-12"
+   ],
+   "source": "https://www.imf.org/-/media/files/publications/ftn063/2025/english/ftnea2025001.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   },
+   "topic": "current"
+  },
+  {
+   "readingId": "CI-8",
+   "title": "Digital Resilience and Financial Stability: The Quest for Policy Tools in the Financial Sector",
+   "principles": [
+    "Une panne non malveillante et une attaque peuvent toutes deux perturber des services critiques.",
+    "Les flux réalisés pendant une panne peuvent masquer une demande de liquidité qui s’accumule.",
+    "Un coupe-circuit contient une propagation; il exige aussi des conditions de communication et de reprise."
+   ],
+   "recallPrompts": [
+    "Comment distinguer déclencheur technique et importance systémique?",
+    "Pourquoi zéro retrait observé n’indique-t-il pas zéro demande de retrait?",
+    "Quel test montre que la reprise technique est compatible avec les besoins de liquidité?"
+   ],
+   "traps": [
+    {
+     "mistake": "Mesurer la confiance par des paiements impossibles à exécuter.",
+     "correction": "Évaluer la file latente et les réactions à la restauration.",
+     "check": "Quelle demande apparaît lorsque le canal est rouvert?"
+    },
+    {
+     "mistake": "Présenter une pause comme une réparation de données.",
+     "correction": "Distinguer temps gagné, vérification et reprise coordonnée.",
+     "check": "Quelles conditions concrètes autorisent le redémarrage?"
+    }
+   ],
+   "worked": {
+    "prompt": "Après une panne, une banque prévoit 15 de paiements cumulés à la réouverture et 4 de recettes avant l’échéance. Elle dispose de 8 de cash mobilisable. Ignore tout autre flux. Quel besoin supplémentaire faut-il couvrir?",
+    "steps": [
+     "Sortie nette à cette échéance: \\(15-4=11\\).",
+     "Comparer aux 8 mobilisables: \\(11-8=3\\)."
+    ],
+    "result": "Besoin supplémentaire de 3 avant le règlement.",
+    "check": "Le fait que les paiements étaient nuls pendant la panne ne change pas l’obligation à la réouverture."
+   },
+   "formulas": [],
+   "prerequisites": [
+    "LTR-6",
+    "ORR-8",
+    "ORR-12"
+   ],
+   "source": "https://www.bde.es/f/webbde/GAP/Secciones/Publicaciones/InformesBoletinesRevistas/RevistaEstabilidadFinanciera/22/3_FSR43_Digital.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   },
+   "topic": "current"
+  }
+ ],
+ "questions": [
+  {
+   "id": "xt001",
+   "topic": "current",
+   "skill": "x-ai",
+   "objective": "CI-1.1",
+   "reading": "CI-1",
+   "concept": "Generative scenarios versus calibrated probabilities",
+   "question": "A portfolio team uses a generative model to propose adverse scenarios from news and policy documents. Of 40 sampled narratives, 12 mention a recession. The team reports a 30% recession probability. Which assessment is most appropriate?",
+   "choices": [
+    "Narrative frequency is a calibrated physical probability if the model samples randomly at a fixed temperature.",
+    "Narrative generation can assist scenario exploration, but output frequency alone does not establish a calibrated probability of an economic event.",
+    "The frequency is best interpreted as a risk-neutral recession probability because the inputs concern financial markets.",
+    "The frequency becomes calibrated if every narrative cites a genuine source, even without outcome-based validation."
+   ],
+   "answer": 1,
+   "explanation": "Le modèle peut aider à explorer des scénarios. Mais la fréquence des récits reflète son mécanisme de génération et son prompt; elle ne démontre pas une fréquence économique calibrée. Il faut définir la cible probabiliste puis valider les prévisions sur des événements pertinents.",
+   "why": [
+    "L’échantillonnage aléatoire du modèle décrit sa distribution de sortie, pas nécessairement celle de l’économie.",
+    "Le rôle utile de génération de scénarios doit être séparé de la calibration d’une probabilité.",
+    "Des textes financiers ne définissent pas une mesure risque-neutre des événements.",
+    "Des citations fiables renforcent l’ancrage documentaire sans démontrer la calibration des fréquences."
+   ],
+   "cue": "Une distribution de textes n’est pas automatiquement une distribution calibrée des états économiques.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "understanding",
+   "source": "https://www.imf.org/en/Blogs/Articles/2024/10/15/artificial-intelligence-can-make-markets-more-efficient-and-more-volatile",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt002",
+   "topic": "current",
+   "skill": "x-ai",
+   "objective": "CI-1.2",
+   "reading": "CI-1",
+   "concept": "Information speed versus market robustness",
+   "question": "After AI adoption, quoted spreads narrow and announcement prices adjust faster. During a previously unseen outage of one public-data feed, many quotes disappear simultaneously. Which conclusion is best supported?",
+   "choices": [
+    "Faster normal-time price discovery and lower stress-time liquidity resilience can coexist.",
+    "The narrow spreads imply the market makers retain enough committed risk-bearing capacity during the outage.",
+    "The earlier observed price-adjustment improvement should be treated as offsetting the outage-induced loss of depth.",
+    "Data-feed outages should be excluded from liquidity analysis because their initial cause is operational."
+   ],
+   "answer": 0,
+   "explanation": "Les indicateurs de fonctionnement normal ne suffisent pas à identifier la liquidité disponible en crise. Une amélioration de vitesse peut coexister avec une dépendance commune qui amplifie un choc.",
+   "why": [
+    "Les deux observations décrivent des régimes différents; la liquidité est conditionnelle au stress.",
+    "Une cotation étroite ne constitue pas un engagement irrévocable à absorber des ordres.",
+    "Une meilleure vitesse normale ne compense pas automatiquement une perte de capacité d’exécution en crise.",
+    "Un choc opérationnel peut précisément se transmettre par la liquidité de marché."
+   ],
+   "cue": "Compare efficacité normale et capacité à absorber un choc, séparément.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "application",
+   "source": "https://www.imf.org/en/Blogs/Articles/2024/10/15/artificial-intelligence-can-make-markets-more-efficient-and-more-volatile",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt003",
+   "topic": "current",
+   "skill": "x-ai",
+   "objective": "CI-1.3",
+   "reading": "CI-1",
+   "concept": "Endogenous execution feedback",
+   "question": "A trading agent earns positive simulated returns when replaying historical order books. In the simulation its orders never change prices or the actions of other agents. The proposed live position is large relative to displayed depth. Which omitted mechanism most weakens the stability claim?",
+   "choices": [
+    "Using a longer historical sample with the same exogenous replay would identify the strategy’s effect on other agents.",
+    "Increasing the simulation’s number of independent return paths would fully capture the effect of a large live position.",
+    "Feedback from the agent’s own market impact into other agents’ decisions and its subsequent actions.",
+    "The replay’s bid–ask transaction-cost estimate is sufficient to capture changes in market depth caused by the agent."
+   ],
+   "answer": 2,
+   "explanation": "Le replay traite le marché comme exogène. À taille importante, ses ordres déplacent les prix; d’autres acteurs réagissent et la stratégie peut réagir à ces mêmes mouvements. Une réussite sans impact ne valide pas cette boucle.",
+   "why": [
+    "Plus d’historique ne crée pas une rétroaction absente du modèle.",
+    "Davantage de chemins exogènes ne représente pas nécessairement l’impact endogène de la stratégie.",
+    "À taille importante, il faut simuler comment les ordres changent les prix puis les comportements.",
+    "Un spread exogène peut sous-estimer impact, épuisement du carnet et réactions adverses."
+   ],
+   "cue": "Un agent qui déplace le marché change aussi ses propres entrées.",
+   "tier": "deep",
+   "level": 5,
+   "dimension": "critical",
+   "source": "https://www.imf.org/en/Blogs/Articles/2024/10/15/artificial-intelligence-can-make-markets-more-efficient-and-more-volatile",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt004",
+   "topic": "current",
+   "skill": "x-ai",
+   "objective": "CI-1.4",
+   "reading": "CI-1",
+   "concept": "Systemic AI supervisory evidence",
+   "question": "A supervisor can request one additional dataset after receiving each dealer’s model inventory and provider list. Which dataset best supports testing whether AI amplifies market stress?",
+   "choices": [
+    "Quarterly average forecast accuracy and error rates for each model evaluated separately.",
+    "The distribution of standalone daily VaR across the dealers before and after AI adoption.",
+    "Aggregate annual changes in AI staffing, turnover and licence spending by dealer.",
+    "Time-stamped decision and order responses, risk constraints and liquidity usage under a common stress, linked to data and infrastructure dependencies."
+   ],
+   "answer": 3,
+   "explanation": "Les inventaires décrivent les acteurs, mais pas leurs réactions conjointes. Une trace alignée sur un choc commun permet d’étudier synchronisation, consommation de liquidité et effets des contraintes.",
+   "why": [
+    "La précision individuelle moyenne ne révèle pas les erreurs communes ni les réactions de stress.",
+    "La VaR isolée peut manquer l’impact des réactions conjointes sur les prix et la liquidité.",
+    "Ces indicateurs d’adoption ne mesurent pas directement les mécanismes d’amplification.",
+    "Les données synchronisées relient dépendances, décisions et conséquences financières."
+   ],
+   "cue": "Pour tester un système, observe les réactions conjointes au même choc.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "application",
+   "source": "https://www.imf.org/en/Blogs/Articles/2024/10/15/artificial-intelligence-can-make-markets-more-efficient-and-more-volatile",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt005",
+   "topic": "current",
+   "skill": "x-ai",
+   "objective": "CI-2.1",
+   "reading": "CI-2",
+   "concept": "AI adoption: supply and demand",
+   "question": "A bank faces strong competitive pressure to cut processing costs and can now access better pretrained models at lower cost. Deployment remains slow because the bank lacks staff able to validate the models. Which interpretation best separates the drivers and constraints?",
+   "choices": [
+    "Slow adoption shows the bank faces weak economic demand for AI, despite the competitive pressure.",
+    "Competitive pressure can create demand while cheaper model access improves technological supply; scarce validation expertise can still constrain deployment.",
+    "Cheaper model access is a demand-side development, while competitive pressure is a supply-side constraint.",
+    "A shortage of validation expertise means that pretrained-model availability should not count as any improvement in technological supply."
+   ],
+   "answer": 1,
+   "explanation": "Les incitations de rentabilité et de concurrence soutiennent la demande. L’accès à de meilleurs modèles améliore l’offre technique, mais une compétence complémentaire rare peut encore limiter l’adoption. Une adoption lente ne prouve donc pas une demande faible.",
+   "why": [
+    "Une forte incitation économique peut coexister avec une contrainte de mise en œuvre.",
+    "Il faut distinguer incitations, offre de technologie et capacités complémentaires.",
+    "La disponibilité technique relève de l’offre; concurrence et économies attendues stimulent la demande.",
+    "Une contrainte complémentaire peut empêcher l’adoption sans annuler l’amélioration d’un autre élément de l’offre."
+   ],
+   "cue": "Sépare le désir d’adopter, la technologie accessible et la capacité de la déployer.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "understanding",
+   "source": "https://www.fsb.org/uploads/P14112024.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt006",
+   "topic": "current",
+   "skill": "x-ai",
+   "objective": "CI-2.2",
+   "reading": "CI-2",
+   "concept": "Supervisory AI: triage and selection bias",
+   "question": "A supervisor inspects only institutions flagged by its AI tool. The confirmed-breach rate among inspected firms rises. Without a random or otherwise valid audit sample of unflagged firms, which claim remains unsupported?",
+   "choices": [
+    "The tool has selected a group with a higher observed inspection yield.",
+    "AI can be used to prioritize supervisory work.",
+    "The tool has reduced the number of material breaches missed across the full supervised population.",
+    "Inspection findings can be used as evidence about the inspected firms."
+   ],
+   "answer": 2,
+   "explanation": "Le rendement des inspections mesure la précision sur la population sélectionnée, pas les infractions manquées parmi les non-inspectés. Il faut une information indépendante sur ces derniers pour évaluer ce risque.",
+   "why": [
+    "Cette observation décrit les cas inspectés, sans généraliser aux cas absents.",
+    "Le triage reste un usage possible même quand le risque résiduel exige une autre évaluation.",
+    "Il faut observer ou estimer les manquements parmi les non-signalés avant de conclure sur les omissions.",
+    "La validité locale d’un constat n’établit pas la couverture globale du dispositif."
+   ],
+   "cue": "Les cas vus ne renseignent pas seuls sur les cas manqués.",
+   "tier": "deep",
+   "level": 5,
+   "dimension": "critical",
+   "source": "https://www.fsb.org/uploads/P14112024.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt007",
+   "topic": "current",
+   "skill": "x-ai",
+   "objective": "CI-2.3",
+   "reading": "CI-2",
+   "concept": "Common foundation-model update risk",
+   "question": "Four lenders use different applications and separate clouds, but all applications inherit the same foundation-model update. The update systematically misreads a common contractual clause. Which concentration measure would have warned most directly?",
+   "choices": [
+    "Concentration of critical model lineage and update dependencies across institutions.",
+    "Concentration of each lender’s direct cloud-computing contracts by provider.",
+    "Pairwise correlation of application outages during the last year.",
+    "Dispersion of model-performance scores on each lender’s own pre-update test set."
+   ],
+   "answer": 0,
+   "explanation": "La défaillance commune provient ici de la lignée du modèle et du canal de mise à jour. Séparer les clouds ne diversifie pas cette source de défaut sémantique corrélé.",
+   "why": [
+    "La lignée commune porte ici le défaut de lecture et sa propagation simultanée.",
+    "Les clouds sont séparés; cette mesure omet le composant sémantique commun.",
+    "Une erreur de contenu peut se produire sans indisponibilité de l’application.",
+    "Des tests distincts avant la mise à jour peuvent manquer une erreur commune après celle-ci."
+   ],
+   "cue": "Diversifie la cause de panne, pas uniquement le fournisseur visible.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "application",
+   "source": "https://www.fsb.org/uploads/P14112024.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt008",
+   "topic": "current",
+   "skill": "x-private",
+   "objective": "CI-3.1",
+   "reading": "CI-3",
+   "concept": "Private credit: committed capital and bank links",
+   "question": "A closed-end private-credit fund has no routine investor redemptions before year 8. It holds long-term loans but has a bank credit line that must be renewed after year 2. Which assessment is most precise?",
+   "choices": [
+    "The committed investor capital makes the bank facility’s renewal risk negligible even when it finances long-term loans.",
+    "The listed secondary-market price of fund interests, if any, determines the cash available to repay the bank line.",
+    "Its long-term capital reduces one liquidity mismatch, while the credit-line maturity creates a distinct refinancing link to banks.",
+    "Matching the average loan maturity to the fund’s year-8 end date is sufficient to establish that its funding maturities are matched."
+   ],
+   "answer": 2,
+   "explanation": "Le capital engagé évite une obligation de rachat fréquente, mais la dette bancaire arrive plus tôt que les prêts. Il faut analyser chaque échéance de financement et le lien entre banques et fonds.",
+   "why": [
+    "Le capital stable n’assure pas que les liquidités de remboursement soient disponibles à l’année2.",
+    "Une vente de parts entre investisseurs ne fournit pas nécessairement du cash au fonds.",
+    "Chaque obligation doit être comparée aux actifs mobilisables à sa propre échéance.",
+    "Le passif bancaire arrive avant la fin du fonds et peut être masqué par une moyenne."
+   ],
+   "cue": "Écris l’échéancier de chaque passif; fermé ne veut pas dire sans refinancement.",
+   "tier": "deep",
+   "level": 3,
+   "dimension": "understanding",
+   "source": "https://www.bis.org/publ/qtrpdf/r_qt2503b.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt009",
+   "topic": "current",
+   "skill": "x-private",
+   "objective": "CI-3.2",
+   "reading": "CI-3",
+   "concept": "Private-credit evidence: demand versus supply",
+   "question": "A study finds that private-credit originations rise in countries where bank regulation becomes more stringent. A researcher adds country and year fixed effects, but borrower demand and risk composition may still change concurrently. Which conclusion is defensible?",
+   "choices": [
+    "The remaining coefficient identifies the regulatory supply effect because country fixed effects eliminate borrower selection.",
+    "Year fixed effects isolate a causal bank-supply effect even if local borrower demand changes with regulation.",
+    "A statistically significant coefficient identifies the bank-supply mechanism even when several channels can generate the association.",
+    "The association is consistent with a bank-supply substitution channel, but does not by itself isolate that channel from time-varying demand or selection."
+   ],
+   "answer": 3,
+   "explanation": "Les effets fixes éliminent certains facteurs communs ou permanents, pas tous les changements simultanés de demande et de composition. La substitution est une explication compatible, non une identification causale complète.",
+   "why": [
+    "Les effets fixes pays retirent des facteurs constants, pas la sélection qui change dans le temps.",
+    "Les effets fixes temporels retirent les chocs communs; la demande locale simultanée peut subsister.",
+    "La significativité statistique ne sélectionne pas le mécanisme causal parmi les explications possibles.",
+    "Il reste nécessaire d’examiner les variations simultanées propres au pays ou aux emprunteurs."
+   ],
+   "cue": "Après les contrôles, demande encore: quelle variable peut évoluer en même temps?",
+   "tier": "deep",
+   "level": 5,
+   "dimension": "critical",
+   "source": "https://www.bis.org/publ/qtrpdf/r_qt2503b.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt010",
+   "topic": "current",
+   "skill": "x-private",
+   "objective": "CI-3.3",
+   "reading": "CI-3",
+   "concept": "WACC: leverage counterfactual and equity response",
+   "question": "A hypothetical lender has no taxes, preferred shares or fees. Initially 40% debt costs 5% and 60% equity requires 10%. It proposes 60% debt at the same 5% cost. What new equity cost would exactly preserve the initial WACC?",
+   "choices": [
+    "10.0%.",
+    "12.5%.",
+    "15.0%.",
+    "8.0%."
+   ],
+   "answer": 1,
+   "explanation": "Le coût initial est \\(0.4(5\\%)+0.6(10\\%)=8\\%\\). Pour le nouveau financement, résoudre \\(0.6(5\\%)+0.4k_E=8\\%\\), soit \\(k_E=12.5\\%\\). Un poids de dette plus élevé ne garantit pas un coût inférieur si le risque renchérit les composantes.",
+   "why": [
+    "Cela baisse le WACC à 7%, au lieu de le préserver.",
+    "Le surcoût d’équité compense exactement le poids accru de dette.",
+    "Le WACC deviendrait 9%.",
+    "Le WACC deviendrait 6.2%."
+   ],
+   "cue": "Tiens les autres composantes fixes, puis résous le taux qui compense le nouvel effet de poids.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "application",
+   "source": "https://www.bis.org/publ/qtrpdf/r_qt2503b.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt011",
+   "topic": "current",
+   "skill": "x-macro",
+   "objective": "CI-4.1",
+   "reading": "CI-4",
+   "concept": "Geopolitical stress: policy and transmission",
+   "question": "A geopolitical event disrupts payments and trade with one region. A country has ample international reserves but banks also face concentrated private-sector supply-chain losses. Which policy inference is strongest?",
+   "choices": [
+    "Reserves protect external funding, so the remaining bank stress can be limited to direct claims on the affected region.",
+    "If reserves cover near-term external payments, losses on domestic supply-chain loans can be excluded from the first-round scenario.",
+    "Reserves can support external resilience, while bank exposures and funding channels still require targeted stress tests and contingency actions.",
+    "Bank loan stress should be applied only after reserves have been exhausted, because sovereign buffers absorb the initial shock."
+   ],
+   "answer": 2,
+   "explanation": "Un amortisseur souverain traite certaines contraintes extérieures. Il ne neutralise pas les pertes privées ni les besoins de liquidité des banques. Il faut relier le choc aux bilans et aux contre-mesures adaptées.",
+   "why": [
+    "Les liens privés indirects peuvent opérer même si les paiements extérieurs restent financés.",
+    "Le buffer externe ne compense pas nécessairement les revenus privés perdus.",
+    "Les outils répondent à des canaux distincts: financement extérieur, pertes et liquidité des banques.",
+    "Les canaux peuvent agir simultanément plutôt que dans cet ordre artificiel."
+   ],
+   "cue": "Associe chaque amortisseur au canal qu’il peut effectivement amortir.",
+   "tier": "deep",
+   "level": 3,
+   "dimension": "understanding",
+   "source": "https://www.imf.org/-/media/files/publications/gfsr/2025/april/english/ch2.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt012",
+   "topic": "current",
+   "skill": "x-macro",
+   "objective": "CI-4.2",
+   "reading": "CI-4",
+   "concept": "Geopolitical shock: exporter heterogeneity",
+   "question": "A conflict raises the global oil price. Country A is an oil exporter whose own export volumes are cut by sanctions; country B is an oil importer. Which inference avoids an unjustified sign assumption?",
+   "choices": [
+    "A’s oil-export status is sufficient to classify it as a hedge because a higher benchmark price raises its terms of trade.",
+    "A’s sovereign spread should fall if the percentage rise in world oil prices exceeds the rise in B’s import costs.",
+    "The countries’ oil trade positions should be ignored because only direct military involvement determines the price response.",
+    "A’s net effect depends on price, export volume, payment access and financing; the exporter label alone does not establish a gain."
+   ],
+   "answer": 3,
+   "explanation": "Une hausse du prix n’est favorable à l’exportateur que sous d’autres conditions. Une baisse des volumes, un blocage des paiements ou un renchérissement du financement peuvent dominer le gain de prix.",
+   "why": [
+    "Le terme de l’échange ne résume pas les quantités réalisables ni l’accès aux paiements.",
+    "Comparer ces variations ne détermine ni les recettes encaissées ni la prime souveraine.",
+    "Les chocs commerciaux et financiers peuvent toucher des pays non belligérants.",
+    "Il faut reconstruire le flux net et les contraintes avant d’en fixer le signe."
+   ],
+   "cue": "Prix plus élevé × volume encaissable: vérifie les deux facteurs.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "critical",
+   "source": "https://www.imf.org/-/media/files/publications/gfsr/2025/april/english/ch2.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt013",
+   "topic": "current",
+   "skill": "x-macro",
+   "objective": "CI-4.3",
+   "reading": "CI-4",
+   "concept": "Event study: cross-border exposure identification",
+   "question": "An event study reports a larger stock-price fall after a tariff announcement for firms with greater pre-announcement supplier exposure to the targeted country. On the same day, global demand forecasts deteriorate. Which additional design most strengthens interpretation of a tariff-exposure channel?",
+   "choices": [
+    "Compare firms with similar sector and global-demand sensitivity but different pre-event supplier exposure, and examine pre-event trends and other simultaneous news.",
+    "Compare exposed firms only with the broad equity index, without adjusting for their sensitivity to the concurrent demand news.",
+    "Define exposure using the post-announcement supply-chain changes, because these are the best available measure of firms’ economic adjustment.",
+    "Average the event-day declines over more exposed firms; a larger cross-section eliminates confounding from other same-day shocks."
+   ],
+   "answer": 0,
+   "explanation": "Une comparaison tenant compte des facteurs communs et une exposition définie avant l’événement réduisent des confusions. Cela améliore l’identification sans la rendre automatiquement parfaite.",
+   "why": [
+    "Le contrefactuel vise des acteurs comparables face à la nouvelle macroéconomique concurrente.",
+    "Le benchmark peut différer justement sur la sensibilité au choc de demande.",
+    "La mesure après choc peut être une conséquence du traitement et de la réaction des prix.",
+    "Un plus grand échantillon ne supprime pas un biais commun d’identification."
+   ],
+   "cue": "Construis un contrefactuel avec une exposition définie avant le choc.",
+   "tier": "deep",
+   "level": 5,
+   "dimension": "critical",
+   "source": "https://www.imf.org/-/media/files/publications/gfsr/2025/april/english/ch2.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt014",
+   "topic": "current",
+   "skill": "x-macro",
+   "objective": "CI-4.4",
+   "reading": "CI-4",
+   "concept": "Sovereign yield: benchmark and risk premium",
+   "question": "Following a geopolitical shock, a sovereign’s observed yield falls by 20 bp while its same-currency risk-free benchmark falls by 70 bp. Ignore differences in maturity and liquidity. What happened to the sovereign spread?",
+   "choices": [
+    "It fell 90 bp because the sovereign and reference yield declines should be added.",
+    "It rose 50 bp despite the fall in the observed yield.",
+    "It fell 20 bp because the observed sovereign yield directly measures its risk premium.",
+    "It rose 70 bp because the entire benchmark decline becomes a sovereign risk premium."
+   ],
+   "answer": 1,
+   "explanation": "Le spread est la différence des rendements. Sa variation est \\(\\Delta s=\\Delta y-\\Delta r=-20-(-70)=50\\,\\mathrm{bp}\\). Une baisse du taux de référence peut masquer une prime souveraine plus élevée.",
+   "why": [
+    "La variation d’une différence est la différence des variations, pas leur somme.",
+    "Le souverain baisse moins que sa référence: le spread augmente de50bp.",
+    "Le rendement total inclut aussi le taux de référence.",
+    "Il faut tenir compte du mouvement souverain de−20bp."
+   ],
+   "cue": "Décompose toujours rendement souverain = référence + spread.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "application",
+   "source": "https://www.imf.org/-/media/files/publications/gfsr/2025/april/english/ch2.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt015",
+   "topic": "current",
+   "skill": "x-macro",
+   "objective": "CI-4.5",
+   "reading": "CI-4",
+   "concept": "Options: risk pricing versus event probability",
+   "question": "Downside put protection becomes more expensive before a geopolitical event. An analyst claims the option premium alone reveals the physical probability that the event will occur. Which qualification is most important?",
+   "choices": [
+    "Once maturity and strike are fixed, the premium identifies the event probability because the option payoff is contractually fixed.",
+    "After discounting, the premium identifies physical probability as long as trading is arbitrage-free.",
+    "Option prices combine expected payoffs with risk pricing and market conditions; they do not alone identify the physical probability of one geopolitical event.",
+    "Dividing the premium by the strike identifies physical event probability without assumptions about losses in other states."
+   ],
+   "answer": 2,
+   "explanation": "Les prix d’options portent sur des paiements dans plusieurs états et incorporent la valorisation du risque. Une prime plus élevée peut refléter la sévérité, la demande de couverture et les prix du risque, pas une probabilité physique identifiable à elle seule.",
+   "why": [
+    "Le paiement réalisé dépend du cours et des états; fixer le contrat ne détermine pas les prix du risque.",
+    "L’absence d’arbitrage ne rend pas la mesure de valorisation identique à la mesure physique.",
+    "Plusieurs distributions et valorisations du risque peuvent donner un même prix de protection.",
+    "Le rapport ne sépare ni sévérité des pertes, ni autres états, ni prime de risque."
+   ],
+   "cue": "Prix de couverture ≠ probabilité physique d’un événement unique.",
+   "tier": "deep",
+   "level": 5,
+   "dimension": "critical",
+   "source": "https://www.imf.org/-/media/files/publications/gfsr/2025/april/english/ch2.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt016",
+   "topic": "current",
+   "skill": "x-macro",
+   "objective": "CI-4.6",
+   "reading": "CI-4",
+   "concept": "Bank and fund amplification after geopolitics",
+   "question": "After a geopolitical shock, a fund sells corporate bonds to meet redemptions. A bank holds the same bonds as collateral and lends to the affected issuers. Which stress framework best avoids missing amplification?",
+   "choices": [
+    "Model bond repricing, collateral-related funding needs and borrower deterioration jointly, allowing fund sales to worsen market liquidity.",
+    "Capture the fund-sale effect solely through the bank’s existing default-probability stress, because market and credit losses are alternative measures of the same exposure.",
+    "Add standalone credit, market and liquidity stresses while holding liquidation prices and collateral needs fixed in each module.",
+    "Increase collateral haircuts only after borrower defaults, so market repricing is not counted twice."
+   ],
+   "answer": 0,
+   "explanation": "Le lien peut passer par des actifs communs et la liquidité de marché sans détention de parts de fonds. Les ventes modifient les prix et le financement au moment où la qualité des emprunteurs se dégrade.",
+   "why": [
+    "Le dispositif relie les canaux et leurs interactions plutôt que de les considérer isolément.",
+    "Un choc de prix ou de marge peut provoquer un besoin de cash sans défaut de l’émetteur.",
+    "Une simple addition à paramètres fixes peut manquer l’amplification par ventes et appels de marge.",
+    "Les décotes et prix peuvent changer avant le défaut; les reporter masque le calendrier."
+   ],
+   "cue": "Cherche les actifs et financements communs, pas seulement les participations directes.",
+   "tier": "deep",
+   "level": 5,
+   "dimension": "application",
+   "source": "https://www.imf.org/-/media/files/publications/gfsr/2025/april/english/ch2.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt017",
+   "topic": "current",
+   "skill": "x-macro",
+   "objective": "CI-5.1",
+   "reading": "CI-5",
+   "concept": "Consolidated public balance sheet and QE",
+   "question": "A treasury has issued fixed-coupon bonds. Its central bank buys 30 currency units of these bonds, financing the purchase entirely with overnight remunerated reserves. The reserve remuneration rate then rises by 3 percentage points for a full year. Ignore valuation changes and all other balance-sheet changes. What is the additional annual consolidated public-sector interest cost attributable to these reserves?",
+   "choices": [
+    "Zero, because consolidation removes both the treasury coupon and the reserve interest expense.",
+    "0.6 units, measuring the interest reduction on the treasury’s existing fixed-rate liabilities.",
+    "0.09 units, because 3 percentage points should be applied as 0.003.",
+    "0.9 units, reflecting the reserve-rate reset."
+   ],
+   "answer": 3,
+   "explanation": "Les coupons entre Trésor et banque centrale s’éliminent dans la consolidation. Le passif envers les banques reste rémunéré au taux court. Le surcoût est \\(30\\times0.03=0.9\\). Il peut apparaître via une baisse des reversements de la banque centrale.",
+   "why": [
+    "Le flux de coupon devient interne, mais les intérêts versés aux banques restent externes.",
+    "Le scénario ne réduit pas le coupon des titres détenus par les investisseurs externes.",
+    "Trois points de pourcentage correspondent à0.03.",
+    "Le passif de30 à taux court renchérit de30×0.03."
+   ],
+   "cue": "Consolide Trésor et banque centrale avant de conclure que la dette est à taux fixe.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "application",
+   "source": "https://www.bis.org/publications/aer-2023/monetary-fiscal-policy-safeguarding-stability-trust",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt018",
+   "topic": "current",
+   "skill": "x-macro",
+   "objective": "CI-5.2",
+   "reading": "CI-5",
+   "concept": "Region of stability: changing boundary",
+   "question": "A policy mix has operated for years with low measured inflation. A rapid loss of confidence now increases risk premiums and reveals high private leverage and liquidity mismatches. Which interpretation best fits the BIS region-of-stability framework?",
+   "choices": [
+    "Because policy settings are unchanged, the new financial stress should be attributed to an exogenous shock rather than a narrower policy region.",
+    "The feasible policy region can shrink abruptly, and past low inflation did not certify enduring financial stability.",
+    "The previous years of low inflation identify a stable policy combination; only inflation exceeding target would invalidate it.",
+    "If public debt is unchanged, confidence can change market prices but cannot alter the room for monetary–fiscal manoeuvre."
+   ],
+   "answer": 1,
+   "explanation": "La région dépend du contexte financier et de la confiance; sa frontière se déplace. Des fragilités accumulées peuvent restreindre soudainement les combinaisons de politiques viables.",
+   "why": [
+    "Le choc et les fragilités peuvent justement modifier les politiques encore viables.",
+    "La région dépend de la confiance et des fragilités, avec des déplacements parfois brusques.",
+    "La stabilité financière constitue une autre dimension de la région.",
+    "Les prix du financement et les contraintes de marché modifient cet espace même à dette inchangée."
+   ],
+   "cue": "Un même dosage de politiques peut devenir instable si le système autour change.",
+   "tier": "deep",
+   "level": 3,
+   "dimension": "understanding",
+   "source": "https://www.bis.org/publications/aer-2023/monetary-fiscal-policy-safeguarding-stability-trust",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt019",
+   "topic": "current",
+   "skill": "x-macro",
+   "objective": "CI-5.3",
+   "reading": "CI-5",
+   "concept": "Monetary stance versus crisis liquidity",
+   "question": "Inflation remains above target and high public debt has made the fiscal authority sensitive to refinancing costs. A temporary payment disruption creates liquidity stress at otherwise solvent banks, and the government presses for broad rate cuts to lower debt service. Which policy design best recognizes the monetary–fiscal and financial-stability tensions?",
+   "choices": [
+    "Reduce the policy rate until payment liquidity is restored, because the stance and liquidity tools must always move together.",
+    "Keep the stance restrictive and rely solely on private interbank borrowing, without checking whether the payment failure obstructs that market.",
+    "Distinguish targeted, appropriately controlled liquidity support from the general policy stance, while assessing incentives and fiscal or solvency issues separately.",
+    "Provide unconditional support to all affected institutions and classify it as purely operational, avoiding any analysis of credit losses or incentives."
+   ],
+   "answer": 2,
+   "explanation": "Un outil ciblé de liquidité peut répondre à une perturbation sans déterminer à lui seul le taux directeur nécessaire contre l’inflation. Son périmètre et ses conditions comptent; les pertes de solvabilité exigent une autre analyse.",
+   "why": [
+    "La fonction d’un soutien ciblé n’impose pas la même variation au taux directeur.",
+    "Le mécanisme de marché peut lui-même être entravé par la panne commune.",
+    "La séparation des objectifs et la maîtrise du dispositif permettent d’analyser la tension.",
+    "Le caractère opérationnel du choc n’annule ni risque de crédit ni incitations."
+   ],
+   "cue": "Sépare stance monétaire, liquidité temporaire et traitement des pertes.",
+   "tier": "deep",
+   "level": 5,
+   "dimension": "critical",
+   "source": "https://www.bis.org/publications/aer-2023/monetary-fiscal-policy-safeguarding-stability-trust",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt020",
+   "topic": "current",
+   "skill": "x-digital",
+   "objective": "CI-6.1",
+   "reading": "CI-6",
+   "concept": "Crypto classification: claim versus marketing",
+   "question": "A token is advertised as stable because a market maker normally quotes it near one dollar. Holders have no enforceable claim on reserves, no redemption right and no identified backing pool. Which conclusion is most defensible for risk classification?",
+   "choices": [
+    "The history of dollar quotations makes the token reserve-backed even if the reserves are not separately identified.",
+    "Market-maker support should be treated as an enforceable redemption claim because holders normally sell near par.",
+    "The token should be classified from the ledger’s consensus protocol rather than the holder’s legal and economic rights.",
+    "Classify from its actual rights and backing; the quotation alone does not establish an asset-backed redemption claim."
+   ],
+   "answer": 3,
+   "explanation": "La catégorie de risque dépend des droits et du mécanisme économique. Un prix proche d’un dollar n’établit ni une réserve ni une créance de remboursement.",
+   "why": [
+    "Une stabilité de prix historique n’établit pas l’existence d’actifs de couverture.",
+    "Une possibilité de vente usuelle n’est pas un droit de remboursement opposable.",
+    "Le mécanisme de validation ne crée pas les droits patrimoniaux du jeton.",
+    "Le test porte sur les créances, réserves et recours effectivement vérifiables."
+   ],
+   "cue": "Demande: qui doit quoi au détenteur, et sur quels actifs peut-il agir?",
+   "tier": "deep",
+   "level": 3,
+   "dimension": "understanding",
+   "source": "https://www.imf.org/-/media/files/publications/ftn063/2022/english/ftnea2022007.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt021",
+   "topic": "current",
+   "skill": "x-digital",
+   "objective": "CI-6.2",
+   "reading": "CI-6",
+   "concept": "Crypto service provider: licensing versus safeguards",
+   "question": "A crypto exchange receives a business licence but continues to lend client assets to an affiliate, with no segregation or transparent related-party reporting. Which assessment follows a functional, risk-based approach?",
+   "choices": [
+    "The business licence makes further client-asset safeguards a matter of voluntary commercial practice.",
+    "The remaining custody, related-party and client-asset risks require substantive safeguards and supervision, not just a registration label.",
+    "On-chain proof of the affiliate transfers is sufficient protection, even if client assets remain available to the affiliate’s creditors.",
+    "A consolidated group capital ratio can substitute for asset segregation because custody and solvency risks are the same."
+   ],
+   "answer": 1,
+   "explanation": "L’autorisation d’exercer n’est pas à elle seule une protection des actifs clients. Il faut des exigences effectives sur conservation, conflits, opérations intragroupe et suivi des risques.",
+   "why": [
+    "Les fonctions risquées nécessitent des exigences effectives, pas seulement un statut.",
+    "Les contrôles doivent viser les mécanismes de détournement, de conflit et de perte.",
+    "La visibilité des transferts ne résout pas le risque juridique ou de récupération.",
+    "Le capital du groupe et la protection des actifs clients répondent à des risques différents."
+   ],
+   "cue": "Une licence autorise; des règles et contrôles protègent effectivement.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "application",
+   "source": "https://www.imf.org/-/media/files/publications/ftn063/2022/english/ftnea2022007.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt022",
+   "topic": "current",
+   "skill": "x-digital",
+   "objective": "CI-6.3",
+   "reading": "CI-6",
+   "concept": "Historical crypto prudential approach and indirect exposure",
+   "question": "Consider the approaches discussed in the assigned 2022 IMF note, not a statement of current law. A bank holds no unbacked tokens but lends heavily to exchanges, with repayment depending on trading volumes and token collateral. Which prudential conclusion is appropriate?",
+   "choices": [
+    "Conservative treatment of direct holdings does not remove the need to assess correlated indirect exposures and group-wide channels.",
+    "The absence of direct token holdings allows the bank to exclude crypto-market scenarios from its credit stress tests.",
+    "Collateralization by tokens makes exchange lending less sensitive to crypto prices than an unsecured loan, regardless of the collateral’s stress behavior.",
+    "A legally separate lending subsidiary removes group-wide crypto risk as long as the parent does not own tokens directly."
+   ],
+   "answer": 0,
+   "explanation": "Le périmètre économique dépasse les jetons détenus directement. Des prêts et garanties peuvent se détériorer en même temps que le marché crypto. Il faut aussi distinguer une lecture datée d’un énoncé de droit actuel.",
+   "why": [
+    "La dépendance des revenus et garanties de la contrepartie transmet le choc indirectement.",
+    "Le risque de crédit peut dépendre du même marché même sans jetons détenus.",
+    "La garantie peut chuter précisément quand l’emprunteur ne peut plus payer.",
+    "Les liens économiques, réputationnels et de soutien restent à analyser."
+   ],
+   "cue": "Zéro jeton détenu n’implique pas zéro exposition à l’écosystème.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "critical",
+   "source": "https://www.imf.org/-/media/files/publications/ftn063/2022/english/ftnea2022007.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt023",
+   "topic": "current",
+   "skill": "x-digital",
+   "objective": "CI-6.4",
+   "reading": "CI-6",
+   "concept": "Bali Fintech Agenda: learning before scaling",
+   "question": "A jurisdiction runs a small crypto-services pilot with capped customer balances. It proposes lifting the cap, but cannot yet identify beneficial owners, measure cross-border flows or reconcile client assets. Which sequence best fits a learning-oriented, risk-based framework?",
+   "choices": [
+    "Use the pilot’s absence of reported losses as sufficient evidence to scale, keeping the existing reporting system unchanged.",
+    "Replace client-asset reconciliation with an aggregate price-volatility limit, which captures the main risks of crypto activity.",
+    "Improve data, supervisory capability and client-asset visibility, then reassess safeguards and scale against observed risks.",
+    "Lift the cap first to create a larger sample, then decide which client-asset information providers should retain."
+   ],
+   "answer": 2,
+   "explanation": "Un pilote permet d’apprendre seulement si les risques sont observables. L’absence de pertes déclarées dans un dispositif peu mesuré n’établit pas la sûreté du passage à l’échelle.",
+   "why": [
+    "Un résultat peu observable dans un petit pilote n’établit pas la sûreté à grande échelle.",
+    "Le risque de conservation et de flux ne se résume pas à la volatilité des prix.",
+    "Il faut rendre le risque visible et actionnable avant d’augmenter l’exposition.",
+    "La collecte après l’expansion peut manquer des preuves essentielles et amplifier le risque."
+   ],
+   "cue": "Avant de monter en charge, rends mesurables les risques qui déclencheraient une action.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "application",
+   "source": "https://www.imf.org/-/media/files/publications/ftn063/2022/english/ftnea2022007.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt024",
+   "topic": "current",
+   "skill": "x-digital",
+   "objective": "CI-7.1",
+   "reading": "CI-7",
+   "concept": "Tokenization: centralized ledger eligibility",
+   "question": "A supervised single operator runs a ledger shared by multiple participants. Transfer rules and contingent instructions execute within the ledger; participants trust the operator through governance and legal recourse. Which assessment matches the IMF conceptual framework?",
+   "choices": [
+    "It falls outside tokenization because sharedness requires decentralized validation rather than multiple users.",
+    "Sharedness, programmability and trust can exist under a single-operator model; distributed consensus is not the only model.",
+    "Its legal recourse establishes trust, so integrated programmability and shared access are irrelevant to its classification.",
+    "It qualifies only if participants can each update the ledger unilaterally without the operator’s control."
+   ],
+   "answer": 1,
+   "explanation": "Le cadre distingue les caractéristiques du registre du modèle choisi pour les obtenir. Un opérateur central peut fournir partage, programmation interne et confiance, avec ses propres conditions de défaillance.",
+   "why": [
+    "Le partage et la décentralisation du contrôle sont des dimensions distinctes.",
+    "Le cadre permet plusieurs architectures pour obtenir ces caractéristiques.",
+    "La confiance est une caractéristique parmi plusieurs, pas un substitut aux autres.",
+    "Un contrôle unilatéral de chaque participant n’est pas une condition du registre partagé."
+   ],
+   "cue": "Caractéristiques du registre et mécanisme de confiance sont deux questions distinctes.",
+   "tier": "deep",
+   "level": 3,
+   "dimension": "understanding",
+   "source": "https://www.imf.org/-/media/files/publications/ftn063/2025/english/ftnea2025001.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt025",
+   "topic": "current",
+   "skill": "x-digital",
+   "objective": "CI-7.2",
+   "reading": "CI-7",
+   "concept": "Tokenized derivatives: future obligations",
+   "question": "A tokenized option and its premium exchange simultaneously at inception. The writer does not lock the underlying or collateral for the option’s life. The platform claims inception settlement removes all counterparty risk until expiry. What is the strongest qualification?",
+   "choices": [
+    "An atomic inception transfer reduces the writer’s later obligation to the premium amount already paid.",
+    "Executable code substitutes for the writer’s future assets, so no separate financial performance arrangement is needed.",
+    "The option’s future replacement value is hedged by the simultaneous inception exchange, even without collateral.",
+    "Simultaneous inception exchange addresses that immediate trade, while future performance still needs collateral, a guarantor or another risk arrangement."
+   ],
+   "answer": 3,
+   "explanation": "La prestation initiale et l’obligation future sont distinctes. Le fait d’échanger prime et contrat simultanément ne garantit pas que le vendeur pourra honorer l’exercice futur.",
+   "why": [
+    "La prime ne borne pas la valeur future de l’obligation du vendeur.",
+    "Le code peut spécifier une prestation sans créer les actifs permettant de l’honorer.",
+    "L’échange initial ne finance pas automatiquement la future valeur de remplacement.",
+    "Il faut couvrir l’obligation future, pas seulement l’échange initial."
+   ],
+   "cue": "Atomicité de l’échange initial ≠ garantie des prestations futures.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "application",
+   "source": "https://www.imf.org/-/media/files/publications/ftn063/2025/english/ftnea2025001.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt026",
+   "topic": "current",
+   "skill": "x-digital",
+   "objective": "CI-7.3",
+   "reading": "CI-7",
+   "concept": "Tokenization: liquidity-saving externality",
+   "question": "A programmable ledger improves settlement reliability. Banks respond by halving liquidity buffers and increasing leverage, each assuming that rapid asset transfers will remain available. Which system-wide test is most informative?",
+   "choices": [
+    "Stress the common ledger and market liquidity jointly after those balance-sheet adjustments, including the effects of simultaneous attempts to transfer or liquidate assets.",
+    "Compare the new and old ledger on identical pre-adoption balance sheets to isolate the technological effect, and use that result as the system-wide resilience estimate.",
+    "Test each bank’s reduction in buffer independently, assuming its planned asset transfers complete at the normal-time quoted prices.",
+    "Treat the buffer reduction as a reduction in system-wide liquidity demand because each bank can move collateral faster."
+   ],
+   "answer": 0,
+   "explanation": "Le changement technologique modifie les comportements. Tester uniquement les anciens bilans manque une fragilité endogène: moins de réserves et plus de levier peuvent amplifier un choc commun.",
+   "why": [
+    "Le test inclut l’adaptation des bilans et les réactions collectives qui peuvent amplifier le choc.",
+    "Cela isole un effet technique mais omet le changement de comportement déterminant pour le système.",
+    "Les plans individuels peuvent exiger les mêmes acheteurs ou financements au même instant.",
+    "Les besoins peuvent devenir synchrones; transférer plus vite ne crée pas de cash net."
+   ],
+   "cue": "Évalue la technologie avec les bilans qu’elle incite à choisir.",
+   "tier": "deep",
+   "level": 5,
+   "dimension": "critical",
+   "source": "https://www.imf.org/-/media/files/publications/ftn063/2025/english/ftnea2025001.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt027",
+   "topic": "current",
+   "skill": "x-digital",
+   "objective": "CI-7.4",
+   "reading": "CI-7",
+   "concept": "Retail tokenization: internality versus transaction cost",
+   "question": "A ledger allows retail investors to buy a complex contingent product directly for a much lower fee. Many buyers misinterpret its loss trigger. Which welfare assessment is strongest?",
+   "choices": [
+    "The lower transaction fee is sufficient to infer a welfare gain because product losses are voluntary market outcomes.",
+    "Direct ledger access removes the informational role previously played by brokers, so misunderstanding is only a technology-training problem.",
+    "Transaction-cost savings can coexist with investor internalities; product design, disclosure and suitability-related safeguards still matter.",
+    "A technically correct smart contract establishes that buyers have correctly understood the economic loss trigger."
+   ],
+   "answer": 2,
+   "explanation": "Le coût d’accès et la qualité de la décision sont différents. Un investisseur peut acheter moins cher un risque qu’il ne comprend pas et subir une perte évitable.",
+   "why": [
+    "Le choix peut être fondé sur une erreur de compréhension et réduire le bien-être malgré le gain de frais.",
+    "Comprendre les mécanismes financiers reste distinct de savoir utiliser le registre.",
+    "Le cadre distingue coût de transaction et qualité de la décision de l’investisseur.",
+    "L’exécution fidèle du contrat ne démontre pas la compréhension de ses risques."
+   ],
+   "cue": "Moins de frais n’implique pas meilleure décision pour un investisseur mal informé.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "critical",
+   "source": "https://www.imf.org/-/media/files/publications/ftn063/2025/english/ftnea2025001.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt028",
+   "topic": "current",
+   "skill": "x-digital",
+   "objective": "CI-7.5",
+   "reading": "CI-7",
+   "concept": "Ledger trust: consensus versus external truth",
+   "question": "All authorized validators honestly agree on a smart contract’s execution. Its external reference feed is wrong, so the contract transfers collateral at an incorrect reference price. What failed?",
+   "choices": [
+    "The validators failed to reach valid consensus, because a correct consensus would reject any economically wrong input.",
+    "Agreement on execution did not ensure the correctness of the external input; trust also depends on the data-source and governance arrangements.",
+    "Expanding the number of validators would by itself eliminate the erroneous common reference feed.",
+    "The transfer is economically valid once recorded consistently, so source correction would undermine rather than restore trust."
+   ],
+   "answer": 1,
+   "explanation": "Le consensus peut fonctionner exactement comme prévu sur une donnée fausse. Il faut distinguer cohérence de l’état enregistré, qualité de l’entrée externe et mécanismes de correction.",
+   "why": [
+    "La validité technique des règles peut être respectée avec une entrée externe fausse.",
+    "La donnée externe et sa gouvernance sont une dépendance distincte du consensus.",
+    "Davantage de nœuds partageant la même donnée fausse ne diversifie pas cette source d’erreur.",
+    "La cohérence de l’écriture ne garantit pas sa conformité économique ou les moyens de recours."
+   ],
+   "cue": "Accord sur une donnée n’est pas preuve de sa vérité.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "understanding",
+   "source": "https://www.imf.org/-/media/files/publications/ftn063/2025/english/ftnea2025001.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt029",
+   "topic": "current",
+   "skill": "x-digital",
+   "objective": "CI-8.1",
+   "reading": "CI-8",
+   "concept": "ICT versus cyber: trigger and financial impact",
+   "question": "A failed software deployment, with no attack, stops a bank’s payment processing. A separate intrusion exposes old customer records but leaves current payment records and services intact. Which classification and risk inference is best?",
+   "choices": [
+    "The software failure should be classified as cyber risk because the same availability objective is affected.",
+    "The intrusion should automatically receive the higher systemic ranking because it is malicious.",
+    "The non-attack failure is ICT risk; systemic significance depends on service criticality and propagation, not only whether the trigger is malicious.",
+    "The two events should receive the same systemic ranking because both concern the confidentiality–integrity–availability framework."
+   ],
+   "answer": 2,
+   "explanation": "Une panne d’ingénierie peut relever du risque ICT sans attaque. La confidentialité, l’intégrité et la disponibilité ont des effets différents selon les services et interconnexions touchés.",
+   "why": [
+    "Le cadre distingue ici l’attaque de la défaillance d’ingénierie, même si leurs effets peuvent se recouper.",
+    "La malveillance ne suffit pas à comparer les services et réseaux touchés.",
+    "Il faut distinguer classification du déclencheur et effets de propagation.",
+    "Une même famille d’objectifs ne signifie pas une sévérité ou une propagation identique."
+   ],
+   "cue": "Classe le déclencheur, puis trace le service touché et la propagation financière.",
+   "tier": "deep",
+   "level": 3,
+   "dimension": "understanding",
+   "source": "https://www.bde.es/f/webbde/GAP/Secciones/Publicaciones/InformesBoletinesRevistas/RevistaEstabilidadFinanciera/22/3_FSR43_Digital.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt030",
+   "topic": "current",
+   "skill": "x-digital",
+   "objective": "CI-8.2",
+   "reading": "CI-8",
+   "concept": "Cyber outage: hidden queue of withdrawals",
+   "question": "During a bank outage customers cannot execute withdrawals. Measured cash outflows are therefore zero. News of possible record corruption spreads and customers queue instructions for restoration. Which inference is strongest?",
+   "choices": [
+    "The zero-outflow period should lower the estimated stressed withdrawal rate because it is the newest observed data.",
+    "The outage may suppress observable flows while withdrawal demand builds, so restoration can reveal a liquidity shock.",
+    "The queue can be ignored if the bank still meets its accounting capital ratio before restoration.",
+    "Technical restoration and restoration of funding confidence can be modelled as the same event."
+   ],
+   "answer": 1,
+   "explanation": "Le flux réalisé est contraint par le système indisponible; il ne révèle pas la demande latente. La reprise technique peut libérer une file de retraits et créer une tension financière.",
+   "why": [
+    "Les observations sont contraintes par l’indisponibilité et ne mesurent pas une demande libre.",
+    "Les demandes latentes peuvent devenir des sorties effectives à la reprise.",
+    "La solvabilité comptable ne finance pas automatiquement des paiements exigibles.",
+    "La confiance et les instructions accumulées peuvent persister après la réparation technique."
+   ],
+   "cue": "Zéro sortie observée peut signifier impossibilité de sortir, pas absence de volonté.",
+   "tier": "deep",
+   "level": 4,
+   "dimension": "critical",
+   "source": "https://www.bde.es/f/webbde/GAP/Secciones/Publicaciones/InformesBoletinesRevistas/RevistaEstabilidadFinanciera/22/3_FSR43_Digital.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  },
+  {
+   "id": "xt031",
+   "topic": "current",
+   "skill": "x-digital",
+   "objective": "CI-8.3",
+   "reading": "CI-8",
+   "concept": "Cyber circuit breaker: containment and restart",
+   "question": "An authority considers a pre-defined, temporary payment pause after a severe data-integrity incident. Which design priority best captures the policy trade-off described in the assigned digital-resilience reading?",
+   "choices": [
+    "Choose the longest technically possible pause, because containment benefits increase without a corresponding liquidity or confidence cost.",
+    "Use identical automatic pause durations for every institution, regardless of payment criticality or evidence on record integrity.",
+    "Activate the pause based only on historical average cyber losses, then leave restart decisions entirely to each bank without coordination.",
+    "Gain verification time and contain contagion, with explicit triggers, duration, communication and coordinated restart arrangements."
+   ],
+   "answer": 3,
+   "explanation": "Un coupe-circuit vise à limiter une propagation désordonnée et donner du temps à l’évaluation. Il ne répare pas les données et peut lui-même perturber les paiements; déclenchement et reprise doivent être pensés ensemble.",
+   "why": [
+    "La pause perturbe les paiements et peut accroître la demande de liquidité ou l’incertitude.",
+    "Le périmètre, les dépendances et l’état des données influencent la réponse appropriée.",
+    "La profonde incertitude et les effets réseau demandent plus qu’une moyenne historique et des reprises isolées.",
+    "Le temps gagné doit être relié à des conditions de contrôle et de réouverture cohérentes."
+   ],
+   "cue": "Un time-out achète du temps; prépare aussi ce qui permet d’en sortir.",
+   "tier": "deep",
+   "level": 5,
+   "dimension": "application",
+   "source": "https://www.bde.es/f/webbde/GAP/Secciones/Publicaciones/InformesBoletinesRevistas/RevistaEstabilidadFinanciera/22/3_FSR43_Digital.pdf",
+   "sourceRef": {
+    "year": 2026,
+    "note": "2026 required reading; absent from supplied 2024 books"
+   }
+  }
+ ]
+};
