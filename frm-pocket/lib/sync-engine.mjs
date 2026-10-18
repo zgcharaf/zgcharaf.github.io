@@ -33,6 +33,7 @@ function mergeProgress(base, local, remote, {seed = false} = {}) {
     if (/^days\.[^.]+$/.test(path)) return seed ? Math.max(number(l),number(r)) : number(r) + Math.max(0,number(l)-number(b));
     if (/^(quiz|cards)\.[^.]+$/.test(path)) return progressRow(b,l,r,path);
     if (/^evidence\.[^.]+$/.test(path)) {
+      if(equal(l,b))return clone(r);
       if (!l) return clone(r); if (!r) return clone(l);
       return clone(l.at < r.at ? l : r.at < l.at ? r : {...l,correct:l.correct && r.correct,timed:l.timed && r.timed});
     }
@@ -76,6 +77,7 @@ function mergeProgress(base, local, remote, {seed = false} = {}) {
     }
     out.correct = Math.min(out.attempts,out.correct);
     if (first) {out.firstAt=first.firstAt;out.firstCorrect=first.firstCorrect;}
+    if([l,r].some(p=>number(p.attempts)>0&&!(number(p.firstAt)>0))){out.firstAt=null;out.firstCorrect=null;}
     if (wrong) {out.mistakeAt=number(wrong.mistakeAt);out.wrongConfidence=wrong.wrongConfidence??null;out.lastWrongChoice=wrong.lastWrongChoice??null;}
     const sameMistake = number(l.mistakeAt) === number(r.mistakeAt);
     out.repairDays = sameMistake ? [...new Set([...(l.repairDays || []),...(r.repairDays || [])])].sort().slice(-2) : clone(wrong.repairDays || []);
@@ -92,6 +94,8 @@ function mergeProgress(base, local, remote, {seed = false} = {}) {
     }
   }
   if(seed){
+    // A legacy snapshot with prior practice and no fresh-evidence record cannot establish an unseen answer.
+    for(const id of Object.keys(state.evidence||{}))if([local,remote].some(s=>!s.evidence?.[id]&&(s.quiz?.[id]||s.cards?.[id]||s.exposed?.[id])))delete state.evidence[id];
     const logged={};for(const x of state.log||[])if(Number.isFinite(x.at)){
       const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date(x.at));
       const key=['year','month','day'].map(p=>parts.find(x=>x.type===p).value).join('-');logged[key]=(logged[key]||0)+1;

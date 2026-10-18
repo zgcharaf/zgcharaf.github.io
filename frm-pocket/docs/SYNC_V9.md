@@ -9,7 +9,7 @@ Canonical app: https://frm-pocket-charaf.zgcharaf.chatgpt.site/ . Use the same C
 3. Wait for **Synchronisé**, then open the same private URL and account on the second device. The PWA can be installed on the home screen.
 4. Wait for offline assets to finish downloading before relying on airplane mode. Work queues locally and uploads when the app is open and connected again.
 
-Old snapshots may overlap and cannot reveal whether every historical counter is independent. Migration uses the maximum of overlapping counters and the number of identifiable distinct logged answers, rather than adding two unknown totals. New study after linking is merged by deltas and counted exactly once. Repeated imports of the same file do not add attempts. Completed-session histories and readiness samples are retained and deduplicated by their full immutable contents. Histories keep the existing bounded retention; they are not an unlimited archive.
+Old snapshots may overlap and cannot reveal whether every historical counter is independent. Migration uses the maximum of overlapping counters and the number of identifiable distinct logged answers, rather than adding two unknown totals. New study after linking is merged by deltas and counted exactly once. Repeated imports of the same file do not add attempts. Unknown legacy first attempts remain unknown. Overlapping legacy practice without a fresh-evidence record invalidates an imported fresh claim conservatively. Completed-session histories and readiness samples are retained and deduplicated by their full immutable contents. Histories keep the existing bounded retention; they are not an unlimited archive.
 
 ## Data ownership and API
 

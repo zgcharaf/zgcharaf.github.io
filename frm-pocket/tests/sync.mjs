@@ -71,6 +71,11 @@ await test('Repeated legacy imports are conservative, preserve disjoint work and
 await test('A new device receives cloud study settings rather than resetting them to defaults',async()=>{
  const db=new SQLiteD1(),s=defaults();s.goal=30;s.campaign.weekdayMinutes=120;s.notes.q001='Keep this';const a=device(db,{state:s});await a.c.init();await a.c.flush();const b=device(db);await b.c.init();await b.c.flush();assert.equal(b.box.state.goal,30);assert.equal(b.box.state.campaign.weekdayMinutes,120);assert.equal(b.box.state.notes.q001,'Keep this');
 });
+await test('Legacy unknown first attempts stay unknown and cannot inherit fresh evidence from another device',async()=>{
+ const db=new SQLiteD1(),fresh=defaults();answer(fresh,'q001',true,200);const a=device(db,{state:fresh});await a.c.init();await a.c.flush();
+ const legacy=defaults();answer(legacy,'q001',false,100);legacy.quiz.q001.firstAt=null;legacy.quiz.q001.firstCorrect=null;legacy.evidence={};const b=device(db,{state:legacy});await b.c.init();await b.c.flush();
+ assert.equal(b.box.state.quiz.q001.firstCorrect,null);assert.equal(b.box.state.evidence.q001,undefined);await a.c.flush();assert.equal(a.box.state.evidence.q001,undefined);
+});
 await test('Conflicting note edits retain both texts, while independent note fields merge',async()=>{
  const db=new SQLiteD1(),a=device(db),b=device(db);await a.c.init();await a.c.flush();await b.c.init();await b.c.flush();a.box.state.notes.q001='Phone version';b.box.state.notes.q001='Computer version';b.box.state.notes.q002='Independent';await Promise.all([a.c.flush(),b.c.flush()]);const x=await call(db,'GET');assert.equal(x.conflicts.length,1);assert.deepEqual(new Set([x.conflicts[0].local,x.conflicts[0].remote]),new Set(['Phone version','Computer version']));assert.equal(x.state.notes.q002,'Independent');
 });
