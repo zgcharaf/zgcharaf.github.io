@@ -1,5 +1,5 @@
-const CACHE='frm-pocket-v6';
-const ASSETS=['./','./index.html','./styles.css?v=6','./data.js?v=6','./exam.js?v=6','./challenge.js?v=6','./engine.js?v=6','./coach.js?v=6','./app.js?v=6','./syllabus.js?v=6','./checkpoints.js?v=6','./readiness.js?v=6','./upgrade.js?v=6','./coverage-market-credit.js?v=6','./coverage-operational-liquidity.js?v=6','./coverage-investment-current.js?v=6','./coverage-register.js?v=6','./campaign.js?v=6','./exam-prep.js?v=6','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
+const CACHE='frm-pocket-v7';
+const ASSETS=['./','./index.html','./vendor/katex/katex.min.css?v=7','./vendor/katex/katex.min.js?v=7','./math-overrides.js?v=7','./math-text.js?v=7','./styles.css?v=7','./data.js?v=7','./exam.js?v=7','./challenge.js?v=7','./engine.js?v=7','./coach.js?v=7','./app.js?v=7','./syllabus.js?v=7','./checkpoints.js?v=7','./readiness.js?v=7','./upgrade.js?v=7','./coverage-market-credit.js?v=7','./coverage-operational-liquidity.js?v=7','./coverage-investment-current.js?v=7','./coverage-register.js?v=7','./campaign.js?v=7','./exam-prep.js?v=7','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('frm-pocket-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',event=>{

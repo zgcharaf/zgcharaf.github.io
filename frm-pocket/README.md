@@ -2,6 +2,14 @@
 
 Une station, une notion. Application mobile de révision FRM II, sans serveur ni dépendance externe.
 
+## Version 7 — formules LaTeX lisibles, 18 octobre 2026
+
+Les équations des questions, réponses, cartes, corrigés, leçons et fiches sont rendues avec KaTeX 0.19.0 local : fractions, racines, puissances, indices et symboles grecs. Les fiches affichent leurs équations dans un bloc distinct. Les longues expressions se défilent horizontalement dans leur propre zone, avec espacement renforcé sur téléphone. Les notes personnelles acceptent `\( ... \)` et `\[ ... \]` et montrent un aperçu mathématique à la saisie.
+
+Le moteur, sa feuille de style et les 20 polices WOFF2 intégrées sont préchargés dans le cache v7 : aucun CDN nécessaire, y compris en mode hors ligne après chargement complet. La licence MIT et les informations d’intégrité du paquet sont conservées dans `vendor/katex/`. Les textes et clés de la banque, identifiants, sauvegardes et calculs du score restent inchangés.
+
+Validation : `node tests/math.cjs` vérifie les 22 fiches, tous les segments LaTeX explicites, 6 456 champs de la banque, les groupements numériques/indices, l’échappement des notes et les polices embarquées. Les 92 contrôles de comportement, les contrôles de contenu et la simulation hors ligne passent également. [Détails de la revue mathématique](docs/MATH_RENDERING_V7.md). L’affichage dans Safari et sur iPhone physique reste à vérifier.
+
 ## Version 6 — préparation du 24 novembre 2026
 
 Le nouvel onglet **Plan** transforme la banque en programme quotidien : bilan initial de 20 questions inédites, sélection de cas sur les objectifs non explorés et les erreurs arrivées à échéance, vérification ciblée de 2 à 4 lectures, débrief et rappels différés. Un chapitre entièrement nouveau demande un vrai temps d’apprentissage dans les supports officiels, au-delà d’une vérification rapide. Les règles, lectures et résultats de mocks sont conservés dans la sauvegarde locale.
@@ -44,7 +52,7 @@ node tests/offline.cjs
 
 Sources primaires vérifiées le 18 octobre 2026 : GARP [format de l’examen](https://www.garp.org/frm/program-exams), [supports et deux mocks Part II](https://www.garp.org/frm/study-materials), [objectifs 2026](https://www.garp.org/landing/frm-learning-objectives), [lectures obligatoires](https://www.garp.org/frm/readings/required). Les sources propres aux questions sont renseignées dans leurs corrections. Questions originales indépendantes, pas des questions officielles ni des reproductions de mocks. L’index de pratique v1 reste inchangé pour conserver la comparabilité de son historique.
 
-Les descriptions de versions précédentes ci-dessous sont conservées pour historique ; la v6 ci-dessus fait référence pour le comportement actuel.
+Les descriptions de versions précédentes ci-dessous sont conservées pour historique ; la v7 et la v6 ci-dessus font référence pour le comportement actuel.
 
 ## Version 5 — préparation et évaluations, 17 octobre 2026
 
@@ -143,7 +151,7 @@ Les scores concernent uniquement cette banque et ne prédisent pas un résultat 
 
 ## Développement
 
-Les fichiers de production sont dans ce dossier. Aucun build nécessaire. Servir ce dossier sur HTTPS pour utiliser le service worker ; localhost fonctionne aussi en développement.
+Les fichiers de production sont dans `dist/`. Aucun build nécessaire. Servir ce dossier sur HTTPS pour utiliser le service worker ; localhost fonctionne aussi en développement.
 
 ```bash
 python -m http.server 8000
