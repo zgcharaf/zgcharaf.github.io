@@ -2,6 +2,50 @@
 
 Une station, une notion. Application mobile de révision FRM II, sans serveur ni dépendance externe.
 
+## Version 6 — préparation du 24 novembre 2026
+
+Le nouvel onglet **Plan** transforme la banque en programme quotidien : bilan initial de 20 questions inédites, sélection de cas sur les objectifs non explorés et les erreurs arrivées à échéance, vérification ciblée de 2 à 4 lectures, débrief et rappels différés. Un chapitre entièrement nouveau demande un vrai temps d’apprentissage dans les supports officiels, au-delà d’une vérification rapide. Les règles, lectures et résultats de mocks sont conservés dans la sauvegarde locale.
+
+### Banque et couverture
+
+**600 questions originales uniques** : 560 en entraînement (60 fondamentaux, 80 Exam-style, 48 Challenge, 372 Programme) et 40 réservées aux checkpoints. **584 cartes** : 560 reprises de questions, plus 24 cartes de raisonnement ; ce ne sont pas 584 notions supplémentaires.
+
+La nouvelle banque Programme contient 54 Market, 70 Credit, 72 Operational, 52 Liquidity, 84 Investment et 40 Current Issues. L’ensemble possède des mappings explicites sur **107 lectures et 412 des 591 objectifs**. Les **179 objectifs sans question précisément reliée restent visibles**, pour être étudiés dans les supports officiels. Un mapping indique une pratique partielle du sujet, pas la maîtrise de tout l’objectif. Les 372 nouveaux cas et leurs réponses ont fait l’objet d’une revue distincte, avec corrections tracées dans [le compte rendu de contenu](docs/CONTENT_REVIEW_V6.md). Les 88 nouveaux calculs ont été recomputés ; cela ne constitue pas un étalonnage psychométrique.
+
+### Programme et calibration
+
+Budget initial ajustable : 90 minutes en semaine, 180 le week-end. Les simulations complètes réservent 240 minutes et remplacent la séance ordinaire. Les tâches de lecture du jour restent fixes une fois affichées ; la file de questions s’ajuste aux preuves et ne demande pas de rattraper mécaniquement toutes les questions non faites.
+
+| Date proposée | Travail |
+| --- | --- |
+| Premier départ | Checkpoint inédit 20 Q /60 min, puis débrief |
+| 25 octobre | Second checkpoint inédit 20 Q /60 min |
+| 1 novembre | Simulation de l’app, 80 Q /4 h |
+| 8 novembre | Mock officiel GARP 1, à réaliser dans le support officiel |
+| 15 novembre | Mock officiel GARP 2, à réaliser dans le support officiel |
+| 21 novembre | Bloc mixte 20 Q /60 min |
+| 22–23 novembre | Rappels courts, règles personnelles et organisation |
+
+Les lendemains des trois mocks longs sont dédiés au débrief. Les dates se recalculent par rapport à la date d’examen réglée et restent des propositions : le programme n’écrit pas dans un agenda. Les règles de dates utilisent le fuseau Europe/Paris, y compris après changement d’heure.
+
+Le suivi des mocks officiels/externe enregistre date, score /80, durée, première tentative déclarée, conditions, lectures faibles et notes. Une reprise du même mock reste visible, mais n’est pas une nouvelle validation inédite. Les résultats futurs, les reprises, les tentatives avec aide ou de plus de quatre heures ne remplissent pas les jalons de mocks officiels. L’objectif initial de 70 % est **un objectif personnel ajustable, pas un seuil de réussite GARP**. Les résultats saisis et les cases de lecture/débrief ne modifient jamais le score de pratique /100.
+
+Les jalons séparés du score demandent des preuves dans chaque domaine, une exploration de chaque lecture, la consolidation des erreurs avec certitude et deux mocks GARP inédits dans les conditions choisies au-dessus de l’objectif personnel. Ce sont des outils de préparation, **aucune garantie de réussite ou probabilité de passage n’est calculée**.
+
+### Vérifications et sources
+
+```bash
+node tests/verify.cjs
+node tests/content.cjs
+node tests/offline.cjs
+```
+
+92 vérifications de comportement, intégrité des 600 questions/mappings, 88 nouveaux calculs et options numériques, plus installation/migration/scope du cache hors ligne. Les vérifications DOM sont simulées ; Safari, installation et mode avion sur iPhone physique restent à vérifier. La clé locale, les anciennes réponses, les sessions et l’historique de score v1 sont préservés. Le cache et les URL sont en v6. Aucun compte, API payante ou synchronisation cloud nécessaire à l’application.
+
+Sources primaires vérifiées le 18 octobre 2026 : GARP [format de l’examen](https://www.garp.org/frm/program-exams), [supports et deux mocks Part II](https://www.garp.org/frm/study-materials), [objectifs 2026](https://www.garp.org/landing/frm-learning-objectives), [lectures obligatoires](https://www.garp.org/frm/readings/required). Les sources propres aux questions sont renseignées dans leurs corrections. Questions originales indépendantes, pas des questions officielles ni des reproductions de mocks. L’index de pratique v1 reste inchangé pour conserver la comparabilité de son historique.
+
+Les descriptions de versions précédentes ci-dessous sont conservées pour historique ; la v6 ci-dessus fait référence pour le comportement actuel.
+
 ## Version 5 — préparation et évaluations, 17 octobre 2026
 
 - **Préparation /100 et courbe dans le temps**, visibles sur Accueil et Coach, avec relevés chiffrés accessibles. Historique créé à partir des observations réelles, jamais reconstitué à partir d’anciennes moyennes.

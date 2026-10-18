@@ -1,5 +1,5 @@
-const CACHE='frm-pocket-v5';
-const ASSETS=['./','./index.html','./styles.css?v=5','./data.js?v=5','./exam.js?v=5','./challenge.js?v=5','./engine.js?v=5','./coach.js?v=5','./app.js?v=5','./syllabus.js?v=5','./checkpoints.js?v=5','./readiness.js?v=5','./upgrade.js?v=5','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
+const CACHE='frm-pocket-v6';
+const ASSETS=['./','./index.html','./styles.css?v=6','./data.js?v=6','./exam.js?v=6','./challenge.js?v=6','./engine.js?v=6','./coach.js?v=6','./app.js?v=6','./syllabus.js?v=6','./checkpoints.js?v=6','./readiness.js?v=6','./upgrade.js?v=6','./coverage-market-credit.js?v=6','./coverage-operational-liquidity.js?v=6','./coverage-investment-current.js?v=6','./coverage-register.js?v=6','./campaign.js?v=6','./exam-prep.js?v=6','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('frm-pocket-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',event=>{
