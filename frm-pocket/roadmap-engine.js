@@ -69,6 +69,8 @@ const Roadmap=(()=>{
   state.roadmap||=defaults();const rs=rows(state,questions,readings,guides,now),scores=Object.fromEntries(rs.map(r=>[r.id,r.score])),assessed=rs.filter(r=>r.n>0).length,stable=rs.filter(r=>r.status==='stable').length;
   const score=Math.round(Object.entries(weights).reduce((sum,[topic,w])=>{const xs=rs.filter(r=>r.topic===topic);return sum+w*xs.reduce((n,r)=>n+(r.score||0),0)/Math.max(1,xs.length);},0));
   const signature=rs.map(r=>[r.id,r.score??'-',r.n,r.retained,r.errors].join(':')).join('|'),history=state.roadmap.history,last=history.at(-1);
+  if(typeof window!=='undefined'&&window.CloudBootPending)return {score,assessed,stable,rows:rs,history};
+  if(last&&!last.signature&&last.assessed===assessed&&last.stable===stable&&JSON.stringify(last.scores)===JSON.stringify(scores))last.signature=signature;
   if(!last||signature!==last.signature||Campaign.dateKey(last.at)!==Campaign.dateKey(now)){history.push({at:now,score,assessed,stable,scores,signature});state.roadmap.history=history.slice(-180);}
   return {score,assessed,stable,rows:rs,history:state.roadmap.history};
  }

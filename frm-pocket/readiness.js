@@ -18,6 +18,7 @@
  }
  function snapshot(state,questions,skills,now=Date.now(),reason='refresh'){
   const result=score(state,questions,skills,now),last=state.readinessHistory.at(-1);
+  if(typeof window!=='undefined'&&window.CloudBootPending)return result;
   if(!last||Math.floor(last.at/DAY)!==Math.floor(now/DAY)||last.score!==result.score||last.n!==result.n||last.timed!==result.timed||last.delayed!==result.delayed){state.readinessHistory.push({at:now,score:result.score,n:result.n,timed:result.timed,delayed:result.delayed,version:1,reason});state.readinessHistory=state.readinessHistory.slice(-1000);}
   return result;
  }

@@ -1,6 +1,6 @@
 /* Compile reviewed original learning packs. Never embeds the uploaded reference PDFs. */
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
-const root=path.resolve(__dirname,'..'),dist=fs.existsSync(path.join(root,'dist'))?path.join(root,'dist'):root;
+const root=path.resolve(__dirname,'..'),dist=fs.existsSync(path.join(root,'public'))?path.join(root,'public'):root;
 const topics=['market','credit','operational','liquidity','investment','current'];
 const books=topics.map(t=>JSON.parse(fs.readFileSync(path.join(root,'content',t+'-enrichment.json'),'utf8')));
 for(const name of fs.readdirSync(path.join(root,'content')).filter(f=>f.endsWith('-supplement.json')).sort()){

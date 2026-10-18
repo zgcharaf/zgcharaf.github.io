@@ -1,6 +1,21 @@
 # FRM Pocket
 
-Une station, une notion. Application mobile de révision FRM II, sans serveur ni dépendance externe.
+Une station, une notion. Application mobile de révision FRM II, utilisable hors ligne, avec synchronisation privée entre appareils.
+
+## Version 9 — progression synchronisée
+
+Ouvre **https://frm-pocket-charaf.zgcharaf.chatgpt.site/** sur téléphone et ordinateur et connecte-toi au même compte ChatGPT. Le badge **Synchronisé** indique la dernière vérification réussie ; une nouvelle réponse est envoyée automatiquement, avec vérification toutes les 30 secondes lorsque l’app est visible. Le retour du réseau et la réouverture déclenchent un nouvel essai. Les sessions et chronos restent propres à chaque appareil.
+
+Depuis l’ancienne version GitHub, exporte les progrès dans Réglages, puis utilise **Importer et fusionner** dans la version privée. Une copie avant fusion est téléchargée ; une copie avant la première synchronisation est aussi conservée dans le journal de cet appareil. Les imports qui se recouvrent utilisent des compteurs conservateurs et réunissent les réponses identifiables. Ne pas effacer les données de l’ancienne app avant vérification.
+
+Le serveur utilise les identifiants ChatGPT fournis par Sites et une base D1 liée au projet. Chaque lecture et écriture est filtrée par identifiant utilisateur côté serveur. Aucune clé, aucun mot de passe et aucun jeton n’est intégré aux fichiers publics. Le service worker exclut les routes de compte et de synchronisation du cache. Les réponses, erreurs, notes, déclarations de lecture, historiques et roadmap sont fusionnés ; les copies des notes en conflit restent accessibles dans les réglages. Un seul onglet par navigateur prend la main pour éviter des écritures concurrentes dans le même journal.
+
+[Détails du protocole, migration et limites](docs/SYNC_V9.md). Les sections v1–v8 ci-dessous décrivent l’historique du produit ; leurs anciennes limites de stockage local sont remplacées par cette version.
+
+```bash
+node tests/sync.mjs
+node tests/sync-ui.mjs
+```
 
 ## Version 8 — roadmap adaptative et apprentissage par chapitre
 
@@ -34,7 +49,7 @@ node tests/math.cjs
 node tests/offline.cjs
 ```
 
-Les données relues sont dans `content/` ; `node scripts/build-enrichment.cjs` produit les six packs `deep-*.js` et leur registre. Cache et URL en v8, LaTeX et polices locaux, fonctionnement hors ligne après téléchargement complet. [Brief d’apprentissage renforcé](docs/LEARNING_BRIEF_V8.md).
+Les données relues sont dans `content/` ; `node scripts/build-enrichment.cjs` produit les six packs `deep-*.js` et leur registre. Cache et URL actuels en v9, LaTeX et polices locaux, fonctionnement hors ligne après téléchargement complet. [Brief d’apprentissage renforcé](docs/LEARNING_BRIEF_V8.md).
 
 ## Version 7 — formules LaTeX lisibles, 18 octobre 2026
 
@@ -185,19 +200,19 @@ Les scores concernent uniquement cette banque et ne prédisent pas un résultat 
 
 ## Développement
 
-Les fichiers de production sont dans `dist/`. Aucun build nécessaire. Servir ce dossier sur HTTPS pour utiliser le service worker ; localhost fonctionne aussi en développement.
+Cette copie GitHub Pages contient l’interface statique à la racine de `frm-pocket/`. Le serveur privé est déployé et versionné dans le dépôt source du projet Sites. Les modules partagés `lib/sync-*.mjs` et la migration SQL sont conservés ici pour les tests du protocole ; GitHub Pages ne les exécute pas.
 
 ```bash
-python -m http.server 8000
+node tests/sync.mjs
+node tests/sync-ui.mjs
 node tests/verify.cjs
+python -m http.server 8000
 ```
 
-`data.js` contient les fondamentaux et formules ; `exam.js` contient les 80 cas appliqués ; `challenge.js` contient les 48 cas avancés, les 24 cartes ouvertes et la classification des compétences ; `coach.js` contient les règles adaptatives locales ; `engine.js` la logique de révision ; `app.js` l’interface. `sw.js` met en cache uniquement les fichiers de l’application et limite son interception à son propre dossier. Lors d’une mise à jour, incrémenter le nom du cache dans `sw.js` et la vérification correspondante dans `app.js`.
-
-Pour GitHub Pages, publier le contenu de `dist/` dans un dossier dédié, par exemple `frm-pocket/`. Les URLs et le scope du service worker sont relatifs. Pas besoin de modifier le site parent ni son workflow Pages.
+Les URLs et le scope du service worker sont relatifs. Le backend utilise le même compte ChatGPT uniquement à l’adresse privée ; cette copie ne fait aucun appel à son API.
 
 ## Vérification
 
 43 vérifications Node : banque et réponses, pages, scoring sans double comptage, sauvegarde de session, quiz/cartes séparés, échéances, filtres, échappement du texte, présence des ressources hors ligne, formules numériques. Les calculs des 46 nouvelles questions numériques sont recomputés indépendamment, y compris la cohérence des options sélectionnées. Les filtres, proportions du bloc mixte et sauvegardes antérieures sont contrôlés. Les interactions DOM sont simulées ; affichage, installation et mode avion sur iPhone restent à vérifier sur l’appareil réel.
 
-La progression est locale au navigateur. Aucun compte, télémétrie, clé API ou synchronisation cloud dans le code de l’application.
+Version privée : progression locale et cloud liée au compte ChatGPT. Version GitHub : progression locale avec export et lien de migration. Aucune télémétrie ni clé API publique.
